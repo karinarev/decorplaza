@@ -1,0 +1,170 @@
+.filter-panel{
+    border: none;
+    background: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    margin-top: 15px;
+}
+
+.list-group-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+
+.list-group-item{
+    position: static;
+}
+
+.filter-panel .panel-default>.panel-heading{
+    background: none;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+    padding: 15px;
+}
+
+.filter-panel .panel-body, .filter-panel .panel-default{
+    border: none;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+}
+.filter-panel .panel-footer{
+    background: none;
+}
+
+
+.filter-panel .list-group-item{
+    background: none;
+    border: none;
+}
+
+.filter-panel .list-group a.active,
+.filter-panel .list-group a.active:hover,
+.filter-panel .list-group a:hover{
+    background: none;
+    border: none;
+    text-shadow: none;
+}
+
+.filter-panel a.list-group-item{
+    line-height: 28px;
+    color: #c49849;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-left: 40px;
+    padding-bottom: 0;
+}
+
+.filter-panel div.list-group-item{
+    padding-top: 0;
+    padding-bottom: 0;
+    color: #1b1b1b;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+.filter-checkbox + label {
+    cursor: pointer;
+}
+
+.filter-checkbox:not(checked) {
+    position: absolute;
+    opacity: 0;
+}
+.filter-checkbox:not(checked) + label {
+    position: relative;
+    padding: 0 0 0 25px;
+}
+
+.filter-checkbox:not(checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+}
+
+.filter-checkbox:checked + label:before {
+    background: #c49849;
+    border-color: #c49849;
+}
+
+.filter-panel .checkbox .label-group{
+    padding-left: 0;
+}
+
+.btn-filter{
+    width: 270px;
+    height: 50px;
+    border: 2px solid #c49849;
+    border-radius: 25px;
+    background: none;
+
+    color: #c49849;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-filter:focus{
+    outline: none !important;
+    color: #c49849;
+}
+
+.btn-filter:hover{
+    background: #c49849;
+    color: white;
+    box-shadow: none;
+}
+
+.btn-filter:active{
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.filter-panel .panel-heading .filter-link:after {
+    content: url(../image/icons/close.png);
+    float: right;
+    cursor: pointer;
+}
+.filter-panel .panel-heading .filter-link.collapsed:after {
+    content: url(../image/icons/filter.png);
+}
+
+.filter-link{
+    color: #1b1b1b;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+    width: 12px;
+    background-color: #c49849;
+    border-radius: 6px; }
+
+
+
+.mCSB_scrollTools .mCSB_draggerRail{
+    width: 12px;
+    background-color: white;
+    border-radius: 6px;
+}
+
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{
+    background-color: #c49849;
+}
+
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger:active  .mCSB_dragger_bar{
+    background-color: #c49849;
+}

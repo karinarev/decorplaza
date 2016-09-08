@@ -1,0 +1,536 @@
+AWSTATS DATA FILE 7.0 (build 1.971)
+# If you remove this file, all statistics for date 201511 will be lost/reset.
+# Last config file used to build this data file was /etc/awstats/awstats.italy-sumochka.ru.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 27
+POS_GENERAL 1997                
+POS_TIME 2671                
+POS_VISITOR 10730               
+POS_DAY 12602               
+POS_DOMAIN 3502                
+POS_LOGIN 3737                
+POS_ROBOT 3892                
+POS_WORMS 4162                
+POS_EMAILSENDER 4293                
+POS_EMAILRECEIVER 4436                
+POS_SESSION 13108               
+POS_SIDER 13314               
+POS_FILETYPES 4571                
+POS_DOWNLOADS 4889                
+POS_OS 5012                
+POS_BROWSER 5175                
+POS_SCREENSIZE 5742                
+POS_UNKNOWNREFERER 5816                
+POS_UNKNOWNREFERERBROWSER 6108                
+POS_ORIGIN 6368                
+POS_SEREFERRALS 6509                
+POS_PAGEREFS 6673                
+POS_SEARCHWORDS 6895                
+POS_KEYWORDS 7047                
+POS_MISC 2332                
+POS_ERRORS 7106                
+POS_CLUSTER 3593                
+POS_SIDER_404 7263                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20151201034511 1 0 8153601875230
+FirstTime 20151113024558
+LastTime 20151130190345
+LastUpdate 20151202000101 1 0 0 0 0
+TotalVisits 84                  
+TotalUnique 44                  
+MonthHostsKnown 0                   
+MonthHostsUnknown 45                  
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 1088 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 5 5 449896 1 1 195144
+1 22 324 5332844 2 3 10585
+2 10 10 1159523 7 8 580942
+3 0 0 0 3 4 28168
+4 7 7 949027 1 1 763
+5 6 6 362003 4 4 140658
+6 2 2 390288 7 7 55803
+7 4 5 598698 3 4 136261
+8 1 1 193425 1 1 488
+9 56 1633 19337466 14 66 80901
+10 83 1405 17347322 13 63 216275
+11 20 443 6870105 8 22 102573
+12 106 2004 27680191 27 116 147070
+13 222 4239 52530668 59 223 313707
+14 195 4711 48135108 42 352 546507
+15 193 3763 47553919 77 1871 1192202
+16 98 2064 28494312 7 1658 882073
+17 256 6129 64085700 50 1810 1159078
+18 203 3267 34677805 25 1702 1183393
+19 148 3393 39413545 30 507 889190
+20 108 2179 28042724 30 87 822377
+21 42 281 4375039 4 10 7335
+22 7 213 2926151 1 4 14535
+23 7 58 1192609 5 6 370733
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 1
+ip 1801 36142 432098368
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 4
+no_user_agent 9 1292878 20151119005510 2
+unknown 3 3984 20151126191452 3
+ng\/1\. 1 71508 20151128152117 0
+yandex 1 12640 20151113194200 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 12
+css 7902 34625885 0 0
+png 2882 19934277 0 0
+ttf 1 80886 0 0
+txt 622 415678 0 0
+woff 32 1341120 0 0
+php 1255 15921312 0 0
+html 351 13395829 0 0
+jpg 7649 133776792 0 0
+js 14916 209500637 0 0
+jpeg 102 417352 0 0
+Unknown 162 1652915 0 0
+gif 268 1035685 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 2
+/catalog/view/javascript/jquery/name.txt 614 0 415678
+/robots.txt 5 0 6628
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS 11
+linuxandroid 124
+winxp 279
+win2000 3
+winnt 1
+winvista 33818
+linux 577
+win7 1134
+winme 1
+macosx 194
+winunknown 1
+Unknown 10
+END_OS
+
+# Browser ID - Hits
+BEGIN_BROWSER 31
+msie6.0 2
+chrome45.0.2454.99 1
+msie5.01 1
+firefox40.0 128
+firefox42.0 35164
+chrome44.0.2403.130 1
+firefox2.0.0.1 1
+chrome40.0.2214.111 2
+firefox3.0.1.7 2
+chrome43.0.2357.132 1
+chrome28.0.1468.0 3
+chrome46.0.2490.76 123
+msie8.0 56
+chrome46.0.2490.80 132
+firefox39.0 1
+chrome19.0.1084.5409 2
+netscape5.0 1
+firefox22.0 2
+firefox14.0.1 1
+msie7.0 2
+firefox16.0 17
+firefox41.0 1
+chrome46.0.2490.86 451
+chrome43.0.2357.93 1
+safari8.0 1
+safari7.1.3 3
+firefox3.6.3 1
+chrome41.0.2228.0 4
+firebird 1
+Unknown 9
+firefox3.6.13 27
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 5
+Mozilla/5.0 20151129014402
+kupit_kvartiru_v_sankt-peterburge_http://spbkvt.ru 20151128204509
+Go-http-client/1.1 20151129194040
+ltx71_-_(http://ltx71.com/) 20151115072029
+Go_1.1_package_http 20151123021707
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 4
+kupit_kvartiru_v_sankt-peterburge_http://spbkvt.ru 20151128204509
+Go-http-client/1.1 20151129194040
+ltx71_-_(http://ltx71.com/) 20151115072029
+Go_1.1_package_http 20151123021707
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 186 279
+From1 2 2
+From2 2 2
+From3 7 7
+From4 1604 35852
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 2
+google 1 1
+bing 1 1
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 3
+http://regidium.ru 4 4
+http://checker.baspromo.com 2 2
+https://reg.ru 1 1
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 6
+403 15 7157
+302 226 113492
+206 1 80425
+500 25 12283
+301 27 14808
+404 7123 5917706
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referer
+BEGIN_SIDER_404 67
+/admin/content/sitetree/ 1 -
+/image/cache/data/brands/logo_breakpoint-120x120.png 695 http://italy-sumochka.ru/
+/wordpress/ 1 -
+/manager/ 3 -
+/admin.php 11 -
+/image/cache/data/brands/virus-logo-120x120.png 696 http://italy-sumochka.ru/
+/3c.php 6 -
+/manager/templates/default/css/login-min.css 1 -
+/wp-admin/ 1 -
+/image/cache/data/brands/4-120x120.jpg 696 http://italy-sumochka.ru/
+/admin/view/image/ocfilter/position-selector-bg.png 1 http://italy-sumochka.ru/admin/view/stylesheet/ocfilter/ocfilter.css
+/netcat/admin/ 1 -
+/xmlrpc.php 1 -
+/manager/media/script/mootools/mootools.js 1 -
+/image/cache/data/brands/venum-120x120.jpg 696 http://italy-sumochka.ru/
+/alessandro-beato 5 http://italy-sumochka.ru/zhenskie-sumki/
+/wp-content/ 1 -
+/node/ 1 -
+/wp-includes/js/jquery/jquery.js 1 -
+/arcadia 1 http://italy-sumochka.ru/alessandro-beato
+/cache.php 1 -
+/image/fancybox_sprite.png 3 http://italy-sumochka.ru/perchatki-bokserskie-venum-elite-neo-orange
+/manager/templates/default/images/style/modx-logo-header.png 1 -
+/image/cache/data/brands/kimurawear-logo-120x120.png 695 http://italy-sumochka.ru/
+/netcat/admin/skins/default/css/style.css 1 -
+/administrator/ 5 http://italy-sumochka.ru/administrator/
+/bitrix/js/main/core/core.css 1 -
+/admin/view/image/ocfilter/select-arrows.png 12 http://italy-sumochka.ru/admin/view/stylesheet/ocfilter/ocfilter.css
+/images/cms/admin/mac/common/butterfly.png 1 -
+/wp-login.php 11 -
+/netcat/admin/skins/default/css/login.css 1 -
+/manager/media/style/MODxCarbon/images/misc/logo.png 1 -
+/admin/ 10 -
+/manager/media/style/MODxCarbon/images/misc/login-logo.png 1 -
+/manager/templates/default/images/restyle/headers.jpg 1 -
+/bitrix/themes/.default/images/auth_pict.gif 1 -
+/image/cache/data/brands/contract-killer_logo-120x120.jpg 696 http://italy-sumochka.ru/
+/users/forget/ 1 -
+/modules/system/system.base.css 1 -
+/templates/system/css/system.css 1 -
+/image/cache/data/brands/training-mask-logo-120x120.png 696 http://italy-sumochka.ru/
+/blog/ 1 -
+/netcat/admin/skins/default/img/logo.png 1 -
+/modules/system/system.css 1 -
+/wp/ 1 -
+/user/login/ 1 -
+/image/cache/data/brands/clinch-gear-120x120.jpg 696 http://italy-sumochka.ru/
+/kellen 1 http://italy-sumochka.ru/
+/bitrix/themes/.default/adminstyles.css 1 -
+/styles/skins/mac/design/css/style.css 1 -
+/users/registrate/ 1 -
+/blog/robots.txt 1 -
+/installed 1 -
+/administrator/index.php 8 http://italy-sumochka.ru/administrator/index.php
+/wp-admin/images/wordpress-logo.png 1 -
+/export/ 2 -
+/manager/media/style/MODxCarbon/style.css 1 -
+/catalog/view/theme/theme331/js/sl/jscript_zjquery.anythingslider.js 1 http://italy-sumochka.ru/
+/media/system/js/mootools.js 1 -
+/wp-admin/css/wp-admin.css 1 -
+/image/cache/data/brands/flamma%20logo-120x120.jpg 696 http://italy-sumochka.ru/
+/bitrix/admin/ 1 -
+/index.php 43 http://italy-sumochka.ru/hayabusa-kasumi-s-fight-shorts
+/catalog/view/theme/theme331/image/marker-1.png 1 http://italy-sumochka.ru/catalog/view/theme/theme331/stylesheet/stylesheet.css
+/admin/view/image/ocfilter.png 3 http://italy-sumochka.ru/admin/index.php
+/user/password/ 1 -
+/image/cache/data/brands/logo-ranger-up-120x120.gif 695 http://italy-sumochka.ru/
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 45
+109.188.87.204 928 20424 237468283 20151127192757
+5.228.24.162 683 13411 156853744 20151129194124
+188.32.71.175 70 577 5881762 20151127212902
+83.220.239.4 21 719 8988733 20151120144236
+188.225.33.150 17 17 2947754 20151130043603
+62.122.208.179 10 186 3410405 20151119012922
+83.220.238.146 8 246 3195194 20151130190345
+148.251.132.121 6 6 129605 20151129194040
+178.120.145.250 5 87 1354239 20151113113119
+89.208.147.138 4 4 667697 20151130135840
+52.91.247.18 1 1 195144 20151115072029
+83.24.76.52 2 2 209156 20151114005110
+83.220.237.159 2 123 2261127 20151114154844
+31.177.83.242 1 1 52467 20151127173738
+150.70.173.41 1 1 208516 20151113232957
+213.136.64.63 1 1 71508 20151128053156
+176.9.103.166 1 1 24018 20151119022109
+82.235.56.238 1 1 684 20151113231226
+178.43.112.159 2 2 195784 20151115234105
+62.109.27.164 1 1 28930 20151113044033
+64.69.91.210 1 1 208516 20151114013909
+95.169.184.178 1 1 24018 20151115001514
+5.255.253.4 1 1 13198 20151130074109
+194.58.35.7 3 122 1637822 20151113180221
+95.24.32.131 1 1 195144 20151120073144
+109.120.183.23 2 2 417032 20151113203454
+46.39.4.0 2 2 234105 20151113193120
+80.93.49.174 1 1 684 20151129014402
+192.210.228.82 2 2 26289 20151129021058
+95.108.158.134 0 1 68 
+208.42.251.123 1 1 24018 20151116200748
+195.208.48.114 4 128 2988518 20151113154041
+150.70.97.86 1 1 208516 20151113234504
+5.39.93.201 1 1 25188 20151113232257
+98.203.95.221 1 1 23297 20151122124003
+83.222.214.165 1 1 193269 20151126191452
+83.149.25.67 3 3 72054 20151116054729
+5.166.25.207 1 1 193425 20151122225543
+91.219.65.58 1 1 71508 20151128204509
+204.13.200.200 1 52 553921 20151113231244
+91.144.175.44 1 1 193493 20151127044803
+188.134.9.3 2 2 390293 20151115020043
+37.0.66.126 2 2 36425 20151127204813
+91.142.90.30 1 1 222177 20151113024558
+80.87.203.59 1 1 640 20151113142513
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 18
+20151113 858 15954 192449567 17
+20151114 467 9779 121191175 6
+20151115 9 9 1029160 6
+20151116 12 269 3749087 4
+20151117 3 164 805886 2
+20151118 1 1 195144 1
+20151119 12 188 3629567 3
+20151120 23 721 9379021 4
+20151121 1 1 193425 1
+20151122 3 3 410147 3
+20151123 2 2 216722 2
+20151124 2 2 216722 2
+20151125 4 4 433444 4
+20151126 3 3 580119 3
+20151127 218 5824 65561780 10
+20151128 166 2947 28461895 4
+20151129 6 21 244281 5
+20151130 11 250 3351226 7
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 7
+1h+ 5
+5mn-15mn 1
+15mn-30mn 1
+0s-30s 70
+2mn-5mn 3
+30s-2mn 2
+30mn-1h 2
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 101
+/admin/index.php 975 8932510 4 5
+/index.php 231 6907327 0 3
+/ 222 10993776 74 62
+/perchatki-bokserskie-venum-elite-neo-orange 45 150262 0 1
+/zhenskie-sumki/ 34 658582 1 1
+/catalog/view/theme/theme331/fonts/fontawesome-webfont.woff 32 1341120 0 6
+/3%D1%81.php 29 5571 2 1
+/ab103-2755-08-fiori-chanel 13 199208 1 2
+/ab250-nero 11 181271 2 1
+/i.php 11 66688 0 0
+/tosca-blu 1 18890 0 0
+/bruno-rossi 2 38986 0 0
+/dostavka 2 23985 0 0
+/brands/ 1 9912 0 0
+/sitemap/ 1 10481 0 0
+/perchatki-dlya-boksa-venum-elite-boxing-gloves-whiteblackred 1 449 0 0
+/sales/ 9 194945 0 1
+/seo/we-found-cheaper/we-found-cheaper.php 1 437 0 0
+/futbolka-bad-boy-world-cup-tee-england 1 18253 0 0
+/vozvrat 1 9902 0 0
+/optovikam 1 11102 0 0
+/futbolki-majki-bad-boy 1 25879 0 0
+/astronomica 2 30654 0 0
+/shlem-bokserskiy-venum-elite-neo-pink 1 18734 0 0
+/alessandro-beato 5 71721 0 0
+/venum-kontact-shinguards-and-insteps-cotton 2 33793 0 0
+/binty-bad-boy-pro-series-wraps-black 1 16908 0 0
+/perchatki-mma-venum-undisputed-20-white 1 18550 0 0
+/odezhda/futbolki-majki/ 4 113378 0 0
+/binty-bokserskie-excalibur-chernye-35-m 1 449 0 0
+/search/ 5 101874 0 0
+/tolstovka-perun-novaya-bez-kapyushona 1 18198 0 0
+/ekipirovka/bokserskie-perchatki/ 2 67032 0 0
+/odezhda-dlya-detej-bad-boy 2 29317 0 0
+/portfeli-alessandro-beato 2 25580 0 0
+/tentazione-due 1 13272 0 0
+/perchatki-bokserskie-venum-sharp-nappa-leather-black 1 449 0 0
+/virus-airflex-4-way-stretch-training-shorts-black-with-silver 1 17510 0 0
+/venum-competitor-2-0-standup-shinguards-black 1 449 0 0
+/%D0%B0cquanegra 2 43244 0 0
+/odezhda-dlya-detej-break-point 1 14561 0 0
+/oplata 1 13685 0 0
+/bad-boy-backpack 6 2694 0 0
+/venum-tiger-rash-guard-long-sleeves-blackorange 2 898 0 0
+/shopping-cart/ 5 55419 0 0
+/zhenskie-sumki-kellen 1 13677 0 0
+/login/ 2 20828 0 0
+/tayskie-mazi-masla-sprei/ 1 17209 0 0
+/sumki-ryukzaki/ 2 45459 0 0
+/perchatki-mma-venum-elite-sparring-black-red-grey 1 19093 0 0
+/we-found-cheaper 2 21401 0 0
+/kapa-detskaya-ataka-krasnaya 1 17465 0 0
+/odezhda/ 8 223900 0 0
+/sumki-ryukzaki/sportivnye-ryukzaki/ 4 75114 0 0
+/odezhda-dlya-detej-kellen 1 12718 0 0
+/odezhda-dlya-devushek/ 3 46103 0 0
+/kepka-clinch-gear-lone-survivor-fitted-hat 2 17657 0 1
+/zhenskie-sumki/novinki/ 3 30775 0 0
+/odezhda/delovye-sumki-1/ 1 11275 0 0
+/export/yandex_yml.php 1 371 0 0
+/bad-boy 5 131428 0 0
+/bokserskie-perchatki-ataka-bgs-508-detskie-ataka 2 30542 0 0
+/contact-us/ 7 76235 0 0
+/zhenskie-sumki-alessandro-beato 1 11858 0 0
+/mma-sparring-kit 1 449 0 0
+/shorty-venum-shogun-ufs-edition-fight-shorts 1 460 0 0
+/shorty-tayskie-yokkao-tybs-lumpinee-champion 1 17711 0 0
+/test_ioncube.php 1 452 0 0
+/zhenskie-sumki/klassicheskie-sumki/ 2 20869 0 0
+/tolstovka-venum-pro-team-20-hoody-lite-series-all-seasons-grey 1 449 0 0
+/ekipirovka/ 6 188129 0 0
+/tolstovka-venum-carioca-hoody 1 449 0 0
+/bad-boy-youth-retro-graphic-full-zip-hoodie 1 18077 0 0
+/bad-boy-mma-head-guard-dowble 1 449 0 0
+/catalog/view/theme/theme331/fonts/fontawesome-webfont.ttf 1 80886 0 0
+/sertificate 4 40717 0 0
+/o-nas 3 30914 0 0
+/kellen 2 27902 0 0
+/shchitki-venum-elite-neo-yellow 3 1347 0 0
+/shchitki-venum-competitor-20-standup-shinguards-ice 1 18486 0 0
+/zhenskie-sumki/delovye-sumki/ 1 10747 0 0
+/perchatki-mma-venum-undisputed-20-black 2 17120 0 0
+/odezhda/barsetki-vizitki/ 2 21516 0 0
+/perchatki-dlya-mma-bad-boy-pro-series-20-victory-mma-gloves 1 449 0 0
+/sumka-hayabusa-new-pro-mesh-gear-bag 1 16657 0 0
+/hayabusa-kasumi-s-fight-shorts 1 18327 0 0
+/odezhda/portfeli/ 8 104140 0 0
+/zashchita-ushey-slinch-gear 1 449 0 0
+/zhenskie-sumki/ryukzaki/ 1 10721 0 0
+/venum-absolute-2-0-headgear-red-devil 1 17969 0 0
+/podarochnye-sertifikaty/ 2 20665 0 0
+/seo/we-found-cheaper/we-found-cheaper_form.php 6 7956 0 0
+/ekipirovka/mma-perchatki/ 4 97896 0 0
+/kapa-detskaya-ataka-zelenaya 1 17468 0 0
+/shchitki-venum-elite-neo-orange 1 18757 0 0
+/odezhda/shorty/ 1 29237 0 0
+/garantii 2 25750 0 0
+/odezhda-dlya-detej/ 1 23829 0 0
+/novosti/ 2 21150 0 0
+/carts/ 7 94633 0 0
+/perchatki-bokserskie-venum-elite-black 2 37867 0 0
+END_SIDER

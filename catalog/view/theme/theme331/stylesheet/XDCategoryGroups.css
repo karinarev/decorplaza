@@ -1,0 +1,98 @@
+.categories{
+    text-align: center;
+    font-family: 'OpenSans';
+}
+
+.categories .item{
+    display: inline-block;
+    width: 415px;
+    height: 340px;
+    position: relative;
+}
+
+.categories .item img{
+    z-index: 1;
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -ms-filter: blur(2px);
+    -o-filter: blur(2px);
+    filter: blur(2px);
+}
+
+.categories .item .image-background{
+    background: rgba(0, 0, 0, 0.45);
+    width: 415px;
+    height: 340px;
+    position: absolute;
+    bottom: -1px;
+    z-index: 2;
+}
+
+.categories .item .caption{
+    z-index: 3;
+    position: absolute;
+    top: 85px;
+    font-size: 14px;
+    line-height: 18px;
+    width: 415px;
+    height: auto;
+    text-align: center;
+}
+
+.categories .item .caption .catalog-name{
+    color: #c49849;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: auto;
+    width: 70%;
+}
+
+.categories .item .caption .description{
+    color: #f4f4f4;
+    font-weight: 400;
+    padding-top: 15px;
+    width: 80%;
+    margin: auto;
+}
+
+.categories .item .button-area{
+    z-index: 3;
+    position: absolute;
+    bottom: 87px;
+    width: 415px;
+    text-align: center;
+}
+
+.categories .item .button-area .btn-more{
+    width: 270px;
+    height: 50px;
+    border: 2px solid #c49849;
+    border-radius: 25px;
+    background: none;
+}
+
+.categories .item .button-area .btn-more span{
+    color: #c49849;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.categories .item .button-area .btn-more span
+{
+    line-height: 30px;
+}
+
+.categories .item .button-area .btn-more:hover{
+    background-color: #c49849;
+}
+
+.categories .item .button-area .btn-more:focus{
+    outline: none !important;
+}
+
+.categories .item .button-area .btn-more:hover span{
+    color: #f4f4f4;
+}

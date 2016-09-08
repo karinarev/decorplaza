@@ -1,0 +1,96 @@
+h3{
+    text-align: center;
+    color: #1b1b1b;
+    font-family: "BodoniItalic";
+    font-size: 36px;
+    font-weight: 400;
+    margin-top: 40px;
+}
+
+#content {
+    width: 1220px;
+    margin: auto;
+}
+
+.alphabet{
+    color: #777;
+    font-size: 12px;
+    margin-top: 40px;
+    letter-spacing: 1px;
+    font-family: "OpenSans";
+    font-weight: 600;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.alphabet a:link, .alphabet a:visited{
+    color: #777;
+    font-size: 14px;
+    padding: 10px 15px;
+}
+
+.alphabet a:hover{
+    background-color: #c49849;
+    color: white !important;
+    border-radius: 50%;
+}
+
+.category-name{
+    color: #1b1b1b;
+    font-family: "BodoniItalic";
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 60px;
+    margin-bottom: 20px;
+}
+
+.category-divider{
+    height: 1px;
+    border: 1px solid #1b1b1b;
+    width: 100%;
+}
+
+.category-image{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.category-aria{
+    text-align: center;
+    width: 100px;
+    margin: auto;
+}
+
+.category-aria a:link, .category-aria a:visited{
+    color: #777;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.category-aria a:hover img{
+    -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
+    filter: grayscale(0%);
+}
+
+.category-aria a:hover{
+    color: #1b1b1b !important;
+}
+
+.category-col{
+    margin-top: 25px;
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+    float: left;
+    width: 175px;
+    text-align: center;
+}
+
+
+

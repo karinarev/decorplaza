@@ -1,0 +1,170 @@
+<modification>
+  <version>1.5</version> 
+  <vqmver>1.5</vqmver> 
+  <author>Allen</author> 
+<id>Auto-Scroll Manufacturer Carousel</id> 
+	<file name="admin/controller/module/carousel.php">
+	<operation>
+	<search position="after">
+	<![CDATA[
+	$this->data['entry_limit'] = $this->language->get('entry_limit');
+	]]></search>
+	<add>
+	<![CDATA[
+		$this->data['entry_auto'] = $this->language->get('entry_auto');
+		$this->data['entry_wrap'] = $this->language->get('entry_wrap');
+	]]></add>
+	</operation>
+	</file>
+
+	<file name="admin/language/english/module/carousel.php">
+	<operation>
+	<search position="after">
+	<![CDATA[
+	$_['entry_scroll']        = 'Scroll:';
+	]]></search>
+	<add>
+	<![CDATA[
+	$_['entry_auto']	  = 'Auto:';
+	$_['entry_wrap']	  = 'Wrap:';
+	]]></add>
+	</operation>
+	</file>
+
+	<file name="admin/view/template/module/carousel.tpl">
+	<operation>
+	<search position="after">
+	<![CDATA[
+	<td class="left"><?php echo $entry_limit; ?></td>
+	]]></search>
+	<add>
+	<![CDATA[
+	      <td class="left"><?php echo $entry_auto; ?></td>
+	]]></add>
+	</operation>
+	
+	<operation>
+	<search position="after">
+	<![CDATA[
+	<td class="left"><?php echo $entry_scroll; ?></td>
+	]]></search>
+	<add>
+	<![CDATA[
+	      <td class="left"><?php echo $entry_wrap; ?></td>
+	]]></add>
+	</operation>
+	
+	<operation>
+	<search position="after">
+	<![CDATA[
+	<td class="left"><input type="text" name="carousel_module[<?php echo $module_row; ?>][scroll]" value="<?php echo $module['scroll']; ?>" size="3" /></td>
+	]]></search>
+	<add>
+	<![CDATA[
+	      <td class="left">
+	      	<select name="carousel_module[<?php echo $module_row; ?>][cwrap]">
+			<?php if ($module['cwrap'] == 'null') { ?>
+			<option value="null" selected="selected">null</option>
+			<?php } else { ?>
+			<option value="null">null</option>
+			<?php } ?>
+			<?php if ($module['cwrap'] == 'circular') { ?>
+			<option value="circular" selected="selected">circular</option>
+			<?php } else { ?>
+			<option value="circular">circular</option>
+			<?php } ?>
+			<?php if ($module['cwrap'] == 'first') { ?>
+			<option value="first" selected="selected">first</option>
+			<?php } else { ?>
+			<option value="first">first</option>
+			<?php } ?>
+			<?php if ($module['cwrap'] == 'last') { ?>
+			<option value="last" selected="selected">last</option>
+			<?php } else { ?>
+			<option value="last">last</option>
+			<?php } ?>
+		  </select>
+	      </td>
+	]]></add>
+	</operation>
+	
+	<operation>
+	<search position="replace">
+	<![CDATA[
+	<td colspan="8"></td>
+	]]></search>
+	<add>
+	<![CDATA[
+              <td colspan="10"></td>
+	]]></add>
+	</operation>
+	
+	<operation>
+	<search position="replace">
+	<![CDATA[
+	html += '    <td class="left"><input type="text" name="carousel_module[' + module_row + '][scroll]" value="3" size="1" /></td>';
+	]]></search>
+	<add>
+	<![CDATA[
+ 	html += '    <td class="left"><input type="text" name="carousel_module[' + module_row + '][auto]" value="0" size="1" /></td>';
+	html += '    <td class="left"><input type="text" name="carousel_module[' + module_row + '][scroll]" value="3" size="1" /></td>';
+	html += '    <td class="left"><select name="carousel_module[' + module_row + '][cwrap]">';
+	html += '      <option value="null">null</option>';
+	html += '      <option value="circular">circular</option>';
+	html += '      <option value="first">first</option>';
+	html += '      <option value="last">last</option>';
+	html += '    </select></td>';
+	]]></add>
+	</operation>
+	
+	<operation>
+	<search position="after">
+	<![CDATA[
+	<td class="left"><input type="text" name="carousel_module[<?php echo $module_row; ?>][limit]" value="<?php echo $module['limit']; ?>" size="1" /></td>
+	]]></search>
+	<add>
+	<![CDATA[
+	      <td class="left"><input type="text" name="carousel_module[<?php echo $module_row; ?>][auto]" value="<?php echo $module['auto']; ?>" size="3" /></td>
+	]]></add>
+	</operation>
+	</file>
+
+	<file name="catalog/view/theme/default/template/module/carousel.tpl">
+	<operation>
+	<search position="replace">
+	<![CDATA[
+	<a href="<?php echo $banner['link']; ?>">
+	]]></search>
+	<add>
+	<![CDATA[
+	<a target="_blank" href="<?php echo $banner['link']; ?>">
+	]]></add>
+	</operation>
+	<operation>
+	<search position="replace">
+	<![CDATA[
+	scroll: <?php echo $scroll; ?>
+	]]></search>
+	<add>
+	<![CDATA[
+	scroll: <?php echo $scroll; ?>,
+	wrap: '<?php echo $cwrap; ?>',
+	auto: <?php echo $auto; ?>
+	]]></add>
+	</operation>
+	</file>
+
+	<file name="catalog/controller/module/carousel.php">
+	<operation>
+	<search position="after">
+	<![CDATA[
+	$this->data['limit'] = $setting['limit'];
+	]]></search>
+	<add>
+	<![CDATA[
+		$this->data['auto'] = $setting['auto'];
+		$this->data['cwrap'] = $setting['cwrap'];
+	]]></add>
+	</operation>
+	</file>
+</modification>

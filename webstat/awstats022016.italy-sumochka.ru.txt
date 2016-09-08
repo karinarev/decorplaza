@@ -1,0 +1,487 @@
+AWSTATS DATA FILE 7.0 (build 1.971)
+# If you remove this file, all statistics for date 201602 will be lost/reset.
+# Last config file used to build this data file was /etc/awstats/awstats.italy-sumochka.ru.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 27
+POS_GENERAL 1997                
+POS_TIME 2669                
+POS_VISITOR 9376                
+POS_DAY 10918               
+POS_DOMAIN 3344                
+POS_LOGIN 3575                
+POS_ROBOT 3730                
+POS_WORMS 3967                
+POS_EMAILSENDER 4098                
+POS_EMAILRECEIVER 4241                
+POS_SESSION 11541               
+POS_SIDER 11709               
+POS_FILETYPES 4376                
+POS_DOWNLOADS 4657                
+POS_OS 4776                
+POS_BROWSER 4906                
+POS_SCREENSIZE 5289                
+POS_UNKNOWNREFERER 5363                
+POS_UNKNOWNREFERERBROWSER 5528                
+POS_ORIGIN 5661                
+POS_SEREFERRALS 5798                
+POS_PAGEREFS 5942                
+POS_SEARCHWORDS 6323                
+POS_KEYWORDS 6475                
+POS_MISC 2332                
+POS_ERRORS 6534                
+POS_CLUSTER 3431                
+POS_SIDER_404 6672                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20160301071217 1 0 9127691280075
+FirstTime 20160201032754
+LastTime 20160229215130
+LastUpdate 20160302000102 1 0 0 0 0
+TotalVisits 60                  
+TotalUnique 37                  
+MonthHostsKnown 0                   
+MonthHostsUnknown 37                  
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 17 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 9 47 758956 4 7 155197
+1 3 3 85221 4 6 183334
+2 6 6 428423 5 5 2840
+3 4 4 227597 1 1 568
+4 5 5 298987 7 8 229169
+5 3 3 156089 1 1 71508
+6 3 3 97701 0 0 0
+7 4 4 169341 4 4 137226
+8 3 3 85268 18 39 110054
+9 0 0 0 1 1 8715
+10 1 1 71383 0 0 0
+11 5 5 240652 6 10 234033
+12 1 1 13120 0 0 0
+13 3 3 143663 5 5 182731
+14 11 368 7109732 3 14 25747
+15 0 0 0 4 4 1852
+16 1 1 13198 2 2 91010
+17 5 5 123535 11 11 389431
+18 2 2 84503 3 3 25647
+19 2 2 84628 4 6 28144
+20 1 1 13198 4 4 145237
+21 3 3 97504 1 3 3330
+22 53 53 612831 45 45 415440
+23 1 1 13120 0 0 0
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 1
+ip 129 524 10928650
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 3
+no_user_agent 2 143016 20160211053745 0
+unknown 2 2656 20160223192722 2
+ng\/1\. 1 71508 20160221081544 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 12
+css 93 639682 0 0
+png 90 1176920 0 0
+ttf 1 80886 0 0
+txt 6 4062 0 0
+woff 6 268224 0 0
+php 3 14986 0 0
+html 102 3126048 0 0
+js 136 2106880 0 0
+jpg 58 3270691 0 0
+jpeg 5 17030 0 0
+Unknown 17 185800 0 0
+gif 7 37441 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 2
+/catalog/view/javascript/jquery/name.txt 6 0 4062
+/robots.txt 2 0 2656
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS 9
+winxp 97
+win2000 1
+winnt 2
+linux 63
+winvista 123
+win7 61
+macosx 7
+bsdfreebsd 165
+Unknown 5
+END_OS
+
+# Browser ID - Hits
+BEGIN_BROWSER 21
+msie6.0 2
+msie5.01 1
+chrome45.0.2454.99 1
+firefox44.0 46
+firefox2.0.0.1 1
+chrome40.0.2214.111 3
+epiphany 1
+chrome31.0.1650.57 8
+firefox38.0 1
+chrome11.0.696.34 1
+chrome0.4 83
+firefox43.0 121
+firefox37.0 165
+chrome45.0.2454.93 1
+netscape5.0 1
+firefox16.0 11
+chrome37.0.2062.120 61
+safari5.1 4
+chrome41.0.2228.0 7
+msie9.0 1
+Unknown 4
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 3
+Mozilla/5.0 20160215052726
+\ 20160219084000
+Go-http-client/1.1 20160204011157
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 2
+\ 20160219084000
+Go-http-client/1.1 20160204011157
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 87 87
+From1 5 5
+From2 0 0
+From3 18 18
+From4 19 414
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 0
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 9
+http://burger-imperia.com 5 5
+http://hostx.ru 4 4
+http://govnohost.info 2 2
+http://traffic-up.ru 2 2
+http://pizza-imperia.com 1 1
+http://pizza-tycoon.com 1 1
+http://hvd-store.com 1 1
+http://hundejo.com 1 1
+http://keywords.org.ru 1 1
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 5
+403 14 6630
+302 4 2794
+206 1 80425
+301 11 7008
+404 127 2102878
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referer
+BEGIN_SIDER_404 85
+/picard 1 -
+/tosca-blu 1 -
+/admin/content/sitetree/ 1 -
+/bruno-rossi 1 -
+/manager/ 1 -
+/admin.php 11 http://italy-sumochka.ru/admin.php
+/carl-laich 1 -
+/di-gregorio 1 -
+/fabrizio-poker 1 -
+/hayabusa 1 -
+/pollini 1 -
+/coccinelle 1 -
+/admin/login.php 1 http://italy-sumochka.ru/admin/login.php
+/manager/templates/default/css/login-min.css 1 -
+/ripani 1 -
+/wp-admin/ 1 -
+/astronomica 1 -
+/gilda-tonelli 1 -
+/netcat/admin/ 1 -
+/lanzetti 1 -
+/manager/media/script/mootools/mootools.js 1 -
+/mastro-rocco 1 -
+/marina-creazioni 1 -
+/wp-content/ 1 -
+/punishment 1 -
+/tapout 1 -
+/node/ 1 -
+/arcadia 1 -
+/tentazione-due 1 -
+/manager/templates/default/images/style/modx-logo-header.png 1 -
+/twins 1 -
+/qvinto-corridoni 1 -
+/gaude 1 -
+/netcat/admin/skins/default/css/style.css 1 -
+/bitrix/admin 1 http://ITALY-SUMOCHKA.ru/bitrix/admin
+/bitrix/js/main/core/core.css 1 -
+/administrator/ 9 http://italy-sumochka.ru/administrator/
+/images/cms/admin/mac/common/butterfly.png 1 -
+/moschino 1 -
+/io-pelle 1 -
+/wp-login.php 17 http://italy-sumochka.ru/wp-login.php
+/dostavka-i-oplata 1 -
+/stilux 1 -
+/giudi 1 -
+/manager/media/style/MODxCarbon/images/misc/login-logo.png 1 -
+/manager/media/style/MODxCarbon/images/misc/logo.png 1 -
+/netcat/admin/skins/default/css/login.css 1 -
+/manager/templates/default/images/restyle/headers.jpg 1 -
+/bitrix/themes/.default/images/auth_pict.gif 1 -
+/bad-boy 1 -
+/users/forget/ 1 -
+/carlo-salvatelli 1 -
+/templates/system/css/system.css 1 -
+/testserge/admin/login.php 1 http://italy-sumochka.ru/testserge/admin/login.php
+/modules/system/system.base.css 1 -
+/language/en-GB/en-GB.xml 1 -
+/baldinini 1 -
+/gennari-riccardo 1 -
+/mma-elite 1 -
+/wp-admin/admin-ajax.php 1 -
+/cromia 1 -
+/netcat/admin/skins/default/img/logo.png 1 -
+/jean-paul-gaultier 1 -
+/chantal-thomass 1 -
+/modules/system/system.css 1 -
+/guy-de-jean 1 -
+/user/login/ 1 -
+/gironacci 1 -
+/www.zip 1 -
+/bitrix/themes/.default/adminstyles.css 1 -
+/styles/skins/mac/design/css/style.css 1 -
+/users/registrate/ 1 -
+/catalog/mtp_admin/login.php 1 http://italy-sumochka.ru/catalog/mtp_admin/login.php
+/installed 1 -
+/wp-admin/images/wordpress-logo.png 1 -
+/administrator/index.php 5 -
+/ferre 1 -
+/ufc 1 -
+/manager/media/style/MODxCarbon/style.css 1 -
+/wp-admin/css/wp-admin.css 1 -
+/media/system/js/mootools.js 1 -
+/bitrix/admin/ 5 http://italy-sumochka.ru/bitrix/admin/
+/marino-orlandi 1 -
+/site.zip 1 -
+/user/password/ 1 -
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 37
+136.243.48.86 52 52 541448 20160226224036
+188.225.33.150 11 11 785838 20160212052532
+109.188.87.204 7 122 2129237 20160224111933
+88.147.238.103 7 45 591074 20160223003100
+37.1.206.196 6 6 429069 20160228135524
+79.137.223.57 4 4 285657 20160226021654
+194.58.246.1 4 165 2361297 20160205140805
+91.240.85.23 4 4 52027 20160225173240
+37.0.66.126 3 3 39516 20160229215130
+82.117.234.105 2 2 142773 20160210044958
+31.177.83.242 1 1 71383 20160218184134
+213.136.64.63 1 1 71383 20160212020122
+5.9.86.138 1 1 13198 20160215052726
+188.165.79.113 1 1 13120 20160213184453
+120.197.234.164 1 1 71508 20160211115516
+88.147.152.187 1 1 640 20160208010321
+146.148.30.93 1 1 71383 20160224223056
+199.127.226.150 1 1 13198 20160212030352
+92.243.117.198 1 1 71508 20160217172054
+212.33.255.53 1 1 71383 20160229213231
+188.138.33.226 2 2 142891 20160223192709
+46.48.13.161 1 1 71508 20160217085201
+185.100.85.191 1 1 13198 20160208061151
+37.59.123.142 1 1 13198 20160207003644
+46.182.106.190 1 1 13120 20160217121132
+5.228.27.63 1 1 12923 20160201213044
+93.115.95.204 1 1 13120 20160213085801
+5.8.46.65 1 1 13120 20160213190649
+128.74.118.75 1 1 13120 20160211072758
+171.25.193.132 1 1 13198 20160207042334
+185.100.86.128 1 1 13198 20160208160728
+109.120.185.86 1 1 13198 20160204011157
+142.4.206.84 1 1 13198 20160212070516
+193.105.171.119 1 1 13120 20160217061953
+46.164.204.152 1 1 71383 20160215105855
+178.151.182.123 1 1 13198 20160208201425
+93.170.131.6 2 83 2645319 20160215144316
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 26
+20160201 2 2 84431 2
+20160202 1 1 71508 1
+20160203 1 1 71508 1
+20160204 2 2 84581 2
+20160205 11 287 4665561 5
+20160206 1 1 71383 1
+20160207 2 2 26396 2
+20160208 5 5 111617 5
+20160209 1 1 71508 1
+20160210 3 3 214156 2
+20160211 3 3 156136 3
+20160212 5 5 240545 5
+20160213 3 3 39360 3
+20160215 4 85 2729900 3
+20160216 2 2 26043 2
+20160217 4 4 169256 4
+20160218 3 3 85221 3
+20160219 2 2 72148 2
+20160220 1 1 13001 1
+20160221 2 2 143023 1
+20160223 6 44 661302 2
+20160224 2 2 84581 2
+20160225 4 4 52027 1
+20160226 53 53 612831 2
+20160228 4 4 286046 2
+20160229 2 2 84581 2
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 3
+5mn-15mn 1
+30s-2mn 1
+0s-30s 58
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 52
+/ 69 2792397 58 55
+/catalog/view/theme/theme331/fonts/fontawesome-webfont.woff 6 268224 0 4
+/login/ 4 34220 0 1
+/admin/index.php 2 6187 1 0
+/odezhda/delovye-sumki-1/ 1 10328 0 0
+/odezhda-dlya-devushek/ 1 10556 0 0
+/zhenskie-sumki/novinki/ 1 10284 0 0
+/zhenskie-sumki/malenkie-sumochki/ 1 10325 0 0
+/dostavka 1 9949 0 0
+/bokserskie-perchatki-ataka-bgs-508-detskie-ataka 1 15651 0 0
+/brands/ 1 9218 0 0
+/zhenskie-sumki/bolshie-sumki/ 1 10316 0 0
+/contact-us/ 1 9036 0 0
+/perchatki-bokserskie-zhenskie-venum-challenger-pink 1 16099 0 0
+/sitemap/ 1 8829 0 0
+/sales/ 1 10319 0 0
+/vozvrat 1 8091 0 0
+/optovikam 1 8463 0 0
+/discount-form/ 1 8881 0 0
+/zhenskie-sumki/ 1 15422 0 0
+/zhenskie-sumki/klassicheskie-sumki/ 1 10322 0 0
+/discount_form 1 7825 0 0
+/perchatki-bokserskie-detskie-excalibur-model-578-pu 1 15385 0 0
+/alessandro-beato 1 11703 1 0
+/o-nas 1 9071 0 0
+/sertificate 1 7888 0 0
+/catalog/view/theme/theme331/fonts/fontawesome-webfont.ttf 1 80886 0 0
+/kellen 1 13623 0 0
+/discount_cart 1 8593 0 0
+/odezhda/papki-planshety/ 1 10326 0 0
+/search/ 1 10897 0 0
+/create-account/ 1 9943 0 0
+/zhenskie-sumki/delovye-sumki/ 1 10328 0 0
+/odezhda/barsetki-vizitki/ 1 10340 0 0
+/zhenskie-sumki/vintazhnye-sumki/ 1 10326 0 0
+/zhenskie-sumki/sumki-cherez-plecho/ 1 10325 0 0
+/oplata 1 10973 0 0
+/odezhda/portfeli/ 1 10388 0 0
+/zhenskie-sumki/ryukzaki/ 1 10302 0 0
+/table_size 1 7903 0 0
+/tayskie-mazi-masla-sprei/ 1 10235 0 0
+/zhenskie-sumki/sumki-s-printami/ 1 10343 0 0
+/index.php 1 8799 0 0
+/zhenskie-sumki/sumki-premium/ 1 10334 0 0
+/sumki-ryukzaki/ 1 10404 0 0
+/we-found-cheaper 1 8511 0 0
+/ab103-2755-08-fiori-chanel 1 15085 0 0
+/odezhda-dlya-detej/ 1 13950 0 0
+/odezhda/ 1 10532 0 0
+/garantii 1 10987 0 0
+/forgot-password/ 1 8293 0 0
+/novosti/ 1 8329 0 0
+END_SIDER

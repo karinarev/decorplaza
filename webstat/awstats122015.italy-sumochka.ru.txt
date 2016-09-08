@@ -1,0 +1,421 @@
+AWSTATS DATA FILE 7.0 (build 1.971)
+# If you remove this file, all statistics for date 201512 will be lost/reset.
+# Last config file used to build this data file was /etc/awstats/awstats.italy-sumochka.ru.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 27
+POS_GENERAL 1997                
+POS_TIME 2669                
+POS_VISITOR 9020                
+POS_DAY 10908               
+POS_DOMAIN 3504                
+POS_LOGIN 3735                
+POS_ROBOT 3890                
+POS_WORMS 4062                
+POS_EMAILSENDER 4193                
+POS_EMAILRECEIVER 4336                
+POS_SESSION 11660               
+POS_SIDER 11834               
+POS_FILETYPES 4471                
+POS_DOWNLOADS 4735                
+POS_OS 4833                
+POS_BROWSER 4953                
+POS_SCREENSIZE 5507                
+POS_UNKNOWNREFERER 5581                
+POS_UNKNOWNREFERERBROWSER 5806                
+POS_ORIGIN 5999                
+POS_SEREFERRALS 6138                
+POS_PAGEREFS 6293                
+POS_SEARCHWORDS 6692                
+POS_KEYWORDS 6844                
+POS_MISC 2332                
+POS_ERRORS 6903                
+POS_CLUSTER 3591                
+POS_SIDER_404 7023                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20160101004349 1 0 8170882407210
+FirstTime 20151201034511
+LastTime 20151231184654
+LastUpdate 20160102000103 1 0 0 0 0
+TotalVisits 116                 
+TotalUnique 45                  
+MonthHostsKnown 0                   
+MonthHostsUnknown 47                  
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 14 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 8 10 325575 19 2626 2059067
+1 20 20 328958 4 1871 1058159
+2 55 55 1868451 23 471 512624
+3 35 35 623340 8 8 274102
+4 38 38 770746 10 11 320388
+5 34 34 490005 5 5 136852
+6 29 29 194682 1 1 729
+7 33 33 364298 10 10 226277
+8 39 134 2291150 7 9 90439
+9 30 38 199032 10 446 695558
+10 28 32 123112 1 2193 1082022
+11 31 63 224597 7 9183 4579117
+12 32 126 1959588 13 10019 5080421
+13 34 38 490206 2 8185 4039547
+14 29 30 203259 9 8103 4282710
+15 28 28 196174 7 8225 4091155
+16 33 35 255498 5 8187 4072047
+17 33 39 372390 6 6706 3500978
+18 30 42 871555 3 4205 2119469
+19 28 28 199061 7 2344 1234921
+20 32 32 476200 12 637 719163
+21 16 22 193142 4 1359 805806
+22 1 1 13120 8 1869 1282192
+23 4 8 227729 8 2645 1492669
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 1
+ip 680 950 13261868
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 1
+no_user_agent 2 142891 20151219095508 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 11
+css 36 147274 0 0
+png 51 782965 0 0
+txt 3 2031 0 0
+woff 2 89408 0 0
+php 551 2411156 0 0
+html 123 6512675 0 0
+js 64 624295 0 0
+jpg 103 2616642 0 0
+jpeg 9 10218 0 0
+Unknown 4 46436 0 0
+gif 4 18768 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 1
+/catalog/view/javascript/jquery/name.txt 3 0 2031
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS 8
+winxp 603
+winnt 4
+linux 15
+winvista 172
+win7 145
+macosx 4
+bsdfreebsd 1
+Unknown 6
+END_OS
+
+# Browser ID - Hits
+BEGIN_BROWSER 31
+msie6.0 5
+chrome45.0.2454.99 1
+firefox40.0 13
+chrome23.0.1271.64 1
+firefox42.0 99
+chrome22.0.1229.79 3
+firefox10.0.1 2
+chrome31.0.1650.57 8
+firefox38.0 1
+firefox12.0 1
+opera9.80 549
+msie8.0 2
+opera10.00 1
+firefox33.0 1
+chrome45.0.2454.101 5
+chrome47.0.2526.106 2
+netscape5.0 1
+firefox37.0 1
+firefox43.0 91
+firefox3.0.6 1
+chrome37.0.2062.120 14
+firefox23.0 1
+firefox16.0 30
+safari5.1 4
+firefox41.0 2
+chrome46.0.2490.86 79
+chrome31.0.1650.16 2
+chrome41.0.2228.0 23
+Unknown 5
+firefox11.0 1
+firefox3.6.13 1
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 3
+Mozilla/5.0 20151229050931
+Go-http-client/1.1 20151226014747
+kupit_kvartiru_v_sankt-peterburge_spbkvt_http://www.spbkvt.ru 20151229034911
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 2
+Go-http-client/1.1 20151226014747
+kupit_kvartiru_v_sankt-peterburge_spbkvt_http://www.spbkvt.ru 20151229034911
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 616 711
+From1 6 6
+From2 2 2
+From3 36 36
+From4 20 195
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 1
+google 2 2
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 9
+http://regidium.ru 17 17
+http://hostx.ru 6 6
+http://burger-imperia.com 3 3
+http://binary-money.biz 3 3
+http://pizza-imperia.com 2 2
+https://webantivirus.net 2 2
+https://mawords.com/italy-sumochka.ru 1 1
+http://hvd-store.com 1 1
+http://hundejo.com 1 1
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 3
+403 37 17493
+404 79230 43556213
+301 35 21144
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referer
+BEGIN_SIDER_404 38
+/drupal 1 http://italy-sumochka.ru/drupal
+/picard 1 -
+/image/cache/data/brands/logo_breakpoint-120x120.png 7910 http://italy-sumochka.ru/
+/image/cache/data/brands/contract-killer_logo-120x120.jpg 7910 http://italy-sumochka.ru/
+/user 1 -
+/manager/ 1 http://italy-sumochka.ru/manager/
+/admin.php 31 -
+/image/cache/data/brands/virus-logo-120x120.png 7911 http://italy-sumochka.ru/
+/coccinelle 1 -
+/wp-content/plugins/revslider/js/rev_admin.js 1 -
+/carlo-salvatelli 1 -
+/gennari-riccardo 1 -
+/mma-elite 1 -
+/image/cache/data/brands/training-mask-logo-120x120.png 7910 http://italy-sumochka.ru/
+/wp-admin/ 1 -
+/cromia 1 -
+/image/cache/data/brands/4-120x120.jpg 7911 http://italy-sumochka.ru/
+/joomla 1 http://italy-sumochka.ru/joomla
+/wordpress 1 http://italy-sumochka.ru/wordpress
+/blog 1 http://italy-sumochka.ru/blog
+/image/cache/data/brands/venum-120x120.jpg 7912 http://italy-sumochka.ru/
+/admin/wp-login.php 1 http://italy-sumochka.ru/admin/wp-login.php
+/gironacci 1 -
+/image/cache/data/brands/clinch-gear-120x120.jpg 7911 http://italy-sumochka.ru/
+/media/system/css/system.css 1 -
+/cache.php 1 -
+/administrator/index.php 24 -
+/qvinto-corridoni 1 -
+/wp 1 http://italy-sumochka.ru/wp
+/image/cache/data/brands/kimurawear-logo-120x120.png 7910 http://italy-sumochka.ru/
+/administrator/ 9 http://italy-sumochka.ru/administrator/
+/component/users/ 1 ITALY-SUMOCHKA.RU/component/users/
+/image/cache/data/brands/flamma%20logo-120x120.jpg 7910 http://italy-sumochka.ru/
+/bitrix/admin/ 5 http://italy-sumochka.ru/bitrix/admin/
+/default.php 1 http://italy-sumochka.ru/default.php
+/io-pelle 1 -
+/wp-login.php 34 -
+/image/cache/data/brands/logo-ranger-up-120x120.gif 7909 http://italy-sumochka.ru/
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 47
+5.61.36.119 548 548 2409942 20151204212239
+188.225.33.150 30 30 2143990 20151230235909
+79.137.223.57 22 22 1572051 20151230022817
+92.243.117.198 7 7 500397 20151231084733
+93.73.141.135 5 5 357540 20151217173757
+109.188.87.204 4 141 1840121 20151225122828
+109.120.185.86 4 4 52636 20151226014747
+92.249.104.63 4 4 52027 20151231160223
+109.174.112.225 4 99 1857615 20151202085040
+37.1.206.196 4 4 286046 20151204042603
+136.243.48.86 1 1 13623 20151231074003
+142.4.213.25 1 1 13120 20151230002032
+194.44.128.142 2 2 26289 20151230112922
+185.97.253.31 2 2 142773 20151223073656
+37.57.231.111 2 2 142958 20151228055640
+31.177.83.242 1 1 71508 20151221134859
+162.244.33.8 2 2 84628 20151230142026
+91.210.147.185 2 2 143023 20151230205213
+136.243.48.85 1 1 15651 20151231081325
+62.75.222.153 1 1 13120 20151230171101
+213.24.135.40 1 1 71508 20151224211501
+136.243.48.83 2 2 17162 20151231011140
+89.208.147.138 1 1 71508 20151203134449
+190.75.83.61 1 1 13198 20151213072631
+46.165.193.144 1 1 71383 20151206172730
+94.242.228.108 1 1 13198 20151227194001
+46.243.173.23 1 1 13198 20151213130128
+77.247.181.165 2 2 26318 20151222053410
+188.163.78.5 1 1 684 20151226121429
+193.90.12.89 1 1 13198 20151219160523
+80.93.49.174 1 1 684 20151229050931
+195.208.48.114 1 10 672264 20151209182155
+46.150.95.63 2 2 22234 20151223003034
+52.29.190.37 3 3 1680 20151222213345
+5.228.27.63 1 1 12943 20151226021147
+194.58.246.1 1 1 713 20151222130839
+92.241.245.126 1 1 71508 20151217082507
+5.141.224.68 1 1 71508 20151209113657
+82.223.23.52 1 1 13120 20151212011831
+188.191.23.132 1 1 13120 20151222224928
+221.3.86.55 1 1 71383 20151229034911
+93.85.23.42 1 1 71508 20151212165840
+91.144.175.44 2 2 143032 20151224091555
+5.228.24.162 0 24 0 
+193.90.12.87 1 1 13198 20151214124602
+136.243.48.84 3 3 32560 20151231184654
+83.220.237.199 0 5 0 
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 31
+20151201 1 11 71508 1
+20151202 7 118 2013751 4
+20151203 5 19 357547 4
+20151204 552 561 2695981 4
+20151205 3 15 214532 3
+20151206 4 10 227347 4
+20151207 3 15 214524 3
+20151208 1 1 71383 1
+20151209 5 14 958296 5
+20151210 2 2 84628 2
+20151211 2 2 143016 2
+20151212 3 3 156136 3
+20151213 3 3 97779 3
+20151214 2 2 84581 2
+20151215 4 4 227347 4
+20151216 4 4 286084 4
+20151217 4 4 286032 4
+20151218 3 3 156136 3
+20151219 4 4 227365 4
+20151220 4 4 227381 4
+20151221 3 3 214524 3
+20151222 8 8 171649 6
+20151223 5 5 236390 3
+20151224 4 4 286040 4
+20151225 5 92 1970017 3
+20151226 5 5 169591 5
+20151227 3 3 155964 3
+20151228 6 6 429068 5
+20151229 5 5 225159 5
+20151230 11 11 431287 9
+20151231 9 9 170825 6
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 4
+1h+ 1
+30s-2mn 1
+2mn-5mn 1
+0s-30s 113
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 13
+/admin/index.php 548 2409942 1 1
+/ 119 6483622 108 106
+/catalog/view/theme/theme331/fonts/fontawesome-webfont.woff 2 89408 0 0
+/contact-us/ 2 18072 1 2
+/odezhda/papki-planshety/ 1 10326 1 1
+/administrator/ 1 655 0 0
+/bokserskie-perchatki-ataka-bgs-508-detskie-ataka 1 15651 1 1
+/admin.php 1 312 0 1
+/3%D1%81.php 1 189 0 1
+/wp-login.php 1 713 1 0
+/o-nas 1 9071 1 1
+/kellen 1 13623 1 1
+/vozvrat 1 8091 1 1
+END_SIDER

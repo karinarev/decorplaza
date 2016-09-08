@@ -1,0 +1,10 @@
+            
+/* NextPrevLinks */
+.links_navi {width:100%; overflow:hidden; border-collapse:collapse;}
+.links_navi a {color:#999999; text-decoration:none;}
+
+.links_prev,     .links_next     {overflow:hidden; vertical-align:text-top;}
+.links_prev div, .links_next div {overflow:hidden; width:300px; margin-left:10px; margin-right:10px;}
+.links_prev a,   .links_next a   {white-space:nowrap;}
+.links_prev_i {width:20px; background:url('../image/nextprev/prev.png') center no-repeat;}
+.links_next_i {width:20px; background:url('../image/nextprev/next.png') center no-repeat;}

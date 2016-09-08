@@ -1,0 +1,195 @@
+.btn{
+    box-shadow: none !important;
+}
+
+#slideshow-carousel{
+    background: none;
+    height: 450px;
+    position: relative;
+}
+
+.full-screen {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+#slideshow-carousel .item .image-background{
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 450px;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+}
+
+#slideshow-carousel .item .slide-img{
+    width: 100%;
+    height: 450px;
+}
+
+/*#slideshow-carousel .item .carousel-caption{
+    top: 85px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    text-align: center;
+    text-shadow: none;
+}*/
+
+#slideshow-carousel .item .button-area{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 45px;
+}
+
+#slideshow-carousel .item .carousel-caption .name{
+    color: #f4f4f4;
+    font-family: "BodoniItalic";
+    font-style: italic;
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+#slideshow-carousel .item .carousel-caption .divider{
+    border: 2px solid #f4f4f4;
+    margin-bottom: 0px ;
+    margin-top: 40px;
+}
+
+#slideshow-carousel .item .carousel-caption .description{
+    color: #f4f4f4;
+    line-height: 68px;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+#slideshow-carousel .item .carousel-caption .year{
+    color: #f4f4f4;
+    line-height: 68px;
+    text-transform: uppercase;
+    font-size: 70px;
+    font-weight: 700;
+}
+
+
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img{
+    max-width: none;
+}
+
+#slideshow-carousel .item .button-area .btn-more{
+    width: 270px;
+    height: 50px;
+    border: 2px solid #c49849;
+    border-radius: 25px;
+    background: none;
+
+    color: #c49849;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: 15px;
+}
+
+#slideshow-carousel .item .button-area .btn-more:hover{
+    background-color: #c49849;
+    color: #f4f4f4;
+}
+
+#slideshow-carousel .item .button-area .btn-more:focus{
+    outline: none !important;
+}
+
+.divider{
+    width: 94px;
+    height: 2px;
+    border: 2px solid #1b1b1b;
+    margin: 25px auto;
+}
+
+.chevron-white {
+    background: url(../image/icons/chevron-white.png);
+}
+
+.chevron-gray{
+    background: url(../image/icons/chevron-gray.png);
+}
+
+.chevron-left{
+    width: 17px;
+    height: 31px;
+    position: relative;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.chevron-right{
+    width: 17px;
+    height: 31px;
+    -moz-transform: rotate(180deg); /* Для Firefox */
+    -ms-transform: rotate(180deg); /* Для IE */
+    -webkit-transform: rotate(180deg); /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(180deg); /* Для Opera */
+    transform: rotate(180deg);
+    position: relative;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.carousel-control {
+    width: 0;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    background-image: none;
+    background-repeat: no-repeat;
+    text-shadow: none;
+}
+
+.carousel-control.left i {
+    padding-left: 50px;
+    margin-left: 20px;
+}
+
+.carousel-control.right i {
+    padding-right: 50px;
+    margin-right: 20px;
+}
+
+.carousel-control .chevron-left,
+.carousel-control .chevron-right,
+.carousel-control .icon-prev,
+.carousel-control .icon-next {
+    position: absolute;
+    top: 45%;
+    z-index: 5;
+    display: inline-block;
+}
+
+.carousel-control .chevron-left,
+.carousel-control .icon-prev {
+    left: 0;
+}
+
+.carousel-control .chevron-right,
+.carousel-control .icon-next {
+    right: 0;
+}
+
+.carousel-control.left i:hover,
+.carousel-control.right i:hover {
+    opacity: .7;
+    filter: alpha(opacity=70);
+}

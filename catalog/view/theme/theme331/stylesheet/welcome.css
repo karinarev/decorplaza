@@ -1,0 +1,67 @@
+.text-title h2{
+    margin-top: 80px;
+    color: #c49849;
+    font-family: "OpenSans";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.text-title h3{
+    width: 415px;
+    margin: auto;
+    line-height: normal;
+    color: #1b1b1b;
+    font-family: "BodoniItalic";
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.text-description {
+    margin: 55px auto;
+    text-align: justify;
+    width: 1150px;
+
+    -webkit-column-width: auto;
+    -moz-column-width: auto;
+    column-width: auto;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+
+    color: #1b1b1b;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    font-family: "OpenSans";
+}
+
+.divider{
+    width: 94px;
+    height: 2px;
+    border: 2px solid #1b1b1b;
+    margin: 25px auto;
+}
+
+.text-description a{
+    font-family: "OpenSans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.text-description a:link,
+.text-description a:active{
+    color: #b68020;
+    text-decoration: underline;
+}
+
+.text-description a:visited{
+    color: #777;
+    text-decoration: underline;
+}
