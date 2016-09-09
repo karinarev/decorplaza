@@ -2,7 +2,7 @@
 class ControllerModuleFilter extends Controller {
 	protected function index($setting) {
 
-		$this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/filter.css');
+		$this->document->addStyle('catalog/view/theme/theme331/stylesheet/filter.css');
 		$this->document->addStyle('catalog/view/javascript/jquery/customscrollbar/jquery.mCustomScrollbar.min.css');
 		$this->document->addScript('catalog/view/javascript/jquery/customscrollbar/jquery.mCustomScrollbar.concat.min.js');
 

@@ -10,8 +10,8 @@ class ControllerModuleProductquestion extends Controller {
 	
 	public function index() {
 		$this->document->addScript('catalog/view/javascript/productquestion.js');
-		if (file_exists('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/productquestion.css')) {
-			$this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/productquestion.css');
+		if (file_exists('catalog/view/theme/theme331/stylesheet/productquestion.css')) {
+			$this->document->addStyle('catalog/view/theme/theme331/stylesheet/productquestion.css');
 		} else {
 			$this->document->addStyle('catalog/view/theme/default/stylesheet/productquestion.css');
 		}
@@ -215,8 +215,8 @@ class ControllerModuleProductquestion extends Controller {
 			
 		$this->data['pagination'] = $pagination->render();
 		
-		if (file_exists('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/productquestion.css')) {
-			$this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/productquestion.css');
+		if (file_exists('catalog/view/theme/theme331/stylesheet/productquestion.css')) {
+			$this->document->addStyle('catalog/view/theme/theme331/stylesheet/productquestion.css');
 		} else {
 			$this->document->addStyle('catalog/view/theme/default/stylesheet/productquestion.css');
 		}

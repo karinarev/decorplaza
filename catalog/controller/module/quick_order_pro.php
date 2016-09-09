@@ -187,7 +187,7 @@ class ControllerModuleQuickOrderPro extends Controller {
 		$this->document->addScript('catalog/view/javascript/quick_order_pro/quick_order_pro.js');
 		
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/stylesheet/quick_order_pro.css')) {
-			$this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/quick_order_pro.css');
+			$this->document->addStyle('catalog/view/theme/theme331/stylesheet/quick_order_pro.css');
 		} else {
 			$this->document->addStyle('catalog/view/theme/default/stylesheet/quick_order_pro.css');
 		}

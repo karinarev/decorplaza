@@ -73,8 +73,8 @@ class SoforpController extends Controller {
     }
 
     protected function addThemeStyle($file){
-        if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/stylesheet/' . $file)) {
-            $this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/' . $file );
+        if (file_exists(DIR_TEMPLATE . 'theme331/stylesheet/' . $file)) {
+            $this->document->addStyle('catalog/view/theme/theme331/stylesheet/' . $file );
         } else {
             $this->document->addStyle('catalog/view/theme/default/stylesheet/' . $file);
         }

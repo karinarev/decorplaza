@@ -94,3 +94,32 @@ h3{
 
 
 
+@media all and (max-width: 1279px){
+    h3{
+        font-size: 32px;
+    }
+
+    #content {
+        width: 830px;
+    }
+
+    .alphabet .col-md-2{
+        width: 200px;
+        padding-right: 0;
+    }
+
+    .alphabet .col-md-10{
+        width: 630px;
+    }
+
+
+
+}
+
+@media all and (max-width: 767px) {
+
+}
+
+
+
+

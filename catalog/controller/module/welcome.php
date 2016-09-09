@@ -4,8 +4,8 @@ class ControllerModuleWelcome extends Controller {
 
 		$this->language->load('module/welcome');
 
-		if (file_exists('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/welcome.css')) {
-			$this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/welcome.css');
+		if (file_exists('catalog/view/theme/theme331/stylesheet/welcome.css')) {
+			$this->document->addStyle('catalog/view/theme/theme331/stylesheet/welcome.css');
 		} else {
 			$this->document->addStyle('catalog/view/theme/default/stylesheet/welcome.css');
 		}

@@ -7,8 +7,8 @@ class ControllerModuleXDCategoryGroups extends Controller {
             
             //$this->data['heading_title'] = $this->language->get('heading_title');
             
-            if (file_exists('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/XDCategoryGroups.css')) {
-                    $this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/XDCategoryGroups.css');
+            if (file_exists('catalog/view/theme/theme331/stylesheet/XDCategoryGroups.css')) {
+                    $this->document->addStyle('catalog/view/theme/theme331/stylesheet/XDCategoryGroups.css');
             } else {
                     $this->document->addStyle('catalog/view/theme/default/stylesheet/XDCategoryGroups.css');
             }

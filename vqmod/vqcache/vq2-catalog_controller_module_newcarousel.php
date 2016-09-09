@@ -6,9 +6,9 @@ class ControllerModuleNewcarousel extends Controller {
 		$this->load->model('design/banner');
 		$this->load->model('tool/image');
 		
-		$this->document->addScript('catalog/view/theme/' . $this->config->get('config_template') . '/js/sl/jquery.mobile.customized.min.js');
-		$this->document->addScript('catalog/view/theme/' . $this->config->get('config_template') . '/js/sl/camera.js');
-		$this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/camera.css');
+		$this->document->addScript('catalog/view/theme/theme331/js/sl/jquery.mobile.customized.min.js');
+		$this->document->addScript('catalog/view/theme/theme331/js/sl/camera.js');
+		$this->document->addStyle('catalog/view/theme/theme331/stylesheet/camera.css');
 				
 		$this->data['width'] = $setting['width'];
 		$this->data['height'] = $setting['height'];
