@@ -283,10 +283,12 @@
 						btn.removeClass('shopping').addClass('empty-gold');
 					}
 					if(!$.isEmptyObject(data)) {
+						btn.removeClass('shopping').addClass('empty-gold');
 						$(btn).html(quantity);
 					}
 					else{
 						$(btn).removeClass('empty-gold').addClass('shopping');
+						$(btn).html("");
 					}
 
 				}

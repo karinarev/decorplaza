@@ -1,4 +1,4 @@
-<h2>Корзина покупок</h2>
+<h2 id="cart-header">Корзина покупок</h2>
 <div class="cart-area">
 <?php if ($attention) { ?>
 <div class="simplecheckout-warning-block"><?php echo $attention; ?></div>
@@ -70,14 +70,14 @@
             <small><?php echo $product['reward']; ?></small>
             <?php } ?>
         </td>
-        <td class="price"><nobr><?php echo $product['price']; ?></nobr></td>
+        <td class="price"><p class="mobile-name">Цена</p><nobr><?php echo $product['price']; ?></nobr></td>
         <td class="quantity">
             <input hidden class="product_id" name="quantity[<?php echo $product['key']; ?>]" value="<?php echo $product['quantity']; ?>" style="display:none;"/>
             <a <?php if ($quantity > 1) { ?>onclick="minus(this)"<?php } ?> type="button" class="btn btn-minus"><span>&ndash;</span></a>
             <span class="cart-amount-text qt" name="quainty"><?php echo $product['quantity']; ?></span>
             <a onclick="plus(this)"  type="button" class="btn btn-plus"><span>+</span></a>
        </td>
-        <td class="total"><nobr><?php echo $product['total']; ?></nobr></td>
+        <td class="total"><p class="mobile-name">Сумма</p><nobr><?php echo $product['total']; ?></nobr></td>
         <td class="remove">
             <a type="button" class="btn btn-delete" onclick="jQuery('#simplecheckout_remove').val('<?php echo $product['key']; ?>');simplecheckout_reload('product_removed');"><span>&times;</span></a>
         </td>
@@ -103,21 +103,21 @@
             <div class="simplecheckout-cart-promo">
                 <label for="input-promo" class="cart-promo-label">Введите промокод:</label>
                 <input type="text"  id="input-promo" class="form-control input-promo" name="coupon" value="<?php echo $coupon; ?>" onchange="simplecheckout_reload('coupon_changed')"  />
-                <br><button class="btn-promo btn">Применить промокод</button>
+                <div><button class="btn-promo btn">Применить промокод</button></div>
             </div>
             <?php } ?>
             <?php if (isset($modules['reward']) && $points > 0) { ?>
             <div class="simplecheckout-cart-promo">
                 <label for="input-promo" class="cart-promo-label">Введите промокод:</label>
                 <input type="text" id="input-promo" class="form-control input-promo" name="reward" value="<?php echo $reward; ?>" onchange="simplecheckout_reload('reward_changed')"  />
-                <br><button class="btn-promo btn">Применить промокод</button>
+                <div><button class="btn-promo btn">Применить промокод</button></div>
             </div>
             <?php } ?>
             <?php if (isset($modules['voucher'])) { ?>
             <div class="simplecheckout-cart-promo">
                 <label for="input-promo" class="cart-promo-label">Введите промокод:</label>
                 <input type="text"  id="input-promo" class="form-control input-promo" name="voucher" value="<?php echo $voucher; ?>" onchange="simplecheckout_reload('voucher_changed')"  />
-                <br><button class="btn-promo btn">Применить промокод</button>
+                <div><button class="btn-promo btn">Применить промокод</button></div>
             </div>
             <?php } ?>
               </td>
@@ -126,7 +126,7 @@
                 <?php foreach ($totals as $total) { ?>
                 <tr>
                     <th class="text-left"><?php echo $total['title']; ?>:</th>
-                    <td class="text-left"><?php echo $total['text']; ?></td>
+                    <td class="text-left"><nobr><?php echo $total['text']; ?></nobr></td>
                 </tr>
                 <?php } ?>
             </table>

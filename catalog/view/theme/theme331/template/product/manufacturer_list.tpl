@@ -4,10 +4,10 @@
   <h3><?php echo $heading_title; ?></h3>
   <?php if ($categories) { ?>
   <div class="row alphabet">
-    <div class="col-md-2"><?php echo $text_index; ?> </div>
-    <div class="col-md-10">
+    <div class="col-md-2 col-sm-2 col-xs-12"><?php echo $text_index; ?> </div>
+    <div class="col-md-10 col-sm-10 col-xs-12">
       <?php foreach ($categories as $category) { ?>
-      &nbsp;<a href="/brands/#<?php echo $category['name']; ?>"><?php echo $category['name']; ?></a>
+      <a href="/brands/#<?php echo $category['name']; ?>"><?php echo $category['name']; ?></a>
       <?php } ?>
     </div>
   </div>

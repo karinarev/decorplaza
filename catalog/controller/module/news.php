@@ -25,7 +25,7 @@ class ControllerModuleNews extends Controller {
 		$this->data['icon'] = $this->config->get($this->_name . '_icon');
 		$this->data['box'] = $this->config->get($this->_name . '_box');
 
-		$this->document->addStyle('catalog/view/theme/theme331/stylesheet/news.css');
+		$this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/news.css');
 	
 		$this->load->model('catalog/news');
 	

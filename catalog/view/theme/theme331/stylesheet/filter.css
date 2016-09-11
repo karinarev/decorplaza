@@ -168,3 +168,23 @@
 .mCSB_scrollTools .mCSB_dragger:active  .mCSB_dragger_bar{
     background-color: #c49849;
 }
+
+@media all and (max-width: 1279px) {
+
+    .btn-filter{
+        width: 175px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .filter-panel .panel-footer{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+}
+
+@media all and (max-width: 767px) {
+
+}

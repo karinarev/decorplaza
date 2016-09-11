@@ -27,7 +27,7 @@ class ControllerInformationNews extends Controller {
 	
 		if ($news_info) {
 
-			$this->document->addStyle('catalog/view/theme/theme331/stylesheet/news.css');
+			$this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/news.css');
 			$this->document->addStyle('catalog/view/javascript/jquery/colorbox/colorbox.css');
 		
 			$this->document->addScript('catalog/view/javascript/jquery/colorbox/jquery.colorbox-min.js');

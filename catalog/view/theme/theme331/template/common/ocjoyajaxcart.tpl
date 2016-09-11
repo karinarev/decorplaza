@@ -132,11 +132,6 @@
 <script type="text/javascript">
 
 
-function updateCart(id) {
-	$('#ajaxcartloadimg').show();
-	$('.quantity-p').click();
-}
-
 function plus(id){
 	var textSpan = $(id).siblings('.cart-amount-text');
 	var quantity = +(textSpan.text());

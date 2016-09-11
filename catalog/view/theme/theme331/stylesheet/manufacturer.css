@@ -117,6 +117,65 @@ h3{
 }
 
 @media all and (max-width: 767px) {
+    h3{
+        font-size: 24px;
+    }
+
+    .alphabet{
+        margin-top: 0;
+    }
+
+    .alphabet .col-md-10{
+        width: auto;
+    }
+
+    .alphabet .col-xs-12{
+        margin: auto;
+        width: 100%;
+    }
+
+    .alphabet .col-xs-12:first-child{
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    #content {
+        width: 100%;
+        margin: auto;
+        padding-right: 0;
+    }
+
+    .category-divider{
+        width: 95%;
+        margin: auto;
+    }
+
+    .category-name{
+        font-size: 48px;
+    }
+
+    .category-image{
+        width: 73px;
+        height: 73px;
+    }
+
+    .category-aria{
+        width: 73px;
+    }
+
+    .category-col{
+        width: 100px;
+    }
+
+    .category-row{
+        padding-left: 25px;
+    }
+
+
+
+
+
+
 
 }
 

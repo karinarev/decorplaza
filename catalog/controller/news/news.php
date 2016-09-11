@@ -1,7 +1,7 @@
 ﻿<?php  
 class ControllerNewsNews extends Controller {
 	public function index() {
-		$this->document->addStyle('catalog/view/theme/theme331/stylesheet/news.css');
+		$this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/news.css');
 
 		$this->document->setTitle("Наши новости - ".$this->config->get('config_title'));
 		//$this->document->setDescription($this->config->get('config_meta_description'));
