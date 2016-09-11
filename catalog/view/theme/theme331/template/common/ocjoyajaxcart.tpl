@@ -70,6 +70,7 @@
       		</div>
     </div>
 
+
     <div id="ajaxcheckout">
     	<a onclick="$.colorbox.close();" id="gotoshopping" type="button" class="btn"><?php echo $text_gotoshipping; ?></a>
     	<a href="<?php echo $checkout; ?>" id="gotoorder" type="button" class="btn"><?php echo $text_gotoorder; ?></a>

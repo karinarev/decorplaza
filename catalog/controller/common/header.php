@@ -1,6 +1,7 @@
 <?php   
 class ControllerCommonHeader extends Controller {
 	protected function index() {
+
 		$this->data['title'] = $this->document->getTitle();
 
 		if (isset($this->request->server['HTTPS']) && (($this->request->server['HTTPS'] == 'on') || ($this->request->server['HTTPS'] == '1'))) {
@@ -66,7 +67,6 @@ class ControllerCommonHeader extends Controller {
 		$this->data['shopping_cart'] = $this->url->link('checkout/cart');
 		$this->data['checkout'] = $this->url->link('checkout/checkout', '', 'SSL');
 		$this->data['news'] = $this->url->link('news/news', '', 'SSL');
-		$this->data['contact'] = $this->url->link('information/contact');
 
 		// Daniel's robot detector
 		$status = true;

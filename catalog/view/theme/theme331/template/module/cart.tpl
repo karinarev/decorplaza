@@ -1,8 +1,9 @@
 <div id="cart" onclick="location.href='/shopping-cart/'">
 
+
   <div class="heading">
-	<span class="link_a" onclick="location.href='/shopping-cart/'"> 
-		<i class="fa cartIcon"></i>
+	<span class="link_a" onclick="location.href='/shopping-cart/'">
+		<i class="fa fa-shopping-cart"></i>
 		<b><?php echo $heading_title; ?></b>
 		<span class="sc-button"></span>
 		<span id="cart-total2"><?php echo $text_items2; ?></span>
@@ -11,14 +12,14 @@
 		<span class="clear"></span>
 		</span>
 	</div>
-	
+
   <div class="content">
   <div class="content-scroll">
-	
+
 	<?php
-	
-	 if ($products || $vouchers) { 
-	 
+
+	 if ($products || $vouchers) {
+
 	 ?>
 	 <span class="latest-added"><?php echo $text_latest_added;?></span>
 	<br /><br />
@@ -44,7 +45,7 @@
 			  </td>
 		  <!--td class="quantity">x&nbsp;<?php //echo $product['quantity']; ?></td-->
 		  <!--td class="total"><?php //echo $product['total']; ?></td-->
-		  
+
 		</tr>
 		<?php } ?>
 		<?php foreach ($vouchers as $voucher) { ?>
@@ -55,7 +56,7 @@
 			</td>
 		  <!--<td class="quantity">x&nbsp;1</td>-->
 		  <!--<td class="total"><?php echo $voucher['amount']; ?></td>-->
-		  
+
 		</tr>
 		<?php } ?>
 	  </table>
@@ -65,14 +66,14 @@
 		<?php foreach ($totals as $total) { ?>
 		<tr>
 		  <td align="left" class="total-left"><b><?php echo $total['title']; ?>:</b></td>
-         
+
 		  <td align="right" class="total-right"><span class="t-price"><?php echo $total['text']; ?></span></td>
 		</tr>
 		<?php } ?>
 	  </table>
 	</div>
 	<div class="checkout">
-			<a class="button" href="<?php echo $cart; ?>"><span><?php echo $text_cart; ?></span></a> 
+			<a class="button" href="<?php echo $cart; ?>"><span><?php echo $text_cart; ?></span></a>
 			<a class="button" href="<?php echo $checkout; ?>"><span><?php echo $text_checkout; ?></span></a>
 	</div>
 	<?php } else { ?>

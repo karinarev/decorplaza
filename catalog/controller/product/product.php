@@ -1,13 +1,10 @@
-<?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
+<?php  
 class ControllerProductProduct extends Controller {
-	private $error = array();
+	private $error = array(); 
 	
-	public function index() {
+	public function index() { 
 		$this->language->load('product/product');
-
+	
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
@@ -38,7 +35,7 @@ class ControllerProductProduct extends Controller {
 					$this->data['breadcrumbs'][] = array(
 						'text'      => $category_info['name'],
 						'href'      => $this->url->link('product/category', 'path=' . $path),
-						'separator' => ''
+						'separator' => $this->language->get('text_separator')
 					);
 				}
 			}
@@ -168,9 +165,7 @@ class ControllerProductProduct extends Controller {
 		} else {
 			$product_id = 0;
 		}
-
-		$data['query'] =
-
+		
 		$this->load->model('catalog/product');
 		
 		$product_info = $this->model_catalog_product->getProduct($product_id);
@@ -241,7 +236,8 @@ class ControllerProductProduct extends Controller {
 				$price = number_format($this->tax->calculate($product_info['price'], $product_info['tax_class_id'], $this->config->get('config_tax')),0, ".", " ");
 				$price_nomber = $this->tax->calculate($product_info['price'], $product_info['tax_class_id'], $this->config->get('config_tax'));
 			}
-
+			
+			
 			
 			$data = array(
 					'filter_category_id' => $category_info['category_id']
@@ -275,7 +271,7 @@ class ControllerProductProduct extends Controller {
 					$products_analog_arr[$w]['product_id'] = $product_analog['product_id'];
 					$products_analog_arr[$w]['url'] = $this->url->link('product/product&product_id=' . $product_analog['product_id']);
 					//$products_analog_arr[$w]['options'] = $product_analog['options'];
-
+					
 					/****/
 					
 			foreach ($this->model_catalog_product->getProductOptions($product_analog['product_id']) as $analog_option) { 
@@ -304,7 +300,7 @@ class ControllerProductProduct extends Controller {
 							);
 						}
 					}
-
+					
 					$analog_options[] = array(
 						'product_option_id' => $analog_option['product_option_id'],
 						'option_id'         => $analog_option['option_id'],
@@ -337,7 +333,7 @@ class ControllerProductProduct extends Controller {
 				}
 				$w++;
 			}
-
+			
 			$products_analog = array();
 			if (count($products_analog_arr) > $razm) {
 				
@@ -392,6 +388,9 @@ class ControllerProductProduct extends Controller {
 			
 			$this->document->setKeywords($product_info['meta_keyword']);
 			$this->document->addLink($this->url->link('product/product', 'product_id=' . $this->request->get['product_id']), 'canonical');
+			$this->document->addScript('catalog/view/javascript/jquery/tabs.js');
+			$this->document->addScript('catalog/view/javascript/jquery/colorbox/jquery.colorbox-min.js');
+			$this->document->addStyle('catalog/view/javascript/jquery/colorbox/colorbox.css');
 			
 			
 			//$this->data['qwe'] = $product_info[];
@@ -415,8 +414,7 @@ class ControllerProductProduct extends Controller {
 			$this->data['text_share'] = $this->language->get('text_share');
 			$this->data['text_wait'] = $this->language->get('text_wait');
 			$this->data['text_tags'] = $this->language->get('text_tags');
-
-
+			
 			$this->data['entry_name'] = $this->language->get('entry_name');
 			$this->data['entry_review'] = $this->language->get('entry_review');
 			$this->data['entry_rating'] = $this->language->get('entry_rating');
@@ -444,11 +442,7 @@ class ControllerProductProduct extends Controller {
 			$this->data['reward'] = $product_info['reward'];
 			$this->data['points'] = $product_info['points'];
 			$this->data['quantity'] = $product_info['quantity'];
-			if ($product_info['video'])
-				$this->data['video'] = $product_info['video'];
-			if ($product_info['video_description'])
-				$this->data['video_description'] = $product_info['video_description'];
-
+			
 
 			if (($product_info['source'] == 'tsp-shop') || ($product_info['source'] == 'combatmarkt') || ($product_info['stock_status_id'] == 8)) {
 				$this->data['stock'] = "Предзаказ";
@@ -526,7 +520,7 @@ class ControllerProductProduct extends Controller {
 			}
 			
 			$this->data['options'] = array();
-
+			
 			foreach ($this->model_catalog_product->getProductOptions($this->request->get['product_id']) as $option) { 
 				if ($option['type'] == 'select' || $option['type'] == 'radio' || $option['type'] == 'checkbox' || $option['type'] == 'image') { 
 					$option_value_data = array();
@@ -569,7 +563,7 @@ class ControllerProductProduct extends Controller {
 					);						
 				}
 			}
-
+							
 			if ($product_info['minimum']) {
 				$this->data['minimum'] = $product_info['minimum'];
 			} else {
@@ -599,13 +593,13 @@ class ControllerProductProduct extends Controller {
 			} else {
 				
 			
-				$this->data['description2'] = "Decor-Plaza.ru – интернет магазин предлагает посмотреть каталог " . $category_info['namer'] . " " . $product_info['manufacturer'] . ". Мы поможем Вам определиться с выбором " . $category_info['namer'] . ". Все модели есть в наличии, а также у нас есть специальные предложения на " . $category_info['sinonim1'] . " " . $this->translit2rus($product_info['manufacturer']) . ". Оформляйте онлайн заказ через сайт или по телефону " . $this->config->get('config_telephone') . ". Если вы не можете определиться " . $category_info['sinonim2'] . " купить, присмотритесь к " . $category_info['named'] . " " . $product_info['manufacturer'] . ". " . $product_info['name'] . " - " . $product_info['functions'] . ". Магазин italy-sumochka.ru доставит ваш заказ или оформит самовывоз в " . $cityformpred . ".";
+				$this->data['description2'] = "italy-sumochka.ru – интернет магазин предлагает посмотреть каталог " . $category_info['namer'] . " " . $product_info['manufacturer'] . ". Мы поможем Вам определиться с выбором " . $category_info['namer'] . ". Все модели есть в наличии, а также у нас есть специальные предложения на " . $category_info['sinonim1'] . " " . $this->translit2rus($product_info['manufacturer']) . ". Оформляйте онлайн заказ через сайт или по телефону " . $this->config->get('config_telephone') . ". Если вы не можете определиться " . $category_info['sinonim2'] . " купить, присмотритесь к " . $category_info['named'] . " " . $product_info['manufacturer'] . ". " . $product_info['name'] . " - " . $product_info['functions'] . ". Магазин italy-sumochka.ru доставит ваш заказ или оформит самовывоз в " . $cityformpred . ".";
 			}
 			
 			
 			
 			$this->data['attribute_groups'] = $this->model_catalog_product->getProductAttributes($this->request->get['product_id']);
-
+			
 			$this->data['products'] = array();
 			
 			$results = $this->model_catalog_product->getProductRelated($this->request->get['product_id']);
@@ -634,7 +628,7 @@ class ControllerProductProduct extends Controller {
 				} else {
 					$rating = false;
 				}
-
+							
 				$this->data['products'][] = array(
 					'product_id' => $result['product_id'],
 					'thumb'   	 => $image,
@@ -645,7 +639,7 @@ class ControllerProductProduct extends Controller {
 					'reviews'    => sprintf($this->language->get('text_reviews'), (int)$result['reviews']),
 					'href'    	 => $this->url->link('product/product', 'product_id=' . $result['product_id'])
 				);
-			}
+			}	
 			
 			$this->data['tags'] = array();
 			
@@ -659,15 +653,15 @@ class ControllerProductProduct extends Controller {
 					);
 				}
 			}
-
+			
 			$this->model_catalog_product->updateViewed($this->request->get['product_id']);
-
+			
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/product.tpl')) {
 				$this->template = $this->config->get('config_template') . '/template/product/product.tpl';
 			} else {
 				$this->template = 'default/template/product/product.tpl';
 			}
-
+			
 			$this->children = array(
 				'common/column_left',
 				'common/column_right',
@@ -695,8 +689,8 @@ class ControllerProductProduct extends Controller {
 
 			if (isset($this->request->get['search'])) {
 				$url .= '&search=' . $this->request->get['search'];
-			}
-
+			}	
+					
 			if (isset($this->request->get['tag'])) {
 				$url .= '&tag=' . $this->request->get['tag'];
 			}
@@ -759,7 +753,7 @@ class ControllerProductProduct extends Controller {
 				'common/footer',
 				'common/header'
 			);
-
+						
 			$this->response->setOutput($this->render());
     	}
   	}
@@ -827,21 +821,23 @@ class ControllerProductProduct extends Controller {
 			if ((utf8_strlen($this->request->post['text']) < 25) || (utf8_strlen($this->request->post['text']) > 1000)) {
 				$json['error'] = $this->language->get('error_text');
 			}
-
+	
 			if (empty($this->request->post['rating'])) {
 				$json['error'] = $this->language->get('error_rating');
 			}
+	
+			if (empty($this->session->data['captcha']) || ($this->session->data['captcha'] != $this->request->post['captcha'])) {
+				$json['error'] = $this->language->get('error_captcha');
+			}
 				
 			if (!isset($json['error'])) {
+				$this->model_catalog_review->addReview($this->request->get['product_id'], $this->request->post);
+				
 				$json['success'] = $this->language->get('text_success');
 			}
 		}
 		
 		$this->response->setOutput(json_encode($json));
-
-		if (!isset($json['error'])) {
-			($this->model_catalog_review->addReview($this->request->get['product_id'], $this->request->post));
-		}
 	}
 	
 	public function captcha() {
@@ -945,7 +941,7 @@ class ControllerProductProduct extends Controller {
 				}
 			}
 		}
-
+		
 		foreach ($this->data['manufacturer_categorys'] as $tek) {
 			var_dump($tek);
 			$sql = "SELECT * FROM oc_redirect WHERE oc_redirect.from_url='".$tek['linkold']."'";
@@ -1004,6 +1000,7 @@ class ControllerProductProduct extends Controller {
 		$list = $this->db->query($sql);
 		
 		foreach ($list->rows as $key => $value) {
+			
 			echo($this->url->link('product/product', 'product_id=' . $value['product_id'])."<br>");
 		}
 

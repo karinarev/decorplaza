@@ -1171,11 +1171,6 @@ class ControllerCatalogProduct extends Controller {
     	} else {
 			$this->data['quantity'] = 1;
 		}
-
-		if ($product_info['video'])
-			$this->data['video'] = $product_info['video'];
-		if ($product_info['video_description'])
-			$this->data['video_description'] = $product_info['video_description'];
 		
 		if (isset($this->request->post['minimum'])) {
       		$this->data['minimum'] = $this->request->post['minimum'];

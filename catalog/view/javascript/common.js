@@ -175,7 +175,7 @@ $(document).ready(function() {
     $("#colorbox").draggable({ 
       	cursor: "crosshair",
       	containment: "parent"
-    });
+    }); 
 });
 
 $('html').append('<div style="display:none;"><a class="ajaxcart" id="showcart" href="index.php?route=common/ocjoyajaxcart">&nbsp;</a></div>');
