@@ -45,7 +45,7 @@
 	<div class="row-wrapper">
 		<?php if ($products) { ?>
   <div class="sort-row row">
-		<div class="sort col-md-6 col-lg-6"><label for="input-sort"><?php echo $text_sort; ?></label>
+		<div class="sort col-md-6 col-lg-6 col-sm-12"><label for="input-sort"><?php echo $text_sort; ?></label>
 	 	 <select id="input-sort" onchange="location = this.value;">
 		<?php foreach ($sorts as $sorts) { ?>
 		<?php if ($sorts['value'] == $sort . '-' . $order) { ?>
@@ -56,7 +56,7 @@
 		<?php } ?>
 	  </select>
 	</div>
-	  <div class="col-md-6 col-lg-6 text-right">
+	  <div class="col-md-6 col-lg-6 col-sm-12 text-right">
 		  <?php if (isset($pagination)) { ?>
 		  <?php echo $pagination; ?>
 		  <?php } ?>
@@ -64,7 +64,7 @@
   </div>
 	  <div class="row product-row">
 		  <?php foreach ($products as $product) { ?>
-		  <div class="item category-item col-md-3" id="<?php echo $product['product_id']; ?>">
+		  <div class="item category-item col-md-3 col-sm-4" id="<?php echo $product['product_id']; ?>">
 			  <div class="product-layout">
 				  <div class="product-thumb transition">
 					  <div class="image">
@@ -291,10 +291,12 @@
 						btn.removeClass('shopping').addClass('empty-gold');
 					}
 					if(!$.isEmptyObject(data)) {
+						btn.removeClass('shopping').addClass('empty-gold');
 						$(btn).html(quantity);
 					}
 					else{
 						$(btn).removeClass('empty-gold').addClass('shopping');
+						$(btn).html("");
 					}
 
 				}

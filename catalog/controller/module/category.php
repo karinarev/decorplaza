@@ -3,7 +3,7 @@ class ControllerModuleCategory extends Controller {
 	protected function index($setting) {
 		$this->language->load('module/category');
 
-		$this->document->addStyle('catalog/view/theme/theme331/stylesheet/category-list.css');
+		$this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/category-list.css');
 
 		$this->data['heading_title'] = $this->language->get('heading_title');
 		
