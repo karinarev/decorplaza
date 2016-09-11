@@ -70,6 +70,7 @@
                 <td><?php echo $entry_tag; ?></td>
                 <td><input type="text" name="product_description[<?php echo $language['language_id']; ?>][tag]" value="<?php echo isset($product_description[$language['language_id']]) ? $product_description[$language['language_id']]['tag'] : ''; ?>" size="80" /></td>
               </tr>
+              <tr>
             </table>
           </div>
           <?php } ?>
@@ -138,6 +139,13 @@
               <td><input type="text" name="minimum" value="<?php echo $minimum; ?>" size="4" /></td>
             </tr>
             <tr>
+            <tr>
+              <td>Ссылка на видео</td>
+              <td><input type="text" name="videoo" value="<?php echo $video; ?>" /></td>
+            </tr><tr>
+              <td>Описание видео</td>
+              <td><input type="text" name="videoo_description" value="<?php echo $video_description; ?>" /></td>
+            </tr>
               <td><?php echo $entry_subtract; ?></td>
               <td><select name="subtract">
                   <?php if ($subtract) { ?>

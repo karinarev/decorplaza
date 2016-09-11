@@ -1,7 +1,7 @@
 <?php 
 class ControllerProductManufacturer extends Controller {  
 	public function index() {
-		$this->document->addStyle('catalog/view/theme/theme331/stylesheet/manufacturer.css');
+		$this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/manufacturer.css');
 
 		$this->language->load('product/manufacturer');
 		

@@ -181,7 +181,6 @@ function start_show() {
 	}
 }
 $(document).ready(function() {
-	
 	$('.feedbackForm').fancybox();
 	
 	$('.yandexmapmodal').fancybox();
@@ -201,7 +200,44 @@ $(document).ready(function() {
     $("#colorbox").draggable({ 
       	cursor: "crosshair",
       	containment: "parent"
-    }); 
+    });
+	$(".telephoneNumber").on("mouseover", function(event){
+		$(".telephoneNumber").removeClass("headerBigText");
+		//	$(".telephoneNumber").css("padding-top", "5px");
+		//	$(".telephoneNumber").css("padding-bottom", "5px");
+		$("#callIcon").attr("src", "/image/callActive.png");
+		switch (event.target.id){
+			case "firstNumber" :  $("#callIcon").css("top", "0");  break;
+			case "secondNumber" :  $("#callIcon").css("top", "11px");  break;
+			case "thirdNumber" :  $("#callIcon").css("top", "33px");  break;
+		}
+	});
+	$(".telephoneNumber").on("mouseout", function(){
+		//	$(".telephoneNumber").css("padding", "0");
+		$(".telephoneNumber:first-child").addClass("headerBigText");
+		$("#callIcon").attr("src", "/image/call.png");
+		$("#callIcon").css("top", "0");
+	});
+	$("a[href='#catalogCollapse']").on("mouseover", function(){
+		$("#catalogCollapse").addClass("collapse in");
+	});
+	$("a[href='#catalogCollapse']").on("mouseout", function(event){
+		if (event.relatedTarget.className != "categoryLi")
+		$("#catalogCollapse").removeClass("collapse in").addClass("collapse");
+	});
+	$("#catalogCollapse, .categoryLi").on("mouseout", function(event){
+		if (event.relatedTarget.className != ".categoryA" && event.relatedTarget.id != "#catalogCollapse" && event.relatedTarget.className != "pointerSpan" && event.relatedTarget.className != "categoryLi" && event.relatedTarget.className != "subcategoryLi" && event.relatedTarget.className != "subcategoryUl" && event.relatedTarget.className != "list-group categoryUl"){
+			$("#catalogCollapse").removeClass("collapse in").addClass("collapse");
+		    $(".collapseHorizontal").addClass("invisibleElement").removeClass("visibleElement");}
+	})
+	$("#catalogCollapse>ul>a>li").on("mouseover", function(event){
+		$(event.target).find("span").css("background-image", "url(/image/pointerActive.png)");
+	});
+	$("#catalogCollapse>ul>a>li").on("mouseout", function(event){
+		$(event.target).find("span").css("background-image", "url(/image/pointer.png)");
+		if (event.relatedTarget.className != "subcategoryLi" && event.relatedTarget.className != "subcategoryUl")
+			$(".collapseHorizontal").addClass("invisibleElement").removeClass("visibleElement");
+	});
 });
 
 $('html').append('<div style="display:none;"><a class="ajaxcart" id="showcart" href="index.php?route=common/ocjoyajaxcart">&nbsp;</a></div>');
@@ -310,4 +346,65 @@ function RemoveCompare(product_id) {
 			
 		}
 	});
+}
+function callBack(event){
+	event.preventDefault();
+	var link = event.target;
+	$(link).css("visibility", "hidden");
+	$(".callBackStuff").css("display", "inline-block");
+	$("#callBackInput").focus().on("blur", function(){
+		$(".callBackStuff").css("display", "none");
+		$(link).css("visibility", "visible");
+	});
+}
+
+function callBackSend(){
+	if ($("#callBackInput").val()=='')
+		alert("Заявка отклонена: введите телефон");
+	else {
+		alert("Заявка принята, ожидайте звонка");
+	}
+}
+
+function subcategoryBlockShow(categoryNumber){
+	var categoryBlock = event.target;
+	$(".collapseHorizontal>ul").empty();
+	var category = categories[categoryNumber];
+	$("#firstSubcategoryCollapse").addClass("visibleElement").removeClass("invisibleElement");
+	for (var i=0; i<10; i++){
+		if (category.children[i] != undefined){
+			var li = document.createElement("li");
+			var a = document.createElement("a");
+			a.href=category.children[i].href;
+			var li = document.createElement("li");
+			li.textContent = category.children[i].name;
+			li.className="subcategoryLi";
+			$(a).append(li);
+			$("#firstSubcategoryCollapse>ul").append(a);
+		}
+	}
+	if (category.children.length>10){
+		$("#secondSubcategoryCollapse").addClass("visibleElement").removeClass("invisibleElement");
+		for (i=10; i<20; i++) {
+			if (category.children[i] != undefined) {
+				var a = document.createElement("a");
+				a.href=category.children[i].href;
+				var li = document.createElement("li");
+				li.textContent = category.children[i].name;
+				li.className="subcategoryLi";
+				$(a).append(li);
+				$("#secondSubcategoryCollapse>ul").append(a);
+			}
+		}
+	}
+	$(".collapseHorizontal>ul").on("mouseout", function(event){
+		console.log(event.relatedTarget);
+		if (event.relatedTarget.className != "subcategoryUl" && event.relatedTarget.id != "#firstSubcategoryCollapse" && event.relatedTarget.className != "subcategoryLi") {
+			$(".collapseHorizontal").addClass("invisibleElement").removeClass("visibleElement");
+			if (event.relatedTarget.className != ".categoryA" && event.relatedTarget.id != "#catalogCollapse" && event.relatedTarget.className != "pointerSpan" && event.relatedTarget.className != "categoryLi" && event.relatedTarget.className != "list-group categoryUl")
+				$("#catalogCollapse").removeClass("collapse in").addClass("collapse");
+		}
+	})
+
+
 }
