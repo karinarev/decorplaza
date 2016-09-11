@@ -7,7 +7,7 @@
 		<li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
 		<?php } ?>
 	</ul>
-			<h3><?php echo $heading_title; ?></h3>
+			<h3 class="category-header"><?php echo $heading_title; ?></h3>
 		<?php echo $content_top; ?>
 
   <?php if ($categories) { ?>
@@ -64,10 +64,10 @@
   </div>
 	  <div class="row product-row">
 		  <?php foreach ($products as $product) { ?>
-		  <div class="item category-item col-md-3 col-sm-4" id="<?php echo $product['product_id']; ?>">
+		  <div class="item category-item col-md-3 col-sm-4 col-xs-12" id="<?php echo $product['product_id']; ?>">
 			  <div class="product-layout">
 				  <div class="product-thumb transition">
-					  <div class="image">
+					  <div class="image col-xs-5 col-md-12">
 						  <img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" />
 						  <a class="more product-icon" href="<?php echo $product['href']; ?>"></a>
 						  <div>
@@ -218,7 +218,7 @@
 							  </form>
 						  </div>
 					  </div>
-					  <div class="caption">
+					  <div class="caption col-xs-7 col-md-12">
 						  <p class="description"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></p>
 						  <?php if ($product['model']) { ?>
 						  <div class="model">
@@ -275,6 +275,41 @@
 
 <script type="text/javascript"><!--
 
+	$(document).ready(function () {
+
+		checkWindowSize();
+
+		$(window).resize(function(){
+			checkWindowSize();
+
+		});
+
+		function checkWindowSize(){
+			currWindowWidth = $( window ).width();
+			if(currWindowWidth > 767) {
+				console.log('sf');
+				$('.category-item').hover(
+						function () {
+							$(this).find('img').addClass('image-hover');
+							$(this).find('.product-icon').css({'display' : 'block'});
+							$(this).find('.model').css({'display' : 'block'});
+							$(this).find('.rating').css({'display' : 'block'});
+						},
+						function (){
+							$(this).find('img').removeClass('image-hover');
+							$(this).find('.product-icon').css({'display' : 'none'});
+							$(this).find('.model').css({'display' : 'none'});
+							$(this).find('.rating').css({'display' : 'none'});
+						});
+
+			}
+			else{
+				$( "#foo" ).unbind( "click" );
+			}
+		}
+
+	});
+
 	$(document).on('cbox_closed', function () {
 		$('.category-item').each(function(index) {
 			var quantity;
@@ -305,9 +340,6 @@
 		});
 		$('#ajaxcartloadimg').hide();
 	});
-
-
-
 	var curQuantity;
 	$(document).on("mouseenter", '.empty-gold', function() {
 		$(this).removeClass('empty-gold').addClass('plus');
@@ -367,19 +399,10 @@
 		});
 		$('.jq-selectbox__trigger-arrow').html('<i class="fa fa-angle-right" aria-hidden="true"></i>');
 
-	$('.category-item').hover(
-			function () {
-				$(this).find('img').addClass('image-hover');
-				$(this).find('.product-icon').css({'display' : 'block'});
-				$(this).find('.model').css({'display' : 'block'});
-				$(this).find('.rating').css({'display' : 'block'});
-			},
-			function (){
-				$(this).find('img').removeClass('image-hover');
-				$(this).find('.product-icon').css({'display' : 'none'});
-				$(this).find('.model').css({'display' : 'none'});
-				$(this).find('.rating').css({'display' : 'none'});
-			});
+
+
+
+
 
 $('.add_to_cart').submit(function(e){
 	e.preventDefault();
