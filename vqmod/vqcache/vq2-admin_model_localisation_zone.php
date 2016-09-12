@@ -4,8 +4,10 @@ class ModelLocalisationZone extends Model {
 		$this->db->query("INSERT INTO " . DB_PREFIX . "zone SET status = '" . (int)$data['status'] . "', name = '" . $this->db->escape($data['name']) . "', code = '" . $this->db->escape($data['code']) . "', country_id = '" . (int)$data['country_id'] . "'");
 			
 		$this->cache->delete('zone');
+		$this->cache->delete('seo_pro');
 
         
+		$this->cache->delete('seo_pro');
 		$this->cache->delete('seo_pro');
         
       
@@ -15,8 +17,10 @@ class ModelLocalisationZone extends Model {
 		$this->db->query("UPDATE " . DB_PREFIX . "zone SET status = '" . (int)$data['status'] . "', name = '" . $this->db->escape($data['name']) . "', code = '" . $this->db->escape($data['code']) . "', country_id = '" . (int)$data['country_id'] . "' WHERE zone_id = '" . (int)$zone_id . "'");
 
 		$this->cache->delete('zone');
+		$this->cache->delete('seo_pro');
 
         
+		$this->cache->delete('seo_pro');
 		$this->cache->delete('seo_pro');
         
       
@@ -26,8 +30,10 @@ class ModelLocalisationZone extends Model {
 		$this->db->query("DELETE FROM " . DB_PREFIX . "zone WHERE zone_id = '" . (int)$zone_id . "'");
 
 		$this->cache->delete('zone');	
+		$this->cache->delete('seo_pro');
 
         
+		$this->cache->delete('seo_pro');
 		$this->cache->delete('seo_pro');
         
       

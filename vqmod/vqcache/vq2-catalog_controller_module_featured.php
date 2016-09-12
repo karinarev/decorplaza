@@ -1,7 +1,12 @@
 <?php
 class ControllerModuleFeatured extends Controller {
 	protected function index($setting) {
-		$this->language->load('module/featured'); 
+		$module = 0;
+		$this->language->load('module/featured');
+
+		$this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');
+		$this->document->addScript('catalog/view/javascript/jquery/owl-carousel/owl.carousel.min.js');
+		$this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/featured.css');
 
       	$this->data['heading_title'] = $this->language->get('heading_title');
 		
@@ -127,6 +132,7 @@ class ControllerModuleFeatured extends Controller {
 				} else {
 					$rating = false;
 				}
+
 					
 				$newItem = ($product_info['newItem'] > 0) ? $product_info['newItem'] : '';
 				$bestSaller = ($product_info['bestSaller'] > 0) ? $product_info['bestSaller'] : '';	
@@ -137,9 +143,10 @@ class ControllerModuleFeatured extends Controller {
 					'bestSeller'  => $bestSaller,
 					'newItem'     => $newItem,
 					'name'    	 => $product_info['name'],
+					'model'    	 => $product_info['model'],
 					'price'   	 => $price,
 					'special' 	 => $special,
-					'rating'     => $rating,
+					'rating'     => $product_info['rating'],
 					'reviews'    => sprintf($this->language->get('text_reviews'), (int)$product_info['reviews']),
  'description' =>html_entity_decode($product_info['description']),
 					'description1' =>strip_tags (html_entity_decode($product_info['description'])),
@@ -156,6 +163,8 @@ class ControllerModuleFeatured extends Controller {
 				);
 			}
 		}
+
+		$this->data['module'] = $module++;
 
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/featured.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/module/featured.tpl';

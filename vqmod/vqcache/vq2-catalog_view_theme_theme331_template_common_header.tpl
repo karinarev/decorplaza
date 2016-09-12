@@ -2,7 +2,7 @@
 if($_SERVER['REQUEST_URI'] == '/dostavka?_route_=dostavka-i-oplata'){
 
 header("HTTP/1.1 301 Moved Permanently"); 
-header("Location: http://perun-shop.ru/dostavka"); 
+header("Location: http://italy-sumochka.ru/dostavka"); 
 exit(); 
 
 }
@@ -12,8 +12,6 @@ exit();
 
 <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
 
-<meta name='yandex-verification' content='638c16e3dd4651c9' />
-<meta name="google-site-verification" content="DAemEoBz79rdjVVHRjEF_ktP9E3vD6e8wv5aRjTLHRs" />
 <meta name="robots" content="index">
 <meta charset="UTF-8" />
 <title><?php echo $title;  ?></title>
@@ -43,14 +41,14 @@ $description = str_replace(array("&nbsp",";","\r\n", "\r", "\n", "\t", '  ', '  
  if(navigator.userAgent.match(/Android/i)){
     window.scrollTo(0,1);
  }
-</script> 
- 
+</script>
 
+	<link href="catalog/view/javascript/jquery/formstyler/jquery.formstyler.css" rel="stylesheet" />
 <link href="catalog/view/theme/<?php echo $this->config->get('config_template'); ?>/stylesheet/bootstrap.css" rel="stylesheet" type="text/css" />
 <link href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/cloud-zoom.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/stylesheet.css" />
-<link href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/font-awesome.css" rel="stylesheet" type="text/css" />
-<link href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/slideshow.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/fonts.css" />
+	<link href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/slideshow.css" rel="stylesheet" type="text/css" />
 <link href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/jquery.prettyPhoto.css" rel="stylesheet" type="text/css" />
 <link href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/camera.css" rel="stylesheet" type="text/css" />
 <link href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/superfish.css" rel="stylesheet" type="text/css" />
@@ -63,7 +61,7 @@ $description = str_replace(array("&nbsp",";","\r\n", "\r", "\n", "\t", '  ', '  
 <link rel="<?php echo $style['rel']; ?>" type="text/css" href="<?php echo $style['href']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
 <link href='//fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
-
+	<link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
 <script type="text/javascript" src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/jquery/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/jquery/jquery-migrate-1.2.1.min.js"></script>
@@ -83,7 +81,7 @@ $description = str_replace(array("&nbsp",";","\r\n", "\r", "\n", "\t", '  ', '  
 <script type="text/javascript" src="catalog/view/javascript/jquery/jquery.jcarousel.min.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/jquery/jquery.cycle.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/jquery/jquery.maskedinput-1.3.min.js"></script>
-
+	<script src="catalog/view/javascript/jquery/formstyler/jquery.formstyler.min.js"></script>
 
 <!--[if IE]>
 <script type="text/javascript" src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/html5.js"></script>
@@ -161,46 +159,10 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 			
 </head>
 <body class="<?php echo empty($this->request->get['route']) ? 'common-home' : str_replace('/', '-', $this->request->get['route']); ?>"><a id="hidden" href="<?php echo $base; ?>"></a>
-<script type="text/javascript" language="javascript"> var _lh_params = {"popup": false}; lh_clid="5304a88157b924647f640f47"; (function() { var lh = document.createElement('script'); lh.type = 'text/javascript'; lh.async = true; lh.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'track.leadhit.ru/track.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lh, s); })();/* "Любые изменения кода запрещены."*/ </script>
+
 <!-- Yandex.Metrika counter -->
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-65683666-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-
-<script type="text/javascript">
-(function (d, w, c) {
-    (w[c] = w[c] || []).push(function() {
-        try {
-            w.yaCounter21796762 = new Ya.Metrika({id:21796762,
-                    webvisor:true,
-                    clickmap:true,
-                    trackLinks:true,
-                    accurateTrackBounce:true});
-        } catch(e) { }
-    });
-
-    var n = d.getElementsByTagName("script")[0],
-        s = d.createElement("script"),
-        f = function () { n.parentNode.insertBefore(s, n); };
-    s.type = "text/javascript";
-    s.async = true;
-    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
-
-    if (w.opera == "[object Opera]") {
-        d.addEventListener("DOMContentLoaded", f, false);
-    } else { f(); }
-})(document, window, "yandex_metrika_callbacks");
-</script>
-<noscript><div><img src="//mc.yandex.ru/watch/21796762" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 
 <div class="swipe-left"></div>
@@ -258,7 +220,7 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 			<div class="col-sm-12">
 				<?php if ($logo) { ?>
 					<div id="logo"><a style="display:block;" href="<?php echo $home; ?>">
-					<img class="img" style="vertical-align:top;max-width:100%;width:100%;" src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="Perun-Shop – спортивная одежда и экипировка MMA" /></a>
+					<img class="img" style="vertical-align:top;max-width:100%;width:100%;" src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="Итальянские сумки в Москве" /></a>
 					<div class="rightsearch block">
 					<div class="top-search1">
 						<i class="fa fa-search"></i>
@@ -278,20 +240,20 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 				</div>
 				<div class="rightsearch">
 					
-					<a  style="margin-left:20px;position: relative;margin-top: 50px;text-decoration: underline; font-weight:bold;" href="#feedbackForm" class="feedbackForm">Заказать обратный звонок</a>
+					<a href="#feedbackForm" class="feedbackForm feedbackForm2">Заказать обратный звонок</a>
 				</div>
 				
 				 <div class="phone">
 				 <div style="font-size:12px; font-weight:bold;   color: #EC1313;">Бесплатный звонок по России</div>
 					<ul>
 						 <li>
-							<span style="font-size: 22px;   color: #EC1313;">8 (800) 500-89-78</span>
+							<span><a style="font-size: 22px;   color: #EC1313;" href="tel:88005008978">8 (800) 500-89-78</a></span>
 						</li>
 						<li>
-                	        <span style="font-size: 22px;" >8 (495) 490-74-74</span>
+                	        <span><a style="font-size: 22px;"  href="tel:84954907474">8 (495) 490-74-74</a></span>
 						</li>
 						<li>
-                     	    <span style="font-size: 22px;" >8 (926) 025-00-08</span>
+                     	    <span><a style="font-size: 22px;"  href="tel:89260250008">8 (926) 025-00-08</a></span>
 						</li>
 						
                     </ul>
@@ -335,12 +297,13 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 						<?php if (!isset($this->request->get['route'])) { $route='active'; }  else {$route='';}?> 
                         <li class="first"><a class="<?php echo $route; if (isset($this->request->get['route']) && $this->request->get['route']=="common/home") {echo "active";} ?>" href="<?php echo $home; ?>"><i class="fa fa-home"></i><?php echo $text_home; ?></a>
                         </li>
+
                         <?php foreach ($informations as $information) { ?>
 				        <li><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a>
                         </li>
 				<?php } ?>
 						<li><a class="" href="/garantii"><i class="fa fa-optovikam"></i>Гарантии</a></li>
-						<li><a class="" href="/sertificate"><i class="fa fa-optovikam"></i>Сертификаты</a></li>
+						
                 		<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="news/news") {echo "active";} ?>" href="/novosti/"><i class="fa fa-star"></i>Новости</a>
                         </li>
 						<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="information/contact") {echo "active";} ?>" href="<?php echo $contact; ?>"><i class="fa fa-star"></i><?php echo $text_contact; ?></a>
@@ -478,7 +441,7 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 						</li>
 		
 						<li class="cat_6"><a href="/discount-form/">Получить скидку</a>	
-						<li class=""><a href="http://perun-shop.ru/podarochnye-sertifikaty/">Подарочные сертификаты</a> </li>
+					
 						<li class="cat_7"><a href="/index.php?route=discount/discountcart">Дисконтная карта</a>	
 						
 						<li class="account_link"><a  href="<?php echo $account; ?>">Личный кабинет</a></li>
@@ -508,7 +471,6 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 <?php }?>
 
 <div id="container">
-<p id="back-top"> <a href="#top"><span></span></a> </p>
 <div class="container">
 <?php if (!empty($error)) { ?>
     <div class="warning"><?php echo $error ?><img src="catalog/view/theme/theme331/image/close-1.png" alt="" class="close" /></div>

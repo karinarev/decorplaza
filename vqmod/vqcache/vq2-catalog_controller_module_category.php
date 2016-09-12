@@ -2,8 +2,10 @@
 class ControllerModuleCategory extends Controller {
 	protected function index($setting) {
 		$this->language->load('module/category');
-		
-    	$this->data['heading_title'] = $this->language->get('heading_title');
+
+		$this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/category-list.css');
+
+		$this->data['heading_title'] = $this->language->get('heading_title');
 		
 		if (isset($this->request->get['path'])) {
 			$parts = explode('_', (string)$this->request->get['path']);

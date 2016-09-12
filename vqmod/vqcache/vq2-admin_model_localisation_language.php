@@ -4,10 +4,8 @@ class ModelLocalisationLanguage extends Model {
 		$this->db->query("INSERT INTO " . DB_PREFIX . "language SET name = '" . $this->db->escape($data['name']) . "', code = '" . $this->db->escape($data['code']) . "', locale = '" . $this->db->escape($data['locale']) . "', directory = '" . $this->db->escape($data['directory']) . "', filename = '" . $this->db->escape($data['filename']) . "', image = '" . $this->db->escape($data['image']) . "', sort_order = '" . $this->db->escape($data['sort_order']) . "', status = '" . (int)$data['status'] . "'");
 		
 		$this->cache->delete('language');
-		$this->cache->delete('seo_pro');
 
         
-		$this->cache->delete('seo_pro');
 		$this->cache->delete('seo_pro');
         
       
@@ -22,10 +20,8 @@ class ModelLocalisationLanguage extends Model {
 		}
 
 		$this->cache->delete('attribute');
-		$this->cache->delete('seo_pro');
 
         
-		$this->cache->delete('seo_pro');
 		$this->cache->delete('seo_pro');
         
       
@@ -38,10 +34,8 @@ class ModelLocalisationLanguage extends Model {
 		}
 
 		$this->cache->delete('attribute');
-		$this->cache->delete('seo_pro');
 
         
-		$this->cache->delete('seo_pro');
 		$this->cache->delete('seo_pro');
         
       
@@ -54,10 +48,8 @@ class ModelLocalisationLanguage extends Model {
 		}
 
 		$this->cache->delete('attribute');
-		$this->cache->delete('seo_pro');
 
         
-		$this->cache->delete('seo_pro');
 		$this->cache->delete('seo_pro');
         
       
@@ -70,10 +62,8 @@ class ModelLocalisationLanguage extends Model {
 		}
 
 		$this->cache->delete('category');
-		$this->cache->delete('seo_pro');
 
         
-		$this->cache->delete('seo_pro');
 		$this->cache->delete('seo_pro');
         
       
@@ -114,10 +104,8 @@ class ModelLocalisationLanguage extends Model {
 		}		
 
 		$this->cache->delete('information');
-		$this->cache->delete('seo_pro');
 
         
-		$this->cache->delete('seo_pro');
 		$this->cache->delete('seo_pro');
         
       
@@ -130,10 +118,8 @@ class ModelLocalisationLanguage extends Model {
 		}	
 		
 		$this->cache->delete('length_class');
-		$this->cache->delete('seo_pro');
 
         
-		$this->cache->delete('seo_pro');
 		$this->cache->delete('seo_pro');
         
       
@@ -160,10 +146,8 @@ class ModelLocalisationLanguage extends Model {
 		}	
 		
 		$this->cache->delete('order_status');
-		$this->cache->delete('seo_pro');
 
         
-		$this->cache->delete('seo_pro');
 		$this->cache->delete('seo_pro');
         
       
@@ -176,10 +160,8 @@ class ModelLocalisationLanguage extends Model {
 		}
 
 		$this->cache->delete('product');
-		$this->cache->delete('seo_pro');
 
         
-		$this->cache->delete('seo_pro');
 		$this->cache->delete('seo_pro');
         
       
@@ -220,10 +202,8 @@ class ModelLocalisationLanguage extends Model {
 		}
 		
 		$this->cache->delete('stock_status');
-		$this->cache->delete('seo_pro');
 
         
-		$this->cache->delete('seo_pro');
 		$this->cache->delete('seo_pro');
         
       
@@ -243,10 +223,8 @@ class ModelLocalisationLanguage extends Model {
 		}	
 		
 		$this->cache->delete('weight_class');
-		$this->cache->delete('seo_pro');
 
         
-		$this->cache->delete('seo_pro');
 		$this->cache->delete('seo_pro');
         
       
@@ -256,10 +234,8 @@ class ModelLocalisationLanguage extends Model {
 		$this->db->query("UPDATE " . DB_PREFIX . "language SET name = '" . $this->db->escape($data['name']) . "', code = '" . $this->db->escape($data['code']) . "', locale = '" . $this->db->escape($data['locale']) . "', directory = '" . $this->db->escape($data['directory']) . "', filename = '" . $this->db->escape($data['filename']) . "', image = '" . $this->db->escape($data['image']) . "', sort_order = '" . $this->db->escape($data['sort_order']) . "', status = '" . (int)$data['status'] . "' WHERE language_id = '" . (int)$language_id . "'");
 				
 		$this->cache->delete('language');
-		$this->cache->delete('seo_pro');
 
         
-		$this->cache->delete('seo_pro');
 		$this->cache->delete('seo_pro');
         
       
@@ -269,10 +245,8 @@ class ModelLocalisationLanguage extends Model {
 		$this->db->query("DELETE FROM " . DB_PREFIX . "language WHERE language_id = '" . (int)$language_id . "'");
 		
 		$this->cache->delete('language');
-		$this->cache->delete('seo_pro');
 
         
-		$this->cache->delete('seo_pro');
 		$this->cache->delete('seo_pro');
         
       
@@ -285,10 +259,8 @@ class ModelLocalisationLanguage extends Model {
 		$this->db->query("DELETE FROM " . DB_PREFIX . "category_description WHERE language_id = '" . (int)$language_id . "'");
 		
 		$this->cache->delete('category');
-		$this->cache->delete('seo_pro');
 
         
-		$this->cache->delete('seo_pro');
 		$this->cache->delete('seo_pro');
         
       
@@ -300,10 +272,8 @@ class ModelLocalisationLanguage extends Model {
 		$this->db->query("DELETE FROM " . DB_PREFIX . "information_description WHERE language_id = '" . (int)$language_id . "'");
 		
 		$this->cache->delete('information');
-		$this->cache->delete('seo_pro');
 
         
-		$this->cache->delete('seo_pro');
 		$this->cache->delete('seo_pro');
         
       
@@ -311,10 +281,8 @@ class ModelLocalisationLanguage extends Model {
 		$this->db->query("DELETE FROM " . DB_PREFIX . "length_class_description WHERE language_id = '" . (int)$language_id . "'");
 		
 		$this->cache->delete('length_class');
-		$this->cache->delete('seo_pro');
 
         
-		$this->cache->delete('seo_pro');
 		$this->cache->delete('seo_pro');
         
       
@@ -324,10 +292,8 @@ class ModelLocalisationLanguage extends Model {
 		$this->db->query("DELETE FROM " . DB_PREFIX . "order_status WHERE language_id = '" . (int)$language_id . "'");
 		
 		$this->cache->delete('order_status');
-		$this->cache->delete('seo_pro');
 
         
-		$this->cache->delete('seo_pro');
 		$this->cache->delete('seo_pro');
         
       
@@ -336,10 +302,8 @@ class ModelLocalisationLanguage extends Model {
 		$this->db->query("DELETE FROM " . DB_PREFIX . "product_description WHERE language_id = '" . (int)$language_id . "'");
 		
 		$this->cache->delete('product');
-		$this->cache->delete('seo_pro');
 
         
-		$this->cache->delete('seo_pro');
 		$this->cache->delete('seo_pro');
         
       
@@ -347,10 +311,8 @@ class ModelLocalisationLanguage extends Model {
 		$this->db->query("DELETE FROM " . DB_PREFIX . "return_action WHERE language_id = '" . (int)$language_id . "'");
 		
 		$this->cache->delete('return_action');
-		$this->cache->delete('seo_pro');
 
         
-		$this->cache->delete('seo_pro');
 		$this->cache->delete('seo_pro');
         
       
@@ -358,10 +320,8 @@ class ModelLocalisationLanguage extends Model {
 		$this->db->query("DELETE FROM " . DB_PREFIX . "return_reason WHERE language_id = '" . (int)$language_id . "'");
 		
 		$this->cache->delete('return_reason');
-		$this->cache->delete('seo_pro');
 
         
-		$this->cache->delete('seo_pro');
 		$this->cache->delete('seo_pro');
         
       
@@ -369,10 +329,8 @@ class ModelLocalisationLanguage extends Model {
 		$this->db->query("DELETE FROM " . DB_PREFIX . "return_status WHERE language_id = '" . (int)$language_id . "'");
 		
 		$this->cache->delete('return_status');
-		$this->cache->delete('seo_pro');
 
         
-		$this->cache->delete('seo_pro');
 		$this->cache->delete('seo_pro');
         
       
@@ -380,10 +338,8 @@ class ModelLocalisationLanguage extends Model {
 		$this->db->query("DELETE FROM " . DB_PREFIX . "stock_status WHERE language_id = '" . (int)$language_id . "'");
 		
 		$this->cache->delete('stock_status');
-		$this->cache->delete('seo_pro');
 
         
-		$this->cache->delete('seo_pro');
 		$this->cache->delete('seo_pro');
         
       
@@ -391,10 +347,8 @@ class ModelLocalisationLanguage extends Model {
 		$this->db->query("DELETE FROM " . DB_PREFIX . "voucher_theme_description WHERE language_id = '" . (int)$language_id . "'");
 		
 		$this->cache->delete('voucher_theme');
-		$this->cache->delete('seo_pro');
 
         
-		$this->cache->delete('seo_pro');
 		$this->cache->delete('seo_pro');
         
       
@@ -402,10 +356,8 @@ class ModelLocalisationLanguage extends Model {
 		$this->db->query("DELETE FROM " . DB_PREFIX . "weight_class_description WHERE language_id = '" . (int)$language_id . "'");
 		
 		$this->cache->delete('weight_class');
-		$this->cache->delete('seo_pro');
 
         
-		$this->cache->delete('seo_pro');
 		$this->cache->delete('seo_pro');
         
       

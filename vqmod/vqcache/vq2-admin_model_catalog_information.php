@@ -28,10 +28,8 @@ class ModelCatalogInformation extends Model {
 		}
 		
 		$this->cache->delete('information');
-		$this->cache->delete('seo_pro');
 
         
-		$this->cache->delete('seo_pro');
 		$this->cache->delete('seo_pro');
         
       
@@ -71,10 +69,8 @@ class ModelCatalogInformation extends Model {
 		}
 		
 		$this->cache->delete('information');
-		$this->cache->delete('seo_pro');
 
         
-		$this->cache->delete('seo_pro');
 		$this->cache->delete('seo_pro');
         
       
@@ -88,10 +84,8 @@ class ModelCatalogInformation extends Model {
 		$this->db->query("DELETE FROM " . DB_PREFIX . "url_alias WHERE query = 'information_id=" . (int)$information_id . "'");
 
 		$this->cache->delete('information');
-		$this->cache->delete('seo_pro');
 
         
-		$this->cache->delete('seo_pro');
 		$this->cache->delete('seo_pro');
         
       

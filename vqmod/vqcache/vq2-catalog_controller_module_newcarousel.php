@@ -6,9 +6,13 @@ class ControllerModuleNewcarousel extends Controller {
 		$this->load->model('design/banner');
 		$this->load->model('tool/image');
 		
-		$this->document->addScript('catalog/view/theme/theme331/js/sl/jquery.mobile.customized.min.js');
-		$this->document->addScript('catalog/view/theme/theme331/js/sl/camera.js');
-		$this->document->addStyle('catalog/view/theme/theme331/stylesheet/camera.css');
+		//$this->document->addScript('catalog/view/theme/' . $this->config->get('config_template') . '/js/sl/jquery.mobile.customized.min.js');
+		//$this->document->addScript('catalog/view/theme/' . $this->config->get('config_template') . '/js/sl/camera.js');
+		//$this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/camera.css');
+
+		$this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');
+		$this->document->addScript('catalog/view/javascript/jquery/owl-carousel/owl.carousel.min.js');
+		$this->document->addStyle('catalog/view/theme/theme331/stylesheet/newcarousel.css');
 				
 		$this->data['width'] = $setting['width'];
 		$this->data['height'] = $setting['height'];
@@ -25,8 +29,10 @@ class ControllerModuleNewcarousel extends Controller {
             'description' => html_entity_decode($result['description']),
             
 						'title' => $result['title'],
+						'second_title' => $result['second_title'],
+						'third_title' => $result['third_title'],
 						'link'  => $result['link'],
-						'image' => $this->model_tool_image->resize($result['image'], $setting['width'], $setting['height'])
+						'image' => $this->model_tool_image->getFullImage($result['image'])
 					);
 				}
 			}

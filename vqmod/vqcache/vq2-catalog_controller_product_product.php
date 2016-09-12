@@ -347,7 +347,7 @@ class ControllerProductProduct extends Controller {
 					$products_analog_arr[$w]['product_option_id'] = $analog_option['product_option_id'];
 					$products_analog_arr[$w]['option_id'] = $analog_option['option_id'];					
 					$products_analog_arr[$w]['type'] = $analog_option['type'];
-					$products_analog_arr[$w]['name'] = $analog_option['name'];
+					//$products_analog_arr[$w]['name'] = $analog_option['name'];
 					$products_analog_arr[$w]['option_value'] = $analog_option['option_value'];
 					$products_analog_arr[$w]['required'] = $analog_option['required'];
 					/***/					
@@ -394,7 +394,7 @@ class ControllerProductProduct extends Controller {
 			if ($product_info['seo_title']) {
 				$this->document->setTitle($product_info['seo_title']);
 			} else {
-				$this->document->setTitle($product_info['name']." - Купить недорого в " .$cityformpred. " - perun-shop");
+				$this->document->setTitle($product_info['name']." - Купить недорого в " .$cityformpred. " - italy-sumochka");
 			}
 			
 			if ($product_info['seo_h1']) {
@@ -406,7 +406,7 @@ class ControllerProductProduct extends Controller {
 			if ($product_info['meta_description']) {
 				$this->document->setDescription($product_info['meta_description']);
 			} else {
-				$this->document->setDescription("Заказывайте ".$category_info['namev']." ".$product_info['manufacturer']." - ".htmlspecialchars($product_info['name'])." в интернет магазине Perun-Shop. Самые выгодные условия, цены и доставка по всей России");
+				$this->document->setDescription("Заказывайте ".$category_info['namev']." ".$product_info['manufacturer']." - ".htmlspecialchars($product_info['name'])." в интернет магазине italy-sumochka. Самые выгодные условия, цены и доставка по всей России");
 			}
 
 			
@@ -469,8 +469,8 @@ class ControllerProductProduct extends Controller {
 				));
 				
 				$this->document->addScript('catalog/view/javascript/productquestion.js');
-				if (file_exists('catalog/view/theme/theme331/stylesheet/productquestion.css')) {
-					$this->document->addStyle('catalog/view/theme/theme331/stylesheet/productquestion.css');
+				if (file_exists('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/productquestion.css')) {
+					$this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/productquestion.css');
 				} else {
 					$this->document->addStyle('catalog/view/theme/default/stylesheet/productquestion.css');
 				}
@@ -645,7 +645,7 @@ class ControllerProductProduct extends Controller {
 			} else {
 				
 			
-				$this->data['description2'] = "Perun-shop.ru – интернет магазин предлагает посмотреть каталог " . $category_info['namer'] . " " . $product_info['manufacturer'] . ". Мы поможем Вам определиться с выбором " . $category_info['namer'] . ". Все модели есть в наличии, а также у нас есть специальные предложения на " . $category_info['sinonim1'] . " " . $this->translit2rus($product_info['manufacturer']) . ". Оформляйте онлайн заказ через сайт или по телефону " . $this->config->get('config_telephone') . ". Если вы не можете определиться " . $category_info['sinonim2'] . " купить, присмотритесь к " . $category_info['named'] . " " . $product_info['manufacturer'] . ". " . $product_info['name'] . " - " . $product_info['functions'] . ". Магазин Perun-shop.ru доставит ваш заказ или оформит самовывоз в " . $cityformpred . ".";
+				$this->data['description2'] = "italy-sumochka.ru – интернет магазин предлагает посмотреть каталог " . $category_info['namer'] . " " . $product_info['manufacturer'] . ". Мы поможем Вам определиться с выбором " . $category_info['namer'] . ". Все модели есть в наличии, а также у нас есть специальные предложения на " . $category_info['sinonim1'] . " " . $this->translit2rus($product_info['manufacturer']) . ". Оформляйте онлайн заказ через сайт или по телефону " . $this->config->get('config_telephone') . ". Если вы не можете определиться " . $category_info['sinonim2'] . " купить, присмотритесь к " . $category_info['named'] . " " . $product_info['manufacturer'] . ". " . $product_info['name'] . " - " . $product_info['functions'] . ". Магазин italy-sumochka.ru доставит ваш заказ или оформит самовывоз в " . $cityformpred . ".";
 			}
 			
 			
@@ -1103,11 +1103,17 @@ public function add() {
 		}
 		
 		foreach ($this->data['manufacturer_categorys'] as $tek) {
-			$sql = "SELECT * FROM oc_redirect WHERE oc_redirect.from_url='".$tek['linkold']."' AND oc_redirect.to_url='".$tek['linknew']."'";
+			var_dump($tek);
+			$sql = "SELECT * FROM oc_redirect WHERE oc_redirect.from_url='".$tek['linkold']."'";
 			
 			$redirect = $this->db->query($sql);
 			
 			if (count($redirect->row) > 0) {
+				
+				$this->db->query("DELETE FROM oc_redirect WHERE oc_redirect.from_url='".$tek['linkold']."'");
+				$sql = "INSERT INTO oc_redirect SET oc_redirect.active=1, oc_redirect.from_url='".$tek['linkold']."', oc_redirect.to_url='".$tek['linknew']."'";
+				//echo($sql."<br>");
+				$this->db->query($sql);
 				
 			} else {
 				$sql = "INSERT INTO oc_redirect SET oc_redirect.active=1, oc_redirect.from_url='".$tek['linkold']."', oc_redirect.to_url='".$tek['linknew']."'";
@@ -1115,7 +1121,7 @@ public function add() {
 				$this->db->query($sql);
 				//echo($i.";1;".$tek['linkold'].";".$tek['linknew'].";301;;;1<br>");
 			}
-			$i++;
+			
 		}
 	
 	}
@@ -1127,11 +1133,11 @@ public function add() {
 	    $customer_name = trim($_POST['customer_name']);
 	    $customer_phone = trim($_POST['customer_phone']);
 	    $customer_message = trim($_POST['customer_message']);
-	    $mail_subject = "Perun-shop - быстрый заказ (".date('d.m.Y H:i').")";
+	    $mail_subject = "italy-sumochka - быстрый заказ (".date('d.m.Y H:i').")";
 	    
 	    if (isset($customer_name) && $customer_name!=="" && isset($customer_phone) && $customer_phone!=="") {
-	      $store_email = "info@perun-shop.ru";
-	      $fast_order_email = "Perun-shop";
+	      $store_email = "info@italy-sumochka.ru";
+	      $fast_order_email = "italy-sumochka";
 	      //$product_name = iconv("UTF-8", "windows-1251", $product_name);
 	      //$product_price = iconv("UTF-8", "windows-1251", $product_price);
 	      $subject   = '=?windows-1251?B?'.base64_encode($mail_subject).'?=';

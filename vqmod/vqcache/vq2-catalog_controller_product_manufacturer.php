@@ -1,6 +1,8 @@
 <?php 
 class ControllerProductManufacturer extends Controller {  
-	public function index() { 
+	public function index() {
+		$this->document->addStyle('catalog/view/theme/theme331/stylesheet/manufacturer.css');
+
 		$this->language->load('product/manufacturer');
 		
 		$this->load->model('catalog/manufacturer');
@@ -279,7 +281,7 @@ class ControllerProductManufacturer extends Controller {
 					$this->document->setTitle($manufacturer_category_info[1]['seo_title']);
 				} else {
 					
-					$this->document->setTitle('Купить ' . $manufacturer_category_category['namev'] . ' ' . $manufacturer_category_manufacturer['name'] . ' (' . $this->translit2rus($manufacturer_category_manufacturer['name']) . ') в ' .$cityformpred. '  недорого - perun-shop');
+					$this->document->setTitle('Купить ' . $manufacturer_category_category['namev'] . ' ' . $manufacturer_category_manufacturer['name'] . ' (' . $this->translit2rus($manufacturer_category_manufacturer['name']) . ') в ' .$cityformpred. '  недорого - italy-sumochka');
 					
 				}
 				if ($manufacturer_category_info[1]['seo_h1']) {
@@ -290,7 +292,7 @@ class ControllerProductManufacturer extends Controller {
 				if ($manufacturer_category_info[1]['meta_description']) {
 					$this->document->setDescription($manufacturer_category_info[1]['meta_description']);
 				} else {
-					$this->document->setDescription('Заказывайте ' . $manufacturer_category_category['namev'] . ' ' . $manufacturer_category_manufacturer['name'] . ' в интернет магазине Perun-Shop. Самые выгодные условия, цены и доставка по всей России') ;
+					$this->document->setDescription('Заказывайте ' . $manufacturer_category_category['namev'] . ' ' . $manufacturer_category_manufacturer['name'] . ' в интернет магазине italy-sumochka. Самые выгодные условия, цены и доставка по всей России') ;
 				}
 				
 				if ($manufacturer_category_info[1]['description']) {

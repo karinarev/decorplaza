@@ -1,0 +1,510 @@
+---------- Date: 2016-09-11 18:33:30 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=common/home&amp;token=8e3c68aace49bfba82388e063ead5148
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/vqmod_seopro.xml
+   id        : VQMOD SeoPro
+   version   : 1.5.x
+   vqmver    : 2.1.7
+   author    : freelancer
+
+File Name    : admin/model/*/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->cache->delete
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 18:33:40 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=catalog/product&amp;token=8e3c68aace49bfba82388e063ead5148
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/vqmod_seopro.xml
+   id        : VQMOD SeoPro
+   version   : 1.5.x
+   vqmver    : 2.1.7
+   author    : freelancer
+
+File Name    : admin/model/*/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->cache->delete
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 18:33:50 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=catalog/product/filter&amp;token=8e3c68aace49bfba82388e063ead5148&amp;page=1&amp;sort=pd.name&amp;order=ASC&amp;filter_name=ferre
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/vqmod_seopro.xml
+   id        : VQMOD SeoPro
+   version   : 1.5.x
+   vqmver    : 2.1.7
+   author    : freelancer
+
+File Name    : admin/model/*/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->cache->delete
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 18:33:57 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=catalog/product/filter&amp;token=8e3c68aace49bfba82388e063ead5148&amp;page=1&amp;sort=pd.name&amp;order=ASC&amp;filter_name=ferre%20
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/vqmod_seopro.xml
+   id        : VQMOD SeoPro
+   version   : 1.5.x
+   vqmver    : 2.1.7
+   author    : freelancer
+
+File Name    : admin/model/*/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->cache->delete
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 18:33:58 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=catalog/product/filter&amp;token=8e3c68aace49bfba82388e063ead5148&amp;page=1&amp;sort=pd.name&amp;order=ASC&amp;filter_name=ferre%20zf
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/vqmod_seopro.xml
+   id        : VQMOD SeoPro
+   version   : 1.5.x
+   vqmver    : 2.1.7
+   author    : freelancer
+
+File Name    : admin/model/*/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->cache->delete
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 18:34:00 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=catalog/product/filter&amp;token=8e3c68aace49bfba82388e063ead5148&amp;page=1&amp;sort=pd.name&amp;order=ASC&amp;filter_name=ferre%20zf200
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/vqmod_seopro.xml
+   id        : VQMOD SeoPro
+   version   : 1.5.x
+   vqmver    : 2.1.7
+   author    : freelancer
+
+File Name    : admin/model/*/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->cache->delete
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 18:34:04 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=catalog/product/filter&amp;token=8e3c68aace49bfba82388e063ead5148&amp;page=1&amp;sort=pd.name&amp;order=ASC&amp;filter_name=ferre%20zf20
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/vqmod_seopro.xml
+   id        : VQMOD SeoPro
+   version   : 1.5.x
+   vqmver    : 2.1.7
+   author    : freelancer
+
+File Name    : admin/model/*/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->cache->delete
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 18:36:41 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=catalog/product/autocomplete&amp;token=8e3c68aace49bfba82388e063ead5148&amp;filter_name=%09%D0%97%D0%BE%D0%BD%D1%82%20Ferre%20zf20GR%20ferre%20blu%20moro%20mini%20auto
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/vqmod_seopro.xml
+   id        : VQMOD SeoPro
+   version   : 1.5.x
+   vqmver    : 2.1.7
+   author    : freelancer
+
+File Name    : admin/model/*/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->cache->delete
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 18:36:45 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=catalog/product/autocomplete&amp;token=8e3c68aace49bfba82388e063ead5148&amp;filter_name=%09%D0%97%D0%BE%D0%BD%D1%82%20Ferre%20zf20GR%20ferre%20blu%20moro%20mini%20au
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/vqmod_seopro.xml
+   id        : VQMOD SeoPro
+   version   : 1.5.x
+   vqmver    : 2.1.7
+   author    : freelancer
+
+File Name    : admin/model/*/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->cache->delete
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 18:36:47 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=catalog/product/autocomplete&amp;token=8e3c68aace49bfba82388e063ead5148&amp;filter_name=%09%D0%97%D0%BE%D0%BD%D1%82%20Ferre%20zf20GR%20ferre%20blu%20moro%20mini%20a
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/vqmod_seopro.xml
+   id        : VQMOD SeoPro
+   version   : 1.5.x
+   vqmver    : 2.1.7
+   author    : freelancer
+
+File Name    : admin/model/*/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->cache->delete
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 18:36:49 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=catalog/product/autocomplete&amp;token=8e3c68aace49bfba82388e063ead5148&amp;filter_name=%09%D0%97%D0%BE%D0%BD%D1%82%20Ferre%20zf20GR%20ferre%20
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/vqmod_seopro.xml
+   id        : VQMOD SeoPro
+   version   : 1.5.x
+   vqmver    : 2.1.7
+   author    : freelancer
+
+File Name    : admin/model/*/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->cache->delete
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 18:36:52 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=catalog/product/autocomplete&amp;token=8e3c68aace49bfba82388e063ead5148&amp;filter_name=%D0%B7%D0%BE%D0%BD%D1%82
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/vqmod_seopro.xml
+   id        : VQMOD SeoPro
+   version   : 1.5.x
+   vqmver    : 2.1.7
+   author    : freelancer
+
+File Name    : admin/model/*/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->cache->delete
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 18:36:54 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=catalog/product/autocomplete&amp;token=8e3c68aace49bfba82388e063ead5148&amp;filter_name=%D0%B7%D0%BE%D0%BD%D1%82%20
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/vqmod_seopro.xml
+   id        : VQMOD SeoPro
+   version   : 1.5.x
+   vqmver    : 2.1.7
+   author    : freelancer
+
+File Name    : admin/model/*/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->cache->delete
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 18:36:55 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=catalog/product/autocomplete&amp;token=8e3c68aace49bfba82388e063ead5148&amp;filter_name=%D0%B7%D0%BE%D0%BD%D1%82%20fe
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/vqmod_seopro.xml
+   id        : VQMOD SeoPro
+   version   : 1.5.x
+   vqmver    : 2.1.7
+   author    : freelancer
+
+File Name    : admin/model/*/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->cache->delete
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 18:36:57 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=catalog/product/autocomplete&amp;token=8e3c68aace49bfba82388e063ead5148&amp;filter_name=%D0%B7%D0%BE%D0%BD%D1%82%20ferre
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/vqmod_seopro.xml
+   id        : VQMOD SeoPro
+   version   : 1.5.x
+   vqmver    : 2.1.7
+   author    : freelancer
+
+File Name    : admin/model/*/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->cache->delete
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 18:36:58 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=catalog/product/autocomplete&amp;token=8e3c68aace49bfba82388e063ead5148&amp;filter_name=%D0%B7%D0%BE%D0%BD%D1%82%20ferre%20z
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/vqmod_seopro.xml
+   id        : VQMOD SeoPro
+   version   : 1.5.x
+   vqmver    : 2.1.7
+   author    : freelancer
+
+File Name    : admin/model/*/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->cache->delete
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 18:36:59 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=catalog/product/autocomplete&amp;token=8e3c68aace49bfba82388e063ead5148&amp;filter_name=%D0%B7%D0%BE%D0%BD%D1%82%20ferre%20zf20
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/vqmod_seopro.xml
+   id        : VQMOD SeoPro
+   version   : 1.5.x
+   vqmver    : 2.1.7
+   author    : freelancer
+
+File Name    : admin/model/*/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->cache->delete
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 20:43:46 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=common/home&amp;token=1ada0c545d13893a69ded19f9aed9cdc
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/vqmod_seopro.xml
+   id        : VQMOD SeoPro
+   version   : 1.5.x
+   vqmver    : 2.1.7
+   author    : freelancer
+
+File Name    : admin/model/*/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->cache->delete
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 20:44:18 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=setting/setting&amp;token=1ada0c545d13893a69ded19f9aed9cdc
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/vqmod_seopro.xml
+   id        : VQMOD SeoPro
+   version   : 1.5.x
+   vqmver    : 2.1.7
+   author    : freelancer
+
+File Name    : admin/model/*/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->cache->delete
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 20:44:26 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=extension/module&amp;token=1ada0c545d13893a69ded19f9aed9cdc
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/vqmod_seopro.xml
+   id        : VQMOD SeoPro
+   version   : 1.5.x
+   vqmver    : 2.1.7
+   author    : freelancer
+
+File Name    : admin/model/*/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->cache->delete
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 20:45:07 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=module/featured&amp;token=1ada0c545d13893a69ded19f9aed9cdc
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/vqmod_seopro.xml
+   id        : VQMOD SeoPro
+   version   : 1.5.x
+   vqmver    : 2.1.7
+   author    : freelancer
+
+File Name    : admin/model/*/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->cache->delete
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 20:47:29 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=common/home&amp;token=23dc9928d20a1c3e4b1d02025f8f95ac
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/vqmod_seopro.xml
+   id        : VQMOD SeoPro
+   version   : 1.5.x
+   vqmver    : 2.1.7
+   author    : freelancer
+
+File Name    : admin/model/*/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->cache->delete
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 20:47:34 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=extension/module&amp;token=23dc9928d20a1c3e4b1d02025f8f95ac
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/vqmod_seopro.xml
+   id        : VQMOD SeoPro
+   version   : 1.5.x
+   vqmver    : 2.1.7
+   author    : freelancer
+
+File Name    : admin/model/*/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->cache->delete
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 20:47:38 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=module/featured&amp;token=23dc9928d20a1c3e4b1d02025f8f95ac
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/vqmod_seopro.xml
+   id        : VQMOD SeoPro
+   version   : 1.5.x
+   vqmver    : 2.1.7
+   author    : freelancer
+
+File Name    : admin/model/*/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->cache->delete
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 20:47:42 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=module/featured&amp;token=23dc9928d20a1c3e4b1d02025f8f95ac
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/vqmod_seopro.xml
+   id        : VQMOD SeoPro
+   version   : 1.5.x
+   vqmver    : 2.1.7
+   author    : freelancer
+
+File Name    : admin/model/*/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->cache->delete
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 20:47:42 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=extension/module&amp;token=23dc9928d20a1c3e4b1d02025f8f95ac
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/vqmod_seopro.xml
+   id        : VQMOD SeoPro
+   version   : 1.5.x
+   vqmver    : 2.1.7
+   author    : freelancer
+
+File Name    : admin/model/*/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->cache->delete
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 22:06:11 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /zhenskaja-sumka-baldinini-ba670422-cobalto-bianco-bluette
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/price_replace_option.xml
+   id        : price_replace_options_quantities
+   version   : 1.9price_replace_options_quantities
+   vqmver    : 1.0
+   author    : ocextensions.co.uk
+
+File Name    : catalog/view/theme/theme331/template/product/product.tpl(2)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <input type="text" name="quantity" size="2" value="<?php echo $minimum; ?>" />
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 22:42:15 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /zhenskaja-sumka-baldinini-ba670422-cobalto-bianco-bluette
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/price_replace_option.xml
+   id        : price_replace_options_quantities
+   version   : 1.9price_replace_options_quantities
+   vqmver    : 1.0
+   author    : ocextensions.co.uk
+
+File Name    : catalog/view/theme/theme331/template/product/product.tpl(2)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <input type="text" name="quantity" size="2" value="<?php echo $minimum; ?>" />
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 22:49:17 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=common/home&amp;token=82fa273405963ef315999090c764ed87
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/vqmod_seopro.xml
+   id        : VQMOD SeoPro
+   version   : 1.5.x
+   vqmver    : 2.1.7
+   author    : freelancer
+
+File Name    : admin/model/*/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->cache->delete
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 22:49:20 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=extension/module&amp;token=82fa273405963ef315999090c764ed87
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/vqmod_seopro.xml
+   id        : VQMOD SeoPro
+   version   : 1.5.x
+   vqmver    : 2.1.7
+   author    : freelancer
+
+File Name    : admin/model/*/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->cache->delete
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 22:49:27 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=module/youwatched&amp;token=82fa273405963ef315999090c764ed87
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/vqmod_seopro.xml
+   id        : VQMOD SeoPro
+   version   : 1.5.x
+   vqmver    : 2.1.7
+   author    : freelancer
+
+File Name    : admin/model/*/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->cache->delete
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 22:49:32 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=module/youwatched&amp;token=82fa273405963ef315999090c764ed87
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/vqmod_seopro.xml
+   id        : VQMOD SeoPro
+   version   : 1.5.x
+   vqmver    : 2.1.7
+   author    : freelancer
+
+File Name    : admin/model/*/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->cache->delete
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 22:49:32 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=extension/module&amp;token=82fa273405963ef315999090c764ed87
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/vqmod_seopro.xml
+   id        : VQMOD SeoPro
+   version   : 1.5.x
+   vqmver    : 2.1.7
+   author    : freelancer
+
+File Name    : admin/model/*/*.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->cache->delete
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-11 23:04:34 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /zhenskaja-sumka-baldinini-ba670422-cobalto-bianco-bluette
+MOD DETAILS:
+   modFile   : C:\OpenServer\domains\plaza\vqmod/xml/price_replace_option.xml
+   id        : price_replace_options_quantities
+   version   : 1.9price_replace_options_quantities
+   vqmver    : 1.0
+   author    : ocextensions.co.uk
+
+File Name    : catalog/view/theme/theme331/template/product/product.tpl(2)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <input type="text" name="quantity" size="2" value="<?php echo $minimum; ?>" />
+
+----------------------------------------------------------------------
+
+

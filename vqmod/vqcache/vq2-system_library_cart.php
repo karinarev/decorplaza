@@ -402,6 +402,18 @@ class Cart {
 		}
 		
 		return $download;
-	}	
+	}
+
+	public function getQuantity($product_id) {
+		$quantity = 0;
+
+		foreach ($this->getProducts() as $product) {
+			if($product['product_id'] == $product_id) {
+				$quantity = $product['quantity'];
+			}
+		}
+
+		return $quantity;
+	}
 }
 ?>
