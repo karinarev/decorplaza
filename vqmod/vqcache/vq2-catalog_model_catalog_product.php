@@ -39,6 +39,8 @@ class ModelCatalogProduct extends Model {
 				'name'             => $query->row['name'],
 				'functions'        => $query->row['functions'],
 				'description'      => $query->row['description'],
+				'video'            => $query->row['video'],
+				'video_description'=> $query->row['video_description'],
 				'description2'     => $query->row['description2'],
 				'meta_description' => $query->row['meta_description'],
 				'meta_keyword'     => $query->row['meta_keyword'],
@@ -432,7 +434,13 @@ class ModelCatalogProduct extends Model {
 			}
 			
 			if (empty($productID)){
-					$query = $this->db->query("SELECT p.product_id FROM " . DB_PREFIX . "product p WHERE p.status = '1' AND p.bestSaller = '1' AND p.date_available <= '" . $this->NOW . "' ORDER BY p.product_id DESC");
+					/*$query = $this->db->query("SELECT p.product_id FROM " . DB_PREFIX . "product p WHERE p.status = '1' AND p.bestSaller = '1' AND p.date_available <= '" . $this->NOW . "' ORDER BY p.product_id DESC");*/
+					$offset_result = $this->db->query("SELECT FLOOR(RAND() * COUNT(*)) AS `offset` FROM " . DB_PREFIX . "product");
+					$offset = $offset_result->row['offset'];
+					$query = $this->db->query("
+					 SELECT * FROM " . DB_PREFIX . "product p 
+					 WHERE p.quantity > 0
+					 LIMIT $offset, 1 " );
 
 					foreach ($query->rows as $result) {
 						$arProducts[] = $result['product_id'];
@@ -1350,7 +1358,6 @@ public function getAjaxcartProducts($data = array()) {
 				return $product_data;
 		}
 }
-	
 	public function getTotalProductSpecials() {
 		if ($this->customer->isLogged()) {
 			$customer_group_id = $this->customer->getCustomerGroupId();

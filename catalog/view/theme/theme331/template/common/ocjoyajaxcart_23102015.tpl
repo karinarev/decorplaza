@@ -120,7 +120,6 @@
 	<?php } ?>
 
     <?php } else { ?>
-
     <div class="mini-cart-infos">
       <div id="headajaxcart" style="padding-left:20px;"><?php echo $text_ajaxcart_empty; ?></div>
 		<img src="image/ocjoyajaxcart/loading.gif" id="ajaxcartloadimg"/>

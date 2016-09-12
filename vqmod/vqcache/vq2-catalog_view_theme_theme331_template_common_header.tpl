@@ -41,14 +41,14 @@ $description = str_replace(array("&nbsp",";","\r\n", "\r", "\n", "\t", '  ', '  
  if(navigator.userAgent.match(/Android/i)){
     window.scrollTo(0,1);
  }
-</script>
+</script> 
+ 
 
-	<link href="catalog/view/javascript/jquery/formstyler/jquery.formstyler.css" rel="stylesheet" />
 <link href="catalog/view/theme/<?php echo $this->config->get('config_template'); ?>/stylesheet/bootstrap.css" rel="stylesheet" type="text/css" />
 <link href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/cloud-zoom.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/stylesheet.css" />
-	<link rel="stylesheet" type="text/css" href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/fonts.css" />
-	<link href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/slideshow.css" rel="stylesheet" type="text/css" />
+<link href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/font-awesome.css" rel="stylesheet" type="text/css" />
+<link href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/slideshow.css" rel="stylesheet" type="text/css" />
 <link href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/jquery.prettyPhoto.css" rel="stylesheet" type="text/css" />
 <link href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/camera.css" rel="stylesheet" type="text/css" />
 <link href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/superfish.css" rel="stylesheet" type="text/css" />
@@ -61,7 +61,7 @@ $description = str_replace(array("&nbsp",";","\r\n", "\r", "\n", "\t", '  ', '  
 <link rel="<?php echo $style['rel']; ?>" type="text/css" href="<?php echo $style['href']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
 <link href='//fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
-	<link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
 
 <script type="text/javascript" src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/jquery/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/jquery/jquery-migrate-1.2.1.min.js"></script>
@@ -81,7 +81,7 @@ $description = str_replace(array("&nbsp",";","\r\n", "\r", "\n", "\t", '  ', '  
 <script type="text/javascript" src="catalog/view/javascript/jquery/jquery.jcarousel.min.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/jquery/jquery.cycle.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/jquery/jquery.maskedinput-1.3.min.js"></script>
-	<script src="catalog/view/javascript/jquery/formstyler/jquery.formstyler.min.js"></script>
+
 
 <!--[if IE]>
 <script type="text/javascript" src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/html5.js"></script>
@@ -177,10 +177,9 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 			<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="checkout/cart") {echo "active";} ?>" href="/novosti/"><i class="fa fa-news"></i>Новости</a></li>
 			<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="checkout/checkout") {echo "active";} ?>" href="/contact-us/"><i class="fa fa-check"></i>Контакты</a></li>
 			<li><a class href="/optovikam"><i class="fa fa-optovikam"></i>Оптовикам</a></li>
-			<li class="last"><a href="#feedbackForm" class="feedbackForm"><i class="fa fa-obrzvonok"></i>Заказать обратный звонок</a></li>
-			
-			
-			
+
+
+
 			<!--<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="account/wishlist") {echo "active";} ?>" href="<?php echo $wishlist; ?>" id="wishlist-total"><i class="fa fa-star"></i><?php echo $text_wishlist; ?></a></li>
 			<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="account/account") {echo "active";} ?>" href="<?php echo $account; ?>"><i class="fa fa-user"></i><?php echo $text_account; ?></a></li>
 			<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="checkout/cart") {echo "active";} ?>" href="<?php echo $shopping_cart; ?>"><i class="fa fa-shopping-cart"></i><?php echo $text_shopping_cart; ?></a></li>
@@ -189,7 +188,18 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 		</ul>
 	</div>
 </div>
-<div class="header">
+	<div class="navbarFullWidth">
+
+	</div>
+	<div class="headerFullWidth">
+
+		</div>
+	<div class="searchFullWidth">
+
+	</div>
+
+
+<!--div class="header">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
@@ -198,263 +208,163 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 			</div>
 		</div>
 	</div>
-</div>
+</div-->
 <div id="page">
 <div id="shadow">
 <div class="shadow"></div>
 
 <header id="header">
-	<div class="container">
-		<div class="toprow-1">
-			<div class="row">
-				<div class="col-sm-12">
-					<a class="swipe-control" href="#"><i class="fa fa-align-justify"></i></a>
-					<div class="top-search">
-						<i class="fa fa-search"></i>
-					</div>
-				</div>
-				
-			</div>
-		</div>
+	<div class="container-fluid">
+		<!-- Вот тут начинается все-->
 		<div class="row">
 			<div class="col-sm-12">
-				<?php if ($logo) { ?>
-					<div id="logo"><a style="display:block;" href="<?php echo $home; ?>">
-					<img class="img" style="vertical-align:top;max-width:100%;width:100%;" src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="Итальянские сумки в Москве" /></a>
-					<div class="rightsearch block">
-					<div class="top-search1">
-						<i class="fa fa-search"></i>
-					</div>
-					<div id="search">
-						<div class="inner">
-							<div class="button-search"><i class="fa fa-search"></i><i class="fa fa-angle-right"></i></div>
-							<input type="search" name="search" placeholder="<?php echo $text_search; ?>" value="" />
-						</div>
-					</div>
-					</div>
-					
-					</div>
-				<?php } ?>
-				<div class="cart-position" onclick="location.href='/shopping-cart/'">
-					<div class="cart-inner"><?php echo $cart; ?></div>
-				</div>
-				<div class="rightsearch">
-					
-					<a href="#feedbackForm" class="feedbackForm feedbackForm2">Заказать обратный звонок</a>
-				</div>
-				
-				 <div class="phone">
-				 <div style="font-size:12px; font-weight:bold;   color: #EC1313;">Бесплатный звонок по России</div>
-					<ul>
-						 <li>
-							<span><a style="font-size: 22px;   color: #EC1313;" href="tel:88005008978">8 (800) 500-89-78</a></span>
-						</li>
-						<li>
-                	        <span><a style="font-size: 22px;"  href="tel:84954907474">8 (495) 490-74-74</a></span>
-						</li>
-						<li>
-                     	    <span><a style="font-size: 22px;"  href="tel:89260250008">8 (926) 025-00-08</a></span>
-						</li>
-						
-                    </ul>
-				</div>
-				<!--<div class="phonemobil">
-				 <div style="font-size:12px; font-weight:bold;   color: #EC1313;">Бесплатный звонок по России</div>
-					<ul>
-						 <li>
-							<a style="font-size: 22px;   color: #EC1313;" href="tel:+78005008978" >8 (800) 500-89-78</a>
-						</li>
-						<li>
-                	        <a style="font-size: 22px;" href="tel:+74954907474" >8 (495) 490-74-74</a>
-						</li>
-						<li>
-                     	    <a style="font-size: 22px;" href="tel:+79260250008" >8 (926) 025-00-08</a>
-						</li>
-						
-                    </ul>
-				</div>-->
-				
-				<div class="grafik-addres">
-					<span class="dostavka">Доставка по всей России</span>
-					<a class="feedbackForm" href="#grafikmodal"><div class="grafik" >
-						Пн-Пт: 10.00 - 21.00, Сб-Вс: 10.00 - 20.00
-					</div></a> 
-					<a class="feedbackForm" href="#yandexmetromodal"><div class="metro" >
-						Планерная
-					</div></a>
-					<a class="feedbackForm" href="#yandexmapmodal"><div class="addres" >
-						ул. Свободы, д. 89, корпус 5
-					</div></a>
-				
-				
-				</div>
-                
-               
-               
-				
 				<div class="toprow">
-					<ul class="links">
-						<?php if (!isset($this->request->get['route'])) { $route='active'; }  else {$route='';}?> 
-                        <li class="first"><a class="<?php echo $route; if (isset($this->request->get['route']) && $this->request->get['route']=="common/home") {echo "active";} ?>" href="<?php echo $home; ?>"><i class="fa fa-home"></i><?php echo $text_home; ?></a>
+					<ul class="links list-inline">
+						<?php if (!isset($this->request->get['route'])) { $route='active'; }  else { $route=''; }?>
+                        <li class="first"><a class="<?php echo $route; if (isset($this->request->get['route']) && $this->request->get['route']=="common/home") ?>" href="<?php echo $home; ?>"><i class="fa fa-home"></i><?php echo $text_home; ?></a>
                         </li>
+						<li><a class="" href="/o-nas"><i class="fa fa-optovikam"></i>О нас</a></li>
+						<li><a class="" href="/dostavka"><i class="fa fa-optovikam"></i>Доставка и оплата</a></li>
 
-                        <?php foreach ($informations as $information) { ?>
-				        <li><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a>
-                        </li>
-				<?php } ?>
-						<li><a class="" href="/garantii"><i class="fa fa-optovikam"></i>Гарантии</a></li>
+						<li><a class="" href="/garantii"><i class="fa fa-optovikam"></i>Гарантии и сертификаты</a></li>
 						
-                		<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="news/news") {echo "active";} ?>" href="/novosti/"><i class="fa fa-star"></i>Новости</a>
+                		<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="news/news") ?>" href="/novosti/"><i class="fa fa-star"></i>Новости</a>
                         </li>
-						<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="information/contact") {echo "active";} ?>" href="<?php echo $contact; ?>"><i class="fa fa-star"></i><?php echo $text_contact; ?></a>
+						<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="information/contact") ?>" href="<?php echo $contact; ?>"><i class="fa fa-star"></i><?php echo $text_contact; ?></a>
                         </li>
-						
-						
-
+						<div class="headerBrownPanel">
+							<a href="/login" class="icon enterIcon"></a>
+							<a href="/create-account" class="icon accountIcon"></a>
+							<div class="cart-position" onclick="location.href='/shopping-cart/'">
+								<div class="cart-inner"><?php echo $cart; ?></div>
+							</div>
+							<!--a href="/" id="cartIcon" class="icon cartIcon"><?php if($productsNumber) echo'<span id="cart-total">', $productsNumber, '</span>';?></a-->
+						</div>
+						<div class="justifyHelper">
+						</div>
 					</ul>
 					<div class="clear"></div>
 				</div>
 				<div class="clear"></div>
 			</div>
 		</div>
-		<?php if ($categories) { ?>
-		<div class="row">
-			<div class="col-sm-12">
-				
-				<div id="menu-gadget">
-					<div id="menu-icon"><?php echo $text_category; ?></div>
-					<ul id="nav" class="sf-menu-phone">
-						<li style="background-color: #666161;"><a href="/brands/">Производители</a>
-						<?php foreach ($mobilecategories as $mobilecategorie) { ?>
-						<li <?php if ($mobilecategorie['children']) { ?>class="parent"<?php } ?>><a href="<?php echo $mobilecategorie['href']; ?>"><?php echo $mobilecategorie['name']; ?></a>
-							<?php if ($mobilecategorie['children']) { ?>
-					
-								<?php for ($i = 0; $i < count($mobilecategorie['children']);) { ?>
-								<ul>
-								<?php $j = $i + ceil(count($mobilecategorie['children']) / $mobilecategorie['column']); ?>
-								<?php for (; $i < $j; $i++) { ?>
-								<?php if (isset($mobilecategorie['children'][$i])) { ?>
-								<?php $id=$mobilecategorie['children'][$i]['category_id'];?>
-								<?php if ( $id == $child_id) { ?>
-								<li class="active<?php if ($mobilecategorie['children'][$i]['children3']) {?> parent<?php } ?>">
-									<?php } else { ?>
-								<li <?php if ($mobilecategorie['children'][$i]['children3']) {?>class="parent"<?php } ?>>
-									<?php } ?>
-									<?php if ($mobilecategorie['children'][$i]['children3']) {?>
-									<a href="<?php echo $mobilecategorie['children'][$i]['href']; ?>"><?php echo $mobilecategorie['children'][$i]['name'];?></a>
-									<ul>
-									<?php foreach ($mobilecategorie['children'][$i]['children3'] as $ch3) { ?>
-									<li>
-										<?php if ($ch3['category_id'] == $ch3_id) { ?>
-										<a href="<?php echo $ch3['href']; ?>" class="active"><?php echo $ch3['name']; ?></a>
-										<?php } else { ?>
-										<a href="<?php echo $ch3['href']; ?>"><?php echo $ch3['name']; ?></a>
-										<?php } ?>
-									</li>
-									<?php } ?>
-									</ul>
-									<?php } else {?>
-									<a href="<?php echo $mobilecategorie['children'][$i]['href']; ?>"><?php echo $mobilecategorie['children'][$i]['name'];?></a>
-								<?php }?>
-								</li>
-								<?php } ?>
-								<?php } ?>
-								</ul>
-								<?php } ?>
-						<?php } ?>
-						</li>
-						<?php } ?>
-					</ul>
-				</div>
-				
-			</div>
-		</div>
-		<?php } ?>
-	</div>
-	<?php if ($categories) { ?>
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12">
-				<div id="menu">
-					<ul  class="sf-menu">
-						<?php $cv=0;?>
-						<?php foreach ($categories as $category) { $cv++; ?>
-						<?php if ($category['category_id'] == $category_id) { ?>
-						<li class="current cat_<?php echo $cv ?>">
-						<?php } else { ?>
-						<li class="cat_<?php echo $cv ?>">
-						<?php } ?>
-						<a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a>
-						<?php if ($category['children']) { ?>
-								<div class="sf-mega" id="style-1">
-								<?php for ($i = 0; $i < count($category['children']);) { ?>
-										<ul class="sf-mega-section">
-											<?php $j = $i + ceil(count($category['children']) / $category['column']); ?>
-											<?php for (; $i < $j; $i++) { ?>
-											<?php if (isset($category['children'][$i])) { ?>
-											<?php $id=$category['children'][$i]['category_id'];?>
-											<?php if ( $id == $child_id) { ?>
-											<li class="current">
-											<?php } else { ?>
-											<li>
-											<?php } ?>
-											<?php if ($category['children'][$i]['children3']) {?>
-											<a class="screenshot1"  href="<?php echo $category['children'][$i]['href']; ?>"><?php echo $category['children'][$i]['name'];?></a>
-											<!--<ul>
-											<?php foreach ($category['children'][$i]['children3'] as $ch3) { ?>
-												<li>
-												<?php if ($ch3['category_id'] == $ch3_id) { ?>
-												<a href="<?php echo $ch3['href']; ?>" class="current"><?php echo $ch3['name']; ?></a>
-												<?php } else { ?>
-												<a href="<?php echo $ch3['href']; ?>"><?php echo $ch3['name']; ?></a>
-												<?php } ?>
-											</li>
-											<?php }?>
-											</ul>-->
-											<?php } else {?>
-											<a class="screenshot1"  href="<?php echo $category['children'][$i]['href']; ?>"><?php echo $category['children'][$i]['name'];?></a>
-											<?php }?>
-											</li>
-											<?php } ?>
-											<?php } ?>
-										</ul>
-								<?php } ?>
-								</div>
-						<?php } ?>
-						</li>
-						<?php } ?>
-						
-						
-						<li class="cat_5"><a href="/brands/">Бренды</a>	
-						<div class="sf-mega" id="style-1">																								
-							<ul class="sf-mega-section">
-									<?php foreach ($brands as $brand) { ?>
-									<li>
-									<?php if($brand['brand_id'] == $brand_id) {?>
-									<a class="active" href="<?php echo $brand['href']; ?>" title="<?php echo $brand['seo_title']; ?>"><?php echo $brand['name']; ?></a>
-									<?php } else {?>
-									<a href="<?php echo $brand['href']; ?>" title="<?php echo $brand['seo_title']; ?>"><?php echo $brand['name']; ?></a>
-									<?php }?>
-									</li>
-									<?php }?>
-							</ul></div>
-						</li>
-		
-						<li class="cat_6"><a href="/discount-form/">Получить скидку</a>	
-					
-						<li class="cat_7"><a href="/index.php?route=discount/discountcart">Дисконтная карта</a>	
-						
-						<li class="account_link"><a  href="<?php echo $account; ?>">Личный кабинет</a></li>
-					</ul>
-					
-					<div class="clear"></div>
-				</div>
-			</div>
-		</div>
-		
-	</div>
-	<?php } ?>
+	<!--ВСТАВЛЯТЬ СЮДА-->
+
 </header>
+	<div id="decorPlazaHeader">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-3">
+					<div id="logo">
+						<?php if ($logo) { ?>
+						<a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" /></a>
+						<?php } else { ?>
+						<h1><a href="<?php echo $home; ?>"><?php echo $name; ?></a></h1>
+						<?php } ?>
+					</div>
+				</div>
+				<div class="col-sm-1">
+					<img src="/image/call.png" id="callIcon">
+				</div>
+				<div class="col-sm-2">
+					<!--div class="phone">                                                                       Это телефонные номера, по которым можно звонить
+            <div style="font-size:12px; font-weight:bold;   color: #EC1313;">Бесплатный звонок по России</div>
+               <ul>
+                    <li>
+                       <span><a style="font-size: 22px;   color: #EC1313;" href="tel:88005008978">8 (800) 500-89-78</a></span>
+                   </li>
+                   <li>
+                       <span><a style="font-size: 22px;"  href="tel:84954907474">8 (495) 490-74-74</a></span>
+                   </li>
+                   <li>
+                        <span><a style="font-size: 22px;"  href="tel:89260250008">8 (926) 025-00-08</a></span>
+                   </li>
+
+               </ul>
+           </div-->
+					<a href="tel:84993977912" class="headerBigText headerText telephoneNumber" id="firstNumber">84993977912</a><br/>
+					<a href="tel:89253977912" class="headerText telephoneNumber" id="secondNumber">89253977912</a><br/>
+					<a href="tel:89253977914" class="headerText telephoneNumber" id="thirdNumber">89253977914</a>
+				</div>
+				<div class="col-sm-1">
+					<img src="/image/callBack.png">
+				</div>
+				<div class="col-sm-2">
+					<a href="/" onclick="callBack(event);" name="callback" class="headerBigText">Обратный звонок</a><br/>
+					<input type="tel" id="callBackInput" class="callBackStuff"/><button id="callBackButton" class="callBackStuff" onmousedown="callBackSend();"><span class="callBackStuff glyphicon glyphicon-phone-alt"></span></button>
+					<span class="headerText">Режим работы:</span><br/>
+					<span class="headerText">Пн-Птн с 10 до 19</span><br/>
+				</div>
+				<div class="col-sm-1">
+					<img src="/image/location.png">
+				</div>
+				<div class="col-sm-2">
+					<a href="https://yandex.ru/maps/10716/balashiha/?z=15&ll=37.887561%2C55.750140&l=map&origin=jsapi_2_1_41&from=api-maps&um=constructor%3AsXf1ofePV3VE-_X4NL8Z2zh8nC9LIRLe&mode=search&ol=biz&oid=1099254618">
+						<span class="headerBigText" id="ourAdress">Наш адрес:</span><br/>
+						<span class="headerText">г.Москва, м."Новокосино,"</span><br/>
+						<span class="headerText">Носовихинское шоссе вл., 4.</span><br/>
+						<span class="headerText">ТЦ "Никольский Парк"</span><br/>
+					</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="panel panel-default nomargin">
+						<a data-toggle="collapse" href="#catalogCollapse" onclick="wallpapersCatalogCollapse(0)">
+							<div class="panel-heading">
+								Каталог товаров
+							</div>
+						</a>
+						<div id="catalogCollapse" class="panel-collapse collapse headerCollapse">
+							<ul class="list-group categoryUl">
+								<?php $i=0; ?>
+								<?php foreach ($categories as $category) if ($i<6){ if (!empty($category['children'])){ ?>
+								<?php echo ("<a class='categoryA' href='". $category['href'] ."' onmouseover='subcategoryBlockShow(". $i .");'><li class='categoryLi'>" . $category['name'] . "<span class='pointerSpan'></span></li></a>"); ?>
+								<?php } else { ?>
+								<?php echo ("<a class='categoryA' href='". $category['href'] ."' ><li class='categoryLi'>" . $category['name'] . "</li></a>"); }?>
+								<?php $i++; ?>
+								<?php } ?>
+								<!--li class="list-group-item" onclick="wallpapersCatalogCollapse(1);">Каталоги обоев<span id="1"/></li>
+								<li class="list-group-item" onclick="wallpapersCatalogCollapse(2);">Лучшие фрески от фабрики affresco<span id="2"/></li>
+								<li class="list-group-item" onclick="wallpapersCatalogCollapse(3);">Напольные покрытия<span id="3"/></li-->
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="panel panel-default nomargin">
+						<a href="/brands">
+							<div class="panel-heading">
+								Производители
+							</div>
+						</a>
+					</div>
+					<div class="collapseHorizontal invisibleElement" id="firstSubcategoryCollapse">
+						<ul class="subcategoryUl">
+						</ul>
+
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="panel panel-default">
+						<a href="<?php echo $special; ?>">
+							<div class="panel-heading">
+								Акции и скидки
+							</div>
+						</a>
+					</div>
+					<div class="collapseHorizontal invisibleElement" id="secondSubcategoryCollapse">
+						<ul class="subcategoryUl">
+						</ul>
+					</div>
+				</div>
+			</div>
+				<div id="search" name="search" class="container-fluid">
+					<div class="button-search"><img src="/image/search.png"/></div>
+					<input type="text" name="search" placeholder="Поиск по сайту..." value="<?php echo $search; ?>" />
+				</div>
+		</div>
+	</div>
 <section>
 <?php if ($header_top) {?>
 <div class="header-modules">
@@ -470,10 +380,12 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 <div class="clear"></div>
 <?php }?>
 
-<div id="container">
 <div class="container">
 <?php if (!empty($error)) { ?>
     <div class="warning"><?php echo $error ?><img src="catalog/view/theme/theme331/image/close-1.png" alt="" class="close" /></div>
 <?php } ?>
 <div id="notification"></div>
 <div class="row">
+	<script>
+		var categories = <?php echo json_encode($categories); ?>;
+	</script>

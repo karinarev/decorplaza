@@ -75,15 +75,18 @@ class ControllerCommonFooter extends Controller {
 		$this->data['account'] = $this->url->link('account/account', '', 'SSL');
 		$this->data['order'] = $this->url->link('account/order', '', 'SSL');
 		$this->data['wishlist'] = $this->url->link('account/wishlist', '', 'SSL');
-		$this->data['newsletter'] = $this->url->link('account/newsletter', '', 'SSL');		
+		$this->data['newsletter'] = $this->url->link('account/newsletter', '', 'SSL');
  
 			$this->data['address'] = nl2br($this->config->get('config_address'));
 			$this->data['telephone'] = $this->config->get('config_telephone');
 			$this->data['telephone2'] = $this->config->get('config_telephone');
 			$this->data['fax'] = $this->config->get('config_fax');
 			
+		$this->load->model('catalog/manufacturer');
+		$this->data['manufacturersF'] = $this->model_catalog_manufacturer->getManufacturers();
 
 		$this->data['powered'] = sprintf($this->language->get('text_powered'), $this->config->get('config_name'), date('Y', time()));
+		$this->data['telephone'] = $this->config->get('config_telephone');
 		
 		// Whos Online
 		if ($this->config->get('config_customer_online')) {

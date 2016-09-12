@@ -1,7 +1,7 @@
 <?php 
 class ControllerProductCategory extends Controller {  
 	public function index() {
-		$this->document->addStyle('catalog/view/theme/theme331/stylesheet/category.css');
+		$this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/category.css');
 		$this->document->addStyle('catalog/view/javascript/jquery/customscrollbar/jquery.mCustomScrollbar.min.css');
 		$this->document->addScript('catalog/view/javascript/jquery/customscrollbar/jquery.mCustomScrollbar.concat.min.js');
 
