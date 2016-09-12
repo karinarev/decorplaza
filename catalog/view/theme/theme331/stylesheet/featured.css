@@ -1,4 +1,4 @@
-h2 {
+.featured-title h2 {
     color: #c49849;
     font-size: 14px;
     font-weight: 700;
@@ -8,7 +8,7 @@ h2 {
     font-family: 'OpenSans';
 }
 
-h3 {
+.featured-title h3 {
     color: #1b1b1b;
     font-family: "BodoniItalic";
     font-style: italic;
@@ -275,4 +275,28 @@ a.featured-icon:hover, a.featured-icon:active {
 
 .featured-icon:hover{
     opacity: 1;
+}
+
+@media all and (max-width: 1279px) {
+
+    .featured-carousel{
+        width: 790px;
+        padding: 0 50px;
+    }
+
+}
+
+@media all and (max-width: 767px) {
+
+    .featured-carousel{
+        width: auto;
+        padding: 0 50px;
+    }
+
+    .featured-title h2{
+        
+    }
+
+
+
 }

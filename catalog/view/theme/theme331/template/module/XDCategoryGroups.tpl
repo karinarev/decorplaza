@@ -1,4 +1,5 @@
 <div class=" categories">
+    <div class="categories-wrapper">
     <?php foreach($categories as $category) { ?>
     <div class="item">
         <div class="image">
@@ -14,5 +15,45 @@
         </div>
     </div>
     <?php } ?>
+    </div>
+
+    <div class="customNavigation">
+        <a class="prev"></a>
+        <a class="next"></a>
+    </div>
 </div>
 
+
+<script type="text/javascript"><!--
+
+            $('#carousel<?php echo $module; ?>').owlCarousel({
+                items: 3,
+                itemsMobile: [767, 1],
+                autoPlay: false,
+                navigation: false,
+                pagination: false,
+
+            });
+
+    $(document).on("click", '.customNavigation .next', function() {
+        var number = parseInt($('.categories-wrapper').css('transform').split(',')[4]);
+        //console.log(number);
+        if(number == -200)
+            $('.categories-wrapper').css({'transform' : 'translate3d(-405px, 0px, 0px)'});
+        else if(number == 0)
+            $('.categories-wrapper').css({'transform' : 'translate3d(-200px, 0px, 0px)'});
+    });
+
+    $(document).on("click", '.customNavigation .prev', function() {
+        var number = parseInt($('.categories-wrapper').css('transform').split(',')[4]);
+        if(number == -405)
+            $('.categories-wrapper').css({'transform' : 'translate3d(-200px, 0px, 0px)'});
+        else if(number == -200){
+            $('.categories-wrapper').css({'transform' : 'translate3d(0px, 0px, 0px)'});
+        }
+    });
+
+
+
+
+    --></script>

@@ -275,19 +275,21 @@
 
 <script type="text/javascript"><!--
 
+	$(window).resize(function(){
+		checkWindowSize();
+
+	});
+
 	$(document).ready(function () {
 
 		checkWindowSize();
 
-		$(window).resize(function(){
-			checkWindowSize();
 
-		});
 
 		function checkWindowSize(){
+			console.log('sf');
 			currWindowWidth = $( window ).width();
 			if(currWindowWidth > 767) {
-				console.log('sf');
 				$('.category-item').hover(
 						function () {
 							$(this).find('img').addClass('image-hover');
@@ -304,7 +306,7 @@
 
 			}
 			else{
-				$( "#foo" ).unbind( "click" );
+				$( ".category-item" ).unbind( "hover" );
 			}
 		}
 

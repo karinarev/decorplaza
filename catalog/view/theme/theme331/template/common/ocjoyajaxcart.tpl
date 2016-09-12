@@ -1,7 +1,9 @@
 <div id="ajaxcartmodal">
     <?php if (!empty($products)) { ?>
         <div class="mini-cart-infos">
-	    <div id="headajaxcart" style="padding-left:20px;"><?php echo $text_ajaxcart_head; ?></div>
+	    <div id="headajaxcart" style="padding-left:20px;"><?php echo $text_ajaxcart_head; ?>
+			<div id="close-ajax-cart"><a onclick="$.colorbox.close();">&times;</a></div>
+		</div>
 	    <br /><br />
 	    <img src="image/ocjoyajaxcart/loading.gif" id="ajaxcartloadimg"/>
 	    <div class="ajaxtable_table">
@@ -52,14 +54,16 @@
 		    			<?php echo $product['sku']; ?>
 		    		</div>
 		    		<?php } ?>
-		            <div class="ajaxtable_td price" id="price-<?=$product['key'] ?>"><?=$product['price']; ?></div>
+		            <div class="ajaxtable_td price" id="price-<?=$product['key'] ?>"><p class="mobile-name">Цена</p><?=$product['price']; ?></div>
 		    		<div class="ajaxtable_td quantity">
+						<div class="quantity-wrapper">
 						<input hidden class="product_id" value="<?=$product['key']; ?>" style="display:none;"/>
 		                <a onclick="minus(this);" type="button" class="btn btn-minus quantity-m"><span>&ndash;</span></a>
 						<span class="cart-amount-text qt" name="quainty"><?php echo $product['quantity']; ?></span>
 		            <a onclick="plus(this);"  type="button" class="btn btn-plus quantity-p"><span>+</span></a>
+						</div>
 		            </div>
-		            <div class="ajaxtable_td subtotal"><?php echo $product['total']; ?></div>		
+		            <div class="ajaxtable_td subtotal"><p class="mobile-name">Сумма</p><?php echo $product['total']; ?></div>
 		    		<div class="ajaxtable_td delete">
 						<input hidden class="product_id" value="<?=$product['key']; ?>"/>
 						<a type="button" class="btn btn-delete" onclick="del(this);"><span>&times;</span></a></td>

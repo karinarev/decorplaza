@@ -95,8 +95,9 @@ body{
 
 
 .category-item .product-thumb .price{
-    position:absolute;
-    bottom: 5px;
+    position: absolute;
+    bottom: inherit;
+    top: 80px;
 }
 
 .category-item .product-thumb .price .price-new,
@@ -177,6 +178,10 @@ body{
     background: white;
     position: absolute;
     width: 198px;
+}
+
+.category-item:hover .price{
+    top: 164px;
 }
 
 .more{
@@ -476,12 +481,25 @@ a.product-icon:hover, a.product-icon:active {
         width: 33.33333333333333%;
     }
 
-    #content{
+    .product-row .col-xs-5{
+        width: 100%;
+    }
+
+    .product-row .col-xs-7 {
+        width: 100%;
     }
 
 }
 
 @media all and (max-width: 767px) {
+
+    .product-row .col-xs-5{
+        width: 41.66666666666667%
+    }
+
+    .product-row .col-xs-7 {
+        width: 58.333333333333336%;
+    }
 
     body{
         background: #f4f4f4;
@@ -587,6 +605,17 @@ a.product-icon:hover, a.product-icon:active {
 
     .breadcrumb > li + li:before{
         color: rgb(182, 128, 32);
+    }
+    .category-item:hover .product-thumb .caption{
+        padding-top: 15px;
+        bottom: auto;
+        top: 0;
+        right: 0;
+        left: auto;
+        height: 200px;
+        z-index: 1;
+        position: absolute;
+        width: 58.333333333333336%;
     }
 
 

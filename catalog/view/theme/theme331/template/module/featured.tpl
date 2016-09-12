@@ -209,7 +209,8 @@
 
 	$('#carousel<?php echo $module; ?>').owlCarousel({
 		items: 5,
-		itemsTablet: [1024, 3],
+		itemsDesktop: [1279, 3],
+		itemsMobile: [767, 1],
 		autoPlay: false,
 		navigation: true,
 		navigationText: ['<i class="chevron-left chevron-gray"></i>', '<i class="chevron-right chevron-gray"></i>'],

@@ -1,14 +1,16 @@
 <?php
 class ControllerModuleXDCategoryGroups extends Controller {	
 	protected function index() {
+
+            $module = 0;
             $this->language->load('module/XDCategoryGroups');
             $this->load->model('catalog/category');
             $this->load->model('tool/image');
             
             //$this->data['heading_title'] = $this->language->get('heading_title');
             
-            if (file_exists('catalog/view/theme/theme331/stylesheet/XDCategoryGroups.css')) {
-                    $this->document->addStyle('catalog/view/theme/theme331/stylesheet/XDCategoryGroups.css');
+            if (file_exists('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/XDCategoryGroups.css')) {
+                    $this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/XDCategoryGroups.css');
             } else {
                     $this->document->addStyle('catalog/view/theme/default/stylesheet/XDCategoryGroups.css');
             }
@@ -74,6 +76,10 @@ class ControllerModuleXDCategoryGroups extends Controller {
             }
             
             $this->data['categories'] = $cat;
+
+        $module++;
+        $this->data['module'] = $module;
+
             if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/XDCategoryGroups.tpl')) {
                     $this->template = $this->config->get('config_template') . '/template/module/XDCategoryGroups.tpl';
             } else {
