@@ -8,7 +8,8 @@ class ControllerInformationContact extends Controller {
     	$this->document->setTitle($this->language->get('heading_title'));  
 	 
     	if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validate()) {
-			$text = '<p>Сообщение с формы обратного звонка.</p> <p>Имя - '.$this->request->post['name'].'.</p> <p>Номер телефона - '.$this->request->post['phone'].'</p><p>Тема сообщения - '.$this->request->post['enquiry'].'</p>';
+		
+			$text = '<p>Сообщение с формы обратного звонка.</p> <p>Имя - '.$this->request->post['name'].'.</p> <p>Номер телефона - '.$this->request->post['phone'].'</p>';
 			$mail = new Mail();
 			$mail->protocol = $this->config->get('config_mail_protocol');
 			$mail->parameter = $this->config->get('config_mail_parameter');
@@ -18,13 +19,13 @@ class ControllerInformationContact extends Controller {
 			$mail->port = $this->config->get('config_smtp_port');
 			$mail->timeout = $this->config->get('config_smtp_timeout');				
 			$mail->setTo($this->config->get('config_email'));
-			if (!empty($this->request->post['email']))
-			$mail->setFrom($this->request->post['email']); else $mail->setFrom("Goro@wins.ru");
+	  		$mail->setFrom($this->request->post['email']);
 	  		$mail->setSender($this->request->post['name']);
 	  		$mail->setSubject(html_entity_decode(sprintf($this->language->get('email_subject'), $this->request->post['name']), ENT_QUOTES, 'UTF-8'));
 	  		$mail->setText(strip_tags(html_entity_decode($text, ENT_QUOTES, 'UTF-8')));
       		$mail->send();
-			$this->data['successMessage'] = "<script> alert('Ваш запрос был успешно отправлен администрации магазина!'); </script> ";
+
+	  		$this->redirect($this->url->link('information/contact/success'));
     	}
 
       	$this->data['breadcrumbs'] = array();
@@ -65,6 +66,11 @@ class ControllerInformationContact extends Controller {
 		} else {
 			$this->data['error_phone'] = '';
 		}
+		if (isset($this->error['email'])) {
+			$this->data['error_email'] = $this->error['email'];
+		} else {
+			$this->data['error_email'] = '';
+		}		
 		
 		if (isset($this->error['enquiry'])) {
 			$this->data['error_enquiry'] = $this->error['enquiry'];
@@ -186,13 +192,18 @@ class ControllerInformationContact extends Controller {
       		$this->error['name'] = $this->language->get('error_name');
     	}
 
-    	/*if (!$this->ocstore->validate($this->request->post['email'])) {
+    	if (!$this->ocstore->validate($this->request->post['email'])) {
       		$this->error['email'] = $this->language->get('error_email');
-    	}*/
-
+    	}
     	if (utf8_strlen($this->request->post['phone']) < 1) {
       		$this->error['phone'] = $this->language->get('error_phone');
     	}
+		
+		/* 
+
+    	if ((utf8_strlen($this->request->post['enquiry']) < 10) || (utf8_strlen($this->request->post['enquiry']) > 3000)) {
+      		$this->error['enquiry'] = $this->language->get('error_enquiry');
+    	} */
 
     	if (empty($this->session->data['captcha']) || ($this->session->data['captcha'] != $this->request->post['captcha'])) {
       		$this->error['captcha'] = $this->language->get('error_captcha');
