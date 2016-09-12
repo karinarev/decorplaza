@@ -44,18 +44,18 @@ $description = str_replace(array("&nbsp",";","\r\n", "\r", "\n", "\t", '  ', '  
 </script> 
  
 
-<link href="catalog/view/theme/<?php echo $this->config->get('config_template'); ?>/stylesheet/bootstrap.css" rel="stylesheet" type="text/css" />
-<link href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/cloud-zoom.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" type="text/css" href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/stylesheet.css" />
+<link href="catalog/view/theme/theme331/stylesheet/bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="catalog/view/theme/theme331/stylesheet/cloud-zoom.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/theme331/stylesheet/stylesheet.css" />
 <link href="catalog/view/javascript/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
-<link href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/slideshow.css" rel="stylesheet" type="text/css" />
-<link href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/jquery.prettyPhoto.css" rel="stylesheet" type="text/css" />
-<link href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/camera.css" rel="stylesheet" type="text/css" />
-<link href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/superfish.css" rel="stylesheet" type="text/css" />
-<link href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/responsive.css" rel="stylesheet" type="text/css" />
-<link href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/photoswipe.css" rel="stylesheet" type="text/css" />
-<link href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/jquery.bxslider.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" type="text/css" href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/colorbox.css" media="screen" />
+<link href="catalog/view/theme/theme331/stylesheet/slideshow.css" rel="stylesheet" type="text/css" />
+<link href="catalog/view/theme/theme331/stylesheet/jquery.prettyPhoto.css" rel="stylesheet" type="text/css" />
+<link href="catalog/view/theme/theme331/stylesheet/camera.css" rel="stylesheet" type="text/css" />
+<link href="catalog/view/theme/theme331/stylesheet/superfish.css" rel="stylesheet" type="text/css" />
+<link href="catalog/view/theme/theme331/stylesheet/responsive.css" rel="stylesheet" type="text/css" />
+<link href="catalog/view/theme/theme331/stylesheet/photoswipe.css" rel="stylesheet" type="text/css" />
+<link href="catalog/view/theme/theme331/stylesheet/jquery.bxslider.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/theme331/stylesheet/colorbox.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/fast_order.css" />
 <?php foreach ($styles as $style) { ?>
 <link rel="<?php echo $style['rel']; ?>" type="text/css" href="<?php echo $style['href']; ?>" media="<?php echo $style['media']; ?>" />
@@ -66,55 +66,55 @@ $description = str_replace(array("&nbsp",";","\r\n", "\r", "\n", "\t", '  ', '  
 
 
 	<link href="catalog/view/javascript/jquery/formstyler/jquery.formstyler.css" rel="stylesheet" />
-	<script type="text/javascript" src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/jquery/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="catalog/view/theme/theme331/js/jquery/jquery-1.10.2.min.js"></script>
 	<script src="catalog/view/javascript/jquery/formstyler/jquery.formstyler.min.js"></script>
-	<script type="text/javascript" src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/jquery/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="catalog/view/theme/theme331/js/jquery/jquery-migrate-1.2.1.min.js"></script>
 <!--<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.7.1.min.js"></script>-->
 <script type="text/javascript" src="catalog/view/javascript/jquery/ui/jquery-ui-1.8.16.custom.min.js"></script>
 <script  type="text/javascript" src="catalog/view/javascript/jquery/jqall.js"></script> 
 <link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/ui/themes/ui-lightness/jquery-ui-1.8.16.custom.css" />
 <script type="text/javascript" src="catalog/view/javascript/jquery/ui/external/jquery.cookie.js"></script>
-<!--<script type="text/javascript" src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
-<link rel="stylesheet" type="text/css" href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/fancybox/jquery.fancybox-1.3.4.css" media="screen" />-->
+<!--<script type="text/javascript" src="catalog/view/theme/theme331/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/theme331/js/fancybox/jquery.fancybox-1.3.4.css" media="screen" />-->
 
-<script type="text/javascript" src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/fancybox3/jquery.fancybox.pack.js"></script>
-<link rel="stylesheet" type="text/css" href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/fancybox3/jquery.fancybox.css" media="screen" />
+<script type="text/javascript" src="catalog/view/theme/theme331/js/fancybox3/jquery.fancybox.pack.js"></script>
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/theme331/js/fancybox3/jquery.fancybox.css" media="screen" />
 
 
-<script type="text/javascript" src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/colorbox/jquery.colorbox.js"></script>
+<script type="text/javascript" src="catalog/view/theme/theme331/js/colorbox/jquery.colorbox.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/jquery/jquery.jcarousel.min.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/jquery/jquery.cycle.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/jquery/jquery.maskedinput-1.3.min.js"></script>
 
 
 <!--[if IE]>
-<script type="text/javascript" src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/html5.js"></script>
+<script type="text/javascript" src="catalog/view/theme/theme331/js/html5.js"></script>
 <![endif]-->
 <!--[if lt IE 8]><div style='clear:both;height:59px;padding:0 15px 0 15px;position:relative;z-index:10000;text-align:center;'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
-<script type="text/javascript" src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/bootstrap/bootstrap.js"></script>
+<script type="text/javascript" src="catalog/view/theme/theme331/js/bootstrap/bootstrap.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/jquery/tabs.js"></script>
 
-<script type="text/javascript" src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/jQuery.equalHeights.js"></script>
-<script type="text/JavaScript" src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/elevate/jquery.elevatezoom.js"></script>
-<script type="text/javascript" src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/jquery.prettyPhoto.js"></script>
-<script type="text/javascript" src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/jscript_zjquery.anythingslider.js"></script>
-<script type="text/javascript" src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/common.js"></script>
+<script type="text/javascript" src="catalog/view/theme/theme331/js/jQuery.equalHeights.js"></script>
+<script type="text/JavaScript" src="catalog/view/theme/theme331/js/elevate/jquery.elevatezoom.js"></script>
+<script type="text/javascript" src="catalog/view/theme/theme331/js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="catalog/view/theme/theme331/js/jscript_zjquery.anythingslider.js"></script>
+<script type="text/javascript" src="catalog/view/theme/theme331/js/common.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/jquery/nivo-slider/jquery.nivo.slider.pack.js"></script>
-<script type="text/javascript" src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/jquery.mobile-events.js"></script>
-<script type="text/javascript" src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/superfish.js"></script>
-<script type="text/javascript" src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/script.js"></script>
+<script type="text/javascript" src="catalog/view/theme/theme331/js/jquery.mobile-events.js"></script>
+<script type="text/javascript" src="catalog/view/theme/theme331/js/superfish.js"></script>
+<script type="text/javascript" src="catalog/view/theme/theme331/js/script.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/fast_order.js"></script>
 
 <!--[if IE]>
-<script type="text/javascript" src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/sl/jscript_zjquery.anythingslider.js"></script>
+<script type="text/javascript" src="catalog/view/theme/theme331/js/sl/jscript_zjquery.anythingslider.js"></script>
 <![endif]-->
-<script type="text/javascript" src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/sl/camera.js"></script>
+<script type="text/javascript" src="catalog/view/theme/theme331/js/sl/camera.js"></script>
 
 <!-- bx-slider -->
-<script type="text/javascript" language="javascript" src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/bxslider/jquery.bxslider.js"></script>
+<script type="text/javascript" language="javascript" src="catalog/view/theme/theme331/js/bxslider/jquery.bxslider.js"></script>
 <!-- photo swipe -->
-<script type="text/javascript" language="javascript" src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/photo-swipe/klass.min.js"></script>
-<script type="text/javascript" language="javascript" src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/photo-swipe/code.photoswipe.jquery-3.0.5.js"></script>
+<script type="text/javascript" language="javascript" src="catalog/view/theme/theme331/js/photo-swipe/klass.min.js"></script>
+<script type="text/javascript" language="javascript" src="catalog/view/theme/theme331/js/photo-swipe/code.photoswipe.jquery-3.0.5.js"></script>
 
 <script type="text/javascript" language="javascript" src="/seo/we-found-cheaper/we-found-cheaper.js"></script>
 
@@ -122,25 +122,25 @@ $description = str_replace(array("&nbsp",";","\r\n", "\r", "\n", "\t", '  ', '  
 <script type="text/javascript" src="<?php echo $script; ?>"></script>
 <?php } ?>
 <!--[if  IE 8]>
-<link rel="stylesheet" type="text/css" href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/ie8.css" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/theme331/stylesheet/ie8.css" />
 <![endif]-->
 <!--[if  IE 8]>
-<script type="text/javascript" src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/respond.js"></script>
+<script type="text/javascript" src="catalog/view/theme/theme331/js/respond.js"></script>
 <![endif]-->
 <!--[if  IE 8]>
-<script type="text/javascript" src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/matchmedia.polyfill.js"></script>
+<script type="text/javascript" src="catalog/view/theme/theme331/js/matchmedia.polyfill.js"></script>
 <![endif]-->
 <!--[if  IE 8]>
-<script type="text/javascript" src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/matchmedia.addListener.js"></script>
+<script type="text/javascript" src="catalog/view/theme/theme331/js/matchmedia.addListener.js"></script>
 <![endif]-->
 <!--[if lt IE 7]>
-<link rel="stylesheet" type="text/css" href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/ie6.css" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/theme331/stylesheet/ie6.css" />
 <script type="text/javascript" src="catalog/view/javascript/DD_belatedPNG_0.0.8a-min.js"></script>
 <script type="text/javascript">
 DD_belatedPNG.fix('#logo img');
 </script>
 <![endif]-->
-<link rel="stylesheet" type="text/css" href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/livesearch.css"/>
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/theme331/stylesheet/livesearch.css"/>
 <?php if (!empty($stores)) { ?>
 
 <script type="text/javascript"><!--
