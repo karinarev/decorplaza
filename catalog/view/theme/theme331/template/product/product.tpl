@@ -1,16 +1,15 @@
 <?php echo $header; ?>
 <?php echo $column_left; ?>
 	<div class="<?php if ($column_left ) { ?>col-sm-9<?php } ?> <?php if (!$column_left & !$column_left) { ?>col-sm-12  <?php } ?>" id="content"><?php echo $content_top; ?>
-		<div class="breadcrumb">
+	<ul class="breadcrumb breadcrumb-product">
 			<?php foreach ($breadcrumbs as $i=> $breadcrumb) { ?>
-			<?php echo $breadcrumb['separator']; ?><?php if($i+1<count($breadcrumbs)) { ?><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a> <?php } else { ?><?php echo $breadcrumb['text']; ?><?php } ?>
+		   <?php if($i+1<count($breadcrumbs)) { ?><li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li> <?php } else { ?><?php echo '<li><span>' . $breadcrumb['text'] . '</li></span>' ?><?php } ?>
 			<?php } ?>
-		</div>  
+		</ul>
   
 		<div class="product-info" itemscope itemtype="http://schema.org/Product">
 			<div class="row">
 				<div class="col-sm-4">
-					<!--<h1 class="view"><?php echo $heading_title; ?></h1>-->
 					<script type="text/javascript">
 						jQuery(document).ready(function(){
 						var myPhotoSwipe = $("#gallery a").photoSwipe({ enableMouseWheel: false , enableKeyboard: false, captionAndToolbarAutoHideDelay:0 });
@@ -74,58 +73,52 @@
 					<?php } ?>
 				</div>
 				<div class="col-sm-8">
-					<h1 itemprop="name"> <?php echo $heading_title; ?></h1>
+					<h2 itemprop="name" class="myHeader"> <?php echo $heading_title; ?></h2>
 					<div class="description">
+						<div class="row">
+							<div class="col-sm-6">
 						<div class="product-section">
+							<?php for ($i = 1; $i <= 5; $i++) { ?>
+							<?php if ($rating < $i) { ?>
+							<span class="fa fa-stack"><i class="fa fa-star fa-stack-1x lightStar"></i></span>
+							<?php } else { ?>
+							<span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+							<?php } ?>
+							<?php } ?><br/>
 							<?php if ($manufacturer) { ?>
-							<span><?php echo $text_manufacturer; ?></span> <a style="text-decoration:underline;" href="<?php echo $manufacturers; ?>"><?php echo $manufacturer; ?></a><br />
-							<?php } ?>
-							<span><?php echo $text_model; ?></span> <?php echo $model; ?><br />
-							<?php if ($reward) { ?>
-							<span><?php echo $text_reward; ?></span> <?php echo $reward; ?><br />
-							<?php } ?>
-							<span><?php echo $text_stock; ?></span>
+							<span><?php echo $text_manufacturer; ?></span><br/> <a style="text-decoration:underline;" href="<?php echo $manufacturers; ?>"><?php echo $manufacturer; ?></a><br />
+							<?php } ?><br/>
+							<span><?php echo $text_model; ?></span><br/> <?php echo $model; ?><br /><br/>
+							<span><?php echo $text_stock; ?></span><br/>
 							<div class="prod-stock">
-							<?php if($stock == "Есть в наличии" || $stock == "В наличии"){ $color = '#3079ED';} if($stock == "Нет в наличии" || $stock == "Предзаказ" || $stock == "Ожидание 2-3 дня"){ $color = '#9d9d9d';}?>
-								<span class="<?=$product_info['source']?>" style="color:<?=$color;?>;">
+							<?php if($stock == "Есть в наличии" || $stock == "В наличии"){ $color = 'rgb(34, 103, 1)';} if($stock == "Нет в наличии" || $stock == "Предзаказ" || $stock == "Ожидание 2-3 дня"){ $color = 'rgb(142, 0, 0)';}?>
+								<span class="<?=$product_info['source']?>" style="color:<?=$color;?>!important;">
 									<?php echo $stock;?>
 								</span>
 							</div>
 						</div>
-					
-					
-						<?php if ($price) { ?>
-						<div class="price">
-							<span class="text-price"><?php echo $text_price; ?></span>
-							<?php if (!$special) { ?>
-							<span class="price-new ">
-								<span itemprop="offers" itemscope itemtype="http://schema.org/Offer"  class="opprice">
-								<span itemprop="price">
-								<?php echo str_replace('р.', ' </span>р.', $price); ?>
-							</span>
-							</span>
-							<?php } else { ?>
-							<span class="price-new">
-							<span itemprop="offers" itemscope itemtype="http://schema.org/Offer"  class="opprice"><?php echo $special; ?></span></span><span class="price-old">
-							<span itemprop="price">
-							<?php echo str_replace('p.', 'p.</span>', $price); ?></span> 
-							<?php } ?>
-							<?php if ($tax) { ?>
-							<span class="price-tax"><span class="opprice"><?php echo $text_tax; ?> <?php echo $tax; ?></span></span>
-							<?php } ?>
-							<?php if ($points) { ?>
-							<span class="reward"><small><?php echo $text_points; ?> <?php echo $points; ?></small></span>
-							<?php } ?>
-							<?php if ($discounts) { ?>
-							<div class="discount">
-								<?php foreach ($discounts as $discount) { ?>
-									<?php echo sprintf($text_discount, $discount['quantity'], $discount['price']); ?><br />
-								<?php } ?>
 							</div>
-							<?php } ?>
+							<div class="col-sm-6">
+								<?php if ($price) { ?>
+									<?php if (!$special) { ?>
+									<span class="price-new ">
+                                       <span itemprop="offers" itemscope itemtype="http://schema.org/Offer"  class="opprice">
+                                                <span itemprop="price">
+                                                   <?php echo str_replace('р.', ' </span>р.', $price); ?>
+					   					    	</span>
+                                             </span>
+										<?php }?>
+								<?php } ?>
+										<div class="form-group">
+                  <button class="buttonMinus plusminus" onclick="onMinus();"></button>
+                  <input type="text" name="quantity" maxlength="3" disabled="disabled" value="<?php echo $minimum; ?>" size="2" id="input-quantity" class="form-control" />
+                  <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
+                  <button class="buttonPlus plusminus" onclick="onPlus();"></button>
+                  <br />
+											<?php if ($isInCart) echo '<button type="button" id="button-cart" data-loading-text='.$text_loading.' class="btn productInCartButton btn-primary btn-lg btn-block button-cart"><span class="icon cartIcon cartIconProduct"></span><span>В корзине</span></button>'; else echo '<button type="button" id="button-cart" data-loading-text='.$text_loading.' onmouseover="changeCartWhite()" onmouseout="changeCartBlack()" onclick="changeButtonBrown()" class="btn productCartButton btn-primary btn-lg btn-block button-cart"><span class="icon cartIcon cartIconProduct"></span><span> В корзину<span></button>';?>
+                </div>
+							</div>
 						</div>
-						<?php } ?>
-						
 						<?php if (!empty($profiles)): ?>
 						<div class="option">
 							<h2><span class="required">*</span><?php echo $text_payment_profile ?></h2>
@@ -385,82 +378,7 @@
 								window.scrollTo(selectedPosX, selectedPosY);
 							}
 						</script>
-						
-						<? if ($quantity > 0) { ?>
-						<div class="cart">
-							<div class="prod-row">
-								<div class="cart-top">
-									<div class="cart-top-padd form-inline">
-										<label>
-											<?php echo $text_qty; ?>
-											<input id="bc" class="q-mini" type="text" name="quantity" size="2" value="<?php echo $minimum; ?>" />
-											<input class="q-mini" type="hidden" name="product_id" size="2" value="<?php echo $product_id; ?>" />
-										</label>
-										<a id="button-cart" class="button-prod" ><i class="fa fa-shopping-cart"></i><?php echo $button_cart; ?></a>
-										<a id="one_klick_anchor" onclick="one_klick_show(); " href="javascript:void(0);" class="button feedbackForm fast_order">Быстрый заказ</a> 
-										<a class="we-found-cheaper"><p class="find_1">Нашли дешевле? Мы снизим цену!</p></a>
 
-									</div>
-									<div class="extra-button">
-										<div class="wishlist">
-											<a onclick="addToWishList('<?php echo $product_id; ?>');" title="<?php echo $button_wishlist; ?>"><i class="fa fa-star"></i><span><?php echo $button_wishlist; ?></span></a>
-										</div>
-										<div class="compare">
-											<a onclick="addToCompare('<?php echo $product_id; ?>');" title="<?php echo $button_compare; ?>"><i class="fa fa-bar-chart-o"></i><span><?php echo $button_compare; ?></span></a>
-										</div>
-									</div>
-									<div class="clear"></div>
-									<?php if ($minimum > 1) { ?>
-										<div class="minimum"><?php echo $text_minimum; ?></div>
-									<?php } ?>
-								</div>
-							</div>
-						</div>
-						<? } else {?>
-						<div class="cart">
-							<div class="prod-row">
-								<div class="cart-top">
-									<div class="cart-top-padd form-inline">
-										<a onclick="scrollToElement('analog_product')" id="button-cart" class="button-prod" >Подобрать аналоги</a>
-									</div>
-									<div class="clear"></div>
-									<?php if ($minimum > 1) { ?>
-									<div class="minimum"><?php echo $text_minimum; ?></div>
-									<?php } ?>
-								</div>
-							</div>
-						</div>
-						<? } ?>
-						<div class="clear"></div>
-						
-						<?php if ($review_status) { ?>
-						<div class="review">
-							<div>
-								<img src="catalog/view/theme/theme331/image/stars-<?php echo $rating; ?>.png" alt="<?php echo $reviews; ?>" />&nbsp;&nbsp;
-								<div class="btn-rew">
-									<a onclick="document.getElementById('tab-review').scrollIntoView();"><?php echo $reviews; ?></a>
-									<a onclick="document.getElementById('tab-review').scrollIntoView();"><i class="fa fa-pencil"></i><?php echo $text_write; ?></a>
-									<div class="clear"></div>
-								</div>
-							</div>
-							<div class="clear"></div>
-						</div>
-						<?php } ?>
-						<div class="clear"></div>
-						
-						<?php if ($review_status) { ?>
-						<div class="review">
-							<div>
-								<img src="catalog/view/theme/theme331/image/stars-<?php echo $rating; ?>.png" alt="<?php echo $reviews; ?>" />&nbsp;&nbsp;
-								<div class="btn-rew">
-									<a onclick="document.getElementById('tab-review').scrollIntoView();"><?php echo $reviews; ?></a>
-									<a onclick="document.getElementById('tab-review').scrollIntoView();"><i class="fa fa-pencil"></i><?php echo $text_write; ?></a>
-									<div class="clear"></div>
-								</div>
-							</div>
-							<div class="clear"></div>
-						</div>
-						<?php } ?>
 						<div class="clear"></div>
 						<!--<div class="share">
 							
@@ -473,11 +391,20 @@
 							
 						</div>-->
 					</div>
-					
-					<div class="other_links">
-						<i class="fa fa-truck"></i> <a id="dostavka_2" href="http://italy-sumochka.ru/dostavka">Информация о доставке</a>
-						<i class="fa fa-credit-card"></i> <a id="info_2" href=" http://italy-sumochka.ru/oplata">Информация об оплате</a>
-					</div>
+					<?php if ($tags) { ?>
+					<div class="tagsPlaza">
+					<p class="textTags">ТЕГИ:</p>
+					<span class="tags">
+						<?php for ($i = 0; $i < count($tags); $i++) { ?>
+						<?php if ($i < (count($tags) - 1)) { ?>
+						<a href="<?php echo $tags[$i]['href']; ?>"><?php echo $tags[$i]['tag']; ?></a>,
+						<?php } else { ?>
+						<a href="<?php echo $tags[$i]['href']; ?>"><?php echo $tags[$i]['tag']; ?></a>
+						<?php } ?>
+						<?php } ?>
+						</div>
+            </span>
+					<?php } ?>
 				</div>
 			</div>
  
@@ -485,125 +412,60 @@
     <input id="tab11" type="radio" name="tabs" checked>
     <label for="tab11" title="ОПИСАНИЕ">ОПИСАНИЕ</label>
     <input id="tab22" type="radio" name="tabs">
-    <label for="tab22" title="ДОСТАВКА">ДОСТАВКА</label>
+    <label for="tab22" title="ДОСТАВКА">ОТЗЫВЫ</label>
     <input id="tab33" type="radio" name="tabs">
-    <label for="tab33" title="ОПЛАТА">ОПЛАТА</label>
+    <label for="tab33" title="ОПЛАТА">ВИДЕО</label>
     <section id="content11">
         <?php echo $description."<br>".$description2; ?>
     </section>
     <section id="content22">
-        <strong>Самовывоз</strong>
-<p>
-	Самовывоз осуществляется из нашего магазина по адресу: г. Москва, ул. Свободы, дом 89, корпус 5.</p>
-<p>
-	График работы магазина: по-пт 10-00 - 21-00, сб-вс с 10-00 -20-00.</p>
-<strong>Курьерская доставка по Москве</strong>
-<p>
-	В пределах МКАД ежедневно с 10.00 до 24.00, стоимость составляет 350 рублей.<br />
-	Стоимость доставки за МКАД - 700 рублей.</p>
-<p>
-	Курьерская доставка оплачивается даже в случае отказа от покупки выбранного Вами товара (за исключением ситуаций, в которых была привезена не та вещь по вине магазина).</p>
-<strong>Доставка по России</strong>
-<p>Доставка Почтой России</p>
-<p>
-	Данный способ доставки возможен только после предоплаты за тариф доставки (рассчитывается автоматически при оформлении заказа), сам товар отправляется наложенным платежом (Почта России взимает комиссию за пересылку денежных средств отправителю в размере 1-3% от суммы наложенного платежа).&nbsp;<strong>Внимание! Оплату производить только после того, как с Вами свяжется наш менеджер по указанному в заказе телефону или e-mail и подтвердит наличие товара.</strong></p>
-<p>
-	Примерные сроки доставки - от 4 до 14 дней (более подробную информацию можно получить на официальном сайте Почты России).</p>
-<p>
-	Доставка в любую другую страну мира также осуществляется Почтой России. Стоимость рассчитывается по тарифам Почты России в зависимости от ценности, веса посылки, а также Вашего местоположения.</p>
-<strong>
-	&nbsp;Доставка курьерской службой EMS (при Почте России)&nbsp;
-	</strong>
-<p>
-	&nbsp;Данный способ доставки возможен только после предоплаты за тариф доставки (рассчитывается автоматически при оформлении заказа), сам товар отправляется наложенным платежом (Почта России взимает комиссию за пересылку денежных средств отправителю в размере 1-3% от суммы наложенного платежа).&nbsp;Вниман<wbr>ие! Оплату производить только после того, как с Вами свяжется наш менеджер по указанному в заказе телефону или e-mail и подтвердит наличие товара.</wbr></p>
-<p>
-
-	<p>
-		Курьер службы EMS доставит Ваш заказ до дверей. В момент получения заказа Вы оплачиваете его стоимость курьеру.</p>
-	<p>
-	<p>
-		Стоимость услуги экспресс-доставк<wbr>и рассчитывается с учетом нескольких параметров:&nbsp;<br />
-		<br />
-		1) местонахождение населенных пунктов отправителя и получателя (вся территория России и зарубежья разделена на тарифные зоны EMS);&nbsp;<br />
-		2) вес отправления (максимальный вес отправления &ndash; 31,5 кг.);&nbsp;<br />
-		3) наличие дополнительных платных услуг и сервисов (наложенный платеж, страхование, таможенные услуги).&nbsp;</wbr></p>
+        <?php if ($review_status) { ?>
+        <div class="tab-pane" id="tab-review">
+            <div id="review"></div>
+        </div>
+        <?php } ?>
     </section>
     <section id="content33">
-        <p>
-		1) Непосредственно в магазине наличными или банковской картой. <br>
-		2) Наличными курьеру при получении товара. <br>
-		3) Банковский перевод на карту Сбербанка.</p>
+		<?php if (empty($video_description)) echo 'Для данного товара отсутствует видео.'; ?>
+		<?php echo $video_description; ?>
+        <?php if (!empty($video)) echo	'<iframe width="825" height="460" src= "' . $video . '" frameborder="0" allowfullscreen></iframe>'; ?>
     </section>
 </div>
-			
-			<?php if ($attribute_groups) { ?>
-			<div class="tabs">
-				<div class="tab-heading">
-					<?php echo $tab_attribute; ?>
-				</div>
-				<div class="tab-content">
-					<table class="attribute table table-bordered" >
-						<?php foreach ($attribute_groups as $attribute_group) { ?>
-							<thead>
-								<tr>
-									<td colspan="2"><?php echo $attribute_group['name']; ?></td>
-								</tr>
-							</thead>
-							<tbody>
-								<?php foreach ($attribute_group['attribute'] as $attribute) { ?>
-								<tr>
-									<td><?php echo $attribute['name']; ?></td>
-									<td><?php echo $attribute['text']; ?></td>
-								</tr>
-								<?php } ?>
-							</tbody>
-						<?php } ?>
-					</table>
-				</div>
-			</div>
-			<?php } ?>
-			
+
 			<?php if ($review_status) { ?>
-			<div class="tabs" id="tab-review">
-				<div class="tab-heading">
-					<?php echo $tab_review; ?>
-				</div>
+			<form id="form-review" method="post">
+				<h2 class="myHeader">Оставить отзыв</h2>
 				<div class="tab-content">
-					<div id="review"></div>
-					<h2 id="review-title"><?php echo $text_write; ?></h2>
-					<label><?php echo $entry_name; ?></label>
-					<input type="text" name="name" value="" />
-					<br />
-					<br />
-					<label><?php echo $entry_review; ?></label>
-					<textarea name="text" cols="40" rows="8" style="width: 93%;"></textarea>
-					<div class="clear"></div>
-					<span style="font-size: 11px;"><?php echo $text_note; ?></span><br />
-					<br />
-					<label class="inline"><?php echo $entry_rating; ?></label>
-					<div class="form-inline border">
-						<span class="radio"><?php echo $entry_bad; ?></span>&nbsp;
-						<input type="radio" name="rating" value="1" />
-						&nbsp;
-						<input type="radio" name="rating" value="2" />
-						&nbsp;
-						<input type="radio" name="rating" value="3" />
-						&nbsp;
-						<input type="radio" name="rating" value="4" />
-						&nbsp;
-						<input type="radio" name="rating" value="5" />
-						&nbsp; <span class="radio"><?php echo $entry_good; ?></span><br />
+					<div class="row">
+						<div class="col-sm-6">
+							<label><span class="colorRed">*</span>Имя:</label>
+							<input type="text" name="name" value="" id="input-name" class="form-control" />
+						</div>
+						<div class="col-sm-6">
+							<label><span class="colorRed">*</span>E-mail:</label>
+							<input type="text" name="email" value="" id="input-email" class="form-control" />
+						</div>
 					</div>
-					
-					<label><?php echo $entry_captcha; ?></label>
-					<input type="text" name="captcha" value="" />
-					<img src="index.php?route=product/product/captcha" alt="" id="captcha" />
-					<br />
-					<div class="buttons">
-						<div><a id="button-review" class="button-cont-right"><?php echo $button_continue; ?><i class="fa fa-arrow-circle-right"></i></a></div>
+					<div class="row">
+						<div class="col-sm-12">
+							<label class="control-label" for="input-review"><span class="colorRed">*</span>Комментарий:</label>
+							<textarea name="text" rows="5" id="input-review" class="form-control"></textarea>
+						</div>
 					</div>
+					<div class="form-group required">
+						<div class="col-sm-12">
+							<label class="productRateLabel">Оценка:</label>
+							<input type="radio" name="rating" value="1" />
+							<input type="radio" name="rating" value="2" />
+							<input type="radio" name="rating" value="3" />
+							<input type="radio" name="rating" value="4" />
+							<input type="radio" name="rating" value="5" />
+							<span class="colorRed necessaryFields" style="float:right;">*Поля, обязательные для заполнения.</span>
+						</div>
+					</div>
+						<button type="submit" id="button-review" name="submit" data-loading-text="<?php echo $text_loading; ?>" class="callBackSend">Отправить</button>
 				</div>
-			</div>
+			</form>
 			<?php } ?>
 			
 			<?php /* if ($tags) { ?>
@@ -851,7 +713,7 @@
 								<?php if (!$product['special']) { ?>
 									<?php echo $product['price']; ?>
 								<?php } else { ?>
-									<span class="price-new"><?php echo $product['special']; ?></span><span class="price-old"><?php echo $product['price']; ?></span>
+									<span class="price-new"><?php echo $product['special']; ?></span><span class="price-old"><?php echo $product['price']; ?></span></span>
 								<?php } ?>
 							</div>
 							<?php } ?>
@@ -934,7 +796,27 @@
 			opacity: 0.5,
 			rel: "colorbox"
 		});
-		
+		if (isInCart=="true")
+			$(".cartIconProduct").css("background-image", "url(/image/cartWhite.png)");
+		var starsArr = [];
+		for (var i=0; i<5; i++){
+			starsArr[i] = document.createElement("span");
+			var ic = document.createElement("i");
+			$(ic).addClass("fa fa-star fa-stack-1x lightStar");
+			$(starsArr[i]).addClass("fa fa-stack").append(ic);
+			$(".productRateLabel").after(starsArr[i]);
+			$(starsArr[i]).on("click", function(event){
+				var i = starsArr.indexOf(event.target.parentNode);
+				$("#form-review input[type='radio'][value='"+(5-i)+"']").prop("checked", "true");
+				for (var j=0; j<=5; j++)
+					if (i<=j){
+						$(starsArr[j]).children(".fa-stack-1x").css("color", "rgb(119, 119, 119)");
+					} else {
+						$(starsArr[j]).children(".fa-stack-1x").css("color", "rgb(204, 204, 204)");
+					}
+			});
+		}
+
 		/*$('#dostavka_2').click(function(){
 			
 			$('#tab22').click();
@@ -1032,15 +914,14 @@
 <?php foreach ($options as $option) { ?>
 <?php if ($option['type'] == 'file') { ?>
 <script type="text/javascript"><!--
+
+
+
 new AjaxUpload('#button-option-<?php echo $option['product_option_id']; ?>', {
 	action: 'index.php?route=product/product/upload',
 	name: 'file',
 	autoSubmit: true,
 	responseType: 'json',
-	onSubmit: function(file, extension) {
-		$('#button-option-<?php echo $option['product_option_id']; ?>').after('<img src="catalog/view/theme/theme331/image/loading.gif" class="loading" style="padding-left: 5px;" />');
-		$('#button-option-<?php echo $option['product_option_id']; ?>').attr('disabled', true);
-	},
 	onComplete: function(file, json) {
 		$('#button-option-<?php echo $option['product_option_id']; ?>').attr('disabled', false);
 		
@@ -1139,9 +1020,8 @@ $('#button-review').bind('click', function() {
 		url: 'index.php?route=product/product/write&product_id=<?php echo $product_id; ?>',
 		type: 'post',
 		dataType: 'json',
-		data: 'name=' + encodeURIComponent($('input[name=\'name\']').val()) + '&text=' + encodeURIComponent($('textarea[name=\'text\']').val()) + '&rating=' + encodeURIComponent($('input[name=\'rating\']:checked').val() ? $('input[name=\'rating\']:checked').val() : '') + '&captcha=' + encodeURIComponent($('input[name=\'captcha\']').val()),
+		data: 'name=' + encodeURIComponent($('input[name=\'name\']').val()) + '&text=' + encodeURIComponent($('textarea[name=\'text\']').val()) + '&rating=' + encodeURIComponent($('input[name=\'rating\']:checked').val() ? $('input[name=\'rating\']:checked').val() : ''),
 		beforeSend: function() {
-			$('.success, .warning').remove();
 			$('#button-review').attr('disabled', true);
 			$('#review-title').after('<div class="attention"><img src="catalog/view/theme/theme331/image/loading.gif" alt="" /> <?php echo $text_wait; ?></div>');
 		},
@@ -1151,16 +1031,15 @@ $('#button-review').bind('click', function() {
 		},
 		success: function(data) {
 			if (data['error']) {
-				$('#review-title').after('<div class="warning">' + data['error'] + '</div>');
+				alert(data['error'])
 			}
 			
 			if (data['success']) {
-				$('#review-title').after('<div class="success">' + data['success'] + '</div>');
+				alert(data['success']);
 								
 				$('input[name=\'name\']').val('');
 				$('textarea[name=\'text\']').val('');
 				$('input[name=\'rating\']:checked').attr('checked', '');
-				$('input[name=\'captcha\']').val('');
 			}
 		}
 	});
@@ -1220,6 +1099,9 @@ $( document ).ready(function() {
                               $('.pandc').html(html);
 		                          }
 	    }
+	});
+	$("#button-cart").on("mouseover", function(event){
+		changeCartWhite();
 	});
 });
 //--></script>
@@ -1282,7 +1164,45 @@ function hideDelivery()
 		$('#content2').css('display','none');	
 		
 	}
-</script> 
 
+	var quantity = <?php echo $quantity; ?>;
+	var isInCart ="<?php if ($isInCart) echo 'true'; else echo 'false' ?>";  // знаю, что пиздец, но по-другому не работало
+
+	function onPlus(){
+		var i = Number($("#input-quantity").val())+1;
+		if (i<=quantity) $("#input-quantity").val(i);
+	}
+
+	function onMinus(){
+		var i = Number($("#input-quantity").val())-1;
+		if (i>0) $("#input-quantity").val(i);
+	}
+
+	function changeCartWhite(){
+		$(".cartIconProduct").css("background-image", "url(/image/cartWhite.png)");
+	}
+	function changeCartBlack(){
+		if (isInCart == 'false')
+			$(".cartIconProduct").css("background-image", "url(/image/cart.png)");
+	}
+
+	function changeButtonBrown(){
+		isInCart = "true";
+		var cartSpan = document.createElement("span");
+		var textSpan = document.createElement("span");
+		cartSpan.className = "icon cartIcon cartIconProduct";
+		$(textSpan).addClass("textInCart").text("В корзине");
+		$(".productCartButton").empty().removeClass("productCartButton").addClass("productInCartButton").prepend(textSpan).prepend(cartSpan);
+		$(".cartIconProduct").css("background-image", "url(/image/cartWhite.png)");
+		plusProductNumber($("#input-quantity").val());
+	}
+
+	function reviewSubmit(){
+		console.log(document.getElementById("form-review"));
+		document.getElementById("form-review").submit();
+	}
+</script>
+
+<link href="catalog/view/theme/<?php echo $this->config->get('config_template'); ?>/stylesheet/product.css" rel="stylesheet" type="text/css" />
 
 <?php echo $footer; ?>
