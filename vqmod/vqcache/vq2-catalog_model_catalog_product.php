@@ -270,8 +270,7 @@ class ModelCatalogProduct extends Model {
 			'p.price',
 			'rating',
 			'p.sort_order',
-			'p.date_added',
-			'p.sku'
+			'p.date_added'
 		);	
 		
 		if (isset($data['sort']) && in_array($data['sort'], $sort_data)) {
@@ -433,13 +432,7 @@ class ModelCatalogProduct extends Model {
 			}
 			
 			if (empty($productID)){
-					/*$query = $this->db->query("SELECT p.product_id FROM " . DB_PREFIX . "product p WHERE p.status = '1' AND p.bestSaller = '1' AND p.date_available <= '" . $this->NOW . "' ORDER BY p.product_id DESC");*/
-					$offset_result = $this->db->query("SELECT FLOOR(RAND() * COUNT(*)) AS `offset` FROM " . DB_PREFIX . "product");
-					$offset = $offset_result->row['offset'];
-					$query = $this->db->query("
-					 SELECT * FROM " . DB_PREFIX . "product p 
-					 WHERE p.quantity > 0
-					 LIMIT $offset, 1 " );
+					$query = $this->db->query("SELECT p.product_id FROM " . DB_PREFIX . "product p WHERE p.status = '1' AND p.bestSaller = '1' AND p.date_available <= '" . $this->NOW . "' ORDER BY p.product_id DESC");
 
 					foreach ($query->rows as $result) {
 						$arProducts[] = $result['product_id'];
@@ -1357,6 +1350,7 @@ public function getAjaxcartProducts($data = array()) {
 				return $product_data;
 		}
 }
+	
 	public function getTotalProductSpecials() {
 		if ($this->customer->isLogged()) {
 			$customer_group_id = $this->customer->getCustomerGroupId();
@@ -1379,8 +1373,5 @@ public function getAjaxcartProducts($data = array()) {
 		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "city c WHERE c.name='" . $city . "'");
 		return $query->row;
 	}
-
-	
-
 }
 ?>
