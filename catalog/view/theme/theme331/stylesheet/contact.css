@@ -1,0 +1,171 @@
+#body{
+    background-color: rgb(244, 244, 244);
+}
+
+#shadow>section{
+    margin-top: 33px;
+    max-width: 1240px;
+    margin:auto;
+}
+
+#shadow>section>.container{
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 35px;
+    width: 100%;
+    max-width: 1240px;
+    background-color: rgb(244, 244, 244);
+}
+
+#shadow>section>.container>.row{
+    margin: 0;
+}
+
+#shadow>section>.container>.row>.col-sm-12{
+    padding: 0;
+}
+
+#shadow .contact-info{
+    border: 0;
+    background-color: rgb(244, 244, 244);
+}
+
+.contactsRow{
+    font-weight: 400;
+    color: rgb(27, 27, 27);
+    margin-bottom: 0;
+}
+
+.contactsFullRow>div:nth-child(2){
+    padding-top: 6px;
+}
+
+.contactsFullRow>div{
+    padding: 0;
+}
+
+.contact-info .row{
+    margin: 0;
+}
+
+.contact-info .col-sm-6{
+    width: 50%;
+}
+
+.contact-info>.row>.map-left{
+    padding: 0;
+}
+
+.contact-info>.content>.map-left>div>div>ymaps{
+    border: solid white 4px;
+}
+
+.col-lg-1>img{
+    position: relative;
+    bottom: 2px;
+}
+
+.contactHr{
+    border: solid 1px black;
+    width: 100px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.contact-f{
+    padding-top: 30px !important;
+    border: 0!important;
+    width: 100%;
+    padding-top: 30px;
+    padding-right: 0!important;
+    padding-left: 0!important;
+}
+
+
+.contact-f .col-sm-4:nth-child(1),.contact-f .col-sm-4:nth-child(2), .contact-f .col-sm-8:nth-child(4){
+    padding: 0 10px 0 0;
+    margin: 0;
+}
+
+.contact-f .col-sm-4:nth-child(3),.contact-f .col-sm-4:nth-child(5){
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.contact-f input{
+    border: 0;
+    width: 100%;
+    padding-left: 21px;
+    height: 40px;
+}
+
+.contact-f .form-group{
+    margin: 0;
+}
+
+.captchaControl{
+    white-space:nowrap;
+    position: relative;
+    right: 4px;
+    bottom: 18px;
+}
+
+.captchaControl>* {
+    display: inline-block;
+}
+
+.contact-f .control-label{
+    padding-top: 15px;
+    margin-bottom: 16px;
+    font-size: 12px;
+    color: rgb(119, 119, 119);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.colorRed{
+    color: rgb(149, 16, 16) !important;
+}
+
+.necessaryFields{
+    position: relative;
+    display: inline-block;
+    text-transform: none !important;
+    margin-left: 52px;
+    top: 13px;
+    font-weight: normal !important;
+}
+
+.callBackSend{
+    position: relative;
+    top: 10px;
+    display: inherit;
+    margin: 0 auto;
+    height: 50px;
+    width: 260px;
+    border: 2px solid #c49849;
+    background-color: rgb(244, 244, 244);
+    border-radius: 25px;
+    color: #c49849;
+    text-align: center !important;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.286;
+    margin-bottom: 80px;
+}
+
+.callBackSend:focus{
+    outline: none !important;
+}
+
+.callBackSend:hover{
+    background-color: #c49849;
+    color: white;
+}
+
+.captcha{
+    position: relative;
+    left: 4px;
+}

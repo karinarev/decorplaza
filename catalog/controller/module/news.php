@@ -56,8 +56,6 @@ class ControllerModuleNews extends Controller {
 	
 		foreach ($results as $result) {
 
-			//var_dump($result['image']); die();
-
 			
 			if ($result['image']) {
  				$image = $this->model_tool_image->getFullImage($result['image']);
@@ -66,8 +64,6 @@ class ControllerModuleNews extends Controller {
 				$image = $noimage;
 
  			}
-
-			//var_dump($result['image']); die();
 
 			$date = date($this->language->get('date_format_short'), strtotime($result['date_added']));
 			$posted = explode(".", $date);
@@ -101,7 +97,6 @@ class ControllerModuleNews extends Controller {
 	
 		$this->data['module'] = $module++;
 
-		//var_dump(strlen("Миллер против Камоэса, Волкер")); die();
 	
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/' . $this->_name . '.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/module/' . $this->_name . '.tpl';

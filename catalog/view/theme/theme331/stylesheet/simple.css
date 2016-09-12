@@ -1,4 +1,4 @@
-h3{
+#content h3{
     color: #1b1b1b;
     font-family: "BodoniItalic";
     font-size: 36px;
@@ -10,7 +10,7 @@ body{
     background: #f4f4f4;
 }
 
-h2{
+#content h2{
     text-align: center;
     margin-bottom: 25px;
     color: #c49849;
@@ -480,12 +480,16 @@ label[for='input-promo']{
     line-height: 40px;
 }
 
-.jq-selectbox{
+#checkout_customer_main_zone_id-styler,
+#inputShippingMethod-styler,
+#inputPaymentMethod-styler{
     text-align: center;
     width: 100%;
     margin-top: 7px;
 }
-.jq-selectbox__select-text{
+#checkout_customer_main_zone_id-styler .jq-selectbox__select-text,
+#inputShippingMethod-styler .jq-selectbox__select-text,
+#inputPaymentMethod-styler .jq-selectbox__select-text{
     text-align: left;
     color: #1b1b1b;
     font-family: "OpenSans";
@@ -495,13 +499,19 @@ label[for='input-promo']{
     line-height: 25px;
 }
 
-.jq-selectbox.opened .jq-selectbox__select{
+#checkout_customer_main_zone_id-styler.opened .jq-selectbox__select,
+#inputShippingMethod-styler.opened .jq-selectbox__select,
+#inputPaymentMethod-styler.opened .jq-selectbox__select{
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
 
-.jq-selectbox__select,
-.jq-selectbox li{
+#checkout_customer_main_zone_id-styler .jq-selectbox__select,
+#inputShippingMethod-styler .jq-selectbox__select,
+#inputPaymentMethod-styler .jq-selectbox__select,
+#checkout_customer_main_zone_id-styler li,
+#inputShippingMethod-styler li,
+#inputPaymentMethod-styler li{
     height: 38px;
     background: none;
     background-color: white;
@@ -515,20 +525,33 @@ label[for='input-promo']{
 
 }
 
-.jq-selectbox__select:focus,
-.jq-selectbox:focus,
-.focused .jq-selectbox__select	{
+
+#checkout_customer_main_zone_id-styler .jq-selectbox__select:focus,
+#inputShippingMethod-styler .jq-selectbox__select:focus,
+#inputPaymentMethod-styler .jq-selectbox__select:focus,
+#checkout_customer_main_zone_id-styler:focus,
+#inputShippingMethod-styler:focus,
+#inputPaymentMethod-styler:focus,
+#checkout_customer_main_zone_id-styler.focused .jq-selectbox__select,
+#inputShippingMethod-styler.focused .jq-selectbox__select,
+#inputPaymentMethod-styler.focused .jq-selectbox__select{
     outline: none;
     border: none !important;
 }
 
-.jq-selectbox__select:active,
-.jq-selectbox__select:hover{
+#checkout_customer_main_zone_id-styler .jq-selectbox__select:active,
+#inputShippingMethod-styler .jq-selectbox__select:active,
+#inputPaymentMethod-styler .jq-selectbox__select:active,
+#checkout_customer_main_zone_id-styler .jq-selectbox__select:hover,
+#inputShippingMethod-styler .jq-selectbox__select:hover,
+#inputPaymentMethod-styler .jq-selectbox__select:hover{
     background: white;
     box-shadow: none;
 }
 
-.jq-selectbox__dropdown	{
+#checkout_customer_main_zone_id-styler .jq-selectbox__dropdown,
+#inputShippingMethod-styler .jq-selectbox__dropdown,
+#inputPaymentMethod-styler .jq-selectbox__dropdown	{
     border: none;
     box-shadow: none;
     border-top-left-radius: 0;
@@ -548,17 +571,25 @@ label[for='input-promo']{
 
 }
 
-
-.jq-selectbox li:hover, .jq-selectbox li.selected{
+#checkout_customer_main_zone_id-styler li:hover,
+#inputShippingMethod-styler li:hover,
+#inputPaymentMethod-styler li:hover,
+#checkout_customer_main_zone_id-styler li.selected,
+#inputShippingMethod-styler li.selected,
+#inputPaymentMethod-styler li.selected{
     background-color: #c49849;
     border-radius: 20px;
 }
 
-.jq-selectbox__trigger{
+#checkout_customer_main_zone_id-styler .jq-selectbox__trigger,
+#inputShippingMethod-styler .jq-selectbox__trigger,
+#inputPaymentMethod-styler .jq-selectbox__trigger{
     border: none;
 }
 
-.jq-selectbox__trigger-arrow{
+#checkout_customer_main_zone_id-styler .jq-selectbox__trigger-arrow,
+#inputShippingMethod-styler .jq-selectbox__trigger-arrow,
+#inputPaymentMethod-styler .jq-selectbox__trigger-arrow{
     top: 0;
     right: 0;
     width: 40px;
@@ -572,11 +603,15 @@ label[for='input-promo']{
     text-shadow: none;
 }
 
-.jq-selectbox__trigger-arrow i{
+#checkout_customer_main_zone_id-styler .jq-selectbox__trigger-arrow i,
+#inputShippingMethod-styler .jq-selectbox__trigger-arrow i,
+#inputPaymentMethod-styler .jq-selectbox__trigger-arrow i{
     font-size: 2em;
 }
 
-.jq-selectbox.opened .jq-selectbox__trigger-arrow{
+#checkout_customer_main_zone_id-styler.opened .jq-selectbox__trigger-arrow,
+#inputShippingMethod-styler.opened .jq-selectbox__trigger-arrow,
+#inputPaymentMethod-styler.opened .jq-selectbox__trigger-arrow{
     background: none;
 }
 
@@ -706,13 +741,17 @@ label[for='input-promo']{
     display: none;
 }
 
+#content .breadcrumb{
+    display: none;
+}
+
 @media all and (max-width: 1279px){
 
-    h3{
+    #content h3{
         font-size: 32px;
     }
 
-    h2{
+    #content h2{
         font-size: 12px;
     }
 
@@ -942,7 +981,9 @@ label[for='input-promo']{
         padding-right: 0;
     }
 
-    .jq-selectbox{
+    #checkout_customer_main_zone_id-styler,
+    #inputShippingMethod-styler,
+    #inputPaymentMethod-styler{
         margin-bottom: 10px;
     }
 

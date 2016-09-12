@@ -2,9 +2,9 @@
 }
 @media (max-width:1200px){.table th, .table td{padding:8px;}
 }
-@media (min-width:1200px){.container{width:1200px;}
+@media (min-width:1200px){.container{width:1240px;}
 }
-@media (min-width:767px){section{background:url(../image/bg-section.png) repeat-x left top;}
+
 #body{overflow:hidden;}
 .banner>div>a:hover img{}
 .banner>div>a:hover h1{color:#313131;}

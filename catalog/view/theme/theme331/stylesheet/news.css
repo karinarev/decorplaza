@@ -1,4 +1,4 @@
-h3{
+#content h3{
     text-align: center;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -8,6 +8,26 @@ h3{
     font-size: 36px;
     font-weight: 400;
     line-height: 9px;
+}
+
+#body{
+    margin-top: -20px;
+}
+
+.headerBrownPanel{
+    bottom: -3px;
+}
+
+.cart-position{
+    margin-top: 20px;
+}
+
+.cartIcon{
+    top: 20px;
+}
+
+#cart-total2{
+    padding-top: 30px;
 }
 
 #content{

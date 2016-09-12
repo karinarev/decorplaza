@@ -4,8 +4,10 @@ class ControllerInformationContact extends Controller {
 	    
   	public function index() {
 		$this->language->load('information/contact');
+		$this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/contacts.css');
 
-    	$this->document->setTitle($this->language->get('heading_title'));  
+
+		$this->document->setTitle($this->language->get('heading_title'));
 	 
     	if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validate()) {
 			$text = '<p>Сообщение с формы обратного звонка.</p> <p>Имя - '.$this->request->post['name'].'.</p> <p>Номер телефона - '.$this->request->post['phone'].'</p><p>Тема сообщения - '.$this->request->post['enquiry'].'</p>';

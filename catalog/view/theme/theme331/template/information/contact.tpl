@@ -15,7 +15,7 @@
 				</div-->
                 <div class="row contactsFullRow">
 				<div style="display: inline-block; vertical-align: top;" class="col-sm-6">
-                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=ekSFBwanpGIcv-Vv0cKpbygc1p_DeoyM&amp;width=570&amp;height=420&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=ekSFBwanpGIcv-Vv0cKpbygc1p_DeoyM&amp;width=560&amp;height=420&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
 				</div>
 				<div style="display: inline-block; vertical-align: top;" class="col-sm-6">
                     <div class="row contactsRow">
@@ -23,8 +23,8 @@
                             <img class="contactsIcon" src="/image/adress.png">
                         </div>
                         <div class="col-lg-11">
-                            <span class="headerText boldText firstParagraph">Адрес:</span><br/><br/>
-                            Московская область, г.Балашиха, Носовихинское ш., владение 4, Торговый Центр "Никольский Парк", 1 этаж(проезд от м. Новокосино)<br/><br/>
+                            <span class="headerText boldText firstParagraph">Адрес:</span><br/>
+                            <p class="contact-text"> Московская область, г.Балашиха, Носовихинское ш., владение 4, Торговый Центр "Никольский Парк", 1 этаж(проезд от м. Новокосино) </p>
                         </div>
                     </div>
                     <div class="row contactsRow">
@@ -32,10 +32,10 @@
                             <img class="contactsIcon" src="/image/schedule.png">
                         </div>
                         <div class="col-lg-11">
-                            <span class="headerText boldText">График работы:</span><br/><br/>
-                            Понедельник - Пятница с 10.00 до 21.00<br/>
+                            <span class="headerText boldText">График работы:</span><br/>
+                            <p class="contact-text">Понедельник - Пятница с 10.00 до 21.00<br/>
                             Суббота - Воскресенье с 10.00 до 20.00<br/>
-                            Заказы через сайт принимаются круглосуточно и без выходных.<br/><br/>
+                            Заказы через сайт принимаются круглосуточно и без выходных.</p>
                         </div>
                     </div>
                     <div class="row contactsRow">
@@ -43,10 +43,10 @@
                             <img class="contactsIcon" src="/image/telephone.png">
                         </div>
                         <div class="col-lg-11">
-                            <span class="headerText boldText">Телефоны:</span><br/><br/>
-                            8 (925) 397-79-13<br/>
+                            <span class="headerText boldText">Телефоны:</span><br/>
+                            <p class="contact-text">8 (925) 397-79-13<br/>
                             <?php if ($telephone) echo $telephone; ?><br/>
-                            8 (925) 397-79-12<br/><br/>
+                            8 (925) 397-79-12</p>
                         </div>
                     </div>
                     <div class="row contactsRow">
@@ -55,12 +55,12 @@
                         </div>
                         <div class="col-lg-11">
                             <span class="headerText boldText lastParagraph">Email:</span>
-                            <?php echo $config_email; ?><br/><br/>
-                            <span class="spanOriginalSpaces">
+                            <?php echo $config_email; ?><br/>
+                            <p class="contact-text"><span class="spanOriginalSpaces">
                                 Наименование Общество с ограниченной ответственностью "МАРШАЛ ПЛЮС". <br/>
                                 ИНН 5001083150 КПП 500101001 ОГРН 1115001006218 ОКПО 90171834<br/>
                                 Мы будем признательны вам за любые замечания и отзывы о нашей работе, а также предложения по улучшению качества обслуживания.
-                            </span>
+                            </span></p>
                         </div>
                     </div>
                 </div>

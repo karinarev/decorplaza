@@ -1,5 +1,5 @@
 .container{
-    width: 1220px !important;
+    width: 1240px !important;
     margin: auto;
     font-family: "OpenSans";
     font-size: 12px;
@@ -257,18 +257,18 @@ a.product-icon:hover, a.product-icon:active {
     letter-spacing: 1px;
 }
 
-.jq-selectbox{
+#input-sort-styler{
     margin-left: 5px;
     text-align: center;
     width: 252px;
 }
 
-.jq-selectbox.opened .jq-selectbox__select{
+#input-sort-styler.opened .jq-selectbox__select{
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
 
-.jq-selectbox__select	{
+#input-sort-styler .jq-selectbox__select	{
     height: 38px;
     background: none;
     background-color: white;
@@ -289,20 +289,20 @@ a.product-icon:hover, a.product-icon:active {
 
 }
 
-.jq-selectbox__select:focus,
-.jq-selectbox:focus,
-.focused .jq-selectbox__select	{
+#input-sort-styler .jq-selectbox__select:focus,
+#input-sort-styler .jq-selectbox:focus,
+#input-sort-styler .focused .jq-selectbox__select	{
     outline: none;
     border: none !important;
 }
 
-.jq-selectbox__select:active,
-.jq-selectbox__select:hover{
+#input-sort-styler .jq-selectbox__select:active,
+#input-sort-styler .jq-selectbox__select:hover{
     background: white;
     box-shadow: none;
 }
 
-.jq-selectbox__dropdown			{
+#input-sort-styler .jq-selectbox__dropdown			{
     border: none;
     box-shadow: none;
     border-top-left-radius: 0;
@@ -320,20 +320,20 @@ a.product-icon:hover, a.product-icon:active {
 
 }
 
-.jq-selectbox li{
+#input-sort-styler li{
     color: #777775;
 }
 
-.jq-selectbox li:hover, .jq-selectbox li.selected{
+#input-sort-styler li:hover, #input-sort-styler li.selected{
     background-color: #c49849;
     border-radius: 20px;
 }
 
-.jq-selectbox__trigger{
+#input-sort-styler .jq-selectbox__trigger{
     border: none;
 }
 
-.jq-selectbox__trigger-arrow{
+#input-sort-styler .jq-selectbox__trigger-arrow{
     top: 0;
     right: 0;
     width: 40px;
@@ -347,11 +347,11 @@ a.product-icon:hover, a.product-icon:active {
     text-shadow: none;
 }
 
-.jq-selectbox__trigger-arrow i{
+#input-sort-styler .jq-selectbox__trigger-arrow i{
     font-size: 2em;
 }
 
-.jq-selectbox.opened .jq-selectbox__trigger-arrow{
+#input-sort-styler.opened .jq-selectbox__trigger-arrow{
     background: none;
 }
 

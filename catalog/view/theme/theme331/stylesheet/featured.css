@@ -31,12 +31,12 @@
     outline: none !important;
 }
 
-.featured-title{
-    margin-top: 70px;
+.featured-title {
+    margin-top: 120px;
 }
 
 .featured-carousel{
-    margin: 35px auto 50px auto;
+    margin: 35px auto 70px auto;
     padding: 0px 30px;
     background: none;
     width: 1220px;
