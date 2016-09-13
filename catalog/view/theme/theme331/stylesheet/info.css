@@ -1,0 +1,14 @@
+#shadow>section{
+    background-color: rgb(244, 244, 244)!important;
+}
+
+#shadow>section>.container>.row>.col-sm-12{
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+#shadow>section>.container>.row>.col-sm-12 hr{
+    width: 94px;
+    height: 2px;
+    background-color: rgb(27, 27, 27);
+}
