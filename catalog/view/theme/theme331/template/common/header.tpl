@@ -281,9 +281,9 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 
                </ul>
            </div-->
-					<a href="tel:84993977912" class="headerBigText headerText telephoneNumber" id="firstNumber">84993977912</a><br/>
-					<a href="tel:89253977912" class="headerText telephoneNumber" id="secondNumber">89253977912</a><br/>
-					<a href="tel:89253977914" class="headerText telephoneNumber" id="thirdNumber">89253977914</a>
+					<a href="tel:84993977912" class="headerBigText headerText telephoneNumber" id="firstNumber">8 (499) 397-79-12</a><br/>
+					<a href="tel:89253977912" class="headerText telephoneNumber" id="secondNumber">8 (925) 397-79-12</a><br/>
+					<a href="tel:89253977914" class="headerText telephoneNumber" id="thirdNumber">8 (925) 397-79-14</a>
 				</div>
 				<div class="col-sm-1">
 					<img src="/image/callBack.png">
