@@ -23,6 +23,7 @@ define('DB_HOSTNAME', 'localhost');
 define('DB_USERNAME', 'decorplaza');
 define('DB_PASSWORD', '12345qwert');
 define('DB_DATABASE', 'decorplaza');
+define('DB_PORT', '3306');
 define('DB_PREFIX', 'oc_');
 
 ?>

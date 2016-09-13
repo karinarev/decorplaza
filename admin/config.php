@@ -19,12 +19,14 @@ define('DIR_CACHE', '/var/www/dev_gns/data/www/decor-plaza.dev-gns.com/system/ca
 define('DIR_DOWNLOAD', '/var/www/dev_gns/data/www/decor-plaza.dev-gns.com/download/');
 define('DIR_LOGS', '/var/www/dev_gns/data/www/decor-plaza.dev-gns.com/system/logs/');
 define('DIR_CATALOG', '/var/www/dev_gns/data/www/decor-plaza.dev-gns.com/catalog/');
+
 /// DB
 define('DB_DRIVER', 'mysqliz');
 define('DB_HOSTNAME', 'localhost');
 define('DB_USERNAME', 'decorplaza');
 define('DB_PASSWORD', '12345qwert');
 define('DB_DATABASE', 'decorplaza');
+define('DB_PORT', '3306');
 define('DB_PREFIX', 'oc_');
 
 
