@@ -268,7 +268,9 @@
 
 
   </div>
+<div class="content-bottom">
 <?php echo $content_bottom; ?>
+</div>
 
 
 <?php echo $column_right; ?>
