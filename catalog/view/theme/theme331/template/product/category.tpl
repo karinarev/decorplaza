@@ -266,9 +266,9 @@
   <?php } ?>
 	</div>
 
-  <?php echo $content_bottom; ?>
+
   </div>
-  
+<?php echo $content_bottom; ?>
 
 
 <?php echo $column_right; ?>
