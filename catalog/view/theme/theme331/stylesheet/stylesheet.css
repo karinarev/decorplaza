@@ -240,7 +240,7 @@ a#hidden{display:none;visibility:hidden}
 #container{text-align:left;}
 #column-left{}
 #column-right{}
-section{padding-top:30px;     padding-bottom: 20px;}
+section{padding-top:65px;     padding-bottom: 20px;}
 header{position:relative;color:rgb(27, 27, 27);bottom:1px;opacity:100;}
 #logo img {
 	width:254px;
@@ -389,7 +389,7 @@ header .links a{display:inline-block;font-size: 14px;font-weight:600;color:#3333
 .top-search #search{display:none;}
 .top-search1:hover{background-color:#474747;color:#fff;}
 .top-search1{float:right;background-color:#eaeaea;width:50px;height:50px;line-height:50px;text-align:center;font-size:14px;color:#333333;border-radius:50%;cursor:pointer;margin-left:6px;}
-#search{position:relative;float:right;/*display:none;*/margin-top:7px;}
+#search{position:relative;/*display:none;*/margin-top:7px;}
 #search .button-search{float:right;text-align:center;}
 #search .button-search:hover{color:#474747;cursor:pointer;}
 .name a{text-decoration:none;font-size:16px;color:#166EDA;line-height:18px;font-weight:300;font-weight:bold;font-family:"Open Sans Condensed",Helvetica,Arial,sans-serif;}
@@ -1261,12 +1261,12 @@ footer .my_h3 {
 }
 
 .toprow ul li a:link, .toprow ul li a:visited{
-    line-height: 5.3;
-    color: rgb(242, 241, 241);
+     color: rgb(242, 241, 241);
     text-transform: uppercase;
     font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 0.75px;
+    font-weight: 600;
+    line-height: 64px;
+    letter-spacing: 1px;
 }
 
 .toprow ul li a:hover{
@@ -1460,8 +1460,9 @@ footer .my_h3 {
     font-weight: 600;
     font-size: 14px;
     color: rgb(27, 27, 27);
-    line-height: 1.286;
+    line-height: 18px;
     text-align: left;
+
 }
 
 #decorPlazaHeader>div>div>.col-sm-2{
@@ -1485,9 +1486,11 @@ footer .my_h3 {
     text-align: center;
     font-size: 14px;
     color: rgb(244, 244, 244);
-    font-weight: bold;
+    font-weight: 700;
     text-transform: uppercase;
     line-height: 2.4;
+    letter-spacing: 2px;
+    padding-top: 13px;
 }
 
 #decorPlazaHeader .panel-heading>a:link{
@@ -1572,35 +1575,34 @@ footer .my_h3 {
     font-size: 12px;
     color: rgb(27, 27, 27);
     text-transform: uppercase;
-    line-height: 2;
+    line-height: 24px;
     text-align: justify;
     background-color: rgb(244, 244, 244);
     border: 0;
     padding-left: 32px;
     padding-top: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 #catalogCollapse li:hover{
     background-color: rgb(171, 171, 171);
     color: white !important;
-    font-weight: bold;
 }
 
-#catalogCollapse>ul>a>li>span{
+#catalogCollapse>ul>a>li:after{
     display: inline-block;
     float: right;
-    background-image: url(../image/pointer.png);
-    background-position: center;
-    bacground-repeat: no-repeat;
-    width: 5px;
-    height: 8px;
+    content: url(../image/pointer.png);
+    width: 10px;
+    height: 10px;
     position: relative;
-    top: 7px;
+    top: 2px;
     margin-right: 29px;
 }
 
-#catalogCollapse>ul>a>li>span:hover{
-    background-image: url(../image/pointerActive.png);
+#catalogCollapse>ul>a>li:hover:after{
+    content: url(../image/pointerActive.png);
 }
 
 #decorPlazaHeader>.container-fluid:nth-child(2){
@@ -1771,7 +1773,7 @@ footer .my_h3 {
     position: relative;
     text-align: right;
     padding-left: 30px;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 

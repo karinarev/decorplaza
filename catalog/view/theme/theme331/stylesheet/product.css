@@ -18,6 +18,14 @@
     background-color: rgb(244, 244, 244);
 }
 
+body{
+    background-color: rgb(244, 244, 244);
+}
+
+.content-bottom{
+    margin-top: -50px;
+}
+
 .breadcrumb {
     margin: 0 0 32px 23px;
     padding: 8px 0;
@@ -51,7 +59,7 @@
     top: 1px;
 }
 
-.fa-star:before{
+.product-section .fa-star:before{
     content: "\f005"!important;
 }
 
@@ -59,12 +67,12 @@
     color: rgb(204, 204, 204);
 }
 
-.fa-stack{
+.product-section .fa-stack{
     width: 11px;
     color: rgb(119, 119, 119);
 }
 
-.fa:not(.cartIcon) {
+.product-section .fa:not(.cartIcon) {
     font-size: 14px;
     margin-bottom: 7px !important;
 }
@@ -171,19 +179,19 @@
 }
 
 .buttonPlus{
-    background-image: url(/image/+.png);
+    background-image: url(../image/+.png);
 }
 
 .buttonMinus{
-    background-image: url(/image/-.png);
+    background-image: url(../image/-.png);
 }
 
 .plusminus:hover{
-    background-image: url(/image/-Active.png);
+    background-image: url(../image/-Active.png);
 }
 
 .buttonPlus:hover{
-    background-image: url(/image/+Active.png);
+    background-image: url(../image/+Active.png);
 }
 
 button:focus{
@@ -420,10 +428,16 @@ iframe{
 #column-left{
     padding: 0;
     position: relative;
-    bottom: 25px;
 }
 
 #shadow>section>.container>.row>.col-sm-9{
     position: relative;
-    bottom: 25px;
+}
+
+.featured-title h2, .featured-title .divider{
+    display: none;
+}
+
+section{
+    padding-top: 65px !important;
 }

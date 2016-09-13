@@ -78,6 +78,7 @@
     font-weight: 700;
     line-height: 18px;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .categories .item .button-area .btn-more span
@@ -121,6 +122,7 @@
 
     .categories .item .caption .catalog-name{
         width: 80%;
+        letter-spacing: 1px;
     }
 
     .categories .item .caption .description{

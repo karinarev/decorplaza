@@ -234,7 +234,7 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 						<div class="headerBrownPanel">
 							<a href="/login" class="icon enterIcon"></a>
 							<a href="/create-account" class="icon accountIcon"></a>
-							<div class="cart-position" onclick="location.href='/shopping-cart/'">
+							<div class="cart-position">
 								<div class="cart-inner"><?php echo $cart; ?></div>
 							</div>
 							<!--a href="/" id="cartIcon" class="icon cartIcon"><?php if($productsNumber) echo'<span id="cart-total">', $productsNumber, '</span>';?></a-->
@@ -365,7 +365,7 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 		</div>
 	</div>
 <section>
-<?php if ($header_top) {?>
+<?php if ($header_top) { ?>
 <div class="header-modules">
 	<div class="container">
 		<div class="row">
@@ -377,7 +377,7 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 	</div>
 </div>
 <div class="clear"></div>
-<?php }?>
+<?php } ?>
 
 <div class="container">
 <?php if (!empty($error)) { ?>

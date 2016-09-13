@@ -235,6 +235,12 @@
 							  <?php } ?>
 							  <?php } ?>
 						  </div>
+						  <?php } else { ?>
+						  <div class="rating">
+							  <?php for ($i = 1; $i <= 5; $i++) { ?>
+							  <span class="fa fa-stack"><i class="fa fa-star empty-star"></i></span>
+							  <?php } ?>
+						  </div>
 						  <?php } ?>
 						  <?php if ($product['price']) { ?>
 						  <p class="price">
@@ -268,6 +274,7 @@
 
 
   </div>
+<div class="clear"></div>
 <div class="content-bottom">
 	<?php echo $content_bottom; ?>
 </div>

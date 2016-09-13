@@ -179,6 +179,12 @@
 						<?php } ?>
 						<?php } ?>
 					</div>
+					<?php } else { ?>
+					<div class="rating">
+						<?php for ($i = 1; $i <= 5; $i++) { ?>
+						<span class="fa fa-stack"><i class="fa fa-star fa-stack-1x empty-star"></i></span>
+						<?php } ?>
+					</div>
 					<?php } ?>
 					<?php if ($product['price']) { ?>
 					<p class="price">
@@ -321,14 +327,12 @@
 		$('.featured-carousel .item').hover(
 				function () {
 					$(this).find('img').addClass('image-hover');
-					//$(this).find('.image').append('<a class="more featured-icon"></a><a class="shopping-text shopping featured-icon"></a> ');
 					$(this).find('.featured-icon').css({'display' : 'block'});
 					$(this).find('.sku').css({'display' : 'block'});
 					$(this).find('.rating').css({'display' : 'block'});
 				},
 				function (){
 					$(this).find('img').removeClass('image-hover');
-					//$(this).find('.featured-icon').remove();
 					$(this).find('.featured-icon').css({'display' : 'none'});
 					$(this).find('.sku').css({'display' : 'none'});
 					$(this).find('.rating').css({'display' : 'none'});

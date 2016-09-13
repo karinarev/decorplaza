@@ -96,6 +96,7 @@
     font-weight: 700;
     text-transform: uppercase;
     padding-top: 15px;
+    letter-spacing: 1px;
 }
 
 #slideshow-carousel .item .button-area .btn-more:hover{

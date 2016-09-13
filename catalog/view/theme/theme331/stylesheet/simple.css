@@ -4,6 +4,7 @@
     font-size: 36px;
     font-weight: 400;
     text-align: center;
+    margin-top: 40px;
 }
 
 body{
@@ -341,7 +342,7 @@ label[for='input-promo']{
     font-weight: 700;
     line-height: 18px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 
     box-shadow: none;
 }
@@ -723,6 +724,7 @@ label[for='input-promo']{
     font-weight: 700;
     line-height: 18px;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 #simplecheckout_button_confirm:hover{

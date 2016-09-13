@@ -23,7 +23,7 @@ class ControllerModuleFeatured extends Controller {
 		if (empty($setting['limit'])) {
 			$setting['limit'] = 12;
 		}
-		
+
 		$products = array_slice($products, 0, (int)$setting['limit']);
 		
 		foreach ($products as $product_id) {
@@ -79,7 +79,7 @@ class ControllerModuleFeatured extends Controller {
 				
 				
 				if ($product_info['image']) {
-					$image = $this->model_tool_image->resize($product_info['image'], $setting['image_width'], $setting['image_height']);
+					$image = $this->model_tool_image->resize($product_info['image'], 210, 211);
 				} else {
 					$image = false;
 				}
@@ -124,6 +124,7 @@ class ControllerModuleFeatured extends Controller {
 		}
 
 		$this->data['module'] = $module++;
+
 
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/featured.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/module/featured.tpl';
