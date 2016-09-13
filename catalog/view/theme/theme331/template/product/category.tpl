@@ -269,7 +269,7 @@
 
   </div>
 <div class="content-bottom">
-<?php echo $content_bottom; ?>
+	<?php echo $content_bottom; ?>
 </div>
 
 
