@@ -1232,6 +1232,7 @@ footer .my_h3 {
     /*border: 1px solid #ddd;
     border-top: 1px solid #4d90fe;*/
     background: rgb(255, 255, 255);
+     border: none;
 }
 /* активация секций с помощью переключателя :checked */
  #tab11:checked ~ #content11, #tab22:checked ~ #content22, #tab33:checked ~ #content33, #tab44:checked ~ #content44 {
@@ -1337,15 +1338,16 @@ footer .my_h3 {
     height:31px;
     background-color: rgb(196, 152, 73);
     position: absolute;
-    bottom: 17px;
-    left: 13px;
+    bottom: 18px;
+    left: 16px;
     padding-top: 5px;
     border-radius: 50%;
     line-height: 30px;
-    font-size: 14px;
+    font-size: 19px;
     color: #fff;
     text-align: center;
     letter-spacing: 0.75px;
+    font-weight: 600;
 }
 
 .navbarFullWidth{
@@ -1640,12 +1642,13 @@ footer .my_h3 {
     height: 35px;
     width: 100%;
     text-align: center;
-    font-size: 12px;
-    color: rgb(27, 27, 27);
+    font-size: 14px;
+    color: #1b1b1b;
     line-height: 2;
     text-align: justify;
     padding-left: 32px;
     padding-top: 5px;
+    font-weight: 400;
 }
 
 .collapseHorizontal li:hover{
@@ -1792,7 +1795,7 @@ footer .my_h3 {
     line-height: 44px;
     position: relative;
     text-align: right;
-    padding-left: 30px;
+    padding-left: 20px;
     font-weight: 600;
     letter-spacing: 1px;
 }
@@ -1887,6 +1890,10 @@ footer>.container-fluid .col-sm-2{
 
 footer .my_h3{
     letter-spacing: 1px;
+}
+
+.product-info .description .product-section .prod-stock span{
+    font-weight: 700;
 }
 
 
@@ -2230,7 +2237,7 @@ footer .my_h3{
         margin-left: 57px;
     }
 
-    .hamburger{
+    .toprow .links .hamburger{
         display: inline-block;
         max-width: none !important;
         width: 25% !important;
@@ -2243,7 +2250,7 @@ footer .my_h3{
         padding-left: 0;
     }
 
-    .hamburger-content{
+    #header .hamburger-content{
         height: 300px;
         background-color: #1b1b1b;
         width: 95% !important;
@@ -2252,7 +2259,7 @@ footer .my_h3{
         z-index: 100;
     }
 
-    .hamburger-content ul li a{
+    #header .hamburger-content ul li a{
         font-family: "OpenSans";
         font-size: 12px;
         font-weight: 600;
@@ -2261,11 +2268,11 @@ footer .my_h3{
         color: white;
     }
 
-    .hamburger-content ul li a:hover{
+    #header .hamburger-content ul li a:hover{
         color: #c49849;
     }
 
-    .hamburger-content ul li{
+    #header .hamburger-content ul li{
         padding-left: 20px;
         padding-top: 20px;
         padding-bottom: 8px;

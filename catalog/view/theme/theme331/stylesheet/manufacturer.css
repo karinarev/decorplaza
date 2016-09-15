@@ -96,6 +96,65 @@ h3{
     clear: both;
 }
 
+.text-title h2{
+    margin-top: 65px !important;
+}
+
+.pagination>li>a, .pagination>li>span {
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #777;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    background: none;
+    border: none;
+}
+
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+    color: #fff;
+    background-color: #c49849;
+    border: none;
+    border-radius: 50% !important;
+}
+
+.pagination>li>a:focus,
+.pagination>li>a:hover,
+.pagination>li>span:focus,
+.pagination>li>span:hover {
+    color: #c49849;
+    background: none;
+    border: none;
+}
+
+.pagination {
+    margin: -11px 10px;
+    padding-top: 10px;
+    width: auto;
+}
+
+.pagination{
+    margin-bottom: 0px;
+}
+
+.mobile-pagination a.sort-link,
+.mobile-pagination a.sort-link:link,
+.mobile-pagination a.sort-link:visited,
+.mobile-pagination a.sort-link:active{
+    color: #777;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.mobile-pagination{
+    display: none;
+}
 
 
 @media all and (max-width: 1279px){
@@ -105,6 +164,8 @@ h3{
 
     #content {
         width: 750px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .alphabet .col-md-2{
@@ -113,7 +174,7 @@ h3{
     }
 
     .alphabet .col-md-10{
-        width: 630px;
+        width: 550px;
     }
 
     .category-col:nth-child(5n-4){
@@ -159,6 +220,7 @@ h3{
         width: 100%;
         margin: auto;
         padding-right: 0;
+        padding-left: 0;
     }
 
     .category-divider{
@@ -187,6 +249,32 @@ h3{
         padding-left: 25px;
     }
 
+    .category-col:nth-child(5n-4){
+        clear: none;
+    }
+
+    .category-col:nth-child(3n-2){
+        clear: both;
+    }
+
+    .alphabet .col-md-10{
+        line-height: 30px;
+    }
+
+    .mobile-pagination{
+        display: block;
+        text-align: center;
+        color: #777;
+        font-family: "OpenSans";
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 24px;
+        text-transform: uppercase;
+    }
+
+    .mobile-pagination .category-divider{
+        margin-bottom: 10px;
+    }
 
 
 

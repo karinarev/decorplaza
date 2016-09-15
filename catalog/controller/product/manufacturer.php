@@ -33,6 +33,19 @@ class ControllerProductManufacturer extends Controller {
 		);
 		
 		$this->data['categories'] = array();
+
+		if (isset($this->request->get['page'])) {
+			$page = $this->request->get['page'];
+		} else {
+			$page = 1;
+		}
+
+		$limit = 2;
+
+		$data = array(
+			'start'              => ($page - 1) * $limit,
+			'limit'              => $limit
+		);
 				
 		$results = $this->model_catalog_manufacturer->getManufacturers();
 	
@@ -61,6 +74,20 @@ class ControllerProductManufacturer extends Controller {
 		
 		$this->data['continue'] = $this->url->link('common/home');
 
+
+
+		$url = '';
+
+	
+		$pagination = new Pagination();
+		$pagination->total = count($this->data['categories']);
+		$pagination->page = $page;
+		$pagination->limit = $limit;
+		$pagination->text = $this->language->get('text_pagination');
+		$pagination->url = $this->url->link('brands' . $url . '&page={page}');
+
+		$this->data['pagination'] = $pagination->render();
+
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/manufacturer_list.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/product/manufacturer_list.tpl';
 		} else {
@@ -75,8 +102,8 @@ class ControllerProductManufacturer extends Controller {
 			'common/footer',
 			'common/header'
 		);
-				
-		$this->response->setOutput($this->render());										
+
+		$this->response->setOutput($this->render());
   	}
 	
 	public function info() {

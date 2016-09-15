@@ -177,6 +177,11 @@ body{
     .col-sm-6{
         width: 50%;
     }
+
+    .container{
+        padding-right: 0;
+        padding-left: 0;
+    }
 }
 
 @media all and (max-width: 767px) {
@@ -185,10 +190,14 @@ body{
         background: #f4f4f4;
     }
 
-    h3{
+    #body{
+        overflow: visible;
+    }
+
+    #content h3{
         font-size: 24px;
         margin-top: 40px;
-        margin-bottom: 25px;
+        margin-bottom: 30px;
     }
 
     #content{
@@ -210,7 +219,11 @@ body{
     }
 
     .product-thumb .image img {
-        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
+        width: 94px;
+        height: 94px;
+        margin-bottom: 20px;
     }
 
     .divider{
@@ -226,6 +239,18 @@ body{
 
     .row .product-layout:first-child{
         padding-right: 0;
+    }
+
+    .product-list .product-thumb{
+        padding-bottom: 20px;
+    }
+
+    header{
+        bottom: -2px;
+    }
+
+    .headerBrownPanel{
+        bottom: 0;
     }
 
 

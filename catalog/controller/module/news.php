@@ -84,7 +84,7 @@ class ControllerModuleNews extends Controller {
 			$posted = $posted[0]." ".$m." ".$posted[2];
 
 			if(strlen($result['title']) >= 54) $description_length = 90;
-			else $description_length = 180;
+			else $description_length = 150;
 			
 			$this->data['news'][] = array(
 				'title'        		=> $result['title'],

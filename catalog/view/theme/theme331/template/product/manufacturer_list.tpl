@@ -8,6 +8,13 @@
       <?php foreach ($categories as $category) { ?>
       <a href="/brands/#<?php echo $category['name']; ?>"><?php echo $category['name']; ?></a>
       <?php } ?>
+      <div class="mobile-pagination">
+        <?php if (isset($pagination)) { ?>
+        <br>
+        <div class="category-divider"></div>
+        <?php echo $pagination; ?>
+        <?php } ?>
+      </div>
     </div>
   </div>
 
@@ -28,6 +35,12 @@
   </div>
   <?php } ?>
   <?php } ?>
+  <div class="mobile-pagination">
+    <?php if (isset($pagination)) { ?>
+    <br> <div class="category-divider"></div>
+    <?php echo $pagination; ?>
+    <?php } ?>
+  </div>
   <?php } else { ?>
   <div class="content"><?php echo $text_empty; ?></div>
   <div class="buttons">
