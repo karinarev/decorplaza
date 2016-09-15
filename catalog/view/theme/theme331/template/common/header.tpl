@@ -55,7 +55,7 @@ $description = str_replace(array("&nbsp",";","\r\n", "\r", "\n", "\t", '  ', '  
 <link href="catalog/view/theme/theme331/stylesheet/responsive.css" rel="stylesheet" type="text/css" />
 <link href="catalog/view/theme/theme331/stylesheet/photoswipe.css" rel="stylesheet" type="text/css" />
 <link href="catalog/view/theme/theme331/stylesheet/jquery.bxslider.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" type="text/css" href="catalog/view/theme/theme331/stylesheet/colorbox.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/<?php echo $this->config->get('config_template');?>/stylesheet/colorbox.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/fast_order.css" />
 <?php foreach ($styles as $style) { ?>
 <link rel="<?php echo $style['rel']; ?>" type="text/css" href="<?php echo $style['href']; ?>" media="<?php echo $style['media']; ?>" />
@@ -81,7 +81,7 @@ $description = str_replace(array("&nbsp",";","\r\n", "\r", "\n", "\t", '  ', '  
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/theme331/js/fancybox3/jquery.fancybox.css" media="screen" />
 
 
-<script type="text/javascript" src="catalog/view/theme/theme331/js/colorbox/jquery.colorbox.js"></script>
+<script type="text/javascript" src="catalog/view/theme/<?php echo $this->config->get('config_template');?>/js/colorbox/jquery.colorbox.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/jquery/jquery.jcarousel.min.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/jquery/jquery.cycle.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/jquery/jquery.maskedinput-1.3.min.js"></script>
@@ -121,6 +121,7 @@ $description = str_replace(array("&nbsp",";","\r\n", "\r", "\n", "\t", '  ', '  
 <?php foreach ($scripts as $script) { ?>
 <script type="text/javascript" src="<?php echo $script; ?>"></script>
 <?php } ?>
+
 <!--[if  IE 8]>
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/theme331/stylesheet/ie8.css" />
 <![endif]-->
@@ -141,6 +142,8 @@ DD_belatedPNG.fix('#logo img');
 </script>
 <![endif]-->
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/theme331/stylesheet/livesearch.css"/>
+
+	<script type="text/javascript" src="catalog/view/javascript/jquery/colorbox/jquery.colorbox.js" async></script>
 <?php if (!empty($stores)) { ?>
 
 <script type="text/javascript"><!--
