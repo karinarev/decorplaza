@@ -80,8 +80,11 @@ class ControllerProductManufacturer extends Controller {
   	}
 	
 	public function info() {
-	
-    	$this->language->load('product/manufacturer');
+		$this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/category.css');
+		$this->document->addStyle('catalog/view/javascript/jquery/customscrollbar/jquery.mCustomScrollbar.min.css');
+		$this->document->addScript('catalog/view/javascript/jquery/customscrollbar/jquery.mCustomScrollbar.concat.min.js');
+
+		$this->language->load('product/manufacturer');
 		
 		$this->load->model('catalog/manufacturer');
 		

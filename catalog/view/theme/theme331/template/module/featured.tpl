@@ -255,7 +255,7 @@
 							$('#notification').html('<div class="success" style="display: none;">' + json['success'] + '<img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>');
 							$('.success').fadeIn('slow');
 
-							$('#cart-total').html(json['total']);
+							$('#cart-total2').html(json['total'].split(' ')[1]);
 
 							$('html, body').animate({ scrollTop: 0 }, 'slow');
 						}
@@ -263,7 +263,7 @@
 
 						if (json['success']) {
 							$('#showcart').trigger('click');
-							$('#cart-total').html(json['total']);
+							$('#cart-total2').html(json['total'].split(' ')[1]);
 						}
 					}
 					setTimeout(function() {$('.success').fadeOut(1000)},3000)

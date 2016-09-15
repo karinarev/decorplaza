@@ -448,7 +448,7 @@ $('.add_to_cart').submit(function(e){
     $('#notification').html('<div class="success" style="display: none;">' + json['success'] + '<img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>');
     $('.success').fadeIn('slow');
 
-    $('#cart-total').html(json['total']);
+    $('#cart-total2').html(json['total']);
 
     $('html, body').animate({ scrollTop: 0 }, 'slow');
   }
@@ -456,7 +456,7 @@ $('.add_to_cart').submit(function(e){
 
   if (json['success']) {
     $('#showcart').trigger('click');
-    $('#cart-total').html(json['total']);
+    $('#cart-total2').html(json['total']);
   }
 }
 			setTimeout(function() {$('.success').fadeOut(1000)},3000)
