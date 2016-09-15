@@ -10,6 +10,7 @@
 		<div class="product-info" itemscope itemtype="http://schema.org/Product">
 			<div class="row">
 				<div class="col-sm-4">
+					<h2 itemprop="name" class="myHeader mobileHeader"> <?php echo $heading_title; ?></h2>
 					<script type="text/javascript">
 						jQuery(document).ready(function(){
 						var myPhotoSwipe = $("#gallery a").photoSwipe({ enableMouseWheel: false , enableKeyboard: false, captionAndToolbarAutoHideDelay:0 });
@@ -78,13 +79,15 @@
 						<div class="row">
 							<div class="col-sm-6">
 						<div class="product-section">
+							<div class="rating">
 							<?php for ($i = 1; $i <= 5; $i++) { ?>
 							<?php if ($rating < $i) { ?>
 							<span class="fa fa-stack"><i class="fa fa-star fa-stack-1x lightStar"></i></span>
 							<?php } else { ?>
 							<span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
 							<?php } ?>
-							<?php } ?><br/>
+							<?php } ?>
+							</div><br/>
 							<?php if ($manufacturer) { ?>
 							<span><?php echo $text_manufacturer; ?></span><br/> <a style="text-decoration:underline;" href="<?php echo $manufacturers; ?>"><?php echo $manufacturer; ?></a><br />
 							<?php } ?><br/>
@@ -110,10 +113,12 @@
 										<?php }?>
 								<?php } ?>
 										<div class="form-group">
+											<div class="quantity">
                   <button class="buttonMinus plusminus" onclick="onMinus();"></button>
                   <input type="text" name="quantity" maxlength="3" disabled="disabled" value="<?php echo $minimum; ?>" size="2" id="input-quantity" class="form-control" />
                   <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
                   <button class="buttonPlus plusminus" onclick="onPlus();"></button>
+												</div>
                   <br />
 											<?php if ($isInCart) echo '<button type="button" id="button-cart" data-loading-text='.$text_loading.' class="btn productInCartButton btn-primary btn-lg btn-block button-cart"><span class="icon cartIcon cartIconProduct"></span><span>В корзине</span></button>'; else echo '<button type="button" id="button-cart" data-loading-text='.$text_loading.' onmouseover="changeCartWhite()" onmouseout="changeCartBlack()" onclick="changeButtonBrown()" class="btn productCartButton btn-primary btn-lg btn-block button-cart"><span class="icon cartIcon cartIconProduct"></span><span> В корзину<span></button>';?>
                 </div>
@@ -432,7 +437,6 @@
     </section>
 </div>
 
-			<?php if ($review_status) { ?>
 			<form id="form-review" method="post">
 				<h2 class="myHeader">Оставить отзыв</h2>
 				<div class="tab-content">
@@ -466,27 +470,7 @@
 						<button type="submit" id="button-review" name="submit" data-loading-text="<?php echo $text_loading; ?>" class="callBackSend">Отправить</button>
 				</div>
 			</form>
-			<?php } ?>
 
-			<?php /* if ($tags) { ?>
-			<div class="tabs">
-				<div class="tab-heading">
-					<?php echo $text_tags; ?>
-				</div>
-				<div class="tab-content">
-					<div class="tags">
-						<b><?php echo $text_tags; ?></b>
-						<?php for ($i = 0; $i < count($tags); $i++) { ?>
-							<?php if ($i < (count($tags) - 1)) { ?>
-								<a href="<?php echo $tags[$i]['href']; ?>"><?php echo $tags[$i]['tag']; ?></a>,
-							<?php } else { ?>
-								<a href="<?php echo $tags[$i]['href']; ?>"><?php echo $tags[$i]['tag']; ?></a>
-							<?php } ?>
-						<?php } ?>
-					</div>
-				</div>
-			</div>
-			<?php } */?>
 
 		</div>
 
@@ -850,7 +834,25 @@ $( document ).ready(function() {
 	$("#button-cart").on("mouseover", function(event){
 		changeCartWhite();
 	});
-});
+
+	checkWindowSize();
+
+	$(window).resize(function(){
+		checkWindowSize();
+	});
+
+	function checkWindowSize() {
+		currWindowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+		if(currWindowWidth < 768){
+			$('#column-left').insertBefore('#content');
+			$(document).on('click', '.tabs label', function () {
+				console.log($(this));
+			});
+
+		}
+	}
+
+	});
 //--></script>
 <script type="text/javascript"><!--
 $('#tabs a').tabs();

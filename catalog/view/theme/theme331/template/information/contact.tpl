@@ -7,63 +7,61 @@
 	<div class="contact-info">
 		<div class="content row">
 			<div class="map-left col-sm-6"  style="width: 100%;">
-				<!--div class="contact-box" >
-					<b>Магазин в Москве:</b><br>
-				<div class="contact-box" style="width: 100%;"><i class="fa fa-home"></i><b><?php echo $text_address; ?></b>
-					<?php echo $address; ?>
-				</div>
-				</div-->
                 <div class="row contactsFullRow">
-				<div style="display: inline-block; vertical-align: top;" class="col-sm-6">
-                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=ekSFBwanpGIcv-Vv0cKpbygc1p_DeoyM&amp;width=560&amp;height=420&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
-				</div>
-				<div style="display: inline-block; vertical-align: top;" class="col-sm-6">
-                    <div class="row contactsRow">
-                        <div class="col-lg-1">
-                            <img class="contactsIcon" src="/image/adress.png">
+                    <div style="display: inline-block; vertical-align: top;" class="col-sm-6">
+                        <div class="col-sm-6">
+                            <div class="row contactsRow">
+                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                    <img class="contactsIcon" src="/image/adress.png">
+                                </div>
+                                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                                    <span class="headerText boldText firstParagraph">Адрес:</span><br/>
+                                    <p class="contact-text"> Московская область, г.Балашиха, Носовихинское ш., владение 4, Торговый Центр "Никольский Парк", 1 этаж(проезд от м. Новокосино) </p>
+                                </div>
+                            </div>
+                            <div class="row contactsRow">
+                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                    <img class="contactsIcon" src="/image/schedule.png">
+                                </div>
+                                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                                    <span class="headerText boldText">График работы:</span><br/>
+                                    <p class="contact-text">Понедельник - Пятница с 10.00 до 21.00<br/>
+                                    Суббота - Воскресенье с 10.00 до 20.00<br/>
+                                    Заказы через сайт принимаются круглосуточно и без выходных.</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-lg-11">
-                            <span class="headerText boldText firstParagraph">Адрес:</span><br/>
-                            <p class="contact-text"> Московская область, г.Балашиха, Носовихинское ш., владение 4, Торговый Центр "Никольский Парк", 1 этаж(проезд от м. Новокосино) </p>
+                        <div class="col-sm-6">
+                            <div class="row contactsRow">
+                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                    <img class="contactsIcon" src="/image/telephone.png">
+                                </div>
+                                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                                    <span class="headerText boldText">Телефоны:</span><br/>
+                                    <p class="contact-text">8 (925) 397-79-13<br/>
+                                    <?php if ($telephone) echo $telephone; ?><br/>
+                                    8 (925) 397-79-12</p>
+                                </div>
+                            </div>
+                            <div class="row contactsRow">
+                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                    <img class="contactsIcon" src="/image/email.png">
+                                </div>
+                                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                                    <span class="headerText boldText lastParagraph">Email:</span>
+                                    <?php echo $config_email; ?><br/>
+                                    <p class="contact-text"><span class="spanOriginalSpaces">
+                                        Наименование Общество с ограниченной ответственностью "МАРШАЛ ПЛЮС". <br/>
+                                        ИНН 5001083150 КПП 500101001 ОГРН 1115001006218 ОКПО 90171834<br/>
+                                        Мы будем признательны вам за любые замечания и отзывы о нашей работе, а также предложения по улучшению качества обслуживания.
+                                    </span></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="row contactsRow">
-                        <div class="col-lg-1">
-                            <img class="contactsIcon" src="/image/schedule.png">
-                        </div>
-                        <div class="col-lg-11">
-                            <span class="headerText boldText">График работы:</span><br/>
-                            <p class="contact-text">Понедельник - Пятница с 10.00 до 21.00<br/>
-                            Суббота - Воскресенье с 10.00 до 20.00<br/>
-                            Заказы через сайт принимаются круглосуточно и без выходных.</p>
-                        </div>
+                    <div style="display: inline-block; vertical-align: top;" class="col-sm-6">
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=ekSFBwanpGIcv-Vv0cKpbygc1p_DeoyM&amp;width=560&amp;height=420&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
                     </div>
-                    <div class="row contactsRow">
-                        <div class="col-lg-1">
-                            <img class="contactsIcon" src="/image/telephone.png">
-                        </div>
-                        <div class="col-lg-11">
-                            <span class="headerText boldText">Телефоны:</span><br/>
-                            <p class="contact-text">8 (925) 397-79-13<br/>
-                            <?php if ($telephone) echo $telephone; ?><br/>
-                            8 (925) 397-79-12</p>
-                        </div>
-                    </div>
-                    <div class="row contactsRow">
-                        <div class="col-lg-1">
-                            <img class="contactsIcon" src="/image/email.png">
-                        </div>
-                        <div class="col-lg-11">
-                            <span class="headerText boldText lastParagraph">Email:</span>
-                            <?php echo $config_email; ?><br/>
-                            <p class="contact-text"><span class="spanOriginalSpaces">
-                                Наименование Общество с ограниченной ответственностью "МАРШАЛ ПЛЮС". <br/>
-                                ИНН 5001083150 КПП 500101001 ОГРН 1115001006218 ОКПО 90171834<br/>
-                                Мы будем признательны вам за любые замечания и отзывы о нашей работе, а также предложения по улучшению качества обслуживания.
-                            </span></p>
-                        </div>
-                    </div>
-                </div>
                 </div>
 				<div style="clear:both;"></div>
 			</div>

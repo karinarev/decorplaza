@@ -92,6 +92,10 @@ h3{
     text-align: center;
 }
 
+.category-col:nth-child(7n-6){
+    clear: both;
+}
+
 
 
 @media all and (max-width: 1279px){
@@ -100,7 +104,7 @@ h3{
     }
 
     #content {
-        width: 830px;
+        width: 750px;
     }
 
     .alphabet .col-md-2{
@@ -110,6 +114,18 @@ h3{
 
     .alphabet .col-md-10{
         width: 630px;
+    }
+
+    .category-col:nth-child(5n-4){
+        clear: both;
+    }
+
+    .category-col:nth-child(7n-6){
+        clear: none;
+    }
+
+    .category-col{
+        width: 150px;
     }
 
 

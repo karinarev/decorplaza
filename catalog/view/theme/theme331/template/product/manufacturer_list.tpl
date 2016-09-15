@@ -16,9 +16,8 @@
   <h3 id="<?php echo $category['name']; ?>" class="category-name"><?php echo $category['name']; ?></h3>
   <div class="category-divider"></div>
   <?php if ($category['manufacturer']) { ?>
-  <?php foreach (array_chunk($category['manufacturer'], 7) as $manufacturers) { ?>
   <div class="row category-row">
-    <?php foreach ($manufacturers as $manufacturer) { ?>
+    <?php foreach ($category['manufacturer'] as $manufacturer) { ?>
     <div class="category-col">
       <div class="category-aria">
         <a href="<?php echo $manufacturer['href']; ?>">
@@ -26,10 +25,8 @@
           <?php echo $manufacturer['name']; ?>
         </a></div>
     </div>
-
     <?php } ?>
   </div>
-  <?php } ?>
   <?php } ?>
   <?php } ?>
   <?php } else { ?>

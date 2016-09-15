@@ -21,7 +21,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<?php if ($informations) { ?>
-			<div class="col-sm-2">
+			<div class="col-md-2 col-sm-4 col-xs-6">
 				<p class="my_h3"><?php echo $text_information; ?></p>
 				<ul>
 				<?php foreach ($informations as $information) { ?>
@@ -33,7 +33,7 @@
 			</div>
 			<?php } ?>
 			
-			<div class="col-sm-2">
+			<div class="col-md-2 col-sm-4 col-xs-6">
 				<p class="my_h3"><?php echo $text_extra; ?></p>
 				<ul>
 				<li><a href="#callback">Обратный звонок</a></li>
@@ -45,7 +45,7 @@
 				<!--	<li><a href="<?php echo $special; ?>"><?php echo $text_special; ?></a></li>-->
 				</ul>
 			</div>
-			<div class="col-sm-2">
+			<div class="col-md-2 col-sm-4 col-xs-6">
 				<p class="my_h3"><?php echo $text_account; ?></p>
 				<ul>
 				<li><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
@@ -54,7 +54,7 @@
 				<!--<li><a href="<?php echo $newsletter; ?>"><?php echo $text_newsletter; ?></a></li>-->
 				</ul>
 			</div>
-			<div class="col-sm-2">
+			<div class="col-md-2 col-sm-4 col-xs-6">
 				<p class="my_h3">Мы в соцсетях</p>
 				<ul>
 <li><span class="external-reference" data-link="https://www.facebook.com/italy-sumochka">Facebook</span></li>
@@ -63,7 +63,7 @@
                     
 				</ul>
 			</div>
-			<div class="col-sm-2">
+			<div class="col-md-2 col-sm-4 col-xs-6">
 				<p class="my_h3">График работы</p>
 				<ul>
 				<li>Пн-Пт с 10.00 до 19.00 <br/>
@@ -72,12 +72,12 @@
 				
 				</ul>
 			</div>
-			<div class="col-sm-2">
+			<div class="col-md-2 col-sm-4 col-xs-6">
 				<!--<h3><?php echo $text_support; ?></h3>-->
 						<p class="my_h3">Телефоны</p>
 				<ul>
 						<li>Бесплатно по России:<br/>
-						8 (800) 555-55-55.</li><br/>
+						8 (800) 555-55-55.</li>
 						<li><?php echo $telephone; ?>;<br/>
 						8 (926) 555-55-55.</li>
 						</ul>
@@ -111,24 +111,6 @@
 </div-->
 </div>
 
-<div class="phonemobil">
-	<p class="my_h3">
-		Телефоны
-	</p>
-		<ul>
-			 <li>
-				<div style="font-size:12px; font-weight:bold; color: #f00;">Бесплатный звонок по России</div>
-				<a style="font-size: 22px; color: #f00;" href="tel:+78005555555" >8 (800) 555-55-55</a>
-			</li>
-			<li>
-				<a style="font-size: 22px;" href="tel:+74955555555" >8 (495) 555-55-55</a>
-			</li>
-			<li>
-				<a style="font-size: 22px;" href="tel:+79265555555" >8 (926) 555-55-55</a>
-			</li>
-			
-		</ul>
-	</div>
 
 <div style="display: none;" >
 	<div id="grafikmodal" >

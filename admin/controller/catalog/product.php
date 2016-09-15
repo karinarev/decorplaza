@@ -260,6 +260,8 @@ class ControllerCatalogProduct extends Controller {
 	
     	if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
 			$this->model_catalog_product->editProduct($this->request->get['product_id'], $this->request->post);
+
+			var_dump($this->session->data['success']); die();
 			
 			$this->session->data['success'] = $this->language->get('text_success');
 			
@@ -304,7 +306,6 @@ class ControllerCatalogProduct extends Controller {
 			if (isset($this->request->get['page'])) {
 				$url .= '&page=' . $this->request->get['page'];
 			}
-			
 			$this->redirect($this->url->link('catalog/product', 'token=' . $this->session->data['token'] . $url, 'SSL'));
 		}
 

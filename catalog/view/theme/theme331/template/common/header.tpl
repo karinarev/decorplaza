@@ -177,13 +177,6 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 			<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="checkout/checkout") {echo "active";} ?>" href="/contact-us/"><i class="fa fa-check"></i>Контакты</a></li>
 			<li><a class href="/optovikam"><i class="fa fa-optovikam"></i>Оптовикам</a></li>
 
-
-
-			<!--<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="account/wishlist") {echo "active";} ?>" href="<?php echo $wishlist; ?>" id="wishlist-total"><i class="fa fa-star"></i><?php echo $text_wishlist; ?></a></li>
-			<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="account/account") {echo "active";} ?>" href="<?php echo $account; ?>"><i class="fa fa-user"></i><?php echo $text_account; ?></a></li>
-			<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="checkout/cart") {echo "active";} ?>" href="<?php echo $shopping_cart; ?>"><i class="fa fa-shopping-cart"></i><?php echo $text_shopping_cart; ?></a></li>
-			<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="checkout/checkout") {echo "active";} ?>" href="<?php echo $checkout; ?>"><i class="fa fa-check"></i><?php echo $text_checkout; ?></a></li>
-			-->
 		</ul>
 	</div>
 </div>
@@ -197,17 +190,6 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 
 	</div>
 
-
-<!--div class="header">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12">
-				<?php echo $currency; ?>
-				<?php echo $language; ?>
-			</div>
-		</div>
-	</div>
-</div-->
 <div id="page">
 <div id="shadow">
 <div class="shadow"></div>
@@ -219,8 +201,10 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 			<div class="col-sm-12">
 				<div class="toprow">
 					<ul class="links list-inline">
+						<div class="hamburger"><a class="hamburger-btn"><img src="catalog/view/theme/theme331/image/hamburger.png"/></a> </div>
 						<?php if (!isset($this->request->get['route'])) { $route='active'; }  else { $route=''; }?>
-                        <li class="first"><a class="<?php echo $route; if (isset($this->request->get['route']) && $this->request->get['route']=="common/home") ?>" href="<?php echo $home; ?>"><i class="fa fa-home"></i><?php echo $text_home; ?></a>
+						<li><a class="" id="header-back-link"><img src="catalog/view/theme/theme331/image/header-back.png"/></a></li>
+						<li class="first"><a class="<?php echo $route; if (isset($this->request->get['route']) && $this->request->get['route']=="common/home") ?>" href="<?php echo $home; ?>"><i class="fa fa-home"></i><?php echo $text_home; ?></a>
                         </li>
 						<li><a class="" href="/o-nas"><i class="fa fa-optovikam"></i>О нас</a></li>
 						<li><a class="" href="/dostavka"><i class="fa fa-optovikam"></i>Доставка и оплата</a></li>
@@ -231,6 +215,7 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
                         </li>
 						<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="information/contact") ?>" href="<?php echo $contact; ?>"><i class="fa fa-star"></i><?php echo $text_contact; ?></a>
                         </li>
+						<li><a class="" id="header-more-link"><img src="catalog/view/theme/theme331/image/dots.png"/></a></li>
 						<div class="headerBrownPanel">
 							<a href="/login" class="icon enterIcon"></a>
 							<a href="/create-account" class="icon accountIcon"></a>
@@ -249,11 +234,26 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 		</div>
 	<!--ВСТАВЛЯТЬ СЮДА-->
 
+<div class="hamburger-content">
+	<ul class="hamburger-list">
+		<li class="first"><a class="<?php echo $route; if (isset($this->request->get['route']) && $this->request->get['route']=="common/home") ?>" href="<?php echo $home; ?>"><?php echo $text_home; ?></a>
+		</li>
+		<li><a class="" href="/o-nas">О нас</a></li>
+		<li><a class="" href="/dostavka">Доставка и оплата</a></li>
+
+		<li><a class="" href="/garantii">Гарантии и сертификаты</a></li>
+
+		<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="news/news") ?>" href="/novosti/">Новости</a>
+		</li>
+		<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="information/contact") ?>" href="<?php echo $contact; ?>"><?php echo $text_contact; ?></a>
+		</li>
+	</ul>
+</div>
 </header>
 	<div id="decorPlazaHeader">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-sm-3">
+				<div class="col-md-3 col-sm-12 col-xs-12">
 					<div id="logo">
 						<?php if ($logo) { ?>
 						<a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" /></a>
@@ -262,10 +262,10 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 						<?php } ?>
 					</div>
 				</div>
-				<div class="col-sm-1">
+				<div class="col-md-1 col-sm-1 col-xs-3">
 					<img src="/image/call.png" id="callIcon">
 				</div>
-				<div class="col-sm-2">
+				<div class="col-md-2 col-sm-3 col-xs-9">
 					<!--div class="phone">                                                                       Это телефонные номера, по которым можно звонить
             <div style="font-size:12px; font-weight:bold;   color: #EC1313;">Бесплатный звонок по России</div>
                <ul>
@@ -285,29 +285,29 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 					<a href="tel:89253977912" class="headerText telephoneNumber" id="secondNumber">8 (925) 397-79-12</a><br/>
 					<a href="tel:89253977914" class="headerText telephoneNumber" id="thirdNumber">8 (925) 397-79-14</a>
 				</div>
-				<div class="col-sm-1">
+				<div class="col-md-1 col-sm-1 col-xs-3">
 					<img src="/image/callBack.png">
 				</div>
-				<div class="col-sm-2">
+				<div class="col-md-2 col-sm-3 col-xs-9">
 					<a href="/" onclick="callBack(event);" name="callback" class="headerBigText">Обратный звонок</a><br/>
 					<input type="tel" id="callBackInput" class="callBackStuff"/><button id="callBackButton" class="callBackStuff" onmousedown="callBackSend();"><span class="callBackStuff glyphicon glyphicon-phone-alt"></span></button>
 					<span class="headerText">Режим работы:</span><br/>
-					<span class="headerText">Пн-Птн с 10 до 19</span><br/>
+					<span class="headerText">Пн-Пт с 10 до 19</span><br/>
 				</div>
-				<div class="col-sm-1">
+				<div class="col-md-1 col-sm-1 col-xs-3">
 					<img src="/image/location.png">
 				</div>
-				<div class="col-sm-2">
+				<div class="col-md-2 col-sm-3 col-xs-9">
 					<a href="https://yandex.ru/maps/10716/balashiha/?z=15&ll=37.887561%2C55.750140&l=map&origin=jsapi_2_1_41&from=api-maps&um=constructor%3AsXf1ofePV3VE-_X4NL8Z2zh8nC9LIRLe&mode=search&ol=biz&oid=1099254618">
 						<span class="headerBigText" id="ourAdress">Наш адрес:</span><br/>
-						<span class="headerText">г.Москва, м."Новокосино,"</span><br/>
+						<span class="headerText">г. Москва, м. "Новокосино",</span><br/>
 						<span class="headerText">Носовихинское шоссе вл., 4.</span><br/>
 						<span class="headerText">ТЦ "Никольский Парк"</span><br/>
 					</a>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-sm-4">
+			<div class="row header-menu">
+				<div class="col-md-4 col-sm-4 col-xs-12">
 					<div class="panel panel-default nomargin">
 						<a data-toggle="collapse" href="#catalogCollapse" onclick="wallpapersCatalogCollapse(0)">
 							<div class="panel-heading">
@@ -330,7 +330,7 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-4">
+				<div class="col-md-4 col-sm-4 col-xs-12">
 					<div class="panel panel-default nomargin">
 						<a href="/brands">
 							<div class="panel-heading">
@@ -344,7 +344,7 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 
 					</div>
 				</div>
-				<div class="col-sm-4">
+				<div class="col-md-4 col-sm-4 col-xs-12">
 					<div class="panel panel-default">
 						<a href="<?php echo $special; ?>">
 							<div class="panel-heading">
@@ -388,3 +388,97 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 	<script>
 		var categories = <?php echo json_encode($categories); ?>;
 	</script>
+
+	<script><!--
+
+		$(document).ready(function () {
+			var backLink = $("#header-back-link").parent('li');
+			var moreLink = $("#header-more-link").parent('li');
+			backLink.css('display', 'none');
+			moreLink.css('display', 'none');
+			checkWindowSize();
+		});
+
+		$(window).resize(function(){
+			checkWindowSize();
+		});
+
+		function checkWindowSize(){
+			currWindowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+			var items = $('#header .toprow .links li');
+			var backLink = $("#header-back-link").parent('li');
+			var moreLink = $("#header-more-link").parent('li');
+
+			if(currWindowWidth > 767 && currWindowWidth < 1280) {
+
+				if(backLink.css('display') == 'none' && moreLink.css('display') == 'none'){
+					moreLink.css('display', 'inline-block');
+
+					for(var i = 6; i > 3; i--){
+						items.eq(i).css('display', 'none');
+					}
+					for(var i = 3; i >= 1; i--){
+						items.eq(i).css('display', 'inline-block');
+					}
+				}
+
+
+				$(document).on("click", '#header-more-link', function() {
+					if(backLink.css('display') == 'none')
+						backLink.css('display', 'inline-block');
+
+					for (var i = 6; i > 3; i--) {
+						items.eq(i).css('display', 'inline-block');
+					}
+					for (var i = 3; i >= 1; i--) {
+						items.eq(i).css('display', 'none');
+					}
+					moreLink.css('display', 'none');
+				});
+
+				$(document).on("click", '#header-back-link', function() {
+					if(moreLink.css('display') == 'none')
+						moreLink.css('display', 'inline-block');
+
+					for(var i = 6; i > 3; i--){
+						items.eq(i).css('display', 'none');
+					}
+					for(var i = 3; i >= 1; i--){
+						items.eq(i).css('display', 'inline-block');
+					}
+					backLink.css('display', 'none');
+				});
+
+			}
+
+			else if(currWindowWidth <= 767){
+				backLink.css('display', 'none');
+				moreLink.css('display', 'none');
+				items.each(function () {
+					items.css('display', 'none');
+				});
+				$('.hamburger').click(function() {
+					var content = $('.hamburger-content');
+					if(content.css('display') == 'none') {
+						content.css('display', 'block');
+						$(this).find('img').attr('src', 'catalog/view/theme/theme331/image/hamburgerClose.png');
+					}
+					else {
+						content.css('display', 'none');
+						$(this).find('img').attr('src', 'catalog/view/theme/theme331/image/hamburger.png');
+					}
+				});
+			}
+
+			else if(currWindowWidth >= 1280){
+				for(var i = 1; i <= 6; i++){
+					items.eq(i).css('display', 'inline-block');
+				}
+				backLink.css('display', 'none');
+				moreLink.css('display', 'none');
+			}
+		}
+
+
+
+	--></script>
