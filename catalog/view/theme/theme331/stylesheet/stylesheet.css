@@ -1881,7 +1881,7 @@ footer>.container-fluid .col-sm-2{
     display: none;
 }
 
-.hamburger, .hamburger-content{
+.toprow .links .hamburger, #header .hamburger-content{
     display: none;
 }
 
