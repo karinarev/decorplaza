@@ -147,25 +147,25 @@
     text-transform: uppercase;
 }
 
-.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+.filter-body .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
     width: 12px;
     background-color: #c49849;
     border-radius: 6px; }
 
 
 
-.mCSB_scrollTools .mCSB_draggerRail{
+.filter-body .mCSB_scrollTools .mCSB_draggerRail{
     width: 12px;
     background-color: white;
     border-radius: 6px;
 }
 
-.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{
+.filter-body .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{
     background-color: #c49849;
 }
 
-.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
-.mCSB_scrollTools .mCSB_dragger:active  .mCSB_dragger_bar{
+.filter-body .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.filter-body .mCSB_scrollTools .mCSB_dragger:active  .mCSB_dragger_bar{
     background-color: #c49849;
 }
 
@@ -180,6 +180,10 @@
     .filter-panel .panel-footer{
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .filter-body div.list-group-item{
+        padding-left: 0;
     }
 
 

@@ -463,6 +463,11 @@ a.product-icon:hover, a.product-icon:active {
         padding-right: 20px;
     }
 
+    section {
+        padding-top: 135px !important;
+    }
+
+
     aside{
         /*width: 200px !important;*/
         width: 17%;
@@ -497,6 +502,24 @@ a.product-icon:hover, a.product-icon:active {
         width: 100%;
     }
 
+    .product-row .product-layout .image{
+        padding-right: 0;
+    }
+
+    .category-item:hover .product-thumb .caption{
+        width: auto;
+    }
+
+    .more{
+        left: 25%;
+    }
+
+    .shopping, .plus, .empty-gold{
+        left: 55%;
+    }
+
+
+
 }
 
 @media all and (max-width: 767px) {
@@ -523,6 +546,15 @@ a.product-icon:hover, a.product-icon:active {
         font-size: 24px;
         text-align: center;
         margin-bottom: 25px;
+    }
+
+    section {
+        padding-top: 0 !important;
+        margin-top: 10px;
+    }
+
+    .text-title h2{
+        margin-top: 25px !important;
     }
 
     .sort-row{

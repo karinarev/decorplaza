@@ -563,6 +563,22 @@ a#gotoshopping:active {
 @media all and (max-width: 1279px) {
 
 
+
+    #ajaxcartmodal{
+        min-width: 750px;
+        max-width: 750px;
+        width: 750px;
+    }
+
+    #ajaxcheckout, .ajaxtable_table{
+        width: 750px;
+    }
+
+    .ajaxtable_table{
+        margin-left: 10px;
+    }
+
+
 }
 
 @media all and (max-width: 767px) {

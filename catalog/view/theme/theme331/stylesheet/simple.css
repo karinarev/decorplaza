@@ -759,8 +759,6 @@ label[for='input-promo']{
 
     .simple-content {
         width: 100%;
-        padding-left: 5%;
-        padding-right: 5%;
     }
 
     .cart-area{
@@ -843,6 +841,10 @@ label[for='input-promo']{
         float: right;
     }
 
+    #checkout_customer_main_zone_id-styler{
+        margin-bottom: 10px;
+    }
+
 }
 
 @media all and (max-width: 767px) {
@@ -851,7 +853,7 @@ label[for='input-promo']{
         background: #f4f4f4;
     }
 
-    h3{
+    #content h3{
         font-size: 24px;
     }
 

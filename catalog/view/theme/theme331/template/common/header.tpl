@@ -222,7 +222,7 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 						<div class="headerBrownPanel">
 							<a href="/login" class="icon enterIcon"></a>
 							<a href="/create-account" class="icon accountIcon"></a>
-							<div class="cart-position">
+							<div class="cart-position" onclick="location.href='/carts/'">
 								<div class="cart-inner"><?php echo $cart; ?></div>
 							</div>
 							<!--a href="/" id="cartIcon" class="icon cartIcon"><?php if($productsNumber) echo'<span id="cart-total">', $productsNumber, '</span>';?></a-->

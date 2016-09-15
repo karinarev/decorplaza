@@ -186,3 +186,30 @@
 .cboxIE #cboxMiddleRight {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
 }
+
+@media all and (max-width: 1279px) {
+    #colorbox, #cboxWrapper, #cboxContent, #cboxLoadedContent{
+        width: 750px !important;
+    }
+
+    #colorbox{
+        left: 50% !important;
+        transform: translateX(-50%);
+    }
+}
+
+@media all and (max-width: 767px) {
+    #colorbox, #cboxWrapper, #cboxContent, #cboxLoadedContent{
+        width: 100% !important;
+    }
+
+    #cboxWrapper{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #colorbox{
+        left: 0 !important;
+        transform: none;
+    }
+}

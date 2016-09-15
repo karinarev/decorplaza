@@ -71,12 +71,12 @@ ul.box-category-children>li{
     padding-left: 10px;
 }
 
-ul.box-category-children>li.active{
+ul.box-category-children>li:hover{
     background: #adacac;
 }
 
-ul.box-category-children>li.active>a.active{
-    color: white;
+ul.box-category-children>li:hover>a{
+    color: white !important;
 }
 
 

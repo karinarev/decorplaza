@@ -290,14 +290,13 @@
 	});
 
 	$(document).ready(function () {
-
+		$('#ajaxcartloadimg').hide();
 		checkWindowSize();
 
 
 
 		function checkWindowSize(){
-			console.log('sf');
-			currWindowWidth = $( window ).width();
+			currWindowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 			if(currWindowWidth > 767) {
 				$('.category-item').hover(
 						function () {
@@ -316,6 +315,7 @@
 			}
 			else{
 				$( ".category-item" ).unbind( "hover" );
+				$('#column-left').insertBefore('#content');
 			}
 		}
 
