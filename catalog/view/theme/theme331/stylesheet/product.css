@@ -315,6 +315,10 @@ iframe{
     cursor: default;
 }
 
+.product-panel-group{
+    display: none;
+}
+
 #form-review .row{
     margin: 0;
 }
@@ -670,26 +674,102 @@ section{
         transform: translateX(-50%);
     }
 
-    .tabs label{
-        width: 100%;
-        text-align: left;
-        color: white;
-        padding-left: 25px;
-        padding-right: 25px;
+    /*.tabs label{*/
+        /*width: 100%;*/
+        /*text-align: left;*/
+        /*color: white;*/
+        /*padding-left: 25px;*/
+        /*padding-right: 25px;*/
+    /*}*/
+
+    /*.tabs input:checked + label{*/
+        /*background: #adacac;*/
+        /*border: none;*/
+    /*}*/
+
+    /*.tabs input:checked + label:after{*/
+        /*content: url(../image/icons/chevron-tab-right.png);*/
+        /*float: right;*/
+    /*}*/
+
+    /*.tabs input:not(:checked) + label{*/
+        /*display: none;*/
+    /*}*/
+
+    .product-panel-group{
+        display: block;
     }
 
-    .tabs input:checked + label{
-        background: #adacac;
+    .tabs{
+        display: none;
+    }
+
+    .product-panel-group{
+        border: none;
+        background: none;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+
+    .product-panel-group .panel-default{
+        border-radius: 0;
+    }
+
+    .product-panel-group .panel-default>.panel-heading{
+        background-color: #adacac;
+        border-radius: 0;
+        padding: 15px;
+    }
+
+    .product-panel-group .panel-default>.panel-heading a:link,
+    .product-panel-group .panel-default>.panel-heading a:visited,
+    .product-panel-group .panel-default>.panel-heading a:active,
+    .category-link{
+        color: white;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 24px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .product-panel-group .panel-heading a:focus,
+    .category-link:focus{
+        text-decoration: none;
+    }
+
+    .panel-heading a:after {
+        content: url(../image/icons/chevron-tab-right.png);
+        float: right;
+        cursor: pointer;
+    }
+
+
+    .product-panel-group .panel-body, .product-panel-group .panel-default{
+        border: none;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .product-panel-group .panel-body a:link,
+    .product-panel-group .panel-body a:visited,
+    .product-panel-group .panel-body a:active{
+        color: black;
+    }
+
+    .product-panel-group .panel-collapse{
+        padding: 15px 25px;
+        background: #fff;
+        font-size: 14px;
+        color: rgb(27, 27, 27);
+        font-family: "OpenSans";
+        line-height: 22px;
+    }
+
+    .product-panel-group .panel-default > .panel-heading + .panel-collapse .panel-body{
         border: none;
     }
 
-    .tabs input:checked + label:after{
-        content: url(../image/icons/chevron-tab-right.png);
-        float: right;
-    }
-
-    .tabs input:not(:checked) + label{
-        display: none;
-    }
 
 }

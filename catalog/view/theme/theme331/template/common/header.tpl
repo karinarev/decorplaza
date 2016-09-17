@@ -142,7 +142,7 @@ DD_belatedPNG.fix('#logo img');
 </script>
 <![endif]-->
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/theme331/stylesheet/livesearch.css"/>
-
+	<script type="text/javascript" src="catalog/view/theme/theme331/js/jquery/jquery.jcarousel.min.js"></script>
 	<script type="text/javascript" src="catalog/view/javascript/jquery/colorbox/jquery.colorbox.js" async></script>
 <?php if (!empty($stores)) { ?>
 

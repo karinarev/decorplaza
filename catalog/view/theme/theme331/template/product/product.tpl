@@ -414,21 +414,19 @@
 			</div>
 
 			<div class="tabs">
-    <input id="tab11" type="radio" name="tabs" checked>
+    <input id="tab11" type="radio" name="tabs" checked onchange="$('#form-review').css('display', 'block')">
     <label for="tab11" title="ОПИСАНИЕ">ОПИСАНИЕ</label>
-    <input id="tab22" type="radio" name="tabs">
+    <input id="tab22" type="radio" name="tabs" onchange="$('#form-review').css('display', 'none')">
     <label for="tab22" title="ДОСТАВКА">ОТЗЫВЫ</label>
-    <input id="tab33" type="radio" name="tabs">
+    <input id="tab33" type="radio" name="tabs" onchange="$('#form-review').css('display', 'none')">
     <label for="tab33" title="ОПЛАТА">ВИДЕО</label>
     <section id="content11">
         <?php echo $description."<br>".$description2; ?>
     </section>
     <section id="content22">
-        <?php if ($review_status) { ?>
         <div class="tab-pane" id="tab-review">
-            <div id="review"></div>
+            <div class="review-area"></div>
         </div>
-        <?php } ?>
     </section>
     <section id="content33">
 		<?php if (empty($video_description)) echo 'Для данного товара отсутствует видео.'; ?>
@@ -436,6 +434,49 @@
         <?php if (!empty($video)) echo	'<iframe width="825" height="460" src= "' . $video . '" frameborder="0" allowfullscreen></iframe>'; ?>
     </section>
 </div>
+
+			<div class="panel-group product-panel-group" id="accordion">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+							Описание
+						</a>
+					</div>
+					<div id="collapseOne" class="panel-collapse collapse in">
+						<div class="panel-body">
+							<?php echo $description."<br>".$description2; ?>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+							Отзывы
+						</a>
+					</div>
+					<div id="collapseTwo" class="panel-collapse collapse">
+						<div class="panel-body">
+							<div class="tab-pane" id="tab-review">
+								<div class="review-area"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+							Видео
+						</a>
+					</div>
+					<div id="collapseThree" class="panel-collapse collapse">
+						<div class="panel-body">
+							<?php if (empty($video_description)) echo 'Для данного товара отсутствует видео.'; ?>
+							<?php echo $video_description; ?>
+							<?php if (!empty($video)) echo	'<iframe width="825" height="460" src= "' . $video . '" frameborder="0" allowfullscreen></iframe>'; ?>
+						</div>
+					</div>
+				</div>
+			</div>
 
 			<form id="form-review" method="post">
 				<h2 class="myHeader">Оставить отзыв</h2>
@@ -467,9 +508,11 @@
 							<span class="colorRed necessaryFields" style="float:right;">*Поля, обязательные для заполнения.</span>
 						</div>
 					</div>
-						<button type="submit" id="button-review" name="submit" data-loading-text="<?php echo $text_loading; ?>" class="callBackSend">Отправить</button>
+					<button type="submit" id="button-review" name="submit" data-loading-text="<?php echo $text_loading; ?>" class="callBackSend">Отправить</button>
 				</div>
 			</form>
+
+
 
 			
 
@@ -736,17 +779,17 @@ new AjaxUpload('#button-option-<?php echo $option['product_option_id']; ?>', {
 							});
 							</script>
 <script type="text/javascript"><!--
-$('#review .pagination a').live('click', function() {
-	$('#review').fadeOut('slow');
+$('.review-area .pagination a').live('click', function() {
+	$('.review-area').fadeOut('slow');
 
-	$('#review').load(this.href);
+	$('.review-area').load(this.href);
 
-	$('#review').fadeIn('slow');
+	$('.review-area').fadeIn('slow');
 
 	return false;
 });
 
-$('#review').load('index.php?route=product/product/review&product_id=<?php echo $product_id; ?>');
+$('.review-area').load('index.php?route=product/product/review&product_id=<?php echo $product_id; ?>');
 
 $('#button-review').bind('click', function() {
 	$.ajax({
@@ -847,9 +890,46 @@ $( document ).ready(function() {
 		currWindowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 		if(currWindowWidth < 768){
 			$('#column-left').insertBefore('#content');
-			$(document).on('click', '.tabs label', function () {
-				console.log($(this));
+			$('.product-panel-group .panel').each(function () {
+				var panelCollapse = $(this).find('.panel-collapse');
+				if(!panelCollapse.hasClass('in')){
+					$(this).css('display', 'none');
+				}
+				else if(panelCollapse.attr('id') == 'collapseOne'){
+					$('#form-review').css('display', 'block');
+				}
+				else {
+					$('#form-review').css('display', 'none');
+				}
+
 			});
+
+			var productPanel = $('.product-panel-group');
+
+			productPanel.on('hide.bs.collapse', function () {
+				$(this).find('.panel').each(function () {
+					$(this).css('display', 'block');
+				});
+				$('#form-review').css('display', 'none');
+			});
+			productPanel.on('show.bs.collapse', function (e) {
+				$(this).find('.panel').each(function () {
+					var panelCollapse = $(this).find('.panel-collapse');
+					if(panelCollapse.attr('id') == $(e.target).attr('id')) {
+						if (panelCollapse.attr('id') == 'collapseOne') {
+							$('#form-review').css('display', 'block');
+						}
+						else {
+							$('#form-review').css('display', 'none');
+						}
+						$(this).css('display', 'block');
+					}
+					else $(this).css('display', 'none');
+				});
+			});
+
+		}
+		else{
 
 		}
 	}

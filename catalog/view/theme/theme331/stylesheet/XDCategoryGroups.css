@@ -1,6 +1,7 @@
 .categories{
     text-align: center;
     font-family: 'OpenSans';
+    margin-top: 80px;
 }
 
 .categories .item{
@@ -167,6 +168,7 @@
     .categories{
         overflow: hidden;
         position: relative;
+        margin-top: 40px;
     }
 
     .categories-wrapper{
