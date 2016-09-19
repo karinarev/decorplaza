@@ -261,8 +261,6 @@ class ControllerCatalogProduct extends Controller {
     	if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
 			$this->model_catalog_product->editProduct($this->request->get['product_id'], $this->request->post);
 
-			var_dump($this->session->data['success']); die();
-			
 			$this->session->data['success'] = $this->language->get('text_success');
 			
 			$url = '';
