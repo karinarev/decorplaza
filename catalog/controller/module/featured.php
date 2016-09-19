@@ -111,7 +111,7 @@ class ControllerModuleFeatured extends Controller {
 					'thumb'   	 => $image,
 					'bestSeller'  => $bestSaller,
 					'newItem'     => $newItem,
-					'name'    	 => $product_info['name'],
+					'name'    	 => utf8_substr($product_info['name'], 0, 55) . "...",
 					'model'    	 => $product_info['model'],
 					'price'   	 => $price,
 					'special' 	 => $special,

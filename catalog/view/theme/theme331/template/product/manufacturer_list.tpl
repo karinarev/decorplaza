@@ -43,9 +43,6 @@
   </div>
   <?php } else { ?>
   <div class="content"><?php echo $text_empty; ?></div>
-  <div class="buttons">
-    <div class="right"><a href="<?php echo $continue; ?>" class="button-cont-right"><?php echo $button_continue; ?><i class="fa fa-arrow-circle-right"></a></div>
-  </div>
   <?php } ?>
   <?php echo $content_bottom; ?></div>
 

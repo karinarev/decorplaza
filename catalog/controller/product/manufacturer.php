@@ -536,7 +536,7 @@ class ControllerProductManufacturer extends Controller {
 					'text_availability' => $text_availability,
 					'text_instock' => $text_instock,
 					'newItem'     => $newItem,
-					'name'        => $result['name'],
+					'name'        => utf8_substr($result['name'], 0, 55) . "...",
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, 300) . '..',
 					'description_poln' => strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')),
 					'price'       => $price,
@@ -710,10 +710,10 @@ class ControllerProductManufacturer extends Controller {
 
       		$this->data['continue'] = $this->url->link('common/home');	
 			
-			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/error/not_found.tpl')) {
-				$this->template = $this->config->get('config_template') . '/template/error/not_found.tpl';
+			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/error/manufacturer_not_found.tpl')) {
+				$this->template = $this->config->get('config_template') . '/template/error/manufacturer_not_found.tpl';
 			} else {
-				$this->template = 'default/template/error/not_found.tpl';
+				$this->template = 'default/template/error/manufacturer_not_found.tpl';
 			}
 			} else {
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/manufacturer_info.tpl')) {
