@@ -591,20 +591,9 @@
 						$(starsArr[j]).children(".fa-stack-1x").css("color", "rgb(204, 204, 204)");
 					}
 			});
+			console.log($(".productRateLabel"));
 		}
 
-		/*$('#dostavka_2').click(function(){
-
-			$('#tab22').click();
-			$('html, body').animate({ scrollTop: $('.tabs').offset().top }, 500);
-			return false;
-		});
-		$('#info_2').click(function(){
-
-			$('#tab33').click();
-			$('html, body').animate({ scrollTop: $('.tabs').offset().top }, 500);
-			return false;
-		});*/
 
 
 	});
