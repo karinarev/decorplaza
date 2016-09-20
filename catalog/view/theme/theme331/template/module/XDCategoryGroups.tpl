@@ -1,5 +1,5 @@
-<div class=" categories">
-    <div class="categories-wrapper">
+<div class="jcarousel-wrapper categories">
+    <div class="jcarousel">
     <?php foreach($categories as $category) { ?>
     <div class="item">
         <div class="image">
@@ -17,42 +17,80 @@
     <?php } ?>
     </div>
 
-    <div class="customNavigation">
-        <a class="prev"></a>
-        <a class="next"></a>
-    </div>
+<a class="jcarousel-control-prev"></a>
+<a class="jcarousel-control-next"></a>
+
 </div>
+
 
 
 <script type="text/javascript"><!--
 
-            $('#carousel<?php echo $module; ?>').owlCarousel({
-                items: 3,
-                itemsMobile: [767, 1],
-                autoPlay: false,
-                navigation: false,
-                pagination: false,
+    $(document).ready(function () {
 
-            });
+        var count = 0;
 
-    $(document).on("click", '.customNavigation .next', function() {
-        var number = parseInt($('.categories-wrapper').css('transform').split(',')[4]);
-        //console.log(number);
-        if(number == -200)
-            $('.categories-wrapper').css({'transform' : 'translate3d(-405px, 0px, 0px)'});
-        else if(number == 0)
-            $('.categories-wrapper').css({'transform' : 'translate3d(-200px, 0px, 0px)'});
+        checkWindowSize();
+
     });
 
-    $(document).on("click", '.customNavigation .prev', function() {
-        var number = parseInt($('.categories-wrapper').css('transform').split(',')[4]);
-        if(number == -405)
-            $('.categories-wrapper').css({'transform' : 'translate3d(-200px, 0px, 0px)'});
-        else if(number == -200){
-            $('.categories-wrapper').css({'transform' : 'translate3d(0px, 0px, 0px)'});
+    $(window).resize(function(){
+        checkWindowSize();
+    });
+
+    function checkWindowSize() {
+        currWindowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+        if (currWindowWidth <= 767) {
+            var jcarousel = $('.jcarousel');
+
+            jcarousel
+                    .on('jcarousel:reload jcarousel:create', function () {
+                        var carousel = $(this),
+                                width = carousel.innerWidth();
+
+                        if (width >= 600) {
+                            width = width / 3;
+                        } else if (width >= 350) {
+                            width = width / 2;
+                        }
+
+                        carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
+                    })
+                    .jcarousel({
+                        wrap: 'circular'
+                    });
+
+            $('.jcarousel-control-prev')
+                    .jcarouselControl({
+                        target: '-=1'
+                    });
+
+            $('.jcarousel-control-next')
+                    .jcarouselControl({
+                        target: '+=1'
+                    });
+
+            $(this).find('.featured-icon').css({'display' : 'none'});
+
+            $('.jcarousel .item').hover(
+                    function () {
+                        $(this).find('img').addClass('image-hover');
+                        $(this).find('.featured-icon').css({'display' : 'block'});
+                        $(this).find('.sku').css({'display' : 'block'});
+                        $(this).find('.rating').css({'display' : 'block'});
+                    },
+                    function (){
+                        $(this).find('img').removeClass('image-hover');
+                        $(this).find('.featured-icon').css({'display' : 'none'});
+                        $(this).find('.sku').css({'display' : 'none'});
+                        $(this).find('.rating').css({'display' : 'none'});
+
+                    });
         }
-    });
 
+
+    }
 
 
 

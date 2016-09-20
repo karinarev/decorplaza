@@ -5,8 +5,8 @@
 </div>
 
 
-<div class="jcarousel-wrapper">
-	<div class="jcarousel">
+<div class="jcarousel-wrapper featured-jcarousel-wrapper">
+	<div class="jcarousel featured-jcarousel">
 		<ul>
 			<?php foreach ($products as $product) { ?>
 			<li class="item">
@@ -275,7 +275,7 @@
 	});
 
 	$(document).on('cbox_closed', function () {
-		$('.featured-carousel .item').each(function(index) {
+		$('.featured-jcarousel .item').each(function(index) {
 			var quantity;
 			var item = $(this);
 			var id = $(this).attr('id');
@@ -335,7 +335,7 @@
 		currWindowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
 		if (currWindowWidth > 767) {
-			var jcarousel = $('.jcarousel');
+			var jcarousel = $('.featured-jcarousel');
 
 			jcarousel
 					.on('jcarousel:reload jcarousel:create', function () {
@@ -366,7 +366,7 @@
 
 			$(this).find('.featured-icon').css({'display' : 'none'});
 
-			$('.jcarousel .item').hover(
+			$('.featured-jcarousel .item').hover(
 					function () {
 						$(this).find('img').addClass('image-hover');
 						$(this).find('.featured-icon').css({'display' : 'block'});
@@ -383,7 +383,7 @@
 		}
 
 		else{
-			$('.jcarousel')
+			$('.featured-jcarousel')
 					.jcarousel({
 						vertical: true
 					});

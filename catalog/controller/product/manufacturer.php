@@ -46,9 +46,9 @@ class ControllerProductManufacturer extends Controller {
 			'start'              => ($page - 1) * $limit,
 			'limit'              => $limit
 		);
-				
+
 		$results = $this->model_catalog_manufacturer->getManufacturers();
-	
+
 		foreach ($results as $result) {
 			if ($result['image']) {
 				$image = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_category_width'), $this->config->get('config_image_category_height'));
@@ -60,17 +60,18 @@ class ControllerProductManufacturer extends Controller {
 			} else {
 				$key = utf8_substr(utf8_strtoupper($result['name']), 0, 1);
 			}
-			
+
 			if (!isset($this->data['manufacturers'][$key])) {
 				$this->data['categories'][$key]['name'] = $key;
 			}
-			
+
 			$this->data['categories'][$key]['manufacturer'][] = array(
-			'thumb' => $image,
+				'thumb' => $image,
 				'name' => $result['name'],
 				'href' => $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $result['manufacturer_id'])
 			);
 		}
+
 		
 		$this->data['continue'] = $this->url->link('common/home');
 

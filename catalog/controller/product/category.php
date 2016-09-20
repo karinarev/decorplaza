@@ -58,8 +58,9 @@ class ControllerProductCategory extends Controller {
    		$this->data['breadcrumbs'][] = array(
        		'text'      => $this->language->get('text_home'),
 			'href'      => $this->url->link('common/home')
-   		);	
-			
+   		);
+
+
 		if (isset($this->request->get['path'])) {
 			$url = '';
 
@@ -109,11 +110,8 @@ class ControllerProductCategory extends Controller {
 		}
 
 
-
-$this->model_catalog_product->checkActions();
+		$this->model_catalog_product->checkActions();
 		$categories = $this->model_catalog_category->getCategories(0);
-
-
 
 		foreach ($categories as $category) {
 			$total = $this->model_catalog_product->getTotalProducts(array('filter_category_id' => $category['category_id']));
@@ -545,7 +543,8 @@ $this->model_catalog_product->checkActions();
 			);
 				
 			$this->response->setOutput($this->render());										
-    	} else {
+    	}
+		else {
 			$url = '';
 
 				# OCFilter start

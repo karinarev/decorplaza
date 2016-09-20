@@ -19,7 +19,7 @@
 
 /** Carousel **/
 
-.jcarousel-wrapper {
+.featured-jcarousel-wrapper {
     margin: 20px auto;
     position: relative;
     height: 335px;
@@ -28,7 +28,7 @@
 
 /** Carousel **/
 
-.jcarousel {
+.featured-jcarousel {
     position: relative;
     overflow: hidden;
     margin: 35px auto 70px auto;
@@ -37,7 +37,7 @@
     width: 1200px;
 }
 
-.jcarousel ul {
+.featured-jcarousel ul {
     width: 20000em;
     position: relative;
     list-style: none;
@@ -45,7 +45,7 @@
     padding: 0;
 }
 
-.jcarousel li {
+.featured-jcarousel li {
     width: 200px;
     float: left;
     border: 1px solid #fff;
@@ -54,18 +54,18 @@
     box-sizing: border-box;
 }
 
-.jcarousel img {
+.featured-jcarousel img {
     display: block;
     max-width: 100%;
     height: auto !important;
 }
 
 /** Carousel Controls **/
-.jcarousel-control-prev:hover, .jcarousel-control-next:hover{
+.featured-jcarousel-wrapper .jcarousel-control-prev:hover, .featured-jcarousel-wrapper .jcarousel-control-next:hover{
     background: url(../image/icons/chevron-black.png);
 }
 
-.jcarousel-control-prev {
+.featured-jcarousel-wrapper .jcarousel-control-prev {
     width: 17px;
     height: 31px;
     display: inline-block;
@@ -78,7 +78,7 @@
 }
 
 
-.jcarousel-control-next {
+.featured-jcarousel-wrapper .jcarousel-control-next {
     position: absolute;
     top: 50%;
     margin-top: -15px;
@@ -95,11 +95,11 @@
     background: url(../image/icons/chevron-gray.png);
 }
 
-.jcarousel-control-prev {
+.featured-jcarousel-wrapper .jcarousel-control-prev {
     left: -15px;
 }
 
-.jcarousel-control-next {
+.featured-jcarousel-wrapper .jcarousel-control-next {
     right: -20px;
 }
 
@@ -110,7 +110,7 @@
     margin: 25px auto;
 }
 
-.jcarousel .btn{
+.featured-jcarousel .btn{
     box-shadow: none;
     border: none;
     border-radius: 0;
@@ -128,7 +128,7 @@
     margin-top: 80px;
 }
 
-.jcarousel .item{
+.featured-jcarousel .item{
     width: 210px !important;
     margin-right: 25px;
 }
@@ -153,11 +153,11 @@
     left: 0;
 }
 
-.jcarousel .item{
+.featured-jcarousel .item{
     width: 210px;
 }
 
-.jcarousel .item img{
+.featured-jcarousel .item img{
     width: 210px;
     height: 210px;
 }
@@ -193,11 +193,11 @@
     background-position: center;
 }
 
-.jcarousel .product-thumb{
+.featured-jcarousel .product-thumb{
     border: none;
     background-color: white;
 }
-.jcarousel .product-thumb .image img{
+.featured-jcarousel .product-thumb .image img{
     height: 211px;
     width: 210px;
 }
@@ -207,12 +207,12 @@
     text-decoration: none;
 }
 
-.jcarousel .product-thumb .caption {
+.featured-jcarousel .product-thumb .caption {
     min-height: 200px;
     padding: 10px 20px 0;
 }
 
-.jcarousel .product-thumb .description {
+.featured-jcarousel .product-thumb .description {
     width: auto;
     color: #1b1b1b;
     font-size: 14px;
@@ -221,7 +221,7 @@
 }
 
 
-.jcarousel .product-thumb .price{
+.featured-jcarousel .product-thumb .price{
     position:absolute;
     bottom: 0px;
 }
@@ -270,20 +270,20 @@
     margin-right: -16px;
 }
 
-.jcarousel .product-layout{
+.featured-jcarousel .product-layout{
     height: 330px;
 }
 
 
-.jcarousel .product-thumb .image a:hover{
+.featured-jcarousel .product-thumb .image a:hover{
     opacity: 1;
 }
 
-.jcarousel .item .product-layout{
+.featured-jcarousel .item .product-layout{
     position: relative;
 }
 
-.jcarousel .item:hover .product-thumb .caption{
+.featured-jcarousel .item:hover .product-thumb .caption{
     padding-top: 10px;
     margin-top: 0;
     bottom: 0;
@@ -355,11 +355,11 @@ a.featured-icon:hover, a.featured-icon:active {
     opacity: 1;
 }
 
-.jcarousel .product-thumb{
+.featured-jcarousel .product-thumb{
     margin: 0;
 }
 
-.jcarousel .product-thumb .col-md-12{
+.featured-jcarousel .product-thumb .col-md-12{
     float: none;
     position: static;
     min-height: 200px;
@@ -367,12 +367,12 @@ a.featured-icon:hover, a.featured-icon:active {
 
 @media all and (max-width: 1279px) {
 
-    .jcarousel, .jcarousel-wrapper{
+    .featured-jcarousel, .featured-jcarousel-wrapper{
         width: 710px;
         padding: 0 10px;
     }
 
-    .jcarousel-wrapper{
+    .featured-jcarousel-wrapper{
         margin-left: auto;
         margin-right: auto;
     }
@@ -397,7 +397,7 @@ a.featured-icon:hover, a.featured-icon:active {
         margin-top: 35px;
     }
 
-    .jcarousel-wrapper {
+    .featured-jcarousel-wrapper {
         margin: 20px auto;
         position: relative;
         width: auto;
@@ -405,18 +405,18 @@ a.featured-icon:hover, a.featured-icon:active {
         padding-top: 10px;
     }
 
-    .jcarousel {
+    .featured-jcarousel {
         position: relative;
         overflow: hidden;
         width: auto;
         height: 640px;
     }
 
-    .jcarousel ul li:last-child .product-layout{
+    .featured-jcarousel ul li:last-child .product-layout{
         margin-bottom: 0;
     }
 
-    .jcarousel ul {
+    .featured-jcarousel ul {
         width: auto;
         height: 20000em;
         position: relative;
@@ -425,11 +425,11 @@ a.featured-icon:hover, a.featured-icon:active {
         padding: 0;
     }
 
-    .jcarousel li {
+    .featured-jcarousel li {
         float: none;
     }
 
-    .jcarousel-control-prev{
+    .featured-jcarousel .jcarousel-control-prev{
         top: 0;
         left: 50%;
         transform: translateX(-50%);
@@ -437,7 +437,7 @@ a.featured-icon:hover, a.featured-icon:active {
         transform: rotate(90deg);
     }
 
-    .jcarousel-control-next{
+    .featured-jcarousel .jcarousel-control-next{
         margin-top: 0;
         top: inherit;
         bottom: 0;
@@ -447,43 +447,43 @@ a.featured-icon:hover, a.featured-icon:active {
         transform: translateX(-50%);
     }
 
-    .jcarousel .item img{
+    .featured-jcarousel .item img{
         width: 100px !important;
         height: 100px !important;
     }
 
-    .jcarousel .item{
+    .featured-jcarousel .item{
         width: 100% !important;
         margin: auto;
     }
 
-    .jcarousel .product-layout{
+    .featured-jcarousel .product-layout{
         height: 205px;
         margin-bottom: 10px;
     }
 
-    .jcarousel .item .image{
+    .featured-jcarousel .item .image{
         float: left;
     }
 
-    .jcarousel .item .caption{
+    .featured-jcarousel .item .caption{
         float: right;
         padding-top: 15px;
         padding-left: 0;
         position: relative;
     }
 
-    .jcarousel .product-thumb .description{
+    .featured-jcarousel .product-thumb .description{
         font-size: 14px;
         line-height: 18px;
         margin-bottom: 15px;
     }
 
-    .jcarousel .product-thumb .sku{
+    .featured-jcarousel .product-thumb .sku{
         display: block;
     }
 
-    .jcarousel .product-thumb .rating{
+    .featured-jcarousel .product-thumb .rating{
         display: block;
         left: -7px;
         bottom: 38px;

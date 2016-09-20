@@ -218,7 +218,7 @@ button:focus{
 
 .productCartButton{
     height: 50px;
-    width: 100%;
+    width: 261px;
     border-radius: 25px;
     border: solid 2px rgb(27, 27, 27);
     background-image: none;
@@ -277,6 +277,10 @@ button:focus{
 
 .price-new>.form-group{
     margin-top: -15px;
+}
+
+.description>.row>.col-sm-6:last-child{
+    padding-left: 0;
 }
 
 .tagsPlaza{

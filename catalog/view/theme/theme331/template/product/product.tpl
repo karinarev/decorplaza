@@ -421,7 +421,7 @@
     <input id="tab33" type="radio" name="tabs" onchange="$('#form-review').css('display', 'none')">
     <label for="tab33" title="ОПЛАТА">ВИДЕО</label>
     <section id="content11">
-        <?php echo $description."<br>".$description2; ?>
+        <?php echo $description; ?>
     </section>
     <section id="content22">
         <div class="tab-pane" id="tab-review">

@@ -16,6 +16,22 @@ class ModelCatalogCategory extends Model {
 
 		return $query->rows;
 	}
+
+	public function getManufacturersByCategoryId($category_id) {
+		$manufacturers_data = $this->cache->get('ocfilter.manufacturer.' . (int)$category_id);
+
+		if ($manufacturers_data && is_array($manufacturers_data)) {
+			return $manufacturers_data;
+		}
+
+		$query = $this->db->query("SELECT m.manufacturer_id AS value_id, m.name, 'm' AS option_id FROM " . DB_PREFIX . "manufacturer m LEFT JOIN " . DB_PREFIX . "manufacturer_to_store m2s ON (m.manufacturer_id = m2s.manufacturer_id) LEFT JOIN " . DB_PREFIX . "product p ON (m.manufacturer_id = p.manufacturer_id) LEFT JOIN " . DB_PREFIX . "product_to_category p2c ON (p.product_id = p2c.product_id) WHERE m2s.store_id = '" . (int)$this->config->get('config_store_id') . "' AND p2c.category_id = '" . (int)$category_id . "' GROUP BY m.manufacturer_id ORDER BY name");
+
+		$manufacturers_data = $query->rows;
+
+		$this->cache->set('ocfilter.manufacturer.' . (int)$category_id, $manufacturers_data);
+
+		return $manufacturers_data;
+	}
 	
 	public function getCategoryFilters($category_id) {
 		$implode = array();

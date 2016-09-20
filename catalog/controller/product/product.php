@@ -78,9 +78,29 @@ class ControllerProductProduct extends Controller {
 				);
 			}
 		}
+
+		if (isset($this->request->get['product_id'])) {
+			$product_id = (int)$this->request->get['product_id'];
+		} else {
+			$product_id = 0;
+		}
+
+		$data['query'] =
+
+		$this->load->model('catalog/product');
 		
-		$this->load->model('catalog/manufacturer');	
-		
+
+		$product_info = $this->model_catalog_product->getProduct($product_id);
+
+		$this->load->model('catalog/manufacturer');
+
+//		$this->data['breadcrumbs'][] = array(
+//			'text'      => $product_info['manufacturer'],
+//			'href'      => $this->url->link('product/category', 'path=' . $this->request->get['path'], 'manufacturer_id=' . $product_info['manufacturer_id']),
+//			'separator' => $this->language->get('text_separator')
+//		);
+
+
 		if (isset($this->request->get['manufacturer_id'])) {
 			$this->data['breadcrumbs'][] = array( 
 				'text'      => $this->language->get('text_brand'),
@@ -163,17 +183,7 @@ class ControllerProductProduct extends Controller {
 			); 	
 		}
 		
-		if (isset($this->request->get['product_id'])) {
-			$product_id = (int)$this->request->get['product_id'];
-		} else {
-			$product_id = 0;
-		}
 
-		$data['query'] =
-
-		$this->load->model('catalog/product');
-		
-		$product_info = $this->model_catalog_product->getProduct($product_id);
 
 		
 		if ($product_info) {
