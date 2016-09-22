@@ -76,7 +76,8 @@ ga('ecommerce:send');
 		$this->language->load('checkout/success');
 		
 		$this->document->setTitle($this->language->get('heading_title'));
-		
+		$this->document->addStyle('catalog/view/theme/'.$this->config->get('config_template').'/stylesheet/success.css');
+
 		$this->data['breadcrumbs'] = array(); 
 
       	$this->data['breadcrumbs'][] = array(
