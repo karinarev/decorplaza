@@ -24,6 +24,7 @@ function doLiveSearch( ev, keywords ) {
 			var eListElem;
 			var eListElems;
 			var eLink;
+			count = 0;
 			for( var i in result ) {
 				eListElem = document.createElement('li');
 				eLink = document.createElement('a');
@@ -46,6 +47,10 @@ function doLiveSearch( ev, keywords ) {
 				}
 				eListElem.appendChild(eLink);
 				eList.appendChild(eListElem);
+				count++;
+				if (count >= 4) {
+					return;
+				}
 			}
 			if( $('#livesearch_search_results').length > 0 ) {
 				$('#livesearch_search_results').remove();
