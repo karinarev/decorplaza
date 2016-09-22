@@ -374,6 +374,10 @@ a.featured-icon:hover, a.featured-icon:active {
     min-height: 200px;
 }
 
+.featured-jcarousel .product-layout .image{
+    padding: 0;
+}
+
 @media all and (max-width: 1279px) {
 
     .featured-jcarousel, .featured-jcarousel-wrapper{
