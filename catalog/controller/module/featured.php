@@ -92,6 +92,7 @@ class ControllerModuleFeatured extends Controller {
 						
 				if ((float)$product_info['special']) {
 					$special = $this->currency->format($this->tax->calculate($product_info['special'], $product_info['tax_class_id'], $this->config->get('config_tax')));
+					$price = substr($price, 0, strrpos($price, ' '));
 				} else {
 					$special = false;
 				}

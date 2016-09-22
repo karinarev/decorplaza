@@ -218,7 +218,16 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
+    height: 60px;
+    overflow: hidden;
+
 }
+
+.featured-jcarousel .product-thumb .description a{
+    height: 60px;
+    display:block;
+}
+
 
 
 .featured-jcarousel .product-thumb .price{

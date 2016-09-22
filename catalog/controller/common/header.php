@@ -180,6 +180,7 @@ $this->load->model('catalog/manufacturer');
 			'module/cart'
 		);
 
+
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/common/header.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/common/header.tpl';
 		} else {

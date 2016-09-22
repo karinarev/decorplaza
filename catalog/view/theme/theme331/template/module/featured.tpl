@@ -10,7 +10,7 @@
 		<ul>
 			<?php foreach ($products as $product) { ?>
 			<li class="item">
-				<div class="product-layout">
+				<div class="product-layout featured-layout">
 					<div class="product-thumb transition row">
 						<div class="image col-md-12 col-xs-6">
 							<img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" />
@@ -320,20 +320,15 @@
 
 
 	$(document).ready(function () {
-
-		var count = 0;
-
-		checkWindowSize();
-
+		checkWindowSizeFeatured();
 	});
 
 	$(window).resize(function(){
-		checkWindowSize();
+		checkWindowSizeFeatured();
 	});
 
-	function checkWindowSize() {
-		currWindowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
+	function checkWindowSizeFeatured() {
+		var currWindowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 		if (currWindowWidth > 767) {
 			var jcarousel = $('.featured-jcarousel');
 
@@ -366,8 +361,9 @@
 
 			$(this).find('.featured-icon').css({'display' : 'none'});
 
-			$('.featured-jcarousel .item').hover(
+			$('.featured-layout').hover(
 					function () {
+						console.log('fd');
 						$(this).find('img').addClass('image-hover');
 						$(this).find('.featured-icon').css({'display' : 'block'});
 						$(this).find('.sku').css({'display' : 'block'});

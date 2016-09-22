@@ -11,7 +11,6 @@ function doLiveSearch( ev, keywords ) {
 	if( keywords == '' || keywords.length < 3 ) {
 		return false;
 	}
-	keywords = encodeURI(keywords);
 
 	$.ajax({
 		url: $('#hidden').attr('href') + 'index.php?route=product/search/ajax&keyword=' + keywords,
@@ -24,7 +23,7 @@ function doLiveSearch( ev, keywords ) {
 			var eListElem;
 			var eListElems;
 			var eLink;
-			count = 0;
+			var count = 0;
 			for( var i in result ) {
 				eListElem = document.createElement('li');
 				eLink = document.createElement('a');

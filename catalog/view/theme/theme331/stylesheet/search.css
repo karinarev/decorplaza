@@ -1,0 +1,75 @@
+h3.header{
+    color: #1b1b1b;
+    font-family: "BodoniItalic";
+    font-size: 36px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 40px;
+}
+.buttons{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.buttons .button{
+    width: 230px;
+    height: 50px;
+    border: 2px solid #c49849;
+    border-radius: 25px;
+    background: none;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    box-shadow: none;
+}
+
+.buttons .button span{
+    color: #c49849;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-top: 13px;
+}
+
+.buttons .button:hover{
+    background: #c49849;
+}
+
+.buttons .button:hover span{
+    color: white;
+}
+
+.more{
+    left: 33% !important;
+}
+
+.shopping{
+    left: 55% !important;
+}
+
+.plus{
+    left: 55% !important;
+}
+
+.empty-gold{
+    left: 55% !important;
+}
+
+.category-item .product-thumb .image img{
+    margin: auto;
+}
+
+.box-container{
+    text-align: center;
+}
+
+.searchInput{
+    border: none !important;
+    width: 600px;
+}
+
+.checkbox input[type="checkbox"]{
+    float: none;
+}
