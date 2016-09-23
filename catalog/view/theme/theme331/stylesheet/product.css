@@ -111,6 +111,38 @@ body{
     width: 26px;
 }
 
+#content11 p{
+    font-family: "OpenSans";
+    font-size: 14px;
+    line-height: 20px;
+}
+
+#content11 h4{
+    color: #1b1b1b;
+    font-weight: 600;
+    font-family: "OpenSans";
+    font-size: 14px;
+    line-height: 20px;
+}
+
+#content11 ul {
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+
+#content11 li {
+    padding-left: 1em;
+    text-indent: -.7em;
+}
+
+#content11 li:before {
+    content: "•";
+    color: #c49849;
+    font-size: 30px;
+    bottom: -6px;
+}
+
 .product-info>.row{
     margin:0;
     font-size: 12px;

@@ -433,6 +433,7 @@
 		<?php echo $video_description; ?>
         <?php if (!empty($video)) echo	'<iframe width="825" height="460" src= "' . $video . '" frameborder="0" allowfullscreen></iframe>'; ?>
     </section>
+
 </div>
 
 			<div class="panel-group product-panel-group" id="accordion">
