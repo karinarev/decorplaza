@@ -143,6 +143,10 @@ body{
     bottom: -6px;
 }
 
+section#content11{
+    padding-top: 40px !important;
+}
+
 .product-info>.row{
     margin:0;
     font-size: 12px;
