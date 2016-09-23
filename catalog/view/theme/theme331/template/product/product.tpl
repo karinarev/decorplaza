@@ -840,9 +840,11 @@ $( document ).ready(function() {
 		opacity: 0.5,
 		rel: "colorbox"
 	});
+
 	if (isInCart=="true")
 		$(".cartIconProduct").css("background-image", "url(/image/cartWhite.png)");
 	var starsArr = [];
+	console.log($(".productRateLabel"));
 	for (var i=0; i<5; i++){
 		starsArr[i] = document.createElement("span");
 		var ic = document.createElement("i");
@@ -916,27 +918,7 @@ $( document ).ready(function() {
 		}
 	}
 
-	});
-//--></script>
-<script type="text/javascript"><!--
-$('#tabs a').tabs();
 
-$('#dostavka_2').click(function(){
-
-	$('#tab22').click();
-	$('html, body').animate({ scrollTop: $('.tabs').offset().top }, 500);
-	return false;
-});
-$('#info_2').click(function(){
-
-	$('#tab33').click();
-	$('html, body').animate({ scrollTop: $('.tabs').offset().top }, 500);
-	return false;
-});
-//--></script>
-<script type="text/javascript" src="catalog/view/javascript/jquery/ui/jquery-ui-timepicker-addon.js"></script>
-<script type="text/javascript"><!--
-$(document).ready(function() {
 	if ($.browser.msie && $.browser.version == 6) {
 		$('.date, .datetime, .time').bgIframe();
 	}
@@ -947,12 +929,8 @@ $(document).ready(function() {
 		timeFormat: 'h:m'
 	});
 	$('.time').timepicker({timeFormat: 'h:m'});
+	});
 
-
-
-});
-
-$(document).ready(function() {
 	$(".various").fancybox({
 		maxWidth	: 150,
 		maxHeight	: 30,
@@ -964,15 +942,13 @@ $(document).ready(function() {
 		openEffect	: 'none',
 		closeEffect	: 'none'
 	});
-});
-//-->
 
-function displayDelivery()
+	function displayDelivery()
 	{
 		$('#content2').css('display','block');
 
 	}
-function hideDelivery()
+	function hideDelivery()
 	{
 		$('#content2').css('display','none');
 
@@ -1014,7 +990,25 @@ function hideDelivery()
 		console.log(document.getElementById("form-review"));
 		document.getElementById("form-review").submit();
 	}
-</script>
+//--></script>
+<script type="text/javascript"><!--
+$('#tabs a').tabs();
+
+$('#dostavka_2').click(function(){
+
+	$('#tab22').click();
+	$('html, body').animate({ scrollTop: $('.tabs').offset().top }, 500);
+	return false;
+});
+$('#info_2').click(function(){
+
+	$('#tab33').click();
+	$('html, body').animate({ scrollTop: $('.tabs').offset().top }, 500);
+	return false;
+});
+//--></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/ui/jquery-ui-timepicker-addon.js"></script>
+
 
 <link href="catalog/view/theme/<?php echo $this->config->get('config_template'); ?>/stylesheet/product.css" rel="stylesheet" type="text/css" />
 <div class="clear"></div>
