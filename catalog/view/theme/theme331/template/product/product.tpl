@@ -777,6 +777,25 @@ $('#button-review').bind('click', function() {
 });
 //--></script>
 <script type="text/javascript"><!--
+	var starsArr = [];
+	for (var i=0; i<5; i++){
+		starsArr[i] = document.createElement("span");
+		var ic = document.createElement("i");
+		$(ic).addClass("fa fa-star fa-stack-1x lightStar");
+		$(starsArr[i]).addClass("fa fa-stack").append(ic);
+		$(".productRateLabel").after(starsArr[i]);
+		$(starsArr[i]).on("click", function(event){
+			var i = starsArr.indexOf(event.target.parentNode);
+			$("#form-review input[type='radio'][value='"+(5-i)+"']").prop("checked", "true");
+			for (var j=0; j<=5; j++)
+				if (i<=j){
+					$(starsArr[j]).children(".fa-stack-1x").css("color", "rgb(119, 119, 119)");
+				} else {
+					$(starsArr[j]).children(".fa-stack-1x").css("color", "rgb(204, 204, 204)");
+				}
+		});
+	}
+	
 function a(){
 	$.ajax({
 		url: 'index.php?route=product/product/add',
@@ -808,7 +827,6 @@ $(document).on("change", ".option", a);
 //$(document).on("keyup", "#bc", a);
 
 $( document ).ready(function() {
-	console.log('fs');
 	$("#button-cart").on("mouseover", function(event){
 		changeCartWhite();
 	});
@@ -821,25 +839,7 @@ $( document ).ready(function() {
 
 	if (isInCart=="true")
 		$(".cartIconProduct").css("background-image", "url(/image/cartWhite.png)");
-	var starsArr = [];
-	for (var i=0; i<5; i++){
-		console.log(i);
-		starsArr[i] = document.createElement("span");
-		var ic = document.createElement("i");
-		$(ic).addClass("fa fa-star fa-stack-1x lightStar");
-		$(starsArr[i]).addClass("fa fa-stack").append(ic);
-		$(".productRateLabel").after(starsArr[i]);
-		$(starsArr[i]).on("click", function(event){
-			var i = starsArr.indexOf(event.target.parentNode);
-			$("#form-review input[type='radio'][value='"+(5-i)+"']").prop("checked", "true");
-			for (var j=0; j<=5; j++)
-				if (i<=j){
-					$(starsArr[j]).children(".fa-stack-1x").css("color", "rgb(119, 119, 119)");
-				} else {
-					$(starsArr[j]).children(".fa-stack-1x").css("color", "rgb(204, 204, 204)");
-				}
-		});
-	}
+
 
 	checkWindowSizeProduct();
 
