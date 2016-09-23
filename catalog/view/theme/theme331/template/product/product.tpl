@@ -808,29 +808,6 @@ $(document).on("change", ".option", a);
 //$(document).on("keyup", "#bc", a);
 
 $( document ).ready(function() {
-	$.ajax({
-		url: 'index.php?route=product/product/add',
-		type: 'post',
-		data: $('.product-info input[type=\'text\'], .product-info input[type=\'hidden\'], .product-info input[type=\'radio\']:checked, .product-info input[type=\'checkbox\']:checked, .product-info select, .product-info textarea'),
-		dataType: 'json',
-		success: function(json) {
-			$('.success, .warning, .attention, information, .error').remove();
-			if (json['error']) {
-				if (json['error']['option']) {
-					for (i in json['error']['option']) {
-						$('#option-' + i).after('<span class="error">' + json['error']['option'][i] + '</span>');
-					}
-				}
-			}
-			if (json['success']) {
-			   html = '';
-                            $.each(json.oprice, function(i, object) {
-                                                           html += object;
-                                                                 });
-                              $('.pandc').html(html);
-		                          }
-	    }
-	});
 	$("#button-cart").on("mouseover", function(event){
 		changeCartWhite();
 	});
@@ -844,7 +821,6 @@ $( document ).ready(function() {
 	if (isInCart=="true")
 		$(".cartIconProduct").css("background-image", "url(/image/cartWhite.png)");
 	var starsArr = [];
-	console.log($(".productRateLabel"));
 	for (var i=0; i<5; i++){
 		starsArr[i] = document.createElement("span");
 		var ic = document.createElement("i");
@@ -861,7 +837,6 @@ $( document ).ready(function() {
 					$(starsArr[j]).children(".fa-stack-1x").css("color", "rgb(204, 204, 204)");
 				}
 		});
-		console.log($(".productRateLabel"));
 	}
 
 	checkWindowSizeProduct();
@@ -918,7 +893,29 @@ $( document ).ready(function() {
 		}
 	}
 
-
+	$.ajax({
+		url: 'index.php?route=product/product/add',
+		type: 'post',
+		data: $('.product-info input[type=\'text\'], .product-info input[type=\'hidden\'], .product-info input[type=\'radio\']:checked, .product-info input[type=\'checkbox\']:checked, .product-info select, .product-info textarea'),
+		dataType: 'json',
+		success: function(json) {
+			$('.success, .warning, .attention, information, .error').remove();
+			if (json['error']) {
+				if (json['error']['option']) {
+					for (i in json['error']['option']) {
+						$('#option-' + i).after('<span class="error">' + json['error']['option'][i] + '</span>');
+					}
+				}
+			}
+			if (json['success']) {
+				html = '';
+				$.each(json.oprice, function(i, object) {
+					html += object;
+				});
+				$('.pandc').html(html);
+			}
+		}
+	});
 	if ($.browser.msie && $.browser.version == 6) {
 		$('.date, .datetime, .time').bgIframe();
 	}
