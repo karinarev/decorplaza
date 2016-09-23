@@ -822,6 +822,7 @@ $( document ).ready(function() {
 		$(".cartIconProduct").css("background-image", "url(/image/cartWhite.png)");
 	var starsArr = [];
 	for (var i=0; i<5; i++){
+		console.log(i);
 		starsArr[i] = document.createElement("span");
 		var ic = document.createElement("i");
 		$(ic).addClass("fa fa-star fa-stack-1x lightStar");
