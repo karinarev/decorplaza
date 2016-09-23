@@ -769,6 +769,7 @@ $('#button-review').bind('click', function() {
 				alert(data['success']);
 
 				$('input[name=\'name\']').val('');
+				$('input[name=\'email\']').val('');
 				$('textarea[name=\'text\']').val('');
 				$('input[name=\'rating\']:checked').attr('checked', '');
 			}
@@ -795,7 +796,7 @@ $('#button-review').bind('click', function() {
 				}
 		});
 	}
-	
+
 function a(){
 	$.ajax({
 		url: 'index.php?route=product/product/add',
