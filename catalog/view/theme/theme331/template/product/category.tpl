@@ -219,7 +219,10 @@
 						  </div>
 					  </div>
 					  <div class="caption col-xs-7 col-md-12">
-						  <p class="description"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></p>
+						  <p class="description"><a href="<?php echo $product['href']; ?>">
+								  <span class="short-name"><?php echo $product['name']; ?></span>
+								  <span class="full-name"><?php echo $product['fullName']; ?></span>
+							  </a></p>
 						  <?php if ($product['model']) { ?>
 						  <div class="model">
 							  <span>Артикул <?php echo $product['model']; ?></span>
@@ -304,12 +307,16 @@
 							$(this).find('.product-icon').css({'display' : 'block'});
 							$(this).find('.model').css({'display' : 'block'});
 							$(this).find('.rating').css({'display' : 'block'});
+							$(this).find('.short-name').css({'display' : 'none'});
+							$(this).find('.full-name').css({'display' : 'block'});
 						},
 						function (){
 							$(this).find('img').removeClass('image-hover');
 							$(this).find('.product-icon').css({'display' : 'none'});
 							$(this).find('.model').css({'display' : 'none'});
 							$(this).find('.rating').css({'display' : 'none'});
+							$(this).find('.full-name').css({'display' : 'none'});
+							$(this).find('.short-name').css({'display' : 'block'});
 						});
 
 			}

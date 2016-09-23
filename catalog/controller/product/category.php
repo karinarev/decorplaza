@@ -395,6 +395,7 @@ class ControllerProductCategory extends Controller {
 					'manufacturers' => $manufacturers,
 					'text_availability' => $text_availability,
 					'text_instock' => $text_instock,
+					'fullName'  	=> $result['name'],
 					'name'        => utf8_substr($result['name'], 0, 55) . "...",
 					'newItem'     => $newItem,
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, 100) . '..',

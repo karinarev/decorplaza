@@ -537,6 +537,7 @@ class ControllerProductManufacturer extends Controller {
 					'text_availability' => $text_availability,
 					'text_instock' => $text_instock,
 					'newItem'     => $newItem,
+					'fullName'   => $result['name'],
 					'name'        => utf8_substr($result['name'], 0, 55) . "...",
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, 300) . '..',
 					'description_poln' => strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')),

@@ -218,14 +218,9 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
-    height: 60px;
+    max-height: 95px;
     overflow: hidden;
 
-}
-
-.featured-jcarousel .product-thumb .description a{
-    height: 60px;
-    display:block;
 }
 
 
@@ -307,6 +302,14 @@
 
 .image-hover{
     opacity: 0.3;
+}
+
+.short-name{
+    display: block;
+}
+
+.full-name{
+    display: none;
 }
 
 .more{

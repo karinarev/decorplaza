@@ -166,7 +166,10 @@
 							</div>
 						</div>
 						<div class="caption col-md-12 col-xs-6">
-							<p class="description"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></p>
+							<p class="description"><a href="<?php echo $product['href']; ?>">
+									<span class="short-name"><?php echo $product['name']; ?></span>
+									<span class="full-name"><?php echo $product['fullName']; ?></span>
+							</a></p>
 							<?php if ($product['model']) { ?>
 							<div class="sku">
 								<span>Артикул <?php echo $product['model']; ?></span>
@@ -363,18 +366,20 @@
 
 			$('.featured-layout').hover(
 					function () {
-						console.log('fd');
 						$(this).find('img').addClass('image-hover');
 						$(this).find('.featured-icon').css({'display' : 'block'});
 						$(this).find('.sku').css({'display' : 'block'});
 						$(this).find('.rating').css({'display' : 'block'});
+						$(this).find('.short-name').css({'display' : 'none'});
+						$(this).find('.full-name').css({'display' : 'block'});
 					},
 					function (){
 						$(this).find('img').removeClass('image-hover');
 						$(this).find('.featured-icon').css({'display' : 'none'});
 						$(this).find('.sku').css({'display' : 'none'});
 						$(this).find('.rating').css({'display' : 'none'});
-
+						$(this).find('.full-name').css({'display' : 'none'});
+						$(this).find('.short-name').css({'display' : 'block'});
 					});
 		}
 

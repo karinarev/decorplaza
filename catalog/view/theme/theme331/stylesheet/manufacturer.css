@@ -29,6 +29,14 @@ h3{
     padding: 10px 15px;
 }
 
+.short-name{
+    display: block;
+}
+
+.full-name{
+    display: none;
+}
+
 .alphabet a:hover{
     background-color: #c49849;
     color: white !important;

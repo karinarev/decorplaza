@@ -191,7 +191,13 @@ body{
 .category-item:hover .price{
     top: 164px;
 }
+.short-name{
+    display: block;
+}
 
+.full-name{
+    display: none;
+}
 .more{
     background: url(../image/icons/more.png);
     left: 59px;
