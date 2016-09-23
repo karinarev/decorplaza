@@ -142,7 +142,8 @@
             <tr>
               <td>Ссылка на видео</td>
               <td><input type="text" name="videoo" value="<?php echo $video; ?>" /></td>
-            </tr><tr>
+            </tr>
+            <tr>
               <td>Описание видео</td>
               <td><input type="text" name="videoo_description" value="<?php echo $video_description; ?>" /></td>
             </tr>
