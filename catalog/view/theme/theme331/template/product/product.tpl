@@ -808,6 +808,7 @@ $(document).on("change", ".option", a);
 //$(document).on("keyup", "#bc", a);
 
 $( document ).ready(function() {
+	console.log('fs');
 	$("#button-cart").on("mouseover", function(event){
 		changeCartWhite();
 	});
