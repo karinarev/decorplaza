@@ -1,24 +1,26 @@
-<div class="jcarousel-wrapper categories">
-    <div class="jcarousel">
-    <?php foreach($categories as $category) { ?>
-    <div class="item">
-        <div class="image">
-            <img src="<?php echo $category['image']; ?>" alt="<?php echo $category['name']; ?>" title="<?php echo $category['name']; ?>" />
-            <div class="image-background"></div>
-        </div>
-        <div class="caption">
-            <div class="catalog-name"><?php echo $category['name']; ?></div>
-            <div class="description"><?php echo $category['description']; ?></div>
-        </div>
-        <div class="button-area">
-            <a class="btn btn-more" href="<?php echo $category['parent_url']; ?>"><span>Подробнее</span></a>
-        </div>
-    </div>
-    <?php } ?>
+<div class="jcarousel-wrapper categories categories-jcarousel-wrapper">
+    <div class="jcarousel categories-jcarousel">
+        <ul>
+            <?php foreach($categories as $category) { ?>
+            <li><div class="item">
+                <div class="image">
+                    <img src="<?php echo $category['image']; ?>" alt="<?php echo $category['name']; ?>" title="<?php echo $category['name']; ?>" />
+                    <div class="image-background"></div>
+                </div>
+                <div class="caption">
+                    <div class="catalog-name"><?php echo $category['name']; ?></div>
+                    <div class="description"><?php echo $category['description']; ?></div>
+                </div>
+                <div class="button-area">
+                    <a class="btn btn-more" href="<?php echo $category['parent_url']; ?>"><span>Подробнее</span></a>
+                </div>
+            </div></li>
+            <?php } ?>
+        </ul>
     </div>
 
-<a class="jcarousel-control-prev"></a>
-<a class="jcarousel-control-next"></a>
+<a class="categories-jcarousel-control-prev"></a>
+<a class="categories-jcarousel-control-next"></a>
 
 </div>
 
@@ -27,65 +29,40 @@
 <script type="text/javascript"><!--
 
     $(document).ready(function () {
-
-        var count = 0;
-
-        checkWindowSize();
-
+        checkWindowSizeXD();
     });
 
     $(window).resize(function(){
-        checkWindowSize();
+        checkWindowSizeXD();
     });
 
-    function checkWindowSize() {
+    function checkWindowSizeXD() {
         currWindowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
         if (currWindowWidth <= 767) {
-            var jcarousel = $('.jcarousel');
+            $('.categories-jcarousel')
+                    .jcarousel();
 
-            jcarousel
-                    .on('jcarousel:reload jcarousel:create', function () {
-                        var carousel = $(this),
-                                width = carousel.innerWidth();
-
-                        if (width >= 600) {
-                            width = width / 3;
-                        } else if (width >= 350) {
-                            width = width / 2;
-                        }
-
-                        carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
+            $('.categories-jcarousel-control-prev')
+                    .on('jcarouselcontrol:active', function () {
+                        $(this).removeClass('inactive');
                     })
-                    .jcarousel({
-                        wrap: 'circular'
-                    });
-
-            $('.jcarousel-control-prev')
+                    .on('jcarouselcontrol:inactive', function () {
+                        $(this).addClass('inactive');
+                    })
                     .jcarouselControl({
                         target: '-=1'
                     });
 
-            $('.jcarousel-control-next')
+            $('.categories-jcarousel-control-next')
+                    .on('jcarouselcontrol:active', function () {
+                        $(this).removeClass('inactive');
+                    })
+                    .on('jcarouselcontrol:inactive', function () {
+                        $(this).addClass('inactive');
+                    })
                     .jcarouselControl({
                         target: '+=1'
-                    });
-
-            $(this).find('.featured-icon').css({'display' : 'none'});
-
-            $('.jcarousel .item').hover(
-                    function () {
-                        $(this).find('img').addClass('image-hover');
-                        $(this).find('.featured-icon').css({'display' : 'block'});
-                        $(this).find('.sku').css({'display' : 'block'});
-                        $(this).find('.rating').css({'display' : 'block'});
-                    },
-                    function (){
-                        $(this).find('img').removeClass('image-hover');
-                        $(this).find('.featured-icon').css({'display' : 'none'});
-                        $(this).find('.sku').css({'display' : 'none'});
-                        $(this).find('.rating').css({'display' : 'none'});
-
                     });
         }
 
