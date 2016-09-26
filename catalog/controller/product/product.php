@@ -94,12 +94,11 @@ class ControllerProductProduct extends Controller {
 
 		$this->load->model('catalog/manufacturer');
 
-//		$this->data['breadcrumbs'][] = array(
-//			'text'      => $product_info['manufacturer'],
-//			'href'      => $this->url->link('product/category', 'path=' . $this->request->get['path'], 'manufacturer_id=' . $product_info['manufacturer_id']),
-//			'separator' => $this->language->get('text_separator')
-//		);
-
+		$this->data['breadcrumbs'][] = array(
+			'text'     => $product_info['manufacturer'],
+			'href'     => $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $product_info['manufacturer_id']),
+			'separator' => $this->language->get('text_separator')
+		);
 
 		if (isset($this->request->get['manufacturer_id'])) {
 			$this->data['breadcrumbs'][] = array( 
@@ -688,7 +687,8 @@ class ControllerProductProduct extends Controller {
 			);
 						
 			$this->response->setOutput($this->render());
-		} else {
+		}
+		else {
 			$url = '';
 			
 			if (isset($this->request->get['path'])) {
