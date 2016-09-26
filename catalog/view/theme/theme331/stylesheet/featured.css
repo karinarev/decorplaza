@@ -412,6 +412,11 @@ a.featured-icon:hover, a.featured-icon:active {
         display: none;
     }
 
+    .featured-jcarousel .item .image{
+        padding-left: 20px;
+        padding-top: 15px;
+    }
+
     .featured-title h2{
         font-size: 12px;
         margin-bottom: 15px;
@@ -457,7 +462,7 @@ a.featured-icon:hover, a.featured-icon:active {
         float: none;
     }
 
-    .featured-jcarousel .jcarousel-control-prev{
+    .featured-jcarousel-wrapper .jcarousel-control-prev{
         top: 0;
         left: 50%;
         transform: translateX(-50%);
@@ -465,7 +470,7 @@ a.featured-icon:hover, a.featured-icon:active {
         transform: rotate(90deg);
     }
 
-    .featured-jcarousel .jcarousel-control-next{
+    .featured-jcarousel-wrapper .jcarousel-control-next{
         margin-top: 0;
         top: inherit;
         bottom: 0;
@@ -530,11 +535,11 @@ a.featured-icon:hover, a.featured-icon:active {
     }
 
     .more{
-        left: 20px;
+        left: 23px;
     }
 
     .shopping, .plus, .empty-gold{
-        left: 73px;
+        left: 80px;
     }
 
 
