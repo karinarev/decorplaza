@@ -26,12 +26,22 @@ body{
     margin-top: -50px;
 }
 
+
 .breadcrumb {
     margin: 0 0 32px 23px;
-    padding: 8px 0;
+    padding: 15px 0 5px;
     background-color: rgb(244, 244, 244);
     border: 0;
+    width: 900px;
+    display: flex;
+    white-space: nowrap;
 }
+
+.breadcrumb >li:last-child{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .breadcrumb i {
     font-size: 15px;
 }
