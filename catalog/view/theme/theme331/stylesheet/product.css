@@ -523,6 +523,8 @@ section{
 
     .breadcrumb{
         margin-left: 0;
+        max-width: 780px;
+        width: auto;
     }
 
     .product-info>.row>.col-sm-4{
