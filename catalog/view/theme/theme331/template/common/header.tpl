@@ -400,14 +400,14 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 			var moreLink = $("#header-more-link").parent('li');
 			backLink.css('display', 'none');
 			moreLink.css('display', 'none');
-			checkWindowSize();
+			checkWindowSizeHeader();
 		});
 
 		$(window).resize(function(){
-			checkWindowSize();
+			checkWindowSizeHeader();
 		});
 
-		function checkWindowSize(){
+		function checkWindowSizeHeader(){
 			currWindowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 			var items = $('#header .toprow .links li');
 			var backLink = $("#header-back-link").parent('li');
