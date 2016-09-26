@@ -143,6 +143,10 @@
         margin-right: 3px;
     }
 
+    .categories-jcarousel-wrapper{
+        height: 240px;
+    }
+
     .categories .item, .categories .item .image-background, .categories .item img{
         width: 250px;
         height: 235px;
