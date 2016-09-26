@@ -113,12 +113,12 @@
     }
 
     .categories .item, .categories .item .image-background, .categories .item img{
-        width: 275px;
+        width: 250px;
         height: 235px;
     }
     .categories .item .caption{
         top: 50px;
-        width: 275px;
+        width: 250px;
     }
 
     .categories .item .caption .catalog-name{
@@ -133,7 +133,7 @@
 
     .categories .item .button-area{
         bottom: 30px;
-        width: 275px;
+        width: 250px;
     }
 
     .categories .item .button-area .btn-more{
