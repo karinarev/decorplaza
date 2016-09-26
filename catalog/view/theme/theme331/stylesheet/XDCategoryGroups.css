@@ -9,6 +9,7 @@
     width: 415px;
     height: 340px;
     position: relative;
+    margin-right: 3px;
 }
 
 .categories .item img{
@@ -208,6 +209,9 @@
         width: auto;
     }
 
+    .categories-jcarousel-wrapper{
+        margin-top: 20px;
+    }
 
     /** Carousel Controls **/
 
