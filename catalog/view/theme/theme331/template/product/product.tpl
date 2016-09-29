@@ -810,7 +810,9 @@ $('#button-review').bind('click', function() {
 
 
 	function onPlusProduct(quantity){
+		console.log('1');
 		var i = Number($("#input-quantity").val())+1;
+		console.log(i);
 		if (i<=quantity) {
 			console.log('sdf');
 			$("#input-quantity").val(i);
