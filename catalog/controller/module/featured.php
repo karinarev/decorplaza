@@ -4,8 +4,6 @@ class ControllerModuleFeatured extends Controller {
 		$module = 0;
 		$this->language->load('module/featured');
 
-		$this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');
-		$this->document->addScript('catalog/view/javascript/jquery/owl-carousel/owl.carousel.min.js');
 		$this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/featured.css');
 
       	$this->data['heading_title'] = $this->language->get('heading_title');

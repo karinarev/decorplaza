@@ -9,7 +9,7 @@
 	<div class="jcarousel featured-jcarousel">
 		<ul>
 			<?php foreach ($products as $product) { ?>
-			<li class="item">
+			<li class="item" id="<?php echo $product['product_id']; ?>">
 				<div class="product-layout featured-layout">
 					<div class="product-thumb transition row">
 						<div class="image col-md-12 col-xs-6">
@@ -347,6 +347,18 @@
 						}
 
 						carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
+
+						if(currWindowWidth < 1280) {
+							if($('.featured-jcarousel').find('li.item').length <= 3){
+								$('.jcarousel-control-prev').css('display', 'none');
+								$('.jcarousel-control-next').css('display', 'none');
+							}
+						} else{
+							if($('.featured-jcarousel').find('li.item').length <= 5){
+								$('.jcarousel-control-prev').css('display', 'none');
+								$('.jcarousel-control-next').css('display', 'none');
+							}
+						}
 					})
 					.jcarousel({
 						wrap: 'circular'

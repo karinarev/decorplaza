@@ -16,8 +16,9 @@ class ControllerProductProduct extends Controller {
 			'separator' => false
 		);
 		
-		$this->load->model('catalog/category');	
-		
+		$this->load->model('catalog/category');
+		$this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/featured.css');
+
 		if (isset($this->request->get['path'])) {
 			$path = '';
 			
@@ -273,21 +274,35 @@ class ControllerProductProduct extends Controller {
 				}
 				if (($price_analog_nomber >= ($price_nomber-$porg)) and ($price_analog_nomber <= ($price_nomber+$porg)) and ($product_analog['product_id']!=$product_id)) {
 					$products_analog_arr[$w]['price'] = number_format($price_analog_nomber,0, ".", " ");
-					//$products_analog_arr[$w]['image'] = $product_analog['image'];
+
 					if ($product_analog['image']) {
-						$products_analog_arr[$w]['image'] = $this->model_tool_image->resize($product_analog['image'], $this->config->get('config_image_related_width'), $this->config->get('config_image_related_height'));
+						$products_analog_arr[$w]['image'] = $this->model_tool_image->resize($product_analog['image'], 210, 211);
 						$this->document->setOgImage($products_analog_arr[$w]['image']);
 					} else {
-						$products_analog_arr[$w]['image'] = $this->model_tool_image->resize('no_image.jpg', $this->config->get('config_image_related_width'), $this->config->get('config_image_related_height'));
+						$products_analog_arr[$w]['image'] = $this->model_tool_image->resize('no_image.jpg', 210, 211);
 					}
-					$products_analog_arr[$w]['name'] = $product_analog['name'];
-					$products_analog_arr[$w]['product_id'] = $product_analog['product_id'];
-					$products_analog_arr[$w]['url'] = $this->url->link('product/product&product_id=' . $product_analog['product_id']);
-					//$products_analog_arr[$w]['options'] = $product_analog['options'];
 
-					/****/
-					
-			foreach ($this->model_catalog_product->getProductOptions($product_analog['product_id']) as $analog_option) { 
+
+					$price = $this->currency->format($this->tax->calculate($product_analog['price'], $product_analog['tax_class_id'], $this->config->get('config_tax')));
+
+					if ((float)$product_analog['special']) {
+						$special = $this->currency->format($this->tax->calculate($product_analog['special'], $product_analog['tax_class_id'], $this->config->get('config_tax')));
+						$price = substr($price, 0, strrpos($price, ' '));
+					} else {
+						$special = false;
+					}
+
+					$products_analog_arr[$w]['price'] = $price;
+					$products_analog_arr[$w]['special'] = $special;
+					$products_analog_arr[$w]['fullName'] = $product_analog['name'];
+					$products_analog_arr[$w]['rating'] = $product_analog['rating'];
+					$products_analog_arr[$w]['model'] = $product_analog['model'];
+					$products_analog_arr[$w]['name'] = utf8_substr($product_analog['name'], 0, 55) . "...";
+					$products_analog_arr[$w]['product_id'] = $product_analog['product_id'];
+					$products_analog_arr[$w]['href'] = $this->url->link('product/product&product_id=' . $product_analog['product_id']);
+
+
+			foreach ($this->model_catalog_product->getProductOptions($product_analog['product_id']) as $analog_option) {
 				/*echo '<!--**995';
 				print_r($analog_option);
 				
@@ -606,12 +621,9 @@ class ControllerProductProduct extends Controller {
 			if ($product_info['description2']) {
 				$this->data['description2'] = html_entity_decode($product_info['description2'], ENT_QUOTES, 'UTF-8');
 			} else {
-				
-			
 				$this->data['description2'] = "Decor-Plaza.ru – интернет магазин предлагает посмотреть каталог " . $category_info['namer'] . " " . $product_info['manufacturer'] . ". Мы поможем Вам определиться с выбором " . $category_info['namer'] . ". Все модели есть в наличии, а также у нас есть специальные предложения на " . $category_info['sinonim1'] . " " . $this->translit2rus($product_info['manufacturer']) . ". Оформляйте онлайн заказ через сайт или по телефону " . $this->config->get('config_telephone') . ". Если вы не можете определиться " . $category_info['sinonim2'] . " купить, присмотритесь к " . $category_info['named'] . " " . $product_info['manufacturer'] . ". " . $product_info['name'] . " - " . $product_info['functions'] . ". Магазин italy-sumochka.ru доставит ваш заказ или оформит самовывоз в " . $cityformpred . ".";
 			}
-			
-			
+
 			
 			$this->data['attribute_groups'] = $this->model_catalog_product->getProductAttributes($this->request->get['product_id']);
 
