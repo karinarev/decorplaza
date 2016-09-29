@@ -1252,10 +1252,24 @@ $( document ).ready(function() {
 
 						carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
 
-						if($('.featured-jcarousel').find('li.item').length <= 5){
+
+						if(carousel.jcarousel('items').length <= 5){
 							$('.jcarousel-control-prev').css('display', 'none');
 							$('.jcarousel-control-next').css('display', 'none');
 						}
+
+						/*if(currWindowWidth < 1280) {
+							if($('.featured-jcarousel').find('li.item').length <= 3){
+								$('.jcarousel-control-prev').css('display', 'none');
+								$('.jcarousel-control-next').css('display', 'none');
+							}
+						}
+						else{
+							if($('.featured-jcarousel').find('li.item').length <= 5){
+								$('.jcarousel-control-prev').css('display', 'none');
+								$('.jcarousel-control-next').css('display', 'none');
+							}
+						} */
 					})
 					.jcarousel({
 						wrap: 'circular'
