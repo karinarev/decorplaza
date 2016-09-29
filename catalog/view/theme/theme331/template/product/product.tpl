@@ -124,7 +124,7 @@
                   <button class="buttonMinus plusminus" onclick="onMinusProduct();"></button>
                   <input type="text" name="quantity" maxlength="3" disabled="disabled" value="<?php echo $minimum; ?>" size="2" id="input-quantity" class="form-control" />
                   <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
-                  <button class="buttonPlus plusminus" onclick="onPlusProduct();"></button>
+                  <button class="buttonPlus plusminus" onclick="onPlusProduct(<?php echo $quantity; ?>);"></button>
 												</div>
                   <br />
 											<?php if ($isInCart) echo '<button type="button" id="button-cart" data-loading-text='.$text_loading.' class="btn productInCartButton btn-primary btn-lg btn-block button-cart"><span class="icon cartIcon cartIconProduct"></span><span>В корзине</span></button>'; else echo '<button type="button" id="button-cart" data-loading-text='.$text_loading.' onmouseover="changeCartWhite()" onmouseout="changeCartBlack()" onclick="changeButtonBrown()" class="btn productCartButton btn-primary btn-lg btn-block button-cart"><span class="icon cartIcon cartIconProduct"></span><span> В корзину<span></button>';?>
@@ -805,12 +805,12 @@ $('#button-review').bind('click', function() {
 		});
 	}
 
-	var quantity = <?php echo $quantity; ?>;
-	var isInCart ="<?php if ($isInCart) echo 'true'; else echo 'false' ?>";  // знаю, что пиздец, но по-другому не работало
+	   var quantity = <?php echo $quantity; ?>;
+		var isInCart ="<?php if ($isInCart) echo 'true'; else echo 'false' ?>";  // знаю, что пиздец, но по-другому не работало
 
 
-	function onPlusProduct(){
-		console.log($("#input-quantity"));
+	function onPlusProduct(quantity){
+		//console.log($("#input-quantity"));
 		var i = Number($("#input-quantity").val())+1;
 		if (i<=quantity) $("#input-quantity").val(i);
 	}
