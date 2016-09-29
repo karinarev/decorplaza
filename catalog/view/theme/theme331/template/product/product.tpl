@@ -556,16 +556,6 @@
 	</style>
 
 	<script>
-		function onPlusProduct(){
-			var i = Number($("#input-quantity").val())+1;
-			if (i<=quantity) $("#input-quantity").val(i);
-		}
-
-		function onMinusProduct(){
-			var i = Number($("#input-quantity").val())-1;
-			if (i>0) $("#input-quantity").val(i);
-		}
-		
 		function one_klick_close(){
 			$('#one_klick').hide();
 			$('#absolutes').hide();
@@ -815,6 +805,43 @@ $('#button-review').bind('click', function() {
 		});
 	}
 
+	var quantity = <?php echo $quantity; ?>;
+	var isInCart ="<?php if ($isInCart) echo 'true'; else echo 'false' ?>";  // знаю, что пиздец, но по-другому не работало
+
+
+	function onPlusProduct(){
+		var i = Number($("#input-quantity").val())+1;
+		if (i<=quantity) $("#input-quantity").val(i);
+	}
+
+	function onMinusProduct(){
+		var i = Number($("#input-quantity").val())-1;
+		if (i>0) $("#input-quantity").val(i);
+	}
+	function changeCartWhite(){
+		$(".cartIconProduct").css("background-image", "url(/image/cartWhite.png)");
+	}
+	function changeCartBlack(){
+		if (isInCart == 'false')
+			$(".cartIconProduct").css("background-image", "url(/image/cart.png)");
+	}
+
+	function changeButtonBrown(){
+		isInCart = "true";
+		var cartSpan = document.createElement("span");
+		var textSpan = document.createElement("span");
+		cartSpan.className = "icon cartIcon cartIconProduct";
+		$(textSpan).addClass("textInCart").text("В корзине");
+		$(".productCartButton").empty().removeClass("productCartButton").addClass("productInCartButton").prepend(textSpan).prepend(cartSpan);
+		$(".cartIconProduct").css("background-image", "url(/image/cartWhite.png)");
+		plusProductNumber($("#input-quantity").val());
+	}
+
+	function reviewSubmit(){
+		console.log(document.getElementById("form-review"));
+		document.getElementById("form-review").submit();
+	}
+
 function a(){
 	$.ajax({
 		url: 'index.php?route=product/product/add',
@@ -977,32 +1004,7 @@ $( document ).ready(function() {
 
 	}
 
-	var quantity = <?php echo $quantity; ?>;
-	var isInCart ="<?php if ($isInCart) echo 'true'; else echo 'false' ?>";  // знаю, что пиздец, но по-другому не работало
 
-	function changeCartWhite(){
-		$(".cartIconProduct").css("background-image", "url(/image/cartWhite.png)");
-	}
-	function changeCartBlack(){
-		if (isInCart == 'false')
-			$(".cartIconProduct").css("background-image", "url(/image/cart.png)");
-	}
-
-	function changeButtonBrown(){
-		isInCart = "true";
-		var cartSpan = document.createElement("span");
-		var textSpan = document.createElement("span");
-		cartSpan.className = "icon cartIcon cartIconProduct";
-		$(textSpan).addClass("textInCart").text("В корзине");
-		$(".productCartButton").empty().removeClass("productCartButton").addClass("productInCartButton").prepend(textSpan).prepend(cartSpan);
-		$(".cartIconProduct").css("background-image", "url(/image/cartWhite.png)");
-		plusProductNumber($("#input-quantity").val());
-	}
-
-	function reviewSubmit(){
-		console.log(document.getElementById("form-review"));
-		document.getElementById("form-review").submit();
-	}
 //--></script>
 <script type="text/javascript"><!--
 $('#tabs a').tabs();
