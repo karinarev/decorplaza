@@ -1288,6 +1288,8 @@ $(document).on('cbox_closed', function () {
 
 
 $( document ).ready(function() {
+	checkWindowSizeProduct();
+	
 	$("#button-cart").on("mouseover", function(event){
 		changeCartWhite();
 	});
@@ -1304,7 +1306,6 @@ $( document ).ready(function() {
 		$(".cartIconProduct").css("background-image", "url(/image/cartWhite.png)");
 
 
-	checkWindowSizeProduct();
 
 
 	$.ajax({
