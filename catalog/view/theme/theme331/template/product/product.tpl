@@ -880,9 +880,6 @@
 <?php foreach ($options as $option) { ?>
 <?php if ($option['type'] == 'file') { ?>
 <script type="text/javascript"><!--
-
-
-
 new AjaxUpload('#button-option-<?php echo $option['product_option_id']; ?>', {
 	action: 'index.php?route=product/product/upload',
 	name: 'file',
@@ -1144,8 +1141,7 @@ $(document).on('cbox_closed', function () {
 
 
 
-$( document ).ready(function() {
-	console.log('ready');
+$(document).on("ready", function() {
 	checkWindowSizeProduct();
 
 	$("#button-cart").on("mouseover", function(event){
@@ -1197,7 +1193,8 @@ $( document ).ready(function() {
 		timeFormat: 'h:m'
 	});
 	$('.time').timepicker({timeFormat: 'h:m'});
-	});
+
+});
 
 
 	$(window).resize(function(){
@@ -1205,7 +1202,6 @@ $( document ).ready(function() {
 	});
 
 	function checkWindowSizeProduct() {
-		console.log('fs');
 		var currWindowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 		if(currWindowWidth < 768){
 			$('#column-left').insertBefore('#content');
@@ -1296,7 +1292,6 @@ $( document ).ready(function() {
 					});
 
 
-			console.log(currWindowWidth);
 			if(currWindowWidth < 1280) {
 				if($('.featured-jcarousel').find('li.item').length <= 3){
 					$('.featured-jcarousel-wrapper .jcarousel-control-prev').css('display', 'none');
@@ -1304,8 +1299,6 @@ $( document ).ready(function() {
 				}
 			}
 			else{
-				console.log($('.featured-jcarousel').find('li.item'));
-				console.log($('.featured-jcarousel-wrapper .jcarousel-control-prev'));
 				if($('.featured-jcarousel').find('li.item').length <= 5){
 					$('.featured-jcarousel-wrapper .jcarousel-control-prev').css('display', 'none');
 					$('.featured-jcarousel-wrapper .jcarousel-control-next').css('display', 'none');
