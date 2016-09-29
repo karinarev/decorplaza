@@ -810,6 +810,7 @@ $('#button-review').bind('click', function() {
 
 
 	function onPlusProduct(){
+		console.log('plus');
 		var i = Number($("#input-quantity").val())+1;
 		if (i<=quantity) $("#input-quantity").val(i);
 	}
