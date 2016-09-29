@@ -114,10 +114,10 @@
 								<?php } ?>
 										<div class="form-group">
 											<div class="quantity">
-                  <button class="buttonMinus plusminus" onclick="onMinus();"></button>
+                  <button class="buttonMinus plusminus" onclick="onMinusProduct();"></button>
                   <input type="text" name="quantity" maxlength="3" disabled="disabled" value="<?php echo $minimum; ?>" size="2" id="input-quantity" class="form-control" />
                   <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
-                  <button class="buttonPlus plusminus" onclick="onPlus();"></button>
+                  <button class="buttonPlus plusminus" onclick="onPlusProduct();"></button>
 												</div>
                   <br />
 											<?php if ($isInCart) echo '<button type="button" id="button-cart" data-loading-text='.$text_loading.' class="btn productInCartButton btn-primary btn-lg btn-block button-cart"><span class="icon cartIcon cartIconProduct"></span><span>В корзине</span></button>'; else echo '<button type="button" id="button-cart" data-loading-text='.$text_loading.' onmouseover="changeCartWhite()" onmouseout="changeCartBlack()" onclick="changeButtonBrown()" class="btn productCartButton btn-primary btn-lg btn-block button-cart"><span class="icon cartIcon cartIconProduct"></span><span> В корзину<span></button>';?>
@@ -421,7 +421,7 @@
     <input id="tab33" type="radio" name="tabs" onchange="$('#form-review').css('display', 'none')">
     <label for="tab33" title="ОПЛАТА">ВИДЕО</label>
     <section id="content11">
-        <?php echo $description; ?>
+		<?php echo $description."<br>".$description2; ?>
     </section>
     <section id="content22">
         <div class="tab-pane" id="tab-review">
@@ -958,12 +958,12 @@ $( document ).ready(function() {
 	var quantity = <?php echo $quantity; ?>;
 	var isInCart ="<?php if ($isInCart) echo 'true'; else echo 'false' ?>";  // знаю, что пиздец, но по-другому не работало
 
-	function onPlus(){
+	function onPlusProduct(){
 		var i = Number($("#input-quantity").val())+1;
 		if (i<=quantity) $("#input-quantity").val(i);
 	}
 
-	function onMinus(){
+	function onMinusProduct(){
 		var i = Number($("#input-quantity").val())-1;
 		if (i>0) $("#input-quantity").val(i);
 	}
