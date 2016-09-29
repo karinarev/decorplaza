@@ -89,7 +89,7 @@
 		</div>
 		<br><br>
 		<span class=footerInfo>2018-2016 Декор-плаза.<br/>
-		Дизайн сайта <a href="www.behance.net/ekso-design" class="designerA">Соседова Екатерина</a></span>
+		Дизайн сайта Соседова Екатерина</span>
 		
 	</div>
 	
