@@ -1141,7 +1141,7 @@ $(document).on('cbox_closed', function () {
 
 
 
-$(document).on("ready", function() {
+$(window).load(function()  {
 	checkWindowSizeProduct();
 
 	$("#button-cart").on("mouseover", function(event){
