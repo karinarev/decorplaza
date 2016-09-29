@@ -810,9 +810,13 @@ $('#button-review').bind('click', function() {
 
 
 	function onPlusProduct(quantity){
-		//console.log($("#input-quantity"));
 		var i = Number($("#input-quantity").val())+1;
-		if (i<=quantity) $("#input-quantity").val(i);
+		if (i<=quantity) {
+			console.log('sdf');
+			$("#input-quantity").val(i);
+		}
+
+		console.log("input = " + $("#input-quantity") + "; val = " + $("#input-quantity").val() + "; quant " + quantity);
 	}
 
 	function onMinusProduct(){
