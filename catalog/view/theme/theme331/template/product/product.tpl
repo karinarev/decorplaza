@@ -828,10 +828,23 @@ function a(){
 $(document).on("change", ".option", a);
 //$(document).on("keyup", "#bc", a);
 
+
+	function onPlusProduct(){
+		var i = Number($("#input-quantity").val())+1;
+		if (i<=quantity) $("#input-quantity").val(i);
+	}
+
+	function onMinusProduct(){
+		var i = Number($("#input-quantity").val())-1;
+		if (i>0) $("#input-quantity").val(i);
+	}
+	
 $( document ).ready(function() {
 	$("#button-cart").on("mouseover", function(event){
 		changeCartWhite();
 	});
+
+
 
 	$('.colorbox').colorbox({
 		overlayClose: true,
@@ -957,16 +970,6 @@ $( document ).ready(function() {
 
 	var quantity = <?php echo $quantity; ?>;
 	var isInCart ="<?php if ($isInCart) echo 'true'; else echo 'false' ?>";  // знаю, что пиздец, но по-другому не работало
-
-	function onPlusProduct(){
-		var i = Number($("#input-quantity").val())+1;
-		if (i<=quantity) $("#input-quantity").val(i);
-	}
-
-	function onMinusProduct(){
-		var i = Number($("#input-quantity").val())-1;
-		if (i>0) $("#input-quantity").val(i);
-	}
 
 	function changeCartWhite(){
 		$(".cartIconProduct").css("background-image", "url(/image/cartWhite.png)");
