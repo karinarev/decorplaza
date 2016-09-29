@@ -1141,6 +1141,65 @@ $(document).on('cbox_closed', function () {
 		});
 	});
 
+
+
+
+$( document ).ready(function() {
+	console.log('ready');
+	checkWindowSizeProduct();
+
+	$("#button-cart").on("mouseover", function(event){
+		changeCartWhite();
+	});
+
+
+	$('.colorbox').colorbox({
+		overlayClose: true,
+		opacity: 0.5,
+		rel: "colorbox"
+	});
+
+	if (isInCart=="true")
+		$(".cartIconProduct").css("background-image", "url(/image/cartWhite.png)");
+
+
+
+	$.ajax({
+		url: 'index.php?route=product/product/add',
+		type: 'post',
+		data: $('.product-info input[type=\'text\'], .product-info input[type=\'hidden\'], .product-info input[type=\'radio\']:checked, .product-info input[type=\'checkbox\']:checked, .product-info select, .product-info textarea'),
+		dataType: 'json',
+		success: function(json) {
+			$('.success, .warning, .attention, information, .error').remove();
+			if (json['error']) {
+				if (json['error']['option']) {
+					for (i in json['error']['option']) {
+						$('#option-' + i).after('<span class="error">' + json['error']['option'][i] + '</span>');
+					}
+				}
+			}
+			if (json['success']) {
+				html = '';
+				$.each(json.oprice, function(i, object) {
+					html += object;
+				});
+				$('.pandc').html(html);
+			}
+		}
+	});
+	if ($.browser.msie && $.browser.version == 6) {
+		$('.date, .datetime, .time').bgIframe();
+	}
+
+	$('.date').datepicker({dateFormat: 'yy-mm-dd'});
+	$('.datetime').datetimepicker({
+		dateFormat: 'yy-mm-dd',
+		timeFormat: 'h:m'
+	});
+	$('.time').timepicker({timeFormat: 'h:m'});
+	});
+
+
 	$(window).resize(function(){
 		checkWindowSizeProduct();
 	});
@@ -1285,63 +1344,6 @@ $(document).on('cbox_closed', function () {
 
 		}
 	}
-
-
-$( document ).ready(function() {
-	checkWindowSizeProduct();
-	
-	$("#button-cart").on("mouseover", function(event){
-		changeCartWhite();
-	});
-
-
-
-	$('.colorbox').colorbox({
-		overlayClose: true,
-		opacity: 0.5,
-		rel: "colorbox"
-	});
-
-	if (isInCart=="true")
-		$(".cartIconProduct").css("background-image", "url(/image/cartWhite.png)");
-
-
-
-
-	$.ajax({
-		url: 'index.php?route=product/product/add',
-		type: 'post',
-		data: $('.product-info input[type=\'text\'], .product-info input[type=\'hidden\'], .product-info input[type=\'radio\']:checked, .product-info input[type=\'checkbox\']:checked, .product-info select, .product-info textarea'),
-		dataType: 'json',
-		success: function(json) {
-			$('.success, .warning, .attention, information, .error').remove();
-			if (json['error']) {
-				if (json['error']['option']) {
-					for (i in json['error']['option']) {
-						$('#option-' + i).after('<span class="error">' + json['error']['option'][i] + '</span>');
-					}
-				}
-			}
-			if (json['success']) {
-				html = '';
-				$.each(json.oprice, function(i, object) {
-					html += object;
-				});
-				$('.pandc').html(html);
-			}
-		}
-	});
-	if ($.browser.msie && $.browser.version == 6) {
-		$('.date, .datetime, .time').bgIframe();
-	}
-
-	$('.date').datepicker({dateFormat: 'yy-mm-dd'});
-	$('.datetime').datetimepicker({
-		dateFormat: 'yy-mm-dd',
-		timeFormat: 'h:m'
-	});
-	$('.time').timepicker({timeFormat: 'h:m'});
-	});
 
 	$(".various").fancybox({
 		maxWidth	: 150,
