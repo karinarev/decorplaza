@@ -1257,16 +1257,20 @@ $( document ).ready(function() {
 						wrap: 'circular'
 					});
 
+
+			console.log(currWindowWidth);
 			if(currWindowWidth < 1280) {
 				if($('.featured-jcarousel').find('li.item').length <= 3){
-					$('.jcarousel-control-prev').css('display', 'none');
-					$('.jcarousel-control-next').css('display', 'none');
+					$('.featured-jcarousel-wrapper .jcarousel-control-prev').css('display', 'none');
+					$('.featured-jcarousel-wrapper .jcarousel-control-next').css('display', 'none');
 				}
 			}
 			else{
+				console.log($('.featured-jcarousel').find('li.item'));
+				console.log($('.featured-jcarousel-wrapper .jcarousel-control-prev'));
 				if($('.featured-jcarousel').find('li.item').length <= 5){
-					$('.jcarousel-control-prev').css('display', 'none');
-					$('.jcarousel-control-next').css('display', 'none');
+					$('.featured-jcarousel-wrapper .jcarousel-control-prev').css('display', 'none');
+					$('.featured-jcarousel-wrapper .jcarousel-control-next').css('display', 'none');
 				}
 			}
 
