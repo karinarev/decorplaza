@@ -4,7 +4,8 @@
   <?php if ($category['children']) { ?>
   <div class="panel panel-default">
     <div class="panel-heading">
-      <a class="category-link" data-toggle="collapse" data-target="#collapse<?php echo $category['category_id']; ?>"><?php echo $category['name']; ?></a>
+      <a class="category-link-name" href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a>
+      <a class="category-link" data-toggle="collapse" data-target="#collapse<?php echo $category['category_id']; ?>"></a>
     </div>
     <div id="collapse<?php echo $category['category_id']; ?>" class="panel-collapse collapse in">
       <div class="panel-body">

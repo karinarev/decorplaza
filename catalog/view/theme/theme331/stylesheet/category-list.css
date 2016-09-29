@@ -18,7 +18,7 @@
 .category-panel .panel-default>.panel-heading a:link,
 .category-panel .panel-default>.panel-heading a:visited,
 .category-panel .panel-default>.panel-heading a:active,
-.category-link{
+.category-link-name{
     color: white;
     font-size: 12px;
     font-weight: 700;
@@ -28,7 +28,7 @@
 }
 
 .category-panel .panel-heading a:focus,
-.category-link:focus{
+.category-link-name:focus{
     text-decoration: none;
 }
 
@@ -79,8 +79,6 @@ ul.box-category-children>li:hover>a{
     color: white !important;
 }
 
-
-
-a:hover{
-    color: #c49849;
+a:hover, .category-link-name:hover{
+    color: #c49849 !important;
 }
