@@ -1257,7 +1257,9 @@ $( document ).ready(function() {
 								$('.jcarousel-control-prev').css('display', 'none');
 								$('.jcarousel-control-next').css('display', 'none');
 							}
-						} else{
+						}
+						else{
+							console.log($('.featured-jcarousel').find('li.item').length);
 							if($('.featured-jcarousel').find('li.item').length <= 5){
 								$('.jcarousel-control-prev').css('display', 'none');
 								$('.jcarousel-control-next').css('display', 'none');
