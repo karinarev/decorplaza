@@ -71,7 +71,7 @@ ul.box-category-children>li{
     padding-left: 10px;
 }
 
-ul.box-category-children>li:hover{
+ul.box-category-children>li:hover, ul.box-category-children>li.active{
     background: #adacac;
 }
 
