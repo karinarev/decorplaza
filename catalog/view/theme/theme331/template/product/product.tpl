@@ -1141,31 +1141,12 @@ $(document).on('cbox_closed', function () {
 		});
 	});
 
-
-$( document ).ready(function() {
-	$("#button-cart").on("mouseover", function(event){
-		changeCartWhite();
-	});
-
-
-
-	$('.colorbox').colorbox({
-		overlayClose: true,
-		opacity: 0.5,
-		rel: "colorbox"
-	});
-
-	if (isInCart=="true")
-		$(".cartIconProduct").css("background-image", "url(/image/cartWhite.png)");
-
-
-	checkWindowSizeProduct();
-
 	$(window).resize(function(){
 		checkWindowSizeProduct();
 	});
 
 	function checkWindowSizeProduct() {
+		console.log('fs');
 		var currWindowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 		if(currWindowWidth < 768){
 			$('#column-left').insertBefore('#content');
@@ -1236,9 +1217,7 @@ $( document ).ready(function() {
 
 		}
 		else {
-
 			var jcarousel = $('.featured-jcarousel');
-
 			jcarousel
 					.on('jcarousel:reload jcarousel:create', function () {
 						var carousel = $(this),
@@ -1274,10 +1253,6 @@ $( document ).ready(function() {
 				}
 			}
 
-
-
-
-
 			$('.jcarousel-control-prev')
 					.jcarouselControl({
 						target: '-=1'
@@ -1310,6 +1285,27 @@ $( document ).ready(function() {
 
 		}
 	}
+
+
+$( document ).ready(function() {
+	$("#button-cart").on("mouseover", function(event){
+		changeCartWhite();
+	});
+
+
+
+	$('.colorbox').colorbox({
+		overlayClose: true,
+		opacity: 0.5,
+		rel: "colorbox"
+	});
+
+	if (isInCart=="true")
+		$(".cartIconProduct").css("background-image", "url(/image/cartWhite.png)");
+
+
+	checkWindowSizeProduct();
+
 
 	$.ajax({
 		url: 'index.php?route=product/product/add',
