@@ -110,7 +110,14 @@
                                                    <?php echo str_replace('р.', ' </span>р.', $price); ?>
 					   					    	</span>
                                              </span>
-										<?php }?>
+										<?php } else { ?>
+										<span class="price-new ">
+                                       <span itemprop="offers" itemscope itemtype="http://schema.org/Offer"  class="opprice">
+                                                <span itemprop="price">
+                                                   <?php echo str_replace('р.', ' </span>р.', $special); ?>
+					   					    	</span>
+                                             </span>
+											<?php } ?>
 								<?php } ?>
 										<div class="form-group">
 											<div class="quantity">
@@ -549,6 +556,16 @@
 	</style>
 
 	<script>
+		function onPlusProduct(){
+			var i = Number($("#input-quantity").val())+1;
+			if (i<=quantity) $("#input-quantity").val(i);
+		}
+
+		function onMinusProduct(){
+			var i = Number($("#input-quantity").val())-1;
+			if (i>0) $("#input-quantity").val(i);
+		}
+		
 		function one_klick_close(){
 			$('#one_klick').hide();
 			$('#absolutes').hide();
@@ -829,16 +846,8 @@ $(document).on("change", ".option", a);
 //$(document).on("keyup", "#bc", a);
 
 
-	function onPlusProduct(){
-		var i = Number($("#input-quantity").val())+1;
-		if (i<=quantity) $("#input-quantity").val(i);
-	}
 
-	function onMinusProduct(){
-		var i = Number($("#input-quantity").val())-1;
-		if (i>0) $("#input-quantity").val(i);
-	}
-	
+
 $( document ).ready(function() {
 	$("#button-cart").on("mouseover", function(event){
 		changeCartWhite();
