@@ -350,7 +350,7 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 				</div>
 				<div class="col-md-4 col-sm-4 col-xs-12">
 					<div class="panel panel-default">
-						<a href="<?php echo $special; ?>">
+						<a href="/discounts">
 							<div class="panel-heading">
 								Акции и скидки
 							</div>
