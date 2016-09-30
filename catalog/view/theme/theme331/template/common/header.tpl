@@ -322,7 +322,7 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 							<ul class="list-group categoryUl">
 								<?php $i=0; ?>
 								<?php foreach ($categories as $category) if ($i<6){ if (!empty($category['children'])){ ?>
-								<?php echo ("<a class='categoryA' href='". $category['href'] ."' onmouseover='subcategoryBlockShow(". $i .");'><li class='categoryLi'>" . $category['name'] . "<span class='pointerSpan'></span></li></a>"); ?>
+								<?php echo ("<a class='categoryA' href='". $category['href'] ."' onmouseover='subcategoryBlockShow(event, ". $i .");'><li class='categoryLi'>" . $category['name'] . "<span class='pointerSpan'></span></li></a>"); ?>
 								<?php } else { ?>
 								<?php echo ("<a class='categoryA' href='". $category['href'] ."' ><li class='categoryLi'>" . $category['name'] . "</li></a>"); }?>
 								<?php $i++; ?>

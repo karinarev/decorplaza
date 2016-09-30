@@ -366,7 +366,7 @@ function callBackSend(){
 	}
 }
 
-function subcategoryBlockShow(categoryNumber){
+function subcategoryBlockShow(event, categoryNumber){
 	var categoryBlock = event.target;
 	$(".collapseHorizontal>ul").empty();
 	var category = categories[categoryNumber];
