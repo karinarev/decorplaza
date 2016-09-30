@@ -7,12 +7,11 @@
 <?php } ?>
 <?php echo $column_left; ?>
 		<div class="<?php if ($column_left or $column_right) { ?>col-sm-9<?php } ?> <?php if (!$column_left & !$column_left) { ?>col-sm-12  <?php } ?> <?php if ($column_left & $column_right) { ?>col-sm-6<?php } ?>" id="content"><?php echo $content_top; ?>
-  <div class="breadcrumb">
-			<?php foreach ($breadcrumbs as $i=> $breadcrumb) { ?>
-			<?php echo $breadcrumb['separator']; ?><?php if($i+1<count($breadcrumbs)) { ?><a href="<?php echo $breadcrumb['href']; ?>">
-			<?php echo $breadcrumb['text']; ?></a> <?php } else { ?><?php echo $breadcrumb['text']; ?><?php } ?>
-			<?php } ?>
-		</div>
+			<ul class="breadcrumb">
+				<?php foreach ($breadcrumbs as $breadcrumb) { ?>
+				<li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+				<?php } ?>
+			</ul>
   <h1><?php echo $heading_title; ?></h1>
   <div class="box-container">
 	  <div class="login-content row">
