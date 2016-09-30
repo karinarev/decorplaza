@@ -1,27 +1,13 @@
 <?php echo $header; ?>
 <?php echo $column_left; ?>
 		<div class="<?php if ($column_left or $column_right) { ?>col-sm-9<?php } ?> <?php if (!$column_left & !$column_left) { ?>col-sm-12  <?php } ?> <?php if ($column_left & $column_right) { ?>col-sm-6<?php } ?>" id="content"><?php echo $content_top; ?>
-  <div class="breadcrumb">
-    <?php/* foreach ($breadcrumbs as $breadcrumb) { ?>
-    <?php echo $breadcrumb['separator']; ?><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
-    <?php } */?>
-	
-	<?php
-	foreach ($breadcrumbs as $key => $breadcrumb) {
-		  if($key == end($array)) {
-				echo $breadcrumb['separator'].'<a href="'. $breadcrumb['href']. '">'.$breadcrumb['text'].'</a>';
-		  }
-		  else {
-				echo $breadcrumb['separator']. $breadcrumb['text'];
-		  }
-		}
-	
-	?>
-	
-	
-  </div>
-  <h1><?php echo $heading_title; ?></h1>
-  <div class="box-container">
+    <ul class="breadcrumb">
+        <?php foreach ($breadcrumbs as $breadcrumb) { ?>
+        <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+        <?php } ?>
+    </ul>
+  <h3 class="map-header"><?php echo $heading_title; ?></h3>
+  <div class="box-container map-container">
     <div class="sitemap-info row">
     <div class=" col-sm-6">
       <ul>
@@ -69,7 +55,7 @@
             <li><a href="<?php echo $contact; ?>"><?php echo $text_contact; ?></a></li>
           </ul>
         </li>
-		<li>Бранд
+		<li>Производители
 		<ul>
 		<?php $list_brands  = $this->db->query("SELECT * FROM `" . DB_PREFIX . "manufacturer` ORDER BY name ASC");
  

@@ -288,17 +288,17 @@
 <script type="text/javascript"><!--
 
 	$(window).resize(function(){
-		checkWindowSize();
+		checkWindowSizeCategory();
 
 	});
 
 	$(document).ready(function () {
 		$('#ajaxcartloadimg').hide();
-		checkWindowSize();
+		checkWindowSizeCategory();
 
 
 
-		function checkWindowSize(){
+		function checkWindowSizeCategory(){
 			currWindowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 			if(currWindowWidth > 767) {
 				$('.category-item').hover(

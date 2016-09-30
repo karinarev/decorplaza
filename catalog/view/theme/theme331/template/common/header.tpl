@@ -302,7 +302,7 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 					<img src="/image/location.png">
 				</div>
 				<div class="col-md-2 col-sm-3 col-xs-9">
-					<a href="https://yandex.ru/maps/10716/balashiha/?z=15&ll=37.887561%2C55.750140&l=map&origin=jsapi_2_1_41&from=api-maps&um=constructor%3AsXf1ofePV3VE-_X4NL8Z2zh8nC9LIRLe&mode=search&ol=biz&oid=1099254618">
+					<a  href="<?php echo $contact; ?>">
 						<span class="headerBigText" id="ourAdress">Наш адрес:</span><br/>
 						<span class="headerText">г. Москва, м. "Новокосино",</span><br/>
 						<span class="headerText">Носовихинское шоссе вл., 4.</span><br/>

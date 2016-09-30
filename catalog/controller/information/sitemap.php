@@ -3,9 +3,10 @@ class ControllerInformationSitemap extends Controller {
 	public function index() {
     	$this->language->load('information/sitemap');
  
-		$this->document->setTitle($this->language->get('heading_title')); 
+		$this->document->setTitle($this->language->get('heading_title'));
+		$this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/account.css');
 
-      	$this->data['breadcrumbs'] = array();
+		$this->data['breadcrumbs'] = array();
 
       	$this->data['breadcrumbs'][] = array(
         	'text'      => $this->language->get('text_home'),

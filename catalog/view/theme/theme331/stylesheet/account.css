@@ -1,0 +1,248 @@
+.breadcrumb{
+    background: none;
+    border: none;
+    padding-left: 0;
+    letter-spacing: 1px;
+    font-family: "OpenSans";
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-bottom: 20px !important;
+}
+
+.breadcrumb > li{
+    padding-left: 0;
+}
+.breadcrumb a.last{
+    color: #777;
+}
+
+.breadcrumb > li + li:before{
+    content: '>';
+    color: #777;
+    padding: 0 10px;
+}
+
+
+.breadcrumb > li > a{
+    color: #777;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h3.register-header, h3.map-header{
+    margin-bottom: 30px;
+    color: #1b1b1b;
+    font-family: "BodoniItalic";
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 9px;
+}
+
+body{
+    background: #f4f4f4;
+}
+
+a:hover{
+    color: #c49849;
+}
+.sitemap-info ul li a{
+    letter-spacing: normal;
+}
+.register-container h2, .sitemap-info ul li{
+    color: #c49849;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'OpenSans';
+}
+
+.required, .error{
+    color: #8e0000 !important;
+}
+
+.center{
+    text-align: center;
+}
+
+.buttons a{
+    width: 261px;
+    height: 50px;
+    border: 2px solid #c49849;
+    border-radius: 25px;
+    background: none;
+    box-shadow: none;
+}
+
+.buttons a span{
+    color: #c49849;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.buttons a:hover{
+    background: #c49849;
+}
+
+.buttons a:hover span{
+    color: white;
+}
+
+.register-container input[type="text"], .register-container input[type="password"]{
+    border: none;
+    height: 40px;
+    font-family: 'OpenSans';
+    width: 400px;
+}
+
+#inputCountry-styler, #inputZone-styler{
+    text-align: center;
+    width: 400px;
+}
+
+#inputCountry-styler.opened .jq-selectbox__select,
+#inputZone-styler.opened .jq-selectbox__select{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#inputCountry-styler .jq-selectbox__select,
+#inputZone-styler .jq-selectbox__select{
+    height: 38px;
+    background: none;
+    background-color: white;
+    border-radius: 19px;
+    border: none;
+    box-shadow: none;
+    padding-right: 0;
+
+    padding-top: 7px;
+    text-align: center;
+
+    color: #777775;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+
+#inputCountry-styler .jq-selectbox__select:focus,
+#inputCountry-styler:focus,
+#inputCountry-styler .focused .jq-selectbox__select
+#inputZone-styler .jq-selectbox__select:focus,
+#inputZone-styler:focus,
+#inputZone-styler .focused .jq-selectbox__select{
+    outline: none;
+    border: none !important;
+}
+
+#inputCountry-styler .jq-selectbox__select:active,
+#inputCountry-styler .jq-selectbox__select:hover,
+#inputZone-styler .jq-selectbox__select:active,
+#inputZone-styler .jq-selectbox__select:hover{
+    background: white;
+    box-shadow: none;
+}
+
+#inputZone-styler .jq-selectbox__dropdown,
+#inputCountry-styler .jq-selectbox__dropdown{
+    border: none;
+    box-shadow: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    color: #777775;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    text-transform: uppercase;
+    margin-top: -5px;
+    letter-spacing: 1px;
+
+}
+
+#inputCountry-styler li,
+#inputZone-styler li{
+    color: #777775;
+}
+
+#inputCountry-styler li:hover, #inputCountry-styler li.selected,
+#inputZone-styler li:hover, #inputZone-styler li.selected{
+    background-color: #c49849;
+    border-radius: 20px;
+}
+
+#inputZone-styler .jq-selectbox__trigger,
+#inputCountry-styler .jq-selectbox__trigger{
+    border: none;
+}
+
+#inputCountry-styler .jq-selectbox__trigger-arrow,
+#inputZone-styler .jq-selectbox__trigger-arrow
+{
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    padding-top: 7px;
+    padding-left: 2px;
+    border: none;
+    border-radius: 50%;
+    background: #c49849;
+    color: white;
+    text-shadow: none;
+}
+
+#inputCountry-styler .jq-selectbox__trigger-arrow i,
+#inputZone-styler .jq-selectbox__trigger-arrow i{
+    font-size: 2em;
+}
+
+#inputZone-styler.opened .jq-selectbox__trigger-arrow,
+#inputCountry-styler.opened .jq-selectbox__trigger-arrow{
+    background: none;
+}
+
+@media all and (max-width: 1279px) {
+    .container{
+        padding: 0;
+        margin: 0;
+    }
+
+    .form-horizontal .control-label{
+        text-align: left;
+    }
+
+    .register-container .col-sm-7{
+        width: 100% !important;
+    }
+}
+
+@media all and (max-width: 1279px) {
+    .container{
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .register-container input[type="text"], .register-container input[type="password"]{
+        width: 100%;
+    }
+
+    #inputCountry-styler, #inputZone-styler{
+        width: 100%;
+    }
+}

@@ -6,14 +6,14 @@
 <?php } ?>
 <?php echo $column_left; ?>
 		<div class="<?php if ($column_left or $column_right) { ?>col-sm-9<?php } ?> <?php if (!$column_left & !$column_left) { ?>col-sm-12  <?php } ?> <?php if ($column_left & $column_right) { ?>col-sm-6<?php } ?>" id="content"><?php echo $content_top; ?>
-  <div class="breadcrumb">
-	<?php foreach ($breadcrumbs as $breadcrumb) { ?>
-	<?php echo $breadcrumb['separator']; ?><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
-	<?php } ?>
-  </div>
-  <h1><?php echo $heading_title; ?></h1>
+		<ul class="breadcrumb">
+			<?php foreach ($breadcrumbs as $breadcrumb) { ?>
+			<li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+			<?php } ?>
+		</ul>
+		<h3 class="register-header"><?php echo $heading_title; ?></h3>
   
-  <div class="box-container">
+  <div class="box-container register-container">
   <p><?php echo $text_account_already; ?></p>
 	  <form class="form-horizontal" action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="register">
 		<h2><?php echo $text_your_details; ?></h2>
@@ -200,8 +200,7 @@
 					<div class="form-group">
 						<label class="control-label col-sm-5" for="country_id"><?php echo $entry_country; ?></label>
 						<div class="controls col-sm-7">
-							<select name="country_id">
-							<option value=""><?php echo $text_select; ?></option>
+							<select name="country_id" id="inputCountry">
 							<?php foreach ($countries as $country) { ?>
 							<?php if ($country['country_id'] == $country_id) { ?>
 							<option value="<?php echo $country['country_id']; ?>" selected="selected"><?php echo $country['name']; ?></option>
@@ -222,7 +221,7 @@
 					<div class="form-group">
 						<label class="control-label col-sm-5" for="zone_id"><?php echo $entry_zone; ?></label>
 						<div class="controls col-sm-7">
-							<select name="zone_id">
+							<select name="zone_id" id="inputZone">
 							</select>
 							<?php if ($error_zone) { ?>
 							<span class="error help-inline"><?php echo $error_zone; ?></span>
@@ -299,7 +298,7 @@
 		</div>
 		<?php if ($text_agree) { ?>
 		<div class="buttons">
-		  <div class="right">
+		  <div class="center">
 			<label class="checkbox inline" >
 			
 			<?php if ($agree) { ?>
@@ -314,7 +313,7 @@
 		</div>
 		<?php } else { ?>
 		<div class="buttons">
-		  <div class="right">
+		  <div class="center">
 			<a onclick="$('#register').submit();" class="button"><span><?php echo $button_continue; ?></span></a>
 		  </div>
 		</div>
@@ -326,6 +325,7 @@
 <?php echo $column_right; ?>
 
 <script type="text/javascript"><!--
+
 $('input[name=\'customer_group_id\']:checked').live('change', function() {
 	var customer_group = [];
 	
@@ -401,6 +401,20 @@ $('select[name=\'country_id\']').bind('change', function() {
 			}
 			
 			$('select[name=\'zone_id\']').html(html);
+			$('#inputZone').styler({
+				onSelectOpened: function () {
+					$('li.sel').css({'display' : 'none'});
+				},
+				onFormStyled: function () {
+					if ($('#inputCountry option').size() == 1) {
+						var styler = $('#inputCountry-styler');
+						styler.css({'cursor' : 'auto'});
+						styler.find('.jq-selectbox__trigger-arrow').css({'display' : 'none'});
+					}
+				}
+			});
+
+			$('.jq-selectbox__trigger-arrow').html('<i class="fa fa-angle-right" aria-hidden="true"></i>');
 		},
 		error: function(xhr, ajaxOptions, thrownError) {
 			alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
@@ -415,6 +429,21 @@ $(document).ready(function() {
 	$('.colorbox').fancybox({
 		
 	});
+
+	$('#inputCountry').styler({
+		onSelectOpened: function () {
+			$('li.sel').css({'display' : 'none'});
+		},
+		onFormStyled: function () {
+			if ($('#inputCountry option').size() == 1) {
+				var styler = $('#inputCountry-styler');
+				styler.css({'cursor' : 'auto'});
+				styler.find('.jq-selectbox__trigger-arrow').css({'display' : 'none'});
+			}
+		}
+	});
+
+	$('.jq-selectbox__trigger-arrow').html('<i class="fa fa-angle-right" aria-hidden="true"></i>');
 });
 //--></script> 
 <?php echo $footer; ?>

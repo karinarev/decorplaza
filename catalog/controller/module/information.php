@@ -2,8 +2,11 @@
 class ControllerModuleInformation extends Controller {
 	protected function index() {
 		$this->language->load('module/information');
-		
-    	$this->data['heading_title'] = $this->language->get('heading_title');
+
+		$this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/category-list.css');
+
+
+		$this->data['heading_title'] = $this->language->get('heading_title');
     	
 		$this->data['text_contact'] = $this->language->get('text_contact');
     	$this->data['text_sitemap'] = $this->language->get('text_sitemap');
