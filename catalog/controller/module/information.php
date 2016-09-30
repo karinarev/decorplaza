@@ -5,7 +5,6 @@ class ControllerModuleInformation extends Controller {
 
 		$this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/category-list.css');
 
-
 		$this->data['heading_title'] = $this->language->get('heading_title');
     	
 		$this->data['text_contact'] = $this->language->get('text_contact');
@@ -16,10 +15,12 @@ class ControllerModuleInformation extends Controller {
 		$this->data['informations'] = array();
 
 		foreach ($this->model_catalog_information->getInformations() as $result) {
-      		$this->data['informations'][] = array(
-        		'title' => $result['title'],
-	    		'href'  => $this->url->link('information/information', 'information_id=' . $result['information_id'])
-      		);
+			if($result['sort_order'] != -1) {
+				$this->data['informations'][] = array(
+					'title' => $result['title'],
+					'href' => $this->url->link('information/information', 'information_id=' . $result['information_id'])
+				);
+			}
     	}
 
 		$this->data['contact'] = $this->url->link('information/contact');
