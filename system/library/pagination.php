@@ -33,7 +33,7 @@ class Pagination {
 
 		$this->url = str_replace('%7Bpage%7D', '{page}', $this->url);
 
-		$output = '<span class="sort-span">Страница:</span><ul class="pagination">';
+		$output = '<div><span class="sort-span">Страница:</span></div><ul class="pagination">';
 
 		if ($num_pages > 1) {
 			$start = 1;

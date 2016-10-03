@@ -26,7 +26,7 @@ h3{
 .alphabet a:link, .alphabet a:visited{
     color: #777;
     font-size: 14px;
-    padding: 10px 15px;
+    padding: 6px 15px;
 }
 
 .short-name{
@@ -142,13 +142,14 @@ h3{
 }
 
 .pagination {
-    margin: -11px 10px;
-    padding-top: 10px;
+    margin: 0;
+    padding-top: 0;
     width: auto;
 }
 
 .pagination{
     margin-bottom: 0px;
+    float: left;
 }
 
 .mobile-pagination a.sort-link,
@@ -158,6 +159,12 @@ h3{
     color: #777;
     cursor: pointer;
     font-size: 12px;
+}
+
+.mobile-pagination .sort-span{
+    width: 100%;
+    display: block;
+    padding-top: 5px;
 }
 
 .mobile-pagination{
@@ -278,6 +285,7 @@ h3{
         font-weight: 600;
         line-height: 24px;
         text-transform: uppercase;
+        padding-left: 10px;
     }
 
     .mobile-pagination .category-divider{

@@ -43,7 +43,7 @@ class ControllerProductManufacturer extends Controller {
 				$page = 1;
 			}
 
-			$limit = 9;
+			$limit = 5;
 
 			$data = array(
 				'start'              => ($page - 1) * $limit,
