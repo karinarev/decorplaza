@@ -79,9 +79,6 @@ class ModelCatalogManufacturer extends Model {
 		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_to_category ptc LEFT JOIN " . DB_PREFIX . "product p ON (ptc.product_id = p.product_id) 
 		WHERE ptc.category_id = ".(int)$catId." AND p.manufacturer_id = ".(int)$manufacturer_id." AND p.status=1");
 		
-		
-	
-	
 		return count($query->rows);
 	}
 }
