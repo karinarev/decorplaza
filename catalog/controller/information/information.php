@@ -65,7 +65,9 @@ private $error = array();
 		}
    		
 		if ($information_info) {
-		
+
+			$this->document->addStyle('catalog/view/theme/' . $this->config->get('config_template') . '/stylesheet/information.css');
+
 			$this->language->load('information/contact');
 			$this->data['text_location'] = $this->language->get('text_location');
 			$this->data['text_contact'] = $this->language->get('text_contact');
