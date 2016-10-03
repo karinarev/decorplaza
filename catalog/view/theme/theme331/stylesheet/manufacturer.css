@@ -109,7 +109,7 @@ h3{
 }
 
 .pagination>li>a, .pagination>li>span {
-    padding: 6px 12px;
+    padding: 6px 12px !important;
     margin-left: -1px;
     line-height: 1.42857143;
     color: #777;
