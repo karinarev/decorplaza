@@ -1818,10 +1818,14 @@ a.button i {
 a.button {
     width: 261px;
     height: 50px;
+    display: block;
     border: 2px solid #c49849;
     border-radius: 25px;
     background: none;
     box-shadow: none;
+    text-align: center;
+    padding-top: 8px;
+    margin: auto;
 }
 
 a.button span {
