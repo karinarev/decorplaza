@@ -191,9 +191,6 @@ $this->load->model('catalog/manufacturer');
 	}
 
 	public function feedBack(){
-		$this->redirect($this->url->link('catalog/attribute', 'token=' . $this->session->data['token'] , 'SSL'));
-
-		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->request->post['mode'] == 'feedbackForm') {
 
 			$text = '<p>Сообщение с формы обратного звонка.</p> <p>Номер телефона - '.$this->request->post['phone'].'</p>';
 			$mail = new Mail();
@@ -208,8 +205,7 @@ $this->load->model('catalog/manufacturer');
 			$mail->setSubject(html_entity_decode(sprintf($this->language->get('email_subject')), ENT_QUOTES, 'UTF-8'));
 			$mail->setText(strip_tags(html_entity_decode($text, ENT_QUOTES, 'UTF-8')));
 			$mail->send();
-
-		}
+		
 	}
 }
 ?>
