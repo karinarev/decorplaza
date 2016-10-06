@@ -192,15 +192,14 @@ $this->load->model('catalog/manufacturer');
 
 	public function feedBack(){
 
-			$text = '<p>Сообщение с формы обратного звонка.</p> <p>Номер телефона - '.$this->request->post['phone'].'</p>';
-			$mail = new Mail();
-			$mail->protocol = $this->config->get('config_mail_protocol');
-			$mail->parameter = $this->config->get('config_mail_parameter');
-			$mail->setTo($this->config->get('config_email'));
-			$mail->setSubject(html_entity_decode(sprintf($this->language->get('email_subject')), ENT_QUOTES, 'UTF-8'));
-			$mail->setText(strip_tags(html_entity_decode($text, ENT_QUOTES, 'UTF-8')));
-			$mail->send();
 
-	}
+			if (mail("123@polyfaust.com", "Обратный вызов", "Номер телефона: " . $this->request->post['phone']))	{
+				echo '<div class="c_success"></div>';
+			} else {
+				echo '<div class="c_error"></div>';
+			}
+		}
+
+
 }
 ?>
