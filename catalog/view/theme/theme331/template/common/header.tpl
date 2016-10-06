@@ -270,24 +270,9 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 					<img src="/image/call.png" id="callIcon">
 				</div>
 				<div class="col-md-2 col-sm-3 col-xs-9">
-					<!--div class="phone">                                                                       Это телефонные номера, по которым можно звонить
-            <div style="font-size:12px; font-weight:bold;   color: #EC1313;">Бесплатный звонок по России</div>
-               <ul>
-                    <li>
-                       <span><a style="font-size: 22px;   color: #EC1313;" href="tel:88005008978">8 (800) 500-89-78</a></span>
-                   </li>
-                   <li>
-                       <span><a style="font-size: 22px;"  href="tel:84954907474">8 (495) 490-74-74</a></span>
-                   </li>
-                   <li>
-                        <span><a style="font-size: 22px;"  href="tel:89260250008">8 (926) 025-00-08</a></span>
-                   </li>
-
-               </ul>
-           </div-->
-					<a href="tel:84993977912" class="headerBigText headerText telephoneNumber" id="firstNumber">8 (499) 397-79-12</a><br/>
-					<a href="tel:89253977912" class="headerText telephoneNumber" id="secondNumber">8 (925) 397-79-12</a><br/>
-					<a href="tel:89253977914" class="headerText telephoneNumber" id="thirdNumber">8 (925) 397-79-14</a>
+					<a href="tel:89253977913" class="headerBigText headerText telephoneNumber" id="firstNumber">8 (925) 397-79-13</a><br/>
+					<a href="tel:89253977914" class="headerText telephoneNumber" id="secondNumber">8 (925) 397-79-14</a><br/>
+					<a href="tel:89253977912" class="headerText telephoneNumber" id="thirdNumber">8 (499) 397-79-12</a>
 				</div>
 				<div class="col-md-1 col-sm-1 col-xs-3">
 					<img src="/image/callBack.png">
@@ -327,9 +312,6 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 								<?php echo ("<a class='categoryA' href='". $category['href'] ."' ><li class='categoryLi'>" . $category['name'] . "</li></a>"); }?>
 								<?php $i++; ?>
 								<?php } ?>
-								<!--li class="list-group-item" onclick="wallpapersCatalogCollapse(1);">Каталоги обоев<span id="1"/></li>
-								<li class="list-group-item" onclick="wallpapersCatalogCollapse(2);">Лучшие фрески от фабрики affresco<span id="2"/></li>
-								<li class="list-group-item" onclick="wallpapersCatalogCollapse(3);">Напольные покрытия<span id="3"/></li-->
 							</ul>
 						</div>
 					</div>

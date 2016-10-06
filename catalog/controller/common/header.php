@@ -188,6 +188,28 @@ $this->load->model('catalog/manufacturer');
 		}
 
 		$this->render();
-	} 	
+	}
+
+	public function feedBack(){
+		$this->redirect($this->url->link('catalog/attribute', 'token=' . $this->session->data['token'] , 'SSL'));
+
+		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->request->post['mode'] == 'feedbackForm') {
+
+			$text = '<p>Сообщение с формы обратного звонка.</p> <p>Номер телефона - '.$this->request->post['phone'].'</p>';
+			$mail = new Mail();
+			$mail->protocol = $this->config->get('config_mail_protocol');
+			$mail->parameter = $this->config->get('config_mail_parameter');
+			$mail->hostname = $this->config->get('config_smtp_host');
+			$mail->username = $this->config->get('config_smtp_username');
+			$mail->password = $this->config->get('config_smtp_password');
+			$mail->port = $this->config->get('config_smtp_port');
+			$mail->timeout = $this->config->get('config_smtp_timeout');
+			$mail->setTo($this->config->get('config_email'));
+			$mail->setSubject(html_entity_decode(sprintf($this->language->get('email_subject')), ENT_QUOTES, 'UTF-8'));
+			$mail->setText(strip_tags(html_entity_decode($text, ENT_QUOTES, 'UTF-8')));
+			$mail->send();
+
+		}
+	}
 }
 ?>

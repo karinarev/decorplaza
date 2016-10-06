@@ -362,8 +362,16 @@ function callBackSend(){
 	if ($("#callBackInput").val()=='')
 		alert("Заявка отклонена: введите телефон");
 	else {
-		alert("Заявка принята, ожидайте звонка");
-	}
+		$.ajax({
+			url: 'index.php?route=common/header/feedBack',
+			type: 'post',
+			data: 'mode=' + 'feedbackForm' + '&phone=' + $("#callBackInput").val(),
+			success: function () {
+				alert("Заявка принята, ожидайте звонка");
+			}
+		});
+
+}
 }
 
 function subcategoryBlockShow(event, categoryNumber){

@@ -3,27 +3,7 @@ class ControllerCommonFooter extends Controller {
 	protected function index() {
 		$this->language->load('common/footer');
 		
-		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->request->post['mode'] == 'feedbackForm' && $this->request->post['ch'] == 'y') {
-		
-			$text = '<p>Сообщение с формы обратного звонка.</p> <p>Имя - '.$this->request->post['name'].'.</p> <p>Номер телефона - '.$this->request->post['phone'].'</p>';
-			$mail = new Mail();
-			$mail->protocol = $this->config->get('config_mail_protocol');
-			$mail->parameter = $this->config->get('config_mail_parameter');
-			$mail->hostname = $this->config->get('config_smtp_host');
-			$mail->username = $this->config->get('config_smtp_username');
-			$mail->password = $this->config->get('config_smtp_password');
-			$mail->port = $this->config->get('config_smtp_port');
-			$mail->timeout = $this->config->get('config_smtp_timeout');				
-			$mail->setTo($this->config->get('config_email'));
-	  		$mail->setFrom($this->request->post['email']);
-	  		$mail->setSender($this->request->post['name']);
-	  		$mail->setSubject(html_entity_decode(sprintf($this->language->get('email_subject'), $this->request->post['name']), ENT_QUOTES, 'UTF-8'));
-	  		$mail->setText(strip_tags(html_entity_decode($text, ENT_QUOTES, 'UTF-8')));
-      		$mail->send();
-
-	  		$this->redirect($this->url->link('information/contact/success'));
-		}
-		
+			
 		
 		$this->data['text_information'] = $this->language->get('text_information');
 		$this->data['text_service'] = $this->language->get('text_service');
