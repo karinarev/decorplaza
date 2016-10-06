@@ -193,7 +193,7 @@ $this->load->model('catalog/manufacturer');
 	public function feedBack(){
 
 
-			mail($this->config->get('config_email'), (html_entity_decode("Обратный вызов", ENT_QUOTES, 'UTF-8')), "Номер телефона: " . $this->request->post['phone']);
+			mail($this->config->get('config_email'), "Callback", "Номер телефона: " . $this->request->post['phone']);
 
 		}
 
