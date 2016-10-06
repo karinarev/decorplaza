@@ -193,11 +193,8 @@ $this->load->model('catalog/manufacturer');
 	public function feedBack(){
 
 
-			if (mail("123@polyfaust.com", "Обратный вызов", "Номер телефона: " . $this->request->post['phone']))	{
-				echo '<div class="c_success"></div>';
-			} else {
-				echo '<div class="c_error"></div>';
-			}
+			mail($this->config->get('config_email'), (html_entity_decode("Обратный вызов", ENT_QUOTES, 'UTF-8')), "Номер телефона: " . $this->request->post['phone']);
+
 		}
 
 
