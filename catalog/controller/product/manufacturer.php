@@ -321,7 +321,7 @@ class ControllerProductManufacturer extends Controller {
 					$this->document->setTitle($manufacturer_category_info[1]['seo_title']);
 				} else {
 					
-					$this->document->setTitle('Купить ' . $manufacturer_category_category['namev'] . ' ' . $manufacturer_category_manufacturer['name'] . ' (' . $this->translit2rus($manufacturer_category_manufacturer['name']) . ') в ' .$cityformpred. '  недорого - italy-sumochka');
+					$this->document->setTitle('Купить ' . $manufacturer_category_category['namev'] . ' ' . $manufacturer_category_manufacturer['name'] . ' (' . $this->translit2rus($manufacturer_category_manufacturer['name']) . ') в ' .$cityformpred. '  недорого - Decor-plaza.ru');
 					
 				}
 				if ($manufacturer_category_info[1]['seo_h1']) {
@@ -332,7 +332,7 @@ class ControllerProductManufacturer extends Controller {
 				if ($manufacturer_category_info[1]['meta_description']) {
 					$this->document->setDescription($manufacturer_category_info[1]['meta_description']);
 				} else {
-					$this->document->setDescription('Заказывайте ' . $manufacturer_category_category['namev'] . ' ' . $manufacturer_category_manufacturer['name'] . ' в интернет магазине italy-sumochka. Самые выгодные условия, цены и доставка по всей России') ;
+					$this->document->setDescription('Заказывайте ' . $manufacturer_category_category['namev'] . ' ' . $manufacturer_category_manufacturer['name'] . ' в интернет магазине Decor-plaza.ru. Самые выгодные условия, цены и доставка по всей России') ;
 				}
 				
 				if ($manufacturer_category_info[1]['description']) {

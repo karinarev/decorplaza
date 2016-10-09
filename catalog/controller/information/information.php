@@ -52,7 +52,7 @@ private $error = array();
 			{
 				$email = $this->request->post['email'];
 			} else {
-				$email = "info@italy-sumochka.ru";
+				$email = "info@decor-plaza.ru";
 			}
 			$mail->setFrom($email);
 			$mail->setSender($this->request->post['name']);

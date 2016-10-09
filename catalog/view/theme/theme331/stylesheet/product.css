@@ -825,3 +825,12 @@ section{
 
 
 }
+
+@media all and (max-width: 512px) {
+    .breadcrumb > li, .breadcrumb > li > a{
+        float: left;
+    }
+    .breadcrumb{
+        display: block;
+    }
+}

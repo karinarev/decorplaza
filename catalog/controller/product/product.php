@@ -398,7 +398,7 @@ class ControllerProductProduct extends Controller {
 			if ($product_info['seo_title']) {
 				$this->document->setTitle($product_info['seo_title']);
 			} else {
-				$this->document->setTitle($product_info['name']." - Купить недорого в " .$cityformpred. " - italy-sumochka");
+				$this->document->setTitle($product_info['name']." - Купить недорого в " .$cityformpred. " - Decor-plaza");
 			}
 			
 			if ($product_info['seo_h1']) {
@@ -410,7 +410,7 @@ class ControllerProductProduct extends Controller {
 			if ($product_info['meta_description']) {
 				$this->document->setDescription($product_info['meta_description']);
 			} else {
-				$this->document->setDescription("Заказывайте ".$category_info['namev']." ".$product_info['manufacturer']." - ".htmlspecialchars($product_info['name'])." в интернет магазине italy-sumochka. Самые выгодные условия, цены и доставка по всей России");
+				$this->document->setDescription("Заказывайте ".$category_info['namev']." ".$product_info['manufacturer']." - ".htmlspecialchars($product_info['name'])." в интернет магазине Decor-plaza. Самые выгодные условия, цены и доставка по всей России");
 			}
 
 			
@@ -621,7 +621,7 @@ class ControllerProductProduct extends Controller {
 			if ($product_info['description2']) {
 				$this->data['description2'] = html_entity_decode($product_info['description2'], ENT_QUOTES, 'UTF-8');
 			} else {
-				$this->data['description2'] = "Decor-Plaza.ru – интернет магазин предлагает посмотреть каталог " . $category_info['namer'] . " " . $product_info['manufacturer'] . ". Мы поможем Вам определиться с выбором " . $category_info['namer'] . ". Все модели есть в наличии, а также у нас есть специальные предложения на " . $category_info['sinonim1'] . " " . $this->translit2rus($product_info['manufacturer']) . ". Оформляйте онлайн заказ через сайт или по телефону " . $this->config->get('config_telephone') . ". Если вы не можете определиться " . $category_info['sinonim2'] . " купить, присмотритесь к " . $category_info['named'] . " " . $product_info['manufacturer'] . ". " . $product_info['name'] . " - " . $product_info['functions'] . ". Магазин italy-sumochka.ru доставит ваш заказ или оформит самовывоз в " . $cityformpred . ".";
+				$this->data['description2'] = "Decor-Plaza.ru – интернет магазин предлагает посмотреть каталог " . $category_info['namer'] . " " . $product_info['manufacturer'] . ". Мы поможем Вам определиться с выбором " . $category_info['namer'] . ". Все модели есть в наличии, а также у нас есть специальные предложения на " . $category_info['sinonim1'] . " " . $this->translit2rus($product_info['manufacturer']) . ". Оформляйте онлайн заказ через сайт или по телефону " . $this->config->get('config_telephone') . ". Если вы не можете определиться " . $category_info['sinonim2'] . " купить, присмотритесь к " . $category_info['named'] . " " . $product_info['manufacturer'] . ". " . $product_info['name'] . " - " . $product_info['functions'] . ". Магазин Decor-plaza.ru доставит ваш заказ или оформит самовывоз в " . $cityformpred . ".";
 			}
 
 			
@@ -999,11 +999,11 @@ class ControllerProductProduct extends Controller {
 	    $customer_name = trim($_POST['customer_name']);
 	    $customer_phone = trim($_POST['customer_phone']);
 	    $customer_message = trim($_POST['customer_message']);
-	    $mail_subject = "italy-sumochka - быстрый заказ (".date('d.m.Y H:i').")";
+	    $mail_subject = "Decor-plaza - быстрый заказ (".date('d.m.Y H:i').")";
 	    
 	    if (isset($customer_name) && $customer_name!=="" && isset($customer_phone) && $customer_phone!=="") {
-	      $store_email = "info@italy-sumochka.ru";
-	      $fast_order_email = "italy-sumochka";
+	      $store_email = "info@decor-plaza.ru";
+	      $fast_order_email = "decor-plaza";
 	      //$product_name = iconv("UTF-8", "windows-1251", $product_name);
 	      //$product_price = iconv("UTF-8", "windows-1251", $product_price);
 	      $subject   = '=?windows-1251?B?'.base64_encode($mail_subject).'?=';

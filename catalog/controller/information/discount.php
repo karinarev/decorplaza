@@ -31,7 +31,7 @@ class ControllerInformationDiscount extends Controller {
 				//$this->model_catalog_information->addVoucher($data);
 				$this->model_catalog_information->addCoupon($data);
 				
-				$text = '<p>Добрый день, '.$this->request->post['name'].'!</p> <p>Поздравляем!</p> <p>Вы получили одноразовую скидку '.$this->config->get('config_discount_form').'% на все товары в магазине italy-sumochka. Введите этот промо-код <b>'.$code.'</b> в специальное поле «Купон» при оформлении заказа в корзине, и скидка будет рассчитана автоматически</p>';
+				$text = '<p>Добрый день, '.$this->request->post['name'].'!</p> <p>Поздравляем!</p> <p>Вы получили одноразовую скидку '.$this->config->get('config_discount_form').'% на все товары в магазине Decor-plaza. Введите этот промо-код <b>'.$code.'</b> в специальное поле «Купон» при оформлении заказа в корзине, и скидка будет рассчитана автоматически</p>';
 			
 			
 				$mail = new Mail();
@@ -49,7 +49,7 @@ class ControllerInformationDiscount extends Controller {
 				$mail->setText(strip_tags(html_entity_decode($text, ENT_QUOTES, 'UTF-8')));
 				$mail->send();
 				
-				$text = '<p>Пользователь '.$this->request->post['name'].' ('.$this->request->post['email'].') получил одноразовую скидку в '.$this->config->get('config_discount_form').'% на все товары в магазине italy-sumochka.</p>';
+				$text = '<p>Пользователь '.$this->request->post['name'].' ('.$this->request->post['email'].') получил одноразовую скидку в '.$this->config->get('config_discount_form').'% на все товары в магазине Decor-plaza.ru</p>';
 				$mail = new Mail();
 				$mail->protocol = $this->config->get('config_mail_protocol');
 				$mail->parameter = $this->config->get('config_mail_parameter');

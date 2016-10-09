@@ -928,7 +928,7 @@ new AjaxUpload('#button-option-<?php echo $option['product_option_id']; ?>', {
 									success: function(json) {
 
 										$('.success, .warning, .attention, information, .error').remove();
-										//{"error":{"option":{"1000":"Поле Размер должно быть заполнено!"}},"redirect":"http://italy-sumochka.ru/venum-amazonia-boxing-gloves"}
+										//{"error":{"option":{"1000":"Поле Размер должно быть заполнено!"}},"redirect":"http://decor-plaza.ru/venum-amazonia-boxing-gloves"}
 										if (json['error']) {
 											if (json['error']['option']) {
 												for (i in json['error']['option']) {
@@ -1035,7 +1035,7 @@ $('#button-review').bind('click', function() {
 
 	function onPlusProduct(quantity){
 		var i = Number($("#input-quantity").val())+1;
-		if (i<=quantity) $("#input-quantity").val(i);
+		if (i>=1) $("#input-quantity").val(i);
 	}
 
 	function onMinusProduct(){

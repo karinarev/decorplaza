@@ -5,7 +5,7 @@ class ControllerNewsNews extends Controller {
 
 		$this->document->setTitle("Наши новости - ".$this->config->get('config_title'));
 		//$this->document->setDescription($this->config->get('config_meta_description'));
-		$this->document->setDescription("Добро пожаловать на новостной раздел интернет магазина italy-sumochka");
+		$this->document->setDescription("Добро пожаловать на новостной раздел интернет магазина Decor-plaza.ru");
 		
 
 		$this->data['heading_title'] = $this->config->get('config_title');

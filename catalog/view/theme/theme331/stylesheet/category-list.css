@@ -80,5 +80,9 @@ ul.box-category-children>li:hover>a{
 }
 
 a:hover, .category-link-name:hover{
-    color: #c49849 !important;
+    color: #c49849 ;
+}
+
+.category-panel .panel-heading a:hover{
+    color: #5d4e33 !important;
 }

@@ -57,9 +57,9 @@
 			<div class="col-md-2 col-sm-4 col-xs-6">
 				<p class="my_h3">Мы в соцсетях</p>
 				<ul>
-<li><span class="external-reference" data-link="https://www.facebook.com/italy-sumochka">Facebook</span></li>
-					<li><span class="external-reference" data-link="http://vk.com/italy-sumochka">Вконтакте</span></li>
-<li><span class="external-reference" data-link="https://instagram.com/italy-sumochka/">Instagram</span></li>
+<li><span class="external-reference" data-link="https://www.facebook.com/decor-plaza">Facebook</span></li>
+					<li><span class="external-reference" data-link="http://vk.com/decor-plaza">Вконтакте</span></li>
+<li><span class="external-reference" data-link="https://instagram.com/decor-plaza/">Instagram</span></li>
                     
 				</ul>
 			</div>

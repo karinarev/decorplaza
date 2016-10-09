@@ -2,7 +2,7 @@
 if($_SERVER['REQUEST_URI'] == '/dostavka?_route_=dostavka-i-oplata'){
 
 header("HTTP/1.1 301 Moved Permanently"); 
-header("Location: http://italy-sumochka.ru/dostavka"); 
+header("Location: http://decor-plaza.ru/dostavka"); 
 exit(); 
 
 }

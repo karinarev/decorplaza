@@ -3,7 +3,7 @@
 		<div class="<?php if ($column_left or $column_right) { ?>col-sm-9<?php } ?> <?php if (!$column_left & !$column_left) { ?>col-sm-12  <?php } ?> <?php if ($column_left & $column_right) { ?>col-sm-6<?php } ?>" id="content"><?php echo $content_top; ?>
   <div class="breadcrumb">
   <?php if($_SERVER['REQUEST_URI'] == "/discount-form/"):?>
-  <a href="http://italy-sumochka.ru/">Главная</a> » Получить скидку
+  <a href="http://decor-plaza.ru/">Главная</a> » Получить скидку
 <?else: ?>
 	<?php foreach ($breadcrumbs as $breadcrumb) { ?>
 	<?php echo $breadcrumb['separator']; ?><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>

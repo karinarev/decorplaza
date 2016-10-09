@@ -542,10 +542,20 @@ a.featured-icon:hover, a.featured-icon:active {
         left: 80px;
     }
 
-
-
-
-
-
-
+    .featured-jcarousel .item:hover .product-thumb .caption{
+        padding-top: 15px;
+        margin-top: 0;
+        bottom: auto;
+        left: auto;
+        height: 200px;
+        width: auto;
+        z-index: 5;
+        background: white;
+        position: relative;
+    }
+}
+@media all and (max-width: 512px) {
+    .featured-title{
+        clear: both;
+    }
 }
