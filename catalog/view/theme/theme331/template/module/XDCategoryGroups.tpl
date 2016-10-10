@@ -45,26 +45,9 @@
                     .on('jcarousel:createend', function() {
                         //$(this).jcarousel('scroll', 1, false);
                         var ul = $('.categories-jcarousel ul');
-                        ul.css('left', '-200px');
+                        ul.css('left', '-210px');
                         ul.find('li').eq(1).addClass('target');
 
-                    })
-//                    .on('jcarousel:targetin', 'li', function() {
-//                        $(this).addClass('target');
-//                    })
-//                    .on('jcarousel:targetout', 'li', function() {
-//                        $(this).removeClass('target');
-//                    })
-                    .on('jcarousel:scrollend', function(event, carousel, target, animate) {
-                        // "this" refers to the root element
-                        // "carousel" is the jCarousel instance
-                        // "target" is the target argument passed to the `scroll` method
-                        // "animate" is the animate argument passed to the `scroll` method
-                        //      indicating whether jCarousel was requested to do an animation
-//                        if($('li.target').index() == 1) {
-//                            console.log($('.categories-jcarousel ul').css('left'));
-//                            $('.categories-jcarousel ul').css('left', '-200px');
-//                        }
                     })
                     .jcarousel();
 
@@ -89,7 +72,7 @@
                             else if(index == 2){
                                 $('li.target').removeClass('target');
                                 var ul = $('.categories-jcarousel ul');
-                                ul.css('left', '-200px');
+                                ul.css('left', '-210px');
                                 ul.find('li').eq(1).addClass('target');
                             }
 
@@ -110,7 +93,7 @@
                                 //this.carousel().jcarousel('scroll', $('.categories-jcarousel li:eq(5)'));
                                 $('li.target').removeClass('target');
                                 var ul = $('.categories-jcarousel ul');
-                                ul.css('left', '-200px');
+                                ul.css('left', '-210px');
                                 ul.find('li').eq(1).addClass('target');
                             }
                             else if(index == 1){
