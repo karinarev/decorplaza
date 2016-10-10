@@ -1,5 +1,5 @@
-<div class="jcarousel-wrapper categories categories-jcarousel-wrapper">
-    <div class="jcarousel categories-jcarousel">
+<div class="categories categories-jcarousel-wrapper jcarousel-wrapper">
+    <div class="categories-jcarousel jcarousel">
         <ul>
             <?php foreach($categories as $category) { ?>
             <li><div class="item">
@@ -15,6 +15,7 @@
                     <a class="btn btn-more" href="<?php echo $category['parent_url']; ?>"><span>Подробнее</span></a>
                 </div>
             </div></li>
+            <!--<li class="li-helper"></li> -->
             <?php } ?>
         </ul>
     </div>
@@ -38,9 +39,33 @@
 
     function checkWindowSizeXD() {
         currWindowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
         if (currWindowWidth <= 767) {
+
             $('.categories-jcarousel')
+                    .on('jcarousel:createend', function() {
+                        //$(this).jcarousel('scroll', 1, false);
+                        var ul = $('.categories-jcarousel ul');
+                        ul.css('left', '-200px');
+                        ul.find('li').eq(1).addClass('target');
+
+                    })
+//                    .on('jcarousel:targetin', 'li', function() {
+//                        $(this).addClass('target');
+//                    })
+//                    .on('jcarousel:targetout', 'li', function() {
+//                        $(this).removeClass('target');
+//                    })
+                    .on('jcarousel:scrollend', function(event, carousel, target, animate) {
+                        // "this" refers to the root element
+                        // "carousel" is the jCarousel instance
+                        // "target" is the target argument passed to the `scroll` method
+                        // "animate" is the animate argument passed to the `scroll` method
+                        //      indicating whether jCarousel was requested to do an animation
+//                        if($('li.target').index() == 1) {
+//                            console.log($('.categories-jcarousel ul').css('left'));
+//                            $('.categories-jcarousel ul').css('left', '-200px');
+//                        }
+                    })
                     .jcarousel();
 
             $('.categories-jcarousel-control-prev')
@@ -51,7 +76,24 @@
                         $(this).addClass('inactive');
                     })
                     .jcarouselControl({
-                        target: '-=1'
+                        //target: "-=1"
+                        method: function() {
+                            var index = $('li.target').index();
+                            if(index == 1) {
+                                //this.carousel().jcarousel('scroll', $('.categories-jcarousel li:eq(0)'));
+                                $('li.target').removeClass('target');
+                                var ul = $('.categories-jcarousel ul');
+                                ul.css('left', '0');
+                                ul.find('li').eq(0).addClass('target');
+                            }
+                            else if(index == 2){
+                                $('li.target').removeClass('target');
+                                var ul = $('.categories-jcarousel ul');
+                                ul.css('left', '-200px');
+                                ul.find('li').eq(1).addClass('target');
+                            }
+
+                        }
                     });
 
             $('.categories-jcarousel-control-next')
@@ -62,9 +104,26 @@
                         $(this).addClass('inactive');
                     })
                     .jcarouselControl({
-                        target: '+=1'
+                        method: function() {
+                            var index = $('li.target').index();
+                            if(index == 0) {
+                                //this.carousel().jcarousel('scroll', $('.categories-jcarousel li:eq(5)'));
+                                $('li.target').removeClass('target');
+                                var ul = $('.categories-jcarousel ul');
+                                ul.css('left', '-200px');
+                                ul.find('li').eq(1).addClass('target');
+                            }
+                            else if(index == 1){
+                                $('li.target').removeClass('target');
+                                var ul = $('.categories-jcarousel ul');
+                                ul.find('li').eq(2).addClass('target');
+                                this.carousel().jcarousel('scroll', $('.categories-jcarousel li:eq(2)'));
+                            }
+
+                        }
                     });
         }
+
 
 
     }

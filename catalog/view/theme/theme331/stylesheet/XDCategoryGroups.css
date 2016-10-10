@@ -201,6 +201,10 @@
         padding-left: 0;
     }
 
+    .categories{
+        position: relative;
+    }
+
     .categories-jcarousel-wrapper {
         height: 240px;
     }
@@ -234,6 +238,46 @@
         z-index: 4;
         right: 0;
     }
+
+    .categories-jcarousel ul{
+        transition-duration: 1s;
+    }
+
+
+
+    /*.categories-jcarousel ul li:nth-child(1){
+        position: absolute;
+        z-index: 3;
+        left: 0;
+    }
+
+    .categories-jcarousel ul li:nth-child(2){
+        width: 220px;
+        height: 235px;
+    }
+
+    .categories-jcarousel ul li:nth-child(3){
+        position: absolute;
+        z-index: 3;
+        left: 253px;
+    }
+
+    .categories-jcarousel ul li:nth-child(4){
+        width: 275px;
+        height: 235px;
+    }
+
+    .categories-jcarousel ul li:nth-child(5){
+        position: absolute;
+        z-index: 3;
+        left: 506px;
+    }
+
+    .categories-jcarousel ul li:nth-child(6){
+        width: 200px;
+        height: 235px;
+
+    } */
 
 
 
